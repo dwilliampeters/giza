@@ -1,0 +1,26 @@
+{
+    "name": "Giza",
+    "version": "0.0.1",
+    "description": "Frontend (Fender) framework",
+    "license": "MIT",
+    "engines": {
+      "node": ">=6.11.1",
+      "npm": ">=3.10.3"
+    },
+    "main": "gulp.js",
+    "scripts": {
+      "go": "gulp",
+      "fin": "gulp dist",
+      "fix-code": "prettier-eslint --write ./js/**/*.{js,jsx}",
+      "fix-styles": "prettier-stylelint --write ./scss/**/*.{css,scss}"
+    },
+    "prettier": {},
+    "dependencies": {},
+    "devDependencies": {
+      "prettier": "^1.14.2",
+      "prettier-eslint": "^8.8.2",
+      "prettier-eslint-cli": "^4.7.1",
+      "prettier-stylelint": "^0.4.2",
+      "stylelint-config-idiomatic-order": "^5.0.0"
+    }
+  }
