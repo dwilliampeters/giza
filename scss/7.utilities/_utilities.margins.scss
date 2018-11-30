@@ -1,35 +1,37 @@
+// Utilities: Margins
+
 .u-margin-top-auto {
-  margin-top: auto !important;
+    margin-top: auto !important;
 }
 
 .u-margin-right-auto {
-  margin-right: auto !important;
+    margin-right: auto !important;
 }
 
 .u-margin-bottom-auto {
-  margin-bottom: auto !important;
+    margin-bottom: auto !important;
 }
 
 .u-margin-left-auto {
-  margin-left: auto !important;
+    margin-left: auto !important;
 }
 
 @each $key, $value in $mq-breakpoints {
-  @include breakpoint($key) {
-    .u-margin-top-auto\@#{$key} {
-      margin-top: auto !important;
-    }
+    @include breakpoint($key) {
+        .u-margin-top-auto\@#{$key} {
+            margin-top: auto !important;
+        }
 
-    .u-margin-right-auto\@#{$key} {
-      margin-right: auto !important;
-    }
+        .u-margin-right-auto\@#{$key} {
+            margin-right: auto !important;
+        }
 
-    .u-margin-bottom-auto\@#{$key} {
-      margin-bottom: auto !important;
-    }
+        .u-margin-bottom-auto\@#{$key} {
+            margin-bottom: auto !important;
+        }
 
-    .u-margin-left-auto\@#{$key} {
-      margin-left: auto !important;
+        .u-margin-left-auto\@#{$key} {
+            margin-left: auto !important;
+        }
     }
-  }
 }
