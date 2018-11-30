@@ -1,0 +1,21 @@
+// Elements: Headings
+
+$heading-font: $font !default;
+$heading-font-weight: $font-weight-bold !default;
+$heading-color: inherit !default;
+$heading-small-size: 75% !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+    font-family: $heading-font;
+    font-weight: $heading-font-weight;
+
+    small {
+        font-size: $heading-small-size;
+    }
+}

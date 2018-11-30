@@ -1,0 +1,34 @@
+// Elements: Links
+
+$link-color: $dark !default;
+$link-hover-color: $dark !default;
+$link-visited: false !default;
+$link-visited-color: $dark !default;
+$link-visited-hover-color: $dark !default;
+
+$link-trans-speed: 200 !default;
+$link-underline: underline !default;
+
+a {
+    text-decoration: $link-underline;
+
+    &:not(.c-text--disabled) {
+        @include color-swap-on-hover(
+            $link-color,
+            $link-hover-color,
+            $link-trans-speed
+        );
+
+        color: $link-color;
+    }
+}
+
+@if $link-visited {
+    a:visited {
+        @include color-swap-on-hover(
+            $link-visited-color,
+            $link-visited-hover-color,
+            $link-trans-speed
+        );
+    }
+}

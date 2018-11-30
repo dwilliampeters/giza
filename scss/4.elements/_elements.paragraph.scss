@@ -1,0 +1,7 @@
+// Elements: Paragraph
+
+$paragraph-margin: $spacer 0 !default;
+
+p {
+    margin: $paragraph-margin;
+}

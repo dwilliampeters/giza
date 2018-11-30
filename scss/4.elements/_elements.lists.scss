@@ -1,0 +1,33 @@
+// Elements: Lists
+
+$list-margin-bottom: $spacer !default;
+$list-margin-side: $spacer !default;
+$list-nested-margin-side: $spacer !default;
+$dt-font-weight: $font-weight-bold !default;
+
+ul,
+ol,
+dl {
+    padding: 0;
+    margin-bottom: $list-margin-bottom;
+}
+
+ul,
+ol {
+    margin-left: $list-margin-side;
+
+    & & {
+        margin-bottom: 0;
+        margin-left: $list-nested-margin-side;
+    }
+}
+
+dl {
+    dt {
+        font-weight: $dt-font-weight;
+    }
+
+    dd {
+        margin: 0;
+    }
+}

@@ -1,0 +1,7 @@
+// Elements: Blockquote
+
+$blockquote-margin: $spacer 0 !default;
+
+blockquote {
+    margin: $blockquote-margin;
+}
