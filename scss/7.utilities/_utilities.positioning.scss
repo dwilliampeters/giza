@@ -1,5 +1,37 @@
 // Utilities: Positioning
 
 .u-position-relative {
-    position: relative;
+    position: relative !important;
+}
+
+.u-position-absolute {
+    position: absolute !important;
+}
+
+.u-position-fixed {
+    position: fixed !important;
+}
+
+.u-position-static {
+    position: static !important;
+}
+
+@each $key, $value in $mq-breakpoints {
+    @include breakpoint($key) {
+        .u-position-relative\@#{$key} {
+            position: relative !important;
+        }
+
+        .u-position-absolute\@#{$key} {
+            position: absolute !important;
+        }
+
+        .u-position-fixed\@#{$key} {
+            position: fixed !important;
+        }
+
+        .u-position-static\@#{$key} {
+            position: static !important;
+        }
+    }
 }
