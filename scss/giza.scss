@@ -13,16 +13,17 @@
 @import '3.generic/generic.base';
 
 // Elements
+@import '4.elements/elements.print';
 
 // Objects
-@import '5.objects/site/object.site';
-@import '5.objects/grid/object.grid';
-@import '5.objects/flex-grid/object.flex-grid';
-@import '5.objects/size/object.size';
+@import '5.objects/site/objects.site';
+@import '5.objects/grid/objects.grid';
+@import '5.objects/flex-grid/objects.flex-grid';
+@import '5.objects/size/objects.size';
 
 // Components
-@import '6.components/button/component.button';
+@import '6.components/button/components.button';
 
 // Utilities
-@import '7.utilities/utility.healthcheck';
-@import '7.utilities/utility.visibility';
+@import '7.utilities/utilities.healthcheck';
+@import '7.utilities/utilities.visibility';
