@@ -1,0 +1,35 @@
+.u-display-none {
+  display: none !important;
+}
+
+.u-display-block {
+  display: block !important;
+}
+
+.u-display-inline-block {
+  display: inline-block !important;
+}
+
+.u-display-flex {
+  display: flex !important;
+}
+
+@each $key, $value in $mq-breakpoints {
+  @include breakpoint($key) {
+    .u-display-none\@#{$key} {
+      display: none !important;
+    }
+
+    .u-display-block\@#{$key} {
+      display: block !important;
+    }
+
+    .u-display-inline-block\@#{$key} {
+      display: block !important;
+    }
+
+    .u-display-flex\@#{$key} {
+      display: flex !important;
+    }
+  }
+}
