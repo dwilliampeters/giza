@@ -14,7 +14,12 @@
 // Elements
 
 // Objects
+@import '5.objects/site/object.site';
+@import '5.objects/flex-grid/object.flex-grid';
+@import '5.objects/size/object.size';
 
 // Components
 
 // Utilities
+@import '7.utilities/utility.healthcheck';
+@import '7.utilities/utility.visibility';
