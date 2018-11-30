@@ -16,16 +16,20 @@
 @import '4.elements/elements';
 
 // Objects
-@import '5.objects/site/objects.site';
-@import '5.objects/grid/objects.grid';
-@import '5.objects/flex-grid/objects.flex-grid';
-@import '5.objects/size/objects.size';
 @import '5.objects/container/objects.container';
+@import '5.objects/flex-grid/objects.flex-grid';
+@import '5.objects/grid/objects.grid';
+@import '5.objects/site/objects.site';
+@import '5.objects/size/objects.size';
 
 // Components
 @import '6.components/button/components.button';
+@import '6.components/hamburger/components.hamburger';
 
 // Utilities
+// @import '7.utilities/utilities.display';
 @import '7.utilities/utilities.healthcheck';
-@import '7.utilities/utilities.positioning';
+// @import '7.utilities/utilities.margins';
+// @import '7.utilities/utilities.positioning';
+// @import '7.utilities/utilities.text-align';
 @import '7.utilities/utilities.visibility';
