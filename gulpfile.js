@@ -8,7 +8,8 @@ requireDir("./gulp");
 gulp.task("build", [
   "clean",
   "sass",
-  "js"
+  "js",
+  "html"
 ]);
 
 gulp.task("serve", ["build"], function() {
@@ -18,6 +19,7 @@ gulp.task("serve", ["build"], function() {
 gulp.task("watch", function() {
   gulp.watch("./scss/**/*", ["sass", browser.reload]);
   gulp.watch("./js/**/*", ["js", browser.reload]);
+  gulp.watch("./html/**/*", ["html", browser.reload]);
 });
 
 gulp.task("default", ["serve", "watch"]);
