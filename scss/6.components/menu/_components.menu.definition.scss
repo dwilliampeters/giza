@@ -1,0 +1,88 @@
+// Components: Menu Definition
+
+$menu-link-color: $link-color !default;
+$menu-link-bg: transparent !default;
+$menu-link-hover-color: $link-hover-color !default;
+$menu-link-hover-bg: $dark !default;
+$menu-link-text-decoration: none !default;
+$menu-link-text-align: center !default;
+$menu-link-trans-speed: 200 !default;
+$menu-link-active-color: $light !default;
+$menu-link-active-bg: $menu-link-color !default;
+
+$menu-item-padding: $spacer !default;
+
+$menu-link-padding: $spacer !default;
+$menu-link-font-weight: $font-weight-normal !default;
+
+.c-menu {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0;
+    list-style: none;
+
+    input,
+    a,
+    button {
+        margin-bottom: 0;
+    }
+}
+
+.c-menu--right {
+    justify-content: flex-end;
+}
+
+.c-menu--center {
+    justify-content: center;
+}
+
+.c-menu--expanded {
+    > .c-menu__item {
+        min-width: 0;
+        flex: 1 1 0%;
+    }
+}
+
+.c-menu--attached {
+    margin-bottom: 0;
+}
+
+.c-menu__item {
+    flex: 0 0 auto;
+    padding: $menu-item-padding;
+}
+
+.c-menu__item--right {
+    display: flex;
+    margin-left: auto;
+}
+
+.c-menu__item--left {
+    display: flex;
+    margin-right: auto;
+}
+
+.c-menu__link {
+    @include color-swap-on-hover(
+        $menu-link-color $menu-link-bg,
+        $menu-link-hover-color $menu-link-hover-bg,
+        $menu-link-trans-speed
+    );
+
+    display: block;
+    padding: $menu-link-padding;
+    text-align: $menu-link-text-align;
+    text-decoration: $menu-link-text-decoration;
+
+    .is-active > &,
+    &.is-active {
+        @include color-swap-on-hover(
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-active-color $menu-link-active-bg,
+            $menu-link-trans-speed
+        );
+    }
+}
