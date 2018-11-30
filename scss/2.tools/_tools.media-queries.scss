@@ -1,17 +1,4 @@
-// ----------------------------------------------------------------------
-
 // Tools: Media Queries
-
-// ----------------------------------------------------------------------
-
-////
-/// @author   Jaywing
-/// @group    jw
-/// @create   14/06/2016
-////
-
-/// Helper mixins for media queries, used in conjuection with the
-/// `sass-mq` media query library
 
 @mixin xxs {
     @include mq($from: map-get($mq-breakpoints, 'xxs')) {

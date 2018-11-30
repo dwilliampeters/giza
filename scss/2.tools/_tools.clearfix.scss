@@ -1,0 +1,9 @@
+// Tools: Clearfix
+
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}

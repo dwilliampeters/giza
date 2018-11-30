@@ -1,0 +1,33 @@
+$container-max-width: $site-max-width !default;
+$container-side-padding: $spacer !default;
+$container-thin-max-width: $site-max-width / 2 !default;
+
+.o-container {
+    @include clearfix;
+
+    max-width: $container-max-width;
+    padding-right: $container-side-padding;
+    padding-left: $container-side-padding;
+}
+
+.o-container--centered {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.o-container--fluid {
+    max-width: 100%;
+}
+
+.o-container--collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.o-container--absolute {
+    position: relative;
+}
+
+.o-container--thin {
+    max-width: $container-thin-max-width;
+}
