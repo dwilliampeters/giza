@@ -24,10 +24,6 @@ $container-thin-max-width: $site-max-width / 2 !default;
     padding-left: 0;
 }
 
-.o-container--absolute {
-    position: relative;
-}
-
 .o-container--thin {
     max-width: $container-thin-max-width;
 }
