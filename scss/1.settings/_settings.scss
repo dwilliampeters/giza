@@ -1,0 +1,28 @@
+// Global settings
+
+$healthcheck: true !default;
+
+$min-touch-size: 44px !default;
+$spacer: 1rem !default;
+
+$light: #fff !default;
+$dark: #000 !default;
+
+$font: Helvetica, Arial, sans-serif !default;
+$font-fl: Helvetica, Arial, sans-serif !default;
+
+$font-size: 16px !default;
+
+$weight-normal: 400 !default;
+$weight-medium: 600 !default;
+$weight-bold: 700 !default;
+
+$mq-breakpoints: (
+    xxs: 320px,
+    xs: 480px,
+    sm: 640px,
+    md: 768px,
+    lg: 960px,
+    xl: 1180px,
+    xxl: 1400px
+) !default;

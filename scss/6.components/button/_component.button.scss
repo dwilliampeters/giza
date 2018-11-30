@@ -1,0 +1,23 @@
+// Components: Button
+
+$button-padding: $spacer !default;
+$button-min-width: $min-touch-size !default;
+$button-min-height: 1em !default;
+$button-border: 0 !default;
+$button-cursor: pointer !default;
+$button-line-height: 1 !default;
+
+.c-button {
+    display: inline-block;
+    min-width: $button-min-width;
+    min-height: $button-min-height;
+    padding: $button-padding;
+    border: $button-border;
+    cursor: $button-cursor;
+    line-height: $button-line-height;
+    vertical-align: baseline;
+
+    &--block {
+        display: block;
+    }
+}

@@ -1,0 +1,33 @@
+// Generic: Base
+
+$base-bg-color: $light !default;
+$base-text-color: $dark !default;
+$base-font-family: $font !default;
+$fl-base-font-family: $font-fl !default;
+$base-font-weight: $weight-normal !default;
+$base-font-size: $font-size !default;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: $base-bg-color;
+    color: $base-text-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+
+    &.fonts-loaded {
+        font-family: $fl-base-font-family;
+    }
+}

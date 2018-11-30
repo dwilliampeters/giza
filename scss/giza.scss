@@ -10,6 +10,7 @@
 @import '2.tools/tools';
 
 // Generic
+@import '3.generic/generic.base';
 
 // Elements
 
@@ -20,6 +21,7 @@
 @import '5.objects/size/object.size';
 
 // Components
+@import '6.components/button/component.button';
 
 // Utilities
 @import '7.utilities/utility.healthcheck';
