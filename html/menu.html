@@ -2,22 +2,67 @@
 
 {% block body %}
     <h2>Menu</h2>
+
     <ul class="c-menu">
         <li class="c-menu__item">
-            <span class="c-menu__title">Menu item</span>
+            <a class="c-menu__link is-active" href="#">Active</a>
         </li>
         <li class="c-menu__item">
-            <a href="c-menu__link">Menu link</a>
+            <a class="c-menu__link" href="#">Link</a>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link" href="#">Link</a>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link is-disabled" href="#">Disabled</a>
         </li>
     </ul>
 
-    <h2>Vertical Menu</h2>
+    <h3>Vertical</h3>
+
     <ul class="c-menu c-menu--vertical">
         <li class="c-menu__item">
-            <span class="c-menu__title">Menu item</span>
+            <a class="c-menu__link is-active" href="#">Active</a>
         </li>
         <li class="c-menu__item">
-            <a href="c-menu__link">Menu link</a>
+            <a class="c-menu__link" href="#">Link</a>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link" href="#">Link</a>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link is-disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+
+    <h3>Nested</h3>
+
+    <ul class="c-menu c-menu--vertical">
+        <li class="c-menu__item">
+            <a class="c-menu__link is-active" href="#">Active</a>
+            <ul class="c-menu c-menu--vertical">
+                <li class="c-menu__item">
+                    <a class="c-menu__link is-active" href="#">Active</a>
+                </li>
+                <li class="c-menu__item">
+                    <a class="c-menu__link" href="#">Link</a>
+                </li>
+                <li class="c-menu__item">
+                    <a class="c-menu__link" href="#">Link</a>
+                </li>
+                <li class="c-menu__item">
+                    <a class="c-menu__link is-disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link" href="#">Link</a>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link" href="#">Link</a>
+        </li>
+        <li class="c-menu__item">
+            <a class="c-menu__link is-disabled" href="#">Disabled</a>
         </li>
     </ul>
 {% endblock %}
