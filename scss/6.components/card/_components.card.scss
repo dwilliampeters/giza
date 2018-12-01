@@ -1,0 +1,29 @@
+$card-border: 1px solid $dark !default;
+$card-bg: $light !default;
+
+$card-header-padding: $spacer !default;
+$card-header-bg: $dark !default;
+$card-header-color: $light !default;
+
+$card-body-padding: $spacer !default;
+
+$card-title-margin: 0 0 $spacer !default;
+
+.c-card {
+    border: $card-border;
+    background: $card-bg;
+}
+
+.c-card__header {
+    padding: $card-header-padding;
+    background: $card-header-bg;
+    color: $card-header-color;
+}
+
+.c-card__body {
+    padding: $card-body-padding;
+}
+
+.c-card__title {
+    margin: $card-title-margin;
+}
