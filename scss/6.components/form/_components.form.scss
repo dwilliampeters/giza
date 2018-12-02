@@ -12,6 +12,7 @@ $form-control-font-size: $base-font-size !default;
 .c-form-label {
     display: inline-block;
     margin-bottom: $form-label-margin;
+    cursor: pointer;
 }
 
 .c-form-control {
