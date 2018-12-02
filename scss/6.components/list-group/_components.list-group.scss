@@ -1,8 +1,12 @@
 $list-group-item-padding: $spacer !default;
 $list-group-item-border: 1px solid $dark !default;
 
-$list-group-item-button-bg: $button-bg !default;
-$list-group-item-button-color: $button-color !default;
+$list-group-item-action-bg: $button-bg !default;
+$list-group-item-action-color: $button-color !default;
+$list-group-item-action-hover-bg: $button-hover-bg !default;
+$list-group-item-action-hover-color: $button-hover-color !default;
+
+$list-group-item-action-text-decoration: none !default;
 
 .c-list-group {
     display: flex;
@@ -18,8 +22,15 @@ $list-group-item-button-color: $button-color !default;
 }
 
 .c-list-group__item--action {
-    background: $list-group-item-button-bg;
-    color: $list-group-item-button-color;
+    background: $list-group-item-action-bg;
+    color: $list-group-item-action-color;
     cursor: pointer;
     text-align: left;
+    text-decoration: $list-group-item-action-text-decoration;
+
+    @include color-swap-on-hover(
+        $list-group-item-action-color $list-group-item-action-bg,
+        $list-group-item-action-hover-color $list-group-item-action-hover-bg,
+        $link-trans-speed
+    );
 }

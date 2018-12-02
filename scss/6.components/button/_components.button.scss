@@ -9,6 +9,10 @@ $button-line-height: 1 !default;
 
 $button-bg: $primary !default;
 $button-color: $light !default;
+$button-hover-bg: $secondary !default;
+$button-hover-color: $light !default;
+
+$button-text-decoration: none !default;
 
 .c-button {
     display: inline-block;
@@ -16,9 +20,18 @@ $button-color: $light !default;
     min-height: $button-min-height;
     padding: $button-padding;
     border: $button-border;
+    background: $button-bg;
+    color: $button-color;
     cursor: $button-cursor;
     line-height: $button-line-height;
+    text-decoration: $button-text-decoration;
     vertical-align: baseline;
+
+    @include color-swap-on-hover(
+        $button-color $button-bg,
+        $button-hover-color $button-hover-bg,
+        $link-trans-speed
+    );
 
     &--block {
         display: block;
