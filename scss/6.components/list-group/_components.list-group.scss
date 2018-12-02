@@ -1,0 +1,25 @@
+$list-group-item-padding: $spacer !default;
+$list-group-item-border: 1px solid $dark !default;
+
+$list-group-item-button-bg: $button-bg !default;
+$list-group-item-button-color: $button-color !default;
+
+.c-list-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-list-group__item {
+    position: relative;
+    display: block;
+    padding: $list-group-item-padding;
+    border: $list-group-item-border;
+    margin-bottom: -1px;
+}
+
+.c-list-group__item--action {
+    background: $list-group-item-button-bg;
+    color: $list-group-item-button-color;
+    cursor: pointer;
+    text-align: left;
+}

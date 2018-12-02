@@ -10,21 +10,16 @@ $link-trans-speed: 200 !default;
 $link-underline: underline !default;
 
 a {
+    color: $link-color;
     text-decoration: $link-underline;
 
-    &:not(.c-text--disabled) {
-        @include color-swap-on-hover(
-            $link-color,
-            $link-hover-color,
-            $link-trans-speed
-        );
+    @include color-swap-on-hover(
+        $link-color,
+        $link-hover-color,
+        $link-trans-speed
+    );
 
-        color: $link-color;
-    }
-}
-
-@if $link-visited {
-    a:visited {
+    &:visited {
         @include color-swap-on-hover(
             $link-visited-color,
             $link-visited-hover-color,

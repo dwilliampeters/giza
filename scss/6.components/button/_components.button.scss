@@ -7,6 +7,9 @@ $button-border: 0 !default;
 $button-cursor: pointer !default;
 $button-line-height: 1 !default;
 
+$button-bg: $primary !default;
+$button-color: $light !default;
+
 .c-button {
     display: inline-block;
     min-width: $button-min-width;
