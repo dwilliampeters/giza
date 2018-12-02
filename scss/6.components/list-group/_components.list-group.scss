@@ -3,10 +3,14 @@ $list-group-margin: 0 !default;
 $list-group-item-padding: $spacer !default;
 $list-group-item-border: 1px solid $dark !default;
 
-$list-group-item-action-bg: $button-bg !default;
-$list-group-item-action-color: $button-color !default;
+$list-group-item-action-bg: transparent !default;
+$list-group-item-action-color: $dark !default;
 $list-group-item-action-hover-bg: $button-hover-bg !default;
 $list-group-item-action-hover-color: $button-hover-color !default;
+$list-group-item-action-active-bg: $button-bg !default;
+$list-group-item-action-active-color: $button-color !default;
+$list-group-item-action-active-hover-bg: $button-hover-bg !default;
+$list-group-item-action-active-hover-color: $button-hover-color !default;
 
 $list-group-item-action-text-decoration: none !default;
 
@@ -36,6 +40,16 @@ $list-group-item-action-text-decoration: none !default;
         $list-group-item-action-hover-color $list-group-item-action-hover-bg,
         $link-trans-speed
     );
+
+    &.is-active {
+        @include color-swap-on-hover(
+            $list-group-item-action-active-color
+            $list-group-item-action-active-bg,
+            $list-group-item-action-active-hover-color
+                $list-group-item-action-active-hover-bg,
+            $link-trans-speed
+        );
+    }
 
     &:visited {
         @include color-swap-on-hover(
