@@ -11,6 +11,10 @@ $button-bg: $primary !default;
 $button-color: $light !default;
 $button-hover-bg: $secondary !default;
 $button-hover-color: $light !default;
+$button-visited-bg: $button-bg !default;
+$button-visited-color: $light !default;
+$button-visited-hover-bg: $button-hover-bg !default;
+$button-visited-hover-color: $button-hover-color !default;
 
 $button-text-decoration: none !default;
 
@@ -32,6 +36,14 @@ $button-text-decoration: none !default;
         $button-hover-color $button-hover-bg,
         $link-trans-speed
     );
+
+    &:visited {
+        @include color-swap-on-hover(
+            $button-visited-color $button-visited-bg,
+            $button-visited-hover-color $button-visited-hover-bg,
+            $link-trans-speed
+        );
+    }
 
     &--block {
         display: block;
