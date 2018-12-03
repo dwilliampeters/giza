@@ -1,6 +1,6 @@
 {
   "name": "giza-framework",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Frontend (Fender) framework",
   "license": "MIT",
   "engines": {
@@ -10,7 +10,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "fin": "gulp dist",
+    "dist": "gulp dist",
     "fix-code": "prettier-eslint --write ./js/**/*.{js,jsx}",
     "fix-styles": "prettier-stylelint --write ./scss/**/*.{css,scss}"
   },
