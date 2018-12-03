@@ -15,7 +15,7 @@ $menu-item-padding: 0 !default;
 $menu-link-padding: $spacer !default;
 $menu-link-font-weight: $font-weight-normal !default;
 
-.c-menu {
+.c-nav {
     display: flex;
     width: 100%;
     max-width: 100%;
@@ -25,37 +25,37 @@ $menu-link-font-weight: $font-weight-normal !default;
     list-style: none;
 }
 
-.c-menu--right {
+.c-nav--right {
     justify-content: flex-end;
 }
 
-.c-menu--center {
+.c-nav--center {
     justify-content: center;
 }
 
-.c-menu--expanded {
-    > .c-menu__item {
+.c-nav--expanded {
+    > .c-nav__item {
         min-width: 0;
         flex: 1 1 0%;
     }
 }
 
-.c-menu__item {
+.c-nav__item {
     flex: 0 0 auto;
     padding: $menu-item-padding;
 }
 
-.c-menu__item--right {
+.c-nav__item--right {
     display: flex;
     margin-left: auto;
 }
 
-.c-menu__item--left {
+.c-nav__item--left {
     display: flex;
     margin-right: auto;
 }
 
-.c-menu__link {
+.c-nav__link {
     @include color-swap-on-hover(
         $menu-link-color $menu-link-bg,
         $menu-link-hover-color $menu-link-hover-bg,

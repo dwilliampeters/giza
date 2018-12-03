@@ -1,28 +1,28 @@
 // Components: Menu Vertical
 
-.c-menu--vertical {
+.c-nav--vertical {
     flex-wrap: wrap;
 
-    .c-menu__item {
+    .c-nav__item {
         max-width: 100%;
         flex: 0 0 100%;
         text-align: left;
     }
 
-    .c-menu__link {
+    .c-nav__link {
         align-items: flex-start;
         justify-content: flex-start;
         text-align: inherit;
     }
 
-    &.c-menu--right {
-        .c-menu__item,
-        .c-menu__item--left {
+    &.c-nav--right {
+        .c-nav__item,
+        .c-nav__item--left {
             text-align: right;
         }
     }
 
-    &.c-menu--center .c-menu__item {
+    &.c-nav--center .c-nav__item {
         text-align: center;
     }
 }
