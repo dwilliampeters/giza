@@ -1,5 +1,18 @@
+// Tools: Breakpoint
+// xxs
+// xs
+// sm
+// md
+// lg
+// xl
+// xxl
+
 @mixin breakpoint($key) {
     @media (min-width: map-get($breakpoints, $key)) {
         @content;
     }
 }
+
+// @include breakpoint(xs) {
+// SCSS
+// }
