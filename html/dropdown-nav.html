@@ -1,0 +1,43 @@
+{% extends 'layouts/giza.html' %}
+
+{% block body %}
+    <ul class="c-nav c-nav--dropdown" data-module="Nav">
+        <li class="c-nav__item is-dropdown-nav-parent">
+            <a href="#" class="c-nav__link">
+                Item 1
+            </a>
+            <button class="c-button is-dropdown-button">
+                <span class="o-icon o-icon--chevron-down ">
+                    I
+                </span>
+            </button>
+            <ul class="c-nav is-dropdown-nav c-nav--vertical ">
+                <li class="c-nav__item ">
+                    <a href="#" class="c-nav__link">
+                        Item 1 - 1
+                    </a>
+                </li>
+                <li class="c-nav__item ">
+                    <a href="#" class="c-nav__link">
+                        Item 1 - 2
+                    </a>
+                </li>
+                <li class="c-nav__item ">
+                    <a href="#" class="c-nav__link">
+                        Item 1 - 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="c-nav__item ">
+            <a href="#" class="c-nav__link">
+                Item 2
+            </a>
+        </li>
+        <li class="c-nav__item ">
+            <a href="#" class="c-nav__link">
+                Item 3
+            </a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,29 @@
+$accordion-nav-bg: $light !default;
+$accordion-nav-border: none !default;
+
+.is-accordion-nav {
+    display: none;
+    border: $accordion-nav-border;
+    background: $accordion-nav-bg;
+}
+
+.is-accordion-button {
+    padding: 0;
+    margin: 0;
+}
+
+.is-accordion-nav-parent {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.is-active {
+        > .is-accordion-nav {
+            display: block;
+            flex: none;
+        }
+
+        > .is-accordion-button {
+            transform: rotate(-180deg);
+        }
+    }
+}
