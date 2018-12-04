@@ -5,7 +5,7 @@ var port = process.env.SERVER_PORT || 3000;
 
 requireDir("./gulp");
 
-gulp.task("build", ["clean", "sass", "javascript", "html"]);
+gulp.task("build", ["clean", "sass", "javascript", "html", "icons"]);
 
 gulp.task("serve", ["build"], function() {
   browser.init({ server: "./_build", port: port, open: false });
