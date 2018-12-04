@@ -1,10 +1,10 @@
 export default class Nav {
   constructor(el) {
     this.el = el;
+    this.init();
   }
 
   init() {
-    console.log(`${this.name} has initialised`);
     this.dom = this.cacheDom();
     this.addEventListeners();
   }
@@ -17,27 +17,23 @@ export default class Nav {
   }
 
   addEventListeners() {
-    forEach(this.dom.dropdownMenuParent, (menuItemParent, index) => {
-      menuItemParent.addEventListener("click", e => {
+    for (let i = 0, len = this.dom.dropdownMenuParent.length; i < len; i++) {
+      this.dom.dropdownMenuParent[i].addEventListener("click", e => {
         e.preventDefault();
-        this.handleParentClick(
-          e,
-          index,
-          this.dom.dropdownMenuParent[index].parentNode
-        );
+        this.handleParentClick(e, i, this.dom.dropdownMenuParent[i].parentNode);
       });
-    });
+    }
 
-    forEach(this.dom.accordionMenuParent, (menuItemParent, index) => {
-      menuItemParent.addEventListener("click", e => {
+    for (let i = 0, len = this.dom.accordionMenuParent.length; i < len; i++) {
+      this.dom.accordionMenuParent[i].addEventListener("click", e => {
         e.preventDefault();
         this.handleParentClick(
           e,
-          index,
-          this.dom.accordionMenuParent[index].parentNode
+          i,
+          this.dom.accordionMenuParent[i].parentNode
         );
       });
-    });
+    }
   }
 
   handleParentClick(e, item, itemParent) {
