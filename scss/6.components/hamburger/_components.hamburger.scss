@@ -26,7 +26,8 @@ $hamburger-color-hover: $dark !default;
         }
     }
 
-    &.is-active {
+    &.is-active,
+    .is-active & {
         .c-hamburger__inner {
             transform: rotate(45deg);
 
