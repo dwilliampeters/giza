@@ -27,7 +27,7 @@ $font-weight-medium: 600 !default;
 $font-weight-bold: 700 !default;
 
 // Media queries
-$mq-breakpoints: (
+$breakpoints: (
     xxs: 320px,
     xs: 480px,
     sm: 640px,
@@ -37,12 +37,7 @@ $mq-breakpoints: (
     xxl: 1400px
 ) !default;
 
-
 // All Grids
-
 $grid-columns: 12 !default;
-
 // Grid
-
-
 // Flex Grid

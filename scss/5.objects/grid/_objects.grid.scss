@@ -21,7 +21,7 @@
     }
 }
 
-@each $key, $value in $mq-breakpoints {
+@each $key, $value in $breakpoints {
     @include breakpoint($key) {
         @for $i from 1 through $grid-columns {
             .o-grid > .o-grid-col-span-#{$i}\@#{$key} {
