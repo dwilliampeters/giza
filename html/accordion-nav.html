@@ -1,5 +1,7 @@
 {% extends 'layouts/giza.html' %}
 
+{% from 'macros/icon.html' import icon %}
+
 {% block body %}
     <ul class="c-nav c-nav--vertical c-nav--accordion" data-module="Nav">
         <li class="c-nav__item is-accordion-nav-parent">
@@ -8,7 +10,7 @@
             </a>
             <button class="c-button is-accordion-button">
                 <span class="o-icon o-icon--chevron-down ">
-                    I
+                    {{icon('chevron-down')}}
                 </span>
             </button>
             <ul class="c-nav is-accordion-nav c-nav--vertical">

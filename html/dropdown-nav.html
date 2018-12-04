@@ -1,5 +1,7 @@
 {% extends 'layouts/giza.html' %}
 
+{% from 'macros/icon.html' import icon %}
+
 {% block body %}
     <ul class="c-nav c-nav--dropdown" data-module="Nav">
         <li class="c-nav__item is-dropdown-nav-parent">
@@ -8,7 +10,7 @@
             </a>
             <button class="c-button is-dropdown-button">
                 <span class="o-icon o-icon--chevron-down ">
-                    I
+                    {{icon('chevron-down')}}
                 </span>
             </button>
             <ul class="c-nav is-dropdown-nav c-nav--vertical ">
