@@ -1,18 +1,22 @@
+$grid-gap: $spacer !default;
+$grid-column-gap: $spacer !default;
+$grid-row-gap: $spacer !default;
+
 .o-grid {
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
 }
 
 .o-grid--gutters {
-    grid-gap: $spacer;
+    grid-gap: $grid-gap;
 }
 
 .o-grid--gutters-horizontal {
-    grid-column-gap: $spacer;
+    grid-column-gap: $grid-column-gap;
 }
 
 .o-grid--gutters-vertical {
-    grid-row-gap: $spacer;
+    grid-row-gap: $grid-row-gap;
 }
 
 @for $i from 1 through $grid-columns {

@@ -26,7 +26,7 @@ $font-weight-normal: 400 !default;
 $font-weight-medium: 600 !default;
 $font-weight-bold: 700 !default;
 
-// Media queries
+// Breakpoints
 $breakpoints: (
     xxs: 320px,
     xs: 480px,
@@ -37,7 +37,5 @@ $breakpoints: (
     xxl: 1400px
 ) !default;
 
-// All Grids
-$grid-columns: 12 !default;
 // Grid
-// Flex Grid
+$grid-columns: 12 !default;
