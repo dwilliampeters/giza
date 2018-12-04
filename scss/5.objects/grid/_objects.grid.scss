@@ -1,0 +1,32 @@
+.o-grid {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+}
+
+.o-grid--gutters {
+    grid-gap: $spacer;
+}
+
+.o-grid--gutters-horizontal {
+    grid-column-gap: $spacer;
+}
+
+.o-grid--gutters-vertical {
+    grid-row-gap: $spacer;
+}
+
+@for $i from 1 through $grid-columns {
+    .o-grid > .o-grid-col-span-#{$i} {
+        grid-column: span #{$i};
+    }
+}
+
+@each $key, $value in $mq-breakpoints {
+    @include breakpoint($key) {
+        @for $i from 1 through $grid-columns {
+            .o-grid > .o-grid-col-span-#{$i}\@#{$key} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+}
