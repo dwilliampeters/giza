@@ -1,0 +1,50 @@
+{% extends 'layouts/giza.html' %}
+
+{% block body %}
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+
+    <hr>
+
+    <h3>Definition list</h3>
+
+    <dl>
+        <dt>Description lists</dt>
+        <dd>A description list defines terms and their corresponding descriptions.</dd>
+        <dt>This is a term</dt>
+        <dd>This is a description.</dd>
+        <dt>This is a term</dt>
+        <dd>This is a description.</dd>
+    </dl>
+{% endblock %}
