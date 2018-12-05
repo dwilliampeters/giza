@@ -19,6 +19,8 @@ $grid-row-gap: $spacer !default;
     grid-row-gap: $grid-row-gap;
 }
 
+// COLUMN SPAN
+
 @for $i from 1 through $grid-columns {
     .o-grid > .o-grid-col-span-#{$i} {
         grid-column: span #{$i};
@@ -34,3 +36,39 @@ $grid-row-gap: $spacer !default;
         }
     }
 }
+
+// // COLUMN START
+
+// @for $i from 1 through $grid-columns {
+//     .o-grid > .o-grid-col-start-#{$i} {
+//         grid-column-start: #{$i};
+//     }
+// }
+
+// @each $key, $value in $breakpoints {
+//     @include breakpoint($key) {
+//         @for $i from 1 through $grid-columns {
+//             .o-grid > .o-grid-col-start-#{$i}\@#{$key} {
+//                 grid-column-start: #{$i};
+//             }
+//         }
+//     }
+// }
+
+// // COLUMN END
+
+// @for $i from 1 through $grid-columns {
+//     .o-grid > .o-grid-col-end-#{$i} {
+//         grid-column-end: span #{$i};
+//     }
+// }
+
+// @each $key, $value in $breakpoints {
+//     @include breakpoint($key) {
+//         @for $i from 1 through $grid-columns {
+//             .o-grid > .o-grid-col-end-#{$i}\@#{$key} {
+//                 grid-column-end: span #{$i};
+//             }
+//         }
+//     }
+// }
