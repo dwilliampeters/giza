@@ -20,6 +20,10 @@ $card-title-margin: 0 0 $spacer !default;
     color: $card-header-color;
 }
 
+.c-card__img {
+    width: 100%;
+}
+
 .c-card__body {
     padding: $card-body-padding;
 }
