@@ -16,7 +16,7 @@
     position: static !important;
 }
 
-@each $key, $value in $mq-breakpoints {
+@each $key, $value in $breakpoints {
     @include breakpoint($key) {
         .u-position-relative\@#{$key} {
             position: relative !important;

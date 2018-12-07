@@ -16,7 +16,7 @@
     text-align: justify !important;
 }
 
-@each $key, $value in $mq-breakpoints {
+@each $key, $value in $breakpoints {
     @include breakpoint($key) {
         .u-text-align-left\@#{$key} {
             text-align: left !important;

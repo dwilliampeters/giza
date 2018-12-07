@@ -16,7 +16,7 @@
     margin-left: auto !important;
 }
 
-@each $key, $value in $mq-breakpoints {
+@each $key, $value in $breakpoints {
     @include breakpoint($key) {
         .u-margin-top-auto\@#{$key} {
             margin-top: auto !important;

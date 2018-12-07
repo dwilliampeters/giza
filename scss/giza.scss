@@ -33,10 +33,10 @@
 @import '6.components/table/components.table';
 
 // Utilities
-// @import '7.utilities/utilities.display';
+@import '7.utilities/utilities.display';
 @import '7.utilities/utilities.healthcheck';
-// @import '7.utilities/utilities.margins';
-// @import '7.utilities/utilities.positioning';
+@import '7.utilities/utilities.margins';
+@import '7.utilities/utilities.positioning';
 @import '7.utilities/utilities.size';
-// @import '7.utilities/utilities.text-align';
+@import '7.utilities/utilities.text-align';
 @import '7.utilities/utilities.visibility';
