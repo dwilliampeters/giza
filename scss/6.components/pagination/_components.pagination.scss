@@ -1,0 +1,27 @@
+$pagination-link-padding: $spacer / 2;
+$pagination-link-border-color: $medium;
+$pagination-link-border-width: 1px;
+
+$pagination-active-bg: $medium;
+
+$pagination-disabled-color: $medium;
+
+.c-pagination {
+    display: flex;
+    margin: 0;
+    list-style: none;
+}
+
+.c-pagination__link {
+    padding: $pagination-link-padding;
+    border: $pagination-link-border-width solid $pagination-link-border-color;
+    margin-left: -$pagination-link-border-width;
+
+    .is-active & {
+        background: $pagination-active-bg;
+    }
+
+    .is-disabled & {
+        color: $pagination-disabled-color;
+    }
+}
