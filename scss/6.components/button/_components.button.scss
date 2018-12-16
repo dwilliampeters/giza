@@ -15,6 +15,10 @@ $button-visited-bg: $button-bg !default;
 $button-visited-color: $light !default;
 $button-visited-hover-bg: $button-hover-bg !default;
 $button-visited-hover-color: $button-hover-color !default;
+$button-active-bg: $button-hover-bg !default;
+$button-active-color: $button-hover-color !default;
+$button-active-hover-bg: $button-hover-bg !default;
+$button-active-hover-color: $button-hover-color !default;
 
 $button-text-decoration: none !default;
 
@@ -41,6 +45,14 @@ $button-text-decoration: none !default;
         @include color-swap-on-hover(
             $button-visited-color $button-visited-bg,
             $button-visited-hover-color $button-visited-hover-bg,
+            $link-trans-speed
+        );
+    }
+
+    &.is-active {
+        @include color-swap-on-hover(
+            $button-active-color $button-active-bg,
+            $button-active-hover-color $button-active-hover-bg,
             $link-trans-speed
         );
     }
