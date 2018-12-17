@@ -1,37 +1,29 @@
-// Utilities: Display
+// SETTINGS
 
-.u-display-none {
-    display: none !important;
+$display-prop-values: 'none', 'block', 'inline-block', 'flex' !default;
+
+// MIXINS
+
+@mixin display($prop-value, $breakpoint: '') {
+    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+    .u-display-#{$prop-value + $breakpoint-suffix} {
+        display: $prop-value !important;
+    }
 }
 
-.u-display-block {
-    display: block !important;
+// LOOP THROUGH DISPLAY PROPERTY VALUES AND RUN MIXINS FOR EACH
+
+@each $value in $display-prop-values {
+    @include display($value);
 }
 
-.u-display-inline-block {
-    display: inline-block !important;
-}
-
-.u-display-flex {
-    display: flex !important;
-}
+// LOOP THROUGH BREAKPOINTS, THEN DISPLAY PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $key, $value in $breakpoints {
     @include breakpoint($key) {
-        .u-display-none\@#{$key} {
-            display: none !important;
-        }
-
-        .u-display-block\@#{$key} {
-            display: block !important;
-        }
-
-        .u-display-inline-block\@#{$key} {
-            display: block !important;
-        }
-
-        .u-display-flex\@#{$key} {
-            display: flex !important;
+        @each $value in $display-prop-values {
+            @include display($value, $key);
         }
     }
 }
