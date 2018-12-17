@@ -1,32 +1,32 @@
 {% extends 'layouts/giza.html' %}
 
 {% block body %}
-    <div class="o-grid">
-        <div class="o-grid-col-span-3 c-demo">3 columns</div>
-        <div class="o-grid-col-span-3 c-demo">3 columns</div>
-        <div class="o-grid-col-span-3 c-demo">3 columns</div>
-        <div class="o-grid-col-span-3 c-demo">3 columns</div>
+    <div class="o-grid o-grid--gutters-triple@sm">
+        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
     </div>
 
     <br>
 
     <div class="o-grid">
-        <div class="o-grid-col-span-4 c-demo">4 columns</div>
-        <div class="o-grid-col-span-4 c-demo">4 columns</div>
-        <div class="o-grid-col-span-4 c-demo">4 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-4 c-demo">4 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-4 c-demo">4 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-4 c-demo">4 columns</div>
     </div>
 
     <br>
 
     <div class="o-grid">
-        <div class="o-grid-col-span-6 c-demo">6 columns</div>
-        <div class="o-grid-col-span-6 c-demo">6 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-6 c-demo">6 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-6 c-demo">6 columns</div>
     </div>
 
     <br>
 
     <div class="o-grid">
-        <div class="o-grid-col-span-12 c-demo">12 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-12 c-demo">12 columns</div>
     </div>
 
     <hr>
@@ -34,8 +34,8 @@
     <h3>Responsive grid</h3>
 
     <div class="o-grid">
-        <div class="o-grid-col-span-12 o-grid-col-span-6@md c-demo">6 columns @ medium</div>
-        <div class="o-grid-col-span-12 o-grid-col-span-6@md c-demo">6 columns @ medium</div>
+        <div class="o-grid__cell o-grid__cell--span-6@md c-demo">6 columns @ medium</div>
+        <div class="o-grid__cell o-grid__cell--span-6@md c-demo">6 columns @ medium</div>
     </div>
 
 {% endblock %}

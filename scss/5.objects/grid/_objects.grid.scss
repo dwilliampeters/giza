@@ -1,74 +1,70 @@
-$grid-gap: $spacer !default;
-$grid-column-gap: $spacer !default;
-$grid-row-gap: $spacer !default;
+// SETTINGS
+$grid-columns: 12 !default;
+$single-spacing: 1rem !default;
+$spacing: (
+    single: $single-spacing,
+    double: $single-spacing * 2,
+    triple: $single-spacing * 3
+) !default;
 
+// MIXINS
+@mixin grid-column($column-number, $breakpoint: '') {
+    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+    .o-grid > .o-grid__cell--span-#{$column-number + $breakpoint-suffix} {
+        grid-column: span #{$column-number};
+    }
+}
+
+@mixin grid-gutters($spacing-prop, $spacing-value, $breakpoint: '') {
+    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+    .o-grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
+        grid-gap: $spacing-value;
+    }
+
+    .o-grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
+        grid-column-gap: $spacing-value;
+    }
+
+    .o-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
+        grid-row-gap: $spacing-value;
+    }
+}
+// DEFINITIONS
 .o-grid {
     display: grid;
     grid-template-columns: repeat($grid-columns, 1fr);
-}
 
-.o-grid--gutters {
-    grid-gap: $grid-gap;
-}
-
-.o-grid--gutters-horizontal {
-    grid-column-gap: $grid-column-gap;
-}
-
-.o-grid--gutters-vertical {
-    grid-row-gap: $grid-row-gap;
-}
-
-// COLUMN SPAN
-
-@for $i from 1 through $grid-columns {
-    .o-grid > .o-grid-col-span-#{$i} {
-        grid-column: span #{$i};
+    > .o-grid__cell {
+        grid-column: span $grid-columns;
     }
 }
-
-@each $key, $value in $breakpoints {
-    @include breakpoint($key) {
-        @for $i from 1 through $grid-columns {
-            .o-grid > .o-grid-col-span-#{$i}\@#{$key} {
-                grid-column: span #{$i};
-            }
+// LOOP THROUGH BREAKPOINTS AND RUN MIXINS FOR EACH
+@each $spacing-key, $spacing-value in $spacing {
+    @include grid-gutters($spacing-key, $spacing-value);
+}
+// LOOP THROUGH BREAKPOINTS, THEN SPACINGS AND RUN MIXINS FOR EACH
+@each $breakpoint-key, $breakpoint-value in $breakpoints {
+    @include breakpoint($breakpoint-key) {
+        @each $spacing-key, $spacing-value in $spacing {
+            @include grid-gutters(
+                $spacing-key,
+                $spacing-value,
+                $breakpoint-key
+            );
         }
     }
 }
-
-// // COLUMN START
-
-// @for $i from 1 through $grid-columns {
-//     .o-grid > .o-grid-col-start-#{$i} {
-//         grid-column-start: #{$i};
-//     }
-// }
-
-// @each $key, $value in $breakpoints {
-//     @include breakpoint($key) {
-//         @for $i from 1 through $grid-columns {
-//             .o-grid > .o-grid-col-start-#{$i}\@#{$key} {
-//                 grid-column-start: #{$i};
-//             }
-//         }
-//     }
-// }
-
-// // COLUMN END
-
-// @for $i from 1 through $grid-columns {
-//     .o-grid > .o-grid-col-end-#{$i} {
-//         grid-column-end: span #{$i};
-//     }
-// }
-
-// @each $key, $value in $breakpoints {
-//     @include breakpoint($key) {
-//         @for $i from 1 through $grid-columns {
-//             .o-grid > .o-grid-col-end-#{$i}\@#{$key} {
-//                 grid-column-end: span #{$i};
-//             }
-//         }
-//     }
-// }
+// LOOP THROUGH GRID COLUMNS AND RUN MIXINS FOR EACH
+@for $i from 1 through $grid-columns {
+    @include grid-column($i);
+}
+// LOOP THROUGH BREAKPOINTS, THEN GRID COLUMNS AND RUN MIXINS FOR EACH
+@each $breakpoint-key, $breakpoint-value in $breakpoints {
+    @include breakpoint($breakpoint-key) {
+        @for $i from 1 through $grid-columns {
+            @include grid-column($i, $breakpoint-key);
+        }
+    }
+}

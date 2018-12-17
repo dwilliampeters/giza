@@ -1,33 +1,15 @@
+// SETTINGS
+
+$grid-columns: 12 !default;
+$single-spacing: 1rem !default;
+$spacing: (
+    single: $single-spacing,
+    double: $single-spacing * 2,
+    triple: $single-spacing * 3
+) !default;
+
+// DEFINITIONS
 .o-flex-grid {
     display: flex;
     flex-wrap: wrap;
 }
-
-..o-flex-grid--gutters {
-    margin-right: #{'-' +($spacer/2) + 'rem'};
-    margin-left: #{'-' +($spacer/2) + 'rem'};
-}
-
-..o-flex-grid--gutters-horizontal {
-    grid-column-gap: $spacer;
-}
-
-..o-flex-grid--gutters-vertical {
-    grid-row-gap: $spacer;
-}
-
-@for $i from 1 through $grid-columns {
-    .o-flex-grid > .o-flex-grid__cell#{$i} {
-
-    }
-}
-
-// @each $key, $value in $breakpoints {
-//     @include breakpoint($key) {
-//         @for $i from 1 through $grid-columns {
-//             > .o-flex-grid-col-span-#{$i}\@#{$key} {
-//                 grid-column: span #{$i};
-//             }
-//         }
-//     }
-// }
