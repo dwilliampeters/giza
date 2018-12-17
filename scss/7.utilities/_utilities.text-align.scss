@@ -1,37 +1,29 @@
-// Utilities: Text align
+// SETTINGS
 
-.u-text-align-left {
-    text-align: left !important;
+$text-align-prop-values: 'left', 'center', 'right', 'justify' !default;
+
+// MIXINS
+
+@mixin text-align($prop-value, $breakpoint: '') {
+    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+    .u-text-align-#{$prop-value + $breakpoint-suffix} {
+        text-align: $prop-value !important;
+    }
 }
 
-.u-text-align-center {
-    text-align: center !important;
+// LOOP THROUGH TEXT-ALIGN PROPERTY VALUES AND RUN MIXINS FOR EACH
+
+@each $value in $text-align-prop-values {
+    @include text-align($value);
 }
 
-.u-text-align-right {
-    text-align: right !important;
-}
-
-.u-text-align-justify {
-    text-align: justify !important;
-}
+// LOOP THROUGH BREAKPOINTS, THEN TEXT-ALIGN PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $key, $value in $breakpoints {
     @include breakpoint($key) {
-        .u-text-align-left\@#{$key} {
-            text-align: left !important;
-        }
-
-        .u-text-align-center\@#{$key} {
-            text-align: center !important;
-        }
-
-        .u-text-align-right\@#{$key} {
-            text-align: right !important;
-        }
-
-        .u-text-align-justify\@#{$key} {
-            text-align: justify !important;
+        @each $value in $text-align-prop-values {
+            @include text-align($value, $key);
         }
     }
 }

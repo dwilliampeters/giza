@@ -1,37 +1,43 @@
-// Utilities: Margins
+// SETTINGS
 
-.u-margin-top-auto {
-    margin-top: auto !important;
+$margin-sides: 'top', 'right', 'bottom', 'left' !default;
+$single-spacing: 1rem !default;
+$spacing: (
+    single: $single-spacing,
+    double: $single-spacing * 2,
+    triple: $single-spacing * 3
+) !default;
+
+// MIXINS
+@mixin margin($side, $name, $size, $breakpoint: '') {
+    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+    .u-margin-#{$side}-#{$name + $breakpoint-suffix} {
+        margin-#{$side}: $size !important;
+    }
 }
+// LOOP THROUGH MARGIN PROPERTIES AND RUN MIXINS FOR EACH
+@each $side in $margin-sides {
+    @include margin($side, auto, auto);
 
-.u-margin-right-auto {
-    margin-right: auto !important;
+    @each $spacing-key, $spacing-value in $spacing {
+        @include margin($side, $spacing-key + '-spacing', $spacing-value);
+    }
 }
+// LOOP THROUGH BREAKPOINTS, THEN MARGIN PROPERTIES AND RUN MIXINS FOR EACH
+@each $breakpoint-key, $breakpoint-value in $breakpoints {
+    @include breakpoint($breakpoint-key) {
+        @each $side in $margin-sides {
+            @include margin($side, auto, auto, $breakpoint-key);
 
-.u-margin-bottom-auto {
-    margin-bottom: auto !important;
-}
-
-.u-margin-left-auto {
-    margin-left: auto !important;
-}
-
-@each $key, $value in $breakpoints {
-    @include breakpoint($key) {
-        .u-margin-top-auto\@#{$key} {
-            margin-top: auto !important;
-        }
-
-        .u-margin-right-auto\@#{$key} {
-            margin-right: auto !important;
-        }
-
-        .u-margin-bottom-auto\@#{$key} {
-            margin-bottom: auto !important;
-        }
-
-        .u-margin-left-auto\@#{$key} {
-            margin-left: auto !important;
+            @each $spacing-key, $spacing-value in $spacing {
+                @include margin(
+                    $side,
+                    $spacing-key + '-spacing',
+                    $spacing-value,
+                    $breakpoint-key
+                );
+            }
         }
     }
 }
