@@ -1,7 +1,16 @@
-var gulp = require("gulp");
-var path = require("path");
-var webpackStream = require("webpack-stream");
-var webpack = require("webpack");
+const gulp = require("gulp");
+const gulpif = require("gulp-if");
+const path = require("path");
+const webpackStream = require("webpack-stream");
+const webpack = require("webpack");
+
+const CONFIG = require("../config");
+
+const paths = {
+  src: [`${CONFIG.BASE}/js/giza.js`],
+  build: `${CONFIG.DEST_BUILD}/assets/js`,
+  prod: `${CONFIG.DEST_PROD}/assets/js`
+};
 
 var webpackConfig = {
   mode: "development",
@@ -33,7 +42,8 @@ var webpackConfig = {
 
 gulp.task("javascript", function() {
   return gulp
-    .src("./js/app.js")
+    .src(paths.src)
     .pipe(webpackStream(webpackConfig, webpack))
-    .pipe(gulp.dest("./_build/js"));
+    .pipe(gulpif(!global.production, gulp.dest(paths.build)))
+    .pipe(gulpif(global.production, gulp.dest(paths.prod)));
 });
