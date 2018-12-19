@@ -1,41 +1,78 @@
 {% extends 'layouts/giza.html' %}
 
 {% block body %}
-    <div class="o-grid o-grid--gutters-triple@sm">
-        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
-        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
-        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
-        <div class="o-grid__cell o-grid__cell--span-3 c-demo">3 columns</div>
-    </div>
-
-    <br>
-
+    <h1>CSS Grid</h1>
+    <hr>
+    <h3>Basic Grid<br>
+        <small>The grid container has a class of
+            <code>.o-grid</code>
+            and each cell has the following classes:
+            <code>.o-grid__cell</code>,
+            <code>.o-grid__cell--span-6@sm</code>,
+            <code>.o-grid__cell--span-3@lg</code>
+        </small>
+    </h3>
     <div class="o-grid">
-        <div class="o-grid__cell o-grid__cell--span-4 c-demo">4 columns</div>
-        <div class="o-grid__cell o-grid__cell--span-4 c-demo">4 columns</div>
-        <div class="o-grid__cell o-grid__cell--span-4 c-demo">4 columns</div>
-    </div>
-
-    <br>
-
-    <div class="o-grid">
-        <div class="o-grid__cell o-grid__cell--span-6 c-demo">6 columns</div>
-        <div class="o-grid__cell o-grid__cell--span-6 c-demo">6 columns</div>
-    </div>
-
-    <br>
-
-    <div class="o-grid">
-        <div class="o-grid__cell o-grid__cell--span-12 c-demo">12 columns</div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
     </div>
 
     <hr>
+    <h3>Basic Grid with gutters<br>
+        <small>Same as the above example with single gutters. The grid container now has the following classes:
+            <code>o-grid</code>
+            and
+            <code>o-grid--gutters-single</code>. You can change the class to single, double or triple.
+        </small>
+    </h3>
 
-    <h3>Responsive grid</h3>
-
-    <div class="o-grid">
-        <div class="o-grid__cell o-grid__cell--span-6@md c-demo">6 columns @ medium</div>
-        <div class="o-grid__cell o-grid__cell--span-6@md c-demo">6 columns @ medium</div>
+    <div class="o-grid o-grid--gutters-single">
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-grid__cell o-grid__cell--span-6@sm o-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
     </div>
 
 {% endblock %}
