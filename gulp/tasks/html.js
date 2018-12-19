@@ -15,7 +15,6 @@ const paths = {
 };
 
 gulp.task("html", function() {
-  console.log(paths.src, paths.src_render);
   return gulp
     .src(paths.src)
     .pipe(nunjucksRender({ path: paths.src_render }))
