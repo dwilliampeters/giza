@@ -1,0 +1,54 @@
+// Tools: Breakpoint Shorthand
+// xxs
+// xs
+// sm
+// md
+// lg
+// xl
+// xxl
+
+// @include xs {
+// SCSS
+// }
+
+@mixin xxs {
+    @include mq($from: map-get($breakpoints, 'xxs')) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @include mq($from: map-get($breakpoints, 'xs')) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @include mq($from: map-get($breakpoints, 'sm')) {
+        @content;
+    }
+}
+
+@mixin md {
+    @include mq($from: map-get($breakpoints, 'md')) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @include mq($from: map-get($breakpoints, 'lg')) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @include mq($from: map-get($breakpoints, 'xl')) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @include mq($from: map-get($breakpoints, 'xxl')) {
+        @content;
+    }
+}
