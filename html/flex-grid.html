@@ -1,9 +1,118 @@
 {% extends 'layouts/giza.html' %}
 
 {% block body %}
+    <h1>Flex Grid</h1>
+    <hr>
+    <h3>Basic Grid<br>
+        <small>The grid container has a class of
+            <code>o-flex-grid</code>
+            and each cell has the following classes:
+            <code>o-flex-grid__cell</code>,
+            <code>o-flex-grid__cell--span-6@sm</code>
+            and
+            <code>o-flex-grid__cell--span-3@lg</code>
+        </small>
+    </h3>
     <div class="o-flex-grid">
-        <div class="o-flex-grid__cell">
-            Grid cell
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
         </div>
     </div>
+
+    <hr>
+    <h3>Grid with gutters<br>
+        <small>Same as the above example but with gutters. The grid container now has the following classes:
+            <code>o-flex-grid</code>,
+            <code>o-flex-grid--gutters-single</code>
+            and
+            <code>o-flex-grid--gutters-double@xl</code>. You can change the gutters class to single, double or triple.
+        </small>
+    </h3>
+
+    <div class="o-flex-grid o-flex-grid--gutters-single o-flex-grid--gutters-double@xl">
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+    </div>
+
+    <hr>
+    <h3>Grid with different vertical and horizontal gutters<br>
+        <small>The grid container now has the following classes:
+            <code>o-flex-grid</code>,
+            <code>o-flex-grid--gutters-single</code>,
+            <code>o-flex-grid--gutters-double-horizontal@lg</code>
+            and
+            <code>o-flex-grid--gutters-triple-vertical@lg</code>.
+        </small>
+    </h3>
+
+    <div class="o-flex-grid o-flex-grid--gutters-single o-flex-grid--gutters-double-horizontal@lg  o-flex-grid--gutters-triple-vertical@lg">
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #ccc"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #000"></div>
+        </div>
+        <div class="o-flex-grid__cell o-flex-grid__cell--span-6@sm o-flex-grid__cell--span-3@lg">
+            <div class="c-demo" style="background-color: #888"></div>
+        </div>
+    </div>
+
 {% endblock %}
