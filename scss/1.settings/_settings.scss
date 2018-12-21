@@ -120,6 +120,7 @@ $type-settings: (
             'line-height': 18px
         ),
         'group-c': (
+            'font-size': 15px,
             'line-height': 20px
         )
     ),
@@ -129,6 +130,7 @@ $type-settings: (
             'line-height': 16px
         ),
         'group-b': (
+            'font-size': 14px,
             'line-height': 18px
         )
     ),
@@ -138,7 +140,8 @@ $type-settings: (
             'line-height': 16px
         ),
         'group-c': (
-            'font-size': 13px
+            'font-size': 13px,
+            'line-height': 16px
         )
     ),
     'body-copy': (

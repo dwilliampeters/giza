@@ -56,6 +56,9 @@
     @return $pixels / $context * 1rem;
 }
 
+@function typography {
+}
+
 @mixin typography($type) {
     @if map-has-key(map-get($type-settings, $type), 'group-a') {
         font-size: map-get(
