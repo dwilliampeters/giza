@@ -7,7 +7,7 @@ $text-align-prop-values: left, center, right, justify !default;
 @mixin text-align($prop-value, $breakpoint: '') {
     $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-    .u-text-align-#{$prop-value + $breakpoint-suffix} {
+    .u-text-#{$prop-value + $breakpoint-suffix} {
         text-align: $prop-value !important;
     }
 }
