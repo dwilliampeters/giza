@@ -44,15 +44,39 @@
     @include typography('body-copy');
 }
 
+@function rem($pixels, $context: $font-size) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
+
 @mixin typography($type) {
     @if map-has-key(map-get($type-settings, $type), 'group-a') {
         font-size: map-get(
             map-get(map-get($type-settings, $type), 'group-a'),
             'font-size'
         );
+        font-size: rem(
+            map-get(
+                map-get(map-get($type-settings, $type), 'group-a'),
+                'font-size'
+            )
+        );
         line-height: map-get(
             map-get(map-get($type-settings, $type), 'group-a'),
             'line-height'
+        );
+        line-height: rem(
+            map-get(
+                map-get(map-get($type-settings, $type), 'group-a'),
+                'line-height'
+            )
         );
     }
 
@@ -62,9 +86,21 @@
                 map-get(map-get($type-settings, $type), 'group-b'),
                 'font-size'
             );
+            font-size: rem(
+                map-get(
+                    map-get(map-get($type-settings, $type), 'group-b'),
+                    'font-size'
+                )
+            );
             line-height: map-get(
                 map-get(map-get($type-settings, $type), 'group-b'),
                 'line-height'
+            );
+            line-height: rem(
+                map-get(
+                    map-get(map-get($type-settings, $type), 'group-b'),
+                    'line-height'
+                )
             );
         }
     }
@@ -75,9 +111,21 @@
                 map-get(map-get($type-settings, $type), 'group-c'),
                 'font-size'
             );
+            font-size: rem(
+                map-get(
+                    map-get(map-get($type-settings, $type), 'group-c'),
+                    'font-size'
+                )
+            );
             line-height: map-get(
                 map-get(map-get($type-settings, $type), 'group-c'),
                 'line-height'
+            );
+            line-height: rem(
+                map-get(
+                    map-get(map-get($type-settings, $type), 'group-c'),
+                    'line-height'
+                )
             );
         }
     }
