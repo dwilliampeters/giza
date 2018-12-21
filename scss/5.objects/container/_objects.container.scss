@@ -5,8 +5,6 @@ $container-side-padding: $spacer !default;
 $container-thin-max-width: $site-max-width / 2 !default;
 
 .o-container {
-    @include clearfix;
-
     max-width: $container-max-width;
     padding-right: $container-side-padding;
     padding-left: $container-side-padding;
