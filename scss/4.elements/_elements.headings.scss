@@ -21,3 +21,27 @@ h6 {
         font-size: $heading-small-size;
     }
 }
+
+h1 {
+    @include trafalgar;
+}
+
+h2 {
+    @include paragon;
+}
+
+h3 {
+    @include double-pica;
+}
+
+h4 {
+    @include great-primer;
+}
+
+h5 {
+    @include pica;
+}
+
+h6 {
+    @include long-primer;
+}
