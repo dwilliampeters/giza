@@ -14,8 +14,6 @@ const paths = {
   prod: `${CONFIG.DEST_PROD}/assets/css`
 };
 
-gulp.task("sass");
-
 gulp.task("sass", function() {
   return gulp
     .src(paths.src)
