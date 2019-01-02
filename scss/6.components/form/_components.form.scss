@@ -21,3 +21,9 @@ $form-control-font-size: $base-font-size !default;
     padding: $form-control-padding;
     font-size: $form-control-font-size;
 }
+
+.c-form-control--check,
+.c-form-control--radio {
+    display: inline-block;
+    width: auto;
+}
