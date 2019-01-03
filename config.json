@@ -1,0 +1,6 @@
+{
+  "BASE": "./",
+  "DEST_BUILD": "./_build",
+  "DEST_PROD": "./dist",
+  "DEST_LAB_BUILD": "./_build/lab"
+}
