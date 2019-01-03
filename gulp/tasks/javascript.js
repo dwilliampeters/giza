@@ -8,8 +8,8 @@ const CONFIG = require("../config");
 
 const paths = {
   src: [`${CONFIG.BASE}/js/giza.js`],
-  build: `${CONFIG.DEST_BUILD}/assets/js`,
-  prod: `${CONFIG.DEST_PROD}/assets/js`
+  build: `${CONFIG.DEST_BUILD}/js`,
+  prod: `${CONFIG.DEST_PROD}/js`
 };
 
 var webpackConfig = {
@@ -19,9 +19,9 @@ var webpackConfig = {
     app: ["babel-polyfill", "giza.js"]
   },
   output: {
-    path: path.resolve("_build/assets/js/"),
+    path: path.resolve("_build/js/"),
     filename: "giza.js",
-    publicPath: "/assets/js/"
+    publicPath: "/js/"
   },
   resolve: {
     modules: [path.resolve("js/"), path.resolve("node_modules")]

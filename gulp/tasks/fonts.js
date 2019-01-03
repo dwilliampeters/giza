@@ -5,8 +5,8 @@ const CONFIG = require("../config");
 
 const paths = {
   src: [`${CONFIG.BASE}/fonts/**/*`],
-  build: `${CONFIG.DEST_BUILD}/assets/fonts`,
-  prod: `${CONFIG.DEST_PROD}/assets/fonts`
+  build: `${CONFIG.DEST_BUILD}/fonts`,
+  prod: `${CONFIG.DEST_PROD}/fonts`
 };
 
 gulp.task("fonts", function() {

@@ -5,8 +5,8 @@ const CONFIG = require("../config");
 
 const paths = {
   src: [`${CONFIG.BASE}/images/**/*{jpg,png,svg}`],
-  build: `${CONFIG.DEST_BUILD}/assets/images`,
-  prod: `${CONFIG.DEST_PROD}/assets/images`
+  build: `${CONFIG.DEST_BUILD}/images`,
+  prod: `${CONFIG.DEST_PROD}/images`
 };
 
 gulp.task("images", function() {

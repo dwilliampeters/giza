@@ -10,8 +10,8 @@ const CONFIG = require("../config");
 
 const paths = {
   src: [`${CONFIG.BASE}/scss/giza.scss`],
-  build: `${CONFIG.DEST_BUILD}/assets/css`,
-  prod: `${CONFIG.DEST_PROD}/assets/css`
+  build: `${CONFIG.DEST_BUILD}/css`,
+  prod: `${CONFIG.DEST_PROD}/css`
 };
 
 gulp.task("sass", function() {
