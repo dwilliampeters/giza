@@ -3,7 +3,8 @@
 Framework for HTML, CSS and JS.
 
 ## Usage
+
 ```bash
 yarn
-yarn start
+yarn build
 ```
