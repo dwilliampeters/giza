@@ -1,6 +1,6 @@
 $pagination-link-padding: $spacer / 2 !default;
-$pagination-link-border-color: $medium !default;
 $pagination-link-border-width: 1px !default;
+$pagination-link-border: $pagination-link-border-width solid $medium !default;
 
 $pagination-active-bg: $medium !default;
 
@@ -14,7 +14,7 @@ $pagination-disabled-color: $medium !default;
 
 .c-pagination__link {
     padding: $pagination-link-padding;
-    border: $pagination-link-border-width solid $pagination-link-border-color;
+    border: $pagination-link-border;
     margin-left: -$pagination-link-border-width;
 
     .is-active & {
