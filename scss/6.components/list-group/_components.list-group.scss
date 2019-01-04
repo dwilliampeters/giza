@@ -1,8 +1,8 @@
-$list-group-margin: 0 !default;
+// Components: List group
 
+$list-group-margin: 0 !default;
 $list-group-item-padding: $spacer !default;
 $list-group-item-border: 1px solid $medium !default;
-
 $list-group-item-action-bg: transparent !default;
 $list-group-item-action-color: $dark !default;
 $list-group-item-action-hover-bg: $button-hover-bg !default;
@@ -11,7 +11,6 @@ $list-group-item-action-active-bg: $button-bg !default;
 $list-group-item-action-active-color: $button-color !default;
 $list-group-item-action-active-hover-bg: $button-hover-bg !default;
 $list-group-item-action-active-hover-color: $button-hover-color !default;
-
 $list-group-item-action-text-decoration: none !default;
 
 .c-list-group {

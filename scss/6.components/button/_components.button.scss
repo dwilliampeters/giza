@@ -6,7 +6,6 @@ $button-min-height: 1em !default;
 $button-border: 0 !default;
 $button-cursor: pointer !default;
 $button-line-height: 1 !default;
-
 $button-bg: $primary !default;
 $button-color: $light !default;
 $button-hover-bg: $secondary !default;
@@ -19,9 +18,7 @@ $button-active-bg: $button-hover-bg !default;
 $button-active-color: $button-hover-color !default;
 $button-active-hover-bg: $button-hover-bg !default;
 $button-active-hover-color: $button-hover-color !default;
-
 $button-icon-fill: $button-color !default;
-
 $button-text-decoration: none !default;
 
 .c-button {

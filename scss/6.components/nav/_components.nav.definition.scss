@@ -1,19 +1,17 @@
-// Components: Menu Definition
+// Components: Nav Definition
 
-$menu-link-color: $link-color !default;
-$menu-link-bg: transparent !default;
-$menu-link-hover-color: $menu-link-color !default;
-$menu-link-hover-bg: $menu-link-bg !default;
-$menu-link-text-decoration: none !default;
-$menu-link-text-align: center !default;
-$menu-link-trans-speed: 200 !default;
-$menu-link-active-color: $menu-link-color !default;
-$menu-link-active-bg: transparent !default;
-
-$menu-item-padding: 0 !default;
-
-$menu-link-padding: $spacer !default;
-$menu-link-font-weight: $font-weight-normal !default;
+$nav-link-color: $link-color !default;
+$nav-link-bg: transparent !default;
+$nav-link-hover-color: $nav-link-color !default;
+$nav-link-hover-bg: $nav-link-bg !default;
+$nav-link-text-decoration: none !default;
+$nav-link-text-align: center !default;
+$nav-link-trans-speed: 200 !default;
+$nav-link-active-color: $nav-link-color !default;
+$nav-link-active-bg: transparent !default;
+$nav-item-padding: 0 !default;
+$nav-link-padding: $spacer !default;
+$nav-link-font-weight: $font-weight-normal !default;
 
 .c-nav {
     display: flex;
@@ -42,7 +40,7 @@ $menu-link-font-weight: $font-weight-normal !default;
 
 .c-nav__item {
     flex: 0 0 auto;
-    padding: $menu-item-padding;
+    padding: $nav-item-padding;
 }
 
 .c-nav__item--right {
@@ -57,22 +55,22 @@ $menu-link-font-weight: $font-weight-normal !default;
 
 .c-nav__link {
     @include color-swap-on-hover(
-        $menu-link-color $menu-link-bg,
-        $menu-link-hover-color $menu-link-hover-bg,
-        $menu-link-trans-speed
+        $nav-link-color $nav-link-bg,
+        $nav-link-hover-color $nav-link-hover-bg,
+        $nav-link-trans-speed
     );
 
     display: block;
-    padding: $menu-link-padding;
-    text-align: $menu-link-text-align;
-    text-decoration: $menu-link-text-decoration;
+    padding: $nav-link-padding;
+    text-align: $nav-link-text-align;
+    text-decoration: $nav-link-text-decoration;
 
     .is-active > &,
     &.is-active {
         @include color-swap-on-hover(
-            $menu-link-active-color $menu-link-active-bg,
-            $menu-link-active-color $menu-link-active-bg,
-            $menu-link-trans-speed
+            $nav-link-active-color $nav-link-active-bg,
+            $nav-link-active-color $nav-link-active-bg,
+            $nav-link-trans-speed
         );
     }
 }
