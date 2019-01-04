@@ -1,5 +1,16 @@
 {% extends 'layouts/giza.html' %}
 
+{% from 'macros/icon.html' import icon %}
+
 {% block body %}
-    <a class="c-button">Button</a>
+    <a class="c-button">
+        <span class="c-button__text">Button</span>
+    </a>
+
+    <br><br>
+
+    <a class="c-button">
+        {{icon('cart')}}
+        <span class="c-button__text">Button</span>
+    </a>
 {% endblock %}

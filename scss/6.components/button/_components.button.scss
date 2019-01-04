@@ -20,12 +20,19 @@ $button-active-color: $button-hover-color !default;
 $button-active-hover-bg: $button-hover-bg !default;
 $button-active-hover-color: $button-hover-color !default;
 
+$button-icon-fill: $button-color !default;
+
 $button-text-decoration: none !default;
 
 .c-button {
-    display: inline-block;
+    // display: inline-block;
+    display: inline-flex;
     min-width: $button-min-width;
     min-height: $button-min-height;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     padding: $button-padding;
     border: $button-border;
     background: $button-bg;
@@ -60,4 +67,14 @@ $button-text-decoration: none !default;
     &--block {
         display: block;
     }
+
+    .o-icon {
+        svg {
+            fill: $button-icon-fill;
+        }
+    }
+}
+
+.c-button__text {
+    display: inline-block;
 }
