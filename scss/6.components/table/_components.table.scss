@@ -12,23 +12,23 @@ $table-td-border-bottom: 1px solid $medium !default;
 $table-td-border-left: none !default;
 
 .c-table {
-    width: 100%;
+  width: 100%;
 
-    th {
-        padding: $table-th-padding;
-        border-top: $table-th-border-top;
-        border-right: $table-th-border-right;
-        border-bottom: $table-th-border-bottom;
-        border-left: $table-th-border-left;
-        text-align: inherit;
-    }
+  th {
+    padding: $table-th-padding;
+    border-top: $table-th-border-top;
+    border-right: $table-th-border-right;
+    border-bottom: $table-th-border-bottom;
+    border-left: $table-th-border-left;
+    text-align: inherit;
+  }
 
-    td {
-        padding: $table-td-padding;
-        border-top: $table-td-border-top;
-        border-right: $table-td-border-right;
-        border-bottom: $table-td-border-bottom;
-        border-left: $table-td-border-left;
-        text-align: inherit;
-    }
+  td {
+    padding: $table-td-padding;
+    border-top: $table-td-border-top;
+    border-right: $table-td-border-right;
+    border-bottom: $table-td-border-bottom;
+    border-left: $table-td-border-left;
+    text-align: inherit;
+  }
 }

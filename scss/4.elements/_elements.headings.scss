@@ -12,36 +12,36 @@ h3,
 h4,
 h5,
 h6 {
-    margin: $heading-margin;
-    color: $heading-color;
-    font-family: $heading-font;
-    font-weight: $heading-font-weight;
+  margin: $heading-margin;
+  color: $heading-color;
+  font-family: $heading-font;
+  font-weight: $heading-font-weight;
 
-    small {
-        font-size: $heading-small-size;
-    }
+  small {
+    font-size: $heading-small-size;
+  }
 }
 
 h1 {
-    @include trafalgar;
+  @include trafalgar;
 }
 
 h2 {
-    @include paragon;
+  @include paragon;
 }
 
 h3 {
-    @include double-pica;
+  @include double-pica;
 }
 
 h4 {
-    @include great-primer;
+  @include great-primer;
 }
 
 h5 {
-    @include pica;
+  @include pica;
 }
 
 h6 {
-    @include long-primer;
+  @include long-primer;
 }

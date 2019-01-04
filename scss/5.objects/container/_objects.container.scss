@@ -5,25 +5,25 @@ $container-side-padding: $spacer !default;
 $container-thin-max-width: $site-max-width / 2 !default;
 
 .o-container {
-    max-width: $container-max-width;
-    padding-right: $container-side-padding;
-    padding-left: $container-side-padding;
+  max-width: $container-max-width;
+  padding-right: $container-side-padding;
+  padding-left: $container-side-padding;
 }
 
 .o-container--centered {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .o-container--fluid {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .o-container--collapse {
-    padding-right: 0;
-    padding-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .o-container--thin {
-    max-width: $container-thin-max-width;
+  max-width: $container-thin-max-width;
 }

@@ -5,25 +5,25 @@ $display-prop-values: 'none', 'block', 'inline-block', 'flex' !default;
 // MIXINS
 
 @mixin display($prop-value, $breakpoint: '') {
-    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-    .u-display-#{$prop-value + $breakpoint-suffix} {
-        display: $prop-value !important;
-    }
+  .u-display-#{$prop-value + $breakpoint-suffix} {
+    display: $prop-value !important;
+  }
 }
 
 // LOOP THROUGH DISPLAY PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $value in $display-prop-values {
-    @include display($value);
+  @include display($value);
 }
 
 // LOOP THROUGH BREAKPOINTS, THEN DISPLAY PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $key, $value in $breakpoints {
-    @include breakpoint($key) {
-        @each $value in $display-prop-values {
-            @include display($value, $key);
-        }
+  @include breakpoint($key) {
+    @each $value in $display-prop-values {
+      @include display($value, $key);
     }
+  }
 }

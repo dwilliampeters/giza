@@ -6,24 +6,24 @@ $form-control-padding: $spacer / 2 !default;
 $form-control-font-size: $base-font-size !default;
 
 .c-form-group {
-    margin-bottom: $form-group-margin;
+  margin-bottom: $form-group-margin;
 }
 
 .c-form-label {
-    display: inline-block;
-    margin-bottom: $form-label-margin;
-    cursor: pointer;
+  display: inline-block;
+  margin-bottom: $form-label-margin;
+  cursor: pointer;
 }
 
 .c-form-control {
-    display: block;
-    width: 100%;
-    padding: $form-control-padding;
-    font-size: $form-control-font-size;
+  display: block;
+  width: 100%;
+  padding: $form-control-padding;
+  font-size: $form-control-font-size;
 }
 
 .c-form-control--check,
 .c-form-control--radio {
-    display: inline-block;
-    width: auto;
+  display: inline-block;
+  width: auto;
 }

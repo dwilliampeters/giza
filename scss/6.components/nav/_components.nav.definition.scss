@@ -14,63 +14,63 @@ $nav-link-padding: $spacer !default;
 $nav-link-font-weight: $font-weight-normal !default;
 
 .c-nav {
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin: 0;
-    list-style: none;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+  list-style: none;
 }
 
 .c-nav--right {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .c-nav--center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .c-nav--expanded {
-    > .c-nav__item {
-        min-width: 0;
-        flex: 1 1 0%;
-    }
+  > .c-nav__item {
+    min-width: 0;
+    flex: 1 1 0%;
+  }
 }
 
 .c-nav__item {
-    flex: 0 0 auto;
-    padding: $nav-item-padding;
+  flex: 0 0 auto;
+  padding: $nav-item-padding;
 }
 
 .c-nav__item--right {
-    display: flex;
-    margin-left: auto;
+  display: flex;
+  margin-left: auto;
 }
 
 .c-nav__item--left {
-    display: flex;
-    margin-right: auto;
+  display: flex;
+  margin-right: auto;
 }
 
 .c-nav__link {
+  @include color-swap-on-hover(
+    $nav-link-color $nav-link-bg,
+    $nav-link-hover-color $nav-link-hover-bg,
+    $nav-link-trans-speed
+  );
+
+  display: block;
+  padding: $nav-link-padding;
+  text-align: $nav-link-text-align;
+  text-decoration: $nav-link-text-decoration;
+
+  .is-active > &,
+  &.is-active {
     @include color-swap-on-hover(
-        $nav-link-color $nav-link-bg,
-        $nav-link-hover-color $nav-link-hover-bg,
-        $nav-link-trans-speed
+      $nav-link-active-color $nav-link-active-bg,
+      $nav-link-active-color $nav-link-active-bg,
+      $nav-link-trans-speed
     );
-
-    display: block;
-    padding: $nav-link-padding;
-    text-align: $nav-link-text-align;
-    text-decoration: $nav-link-text-decoration;
-
-    .is-active > &,
-    &.is-active {
-        @include color-swap-on-hover(
-            $nav-link-active-color $nav-link-active-bg,
-            $nav-link-active-color $nav-link-active-bg,
-            $nav-link-trans-speed
-        );
-    }
+  }
 }

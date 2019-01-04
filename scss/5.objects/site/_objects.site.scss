@@ -3,36 +3,36 @@
 $site-content-padding: $spacer;
 
 .o-site {
-    display: flex;
-    min-height: 100%;
-    flex-direction: column;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 .o-site__header,
 .o-site__footer {
-    flex: none;
+  flex: none;
 }
 
 .o-site__content {
-    width: 100%;
-    flex: 1 0 auto;
-    padding: $site-content-padding 0 0;
+  width: 100%;
+  flex: 1 0 auto;
+  padding: $site-content-padding 0 0;
 
-    &::after {
-        display: block;
-        height: 0;
-        margin-top: $site-content-padding;
-        content: '\00a0';
-        visibility: hidden;
-    }
+  &::after {
+    display: block;
+    height: 0;
+    margin-top: $site-content-padding;
+    content: '\00a0';
+    visibility: hidden;
+  }
 }
 
 .o-site--collapse {
-    .o-site__content {
-        padding: 0;
-    }
+  .o-site__content {
+    padding: 0;
+  }
 
-    .o-site__content::after {
-        content: none;
-    }
+  .o-site__content::after {
+    content: none;
+  }
 }

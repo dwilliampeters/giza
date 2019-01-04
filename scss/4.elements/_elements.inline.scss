@@ -10,51 +10,51 @@ $small-font-size: 80% !default;
 $cite-font-style: italic !default;
 
 b {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 cite {
-    font-style: $cite-font-style;
+  font-style: $cite-font-style;
 
-    &::before {
-        content: '- ';
-    }
+  &::before {
+    content: '- ';
+  }
 }
 
 code {
-    display: inline-block;
-    padding: 0 0.2rem;
-    background: $code-bg;
-    font-family: $code-font-family;
+  display: inline-block;
+  padding: 0 0.2rem;
+  background: $code-bg;
+  font-family: $code-font-family;
 }
 
 hr {
-    max-width: $hr-width;
-    height: 0;
-    border: 0;
-    border-bottom: $hr-border;
-    margin: $hr-margin;
-    clear: both;
+  max-width: $hr-width;
+  height: 0;
+  border: 0;
+  border-bottom: $hr-border;
+  margin: $hr-margin;
+  clear: both;
 }
 
 i {
-    font-style: normal;
+  font-style: normal;
 }
 
 pre {
-    display: block;
+  display: block;
 
-    code {
-        display: block;
-        padding: $spacer;
-        overflow-x: auto;
-    }
+  code {
+    display: block;
+    padding: $spacer;
+    overflow-x: auto;
+  }
 }
 
 small {
-    font-size: $small-font-size;
+  font-size: $small-font-size;
 }
 
 u {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -7,21 +7,21 @@ $pagination-active-bg: $medium !default;
 $pagination-disabled-color: $medium !default;
 
 .c-pagination {
-    display: flex;
-    margin: 0;
-    list-style: none;
+  display: flex;
+  margin: 0;
+  list-style: none;
 }
 
 .c-pagination__link {
-    padding: $pagination-link-padding;
-    border: $pagination-link-border;
-    margin-left: -$pagination-link-border-width;
+  padding: $pagination-link-padding;
+  border: $pagination-link-border;
+  margin-left: -$pagination-link-border-width;
 
-    .is-active & {
-        background: $pagination-active-bg;
-    }
+  .is-active & {
+    background: $pagination-active-bg;
+  }
 
-    .is-disabled & {
-        color: $pagination-disabled-color;
-    }
+  .is-disabled & {
+    color: $pagination-disabled-color;
+  }
 }

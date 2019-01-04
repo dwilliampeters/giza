@@ -5,42 +5,42 @@ $dropdown-nav-bg: $light !default;
 $dropdown-nav-border: $dark 1px solid !default;
 
 .is-dropdown-nav {
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    right: auto;
-    left: 0;
-    display: none;
-    width: auto;
-    min-width: $dropdown-nav-min-width;
-    border: $dropdown-nav-border;
-    margin: 0;
-    background: $dropdown-nav-bg;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  right: auto;
+  left: 0;
+  display: none;
+  width: auto;
+  min-width: $dropdown-nav-min-width;
+  border: $dropdown-nav-border;
+  margin: 0;
+  background: $dropdown-nav-bg;
 
-    .c-nav__link {
-        padding-right: $spacer;
-        padding-left: $spacer;
-    }
+  .c-nav__link {
+    padding-right: $spacer;
+    padding-left: $spacer;
+  }
 }
 
 .is-dropdown-button {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .is-dropdown-nav-parent {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
-    &.is-active {
-        > .is-dropdown-nav {
-            display: block;
-            flex: none;
-        }
-
-        > .is-dropdown-button {
-            transform: rotate(-180deg);
-        }
+  &.is-active {
+    > .is-dropdown-nav {
+      display: block;
+      flex: none;
     }
+
+    > .is-dropdown-button {
+      transform: rotate(-180deg);
+    }
+  }
 }

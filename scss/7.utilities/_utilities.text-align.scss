@@ -5,25 +5,25 @@ $text-align-prop-values: left, center, right, justify !default;
 // MIXINS
 
 @mixin text-align($prop-value, $breakpoint: '') {
-    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-    .u-text-#{$prop-value + $breakpoint-suffix} {
-        text-align: $prop-value !important;
-    }
+  .u-text-#{$prop-value + $breakpoint-suffix} {
+    text-align: $prop-value !important;
+  }
 }
 
 // LOOP THROUGH TEXT-ALIGN PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $value in $text-align-prop-values {
-    @include text-align($value);
+  @include text-align($value);
 }
 
 // LOOP THROUGH BREAKPOINTS, THEN TEXT-ALIGN PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $key, $value in $breakpoints {
-    @include breakpoint($key) {
-        @each $value in $text-align-prop-values {
-            @include text-align($value, $key);
-        }
+  @include breakpoint($key) {
+    @each $value in $text-align-prop-values {
+      @include text-align($value, $key);
     }
+  }
 }

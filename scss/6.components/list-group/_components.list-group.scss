@@ -14,47 +14,46 @@ $list-group-item-action-active-hover-color: $button-hover-color !default;
 $list-group-item-action-text-decoration: none !default;
 
 .c-list-group {
-    display: flex;
-    flex-direction: column;
-    margin: $list-group-margin;
+  display: flex;
+  flex-direction: column;
+  margin: $list-group-margin;
 }
 
 .c-list-group__item {
-    position: relative;
-    display: block;
-    padding: $list-group-item-padding;
-    border: $list-group-item-border;
-    margin-bottom: -1px;
+  position: relative;
+  display: block;
+  padding: $list-group-item-padding;
+  border: $list-group-item-border;
+  margin-bottom: -1px;
 }
 
 .c-list-group__item--action {
-    background: $list-group-item-action-bg;
-    color: $list-group-item-action-color;
-    cursor: pointer;
-    text-align: left;
-    text-decoration: $list-group-item-action-text-decoration;
+  background: $list-group-item-action-bg;
+  color: $list-group-item-action-color;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: $list-group-item-action-text-decoration;
 
+  @include color-swap-on-hover(
+    $list-group-item-action-color $list-group-item-action-bg,
+    $list-group-item-action-hover-color $list-group-item-action-hover-bg,
+    $link-trans-speed
+  );
+
+  &.is-active {
     @include color-swap-on-hover(
-        $list-group-item-action-color $list-group-item-action-bg,
-        $list-group-item-action-hover-color $list-group-item-action-hover-bg,
-        $link-trans-speed
+      $list-group-item-action-active-color $list-group-item-action-active-bg,
+      $list-group-item-action-active-hover-color
+      $list-group-item-action-active-hover-bg,
+      $link-trans-speed
     );
+  }
 
-    &.is-active {
-        @include color-swap-on-hover(
-            $list-group-item-action-active-color
-            $list-group-item-action-active-bg,
-            $list-group-item-action-active-hover-color
-                $list-group-item-action-active-hover-bg,
-            $link-trans-speed
-        );
-    }
-
-    &:visited {
-        @include color-swap-on-hover(
-            $list-group-item-action-color $list-group-item-action-bg,
-            $list-group-item-action-hover-color $list-group-item-action-hover-bg,
-            $link-trans-speed
-        );
-    }
+  &:visited {
+    @include color-swap-on-hover(
+      $list-group-item-action-color $list-group-item-action-bg,
+      $list-group-item-action-hover-color $list-group-item-action-hover-bg,
+      $link-trans-speed
+    );
+  }
 }

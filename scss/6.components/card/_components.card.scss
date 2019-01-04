@@ -9,24 +9,24 @@ $card-body-padding: $spacer !default;
 $card-title-margin: 0 0 $spacer !default;
 
 .c-card {
-    border: $card-border;
-    background: $card-bg;
+  border: $card-border;
+  background: $card-bg;
 }
 
 .c-card__header {
-    padding: $card-header-padding;
-    background: $card-header-bg;
-    color: $card-header-color;
+  padding: $card-header-padding;
+  background: $card-header-bg;
+  color: $card-header-color;
 }
 
 .c-card__img {
-    width: 100%;
+  width: 100%;
 }
 
 .c-card__body {
-    padding: $card-body-padding;
+  padding: $card-body-padding;
 }
 
 .c-card__title {
-    margin: $card-title-margin;
+  margin: $card-title-margin;
 }

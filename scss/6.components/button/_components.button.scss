@@ -22,56 +22,56 @@ $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
 .c-button {
-    // display: inline-block;
-    display: inline-flex;
-    min-width: $button-min-width;
-    min-height: $button-min-height;
-    flex: 1;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: $button-padding;
-    border: $button-border;
-    background: $button-bg;
-    color: $button-color;
-    cursor: $button-cursor;
-    line-height: $button-line-height;
-    text-decoration: $button-text-decoration;
-    vertical-align: baseline;
+  // display: inline-block;
+  display: inline-flex;
+  min-width: $button-min-width;
+  min-height: $button-min-height;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: $button-padding;
+  border: $button-border;
+  background: $button-bg;
+  color: $button-color;
+  cursor: $button-cursor;
+  line-height: $button-line-height;
+  text-decoration: $button-text-decoration;
+  vertical-align: baseline;
 
+  @include color-swap-on-hover(
+    $button-color $button-bg,
+    $button-hover-color $button-hover-bg,
+    $link-trans-speed
+  );
+
+  &:visited {
     @include color-swap-on-hover(
-        $button-color $button-bg,
-        $button-hover-color $button-hover-bg,
-        $link-trans-speed
+      $button-visited-color $button-visited-bg,
+      $button-visited-hover-color $button-visited-hover-bg,
+      $link-trans-speed
     );
+  }
 
-    &:visited {
-        @include color-swap-on-hover(
-            $button-visited-color $button-visited-bg,
-            $button-visited-hover-color $button-visited-hover-bg,
-            $link-trans-speed
-        );
-    }
+  &.is-active {
+    @include color-swap-on-hover(
+      $button-active-color $button-active-bg,
+      $button-active-hover-color $button-active-hover-bg,
+      $link-trans-speed
+    );
+  }
 
-    &.is-active {
-        @include color-swap-on-hover(
-            $button-active-color $button-active-bg,
-            $button-active-hover-color $button-active-hover-bg,
-            $link-trans-speed
-        );
-    }
+  &--block {
+    display: block;
+  }
 
-    &--block {
-        display: block;
+  .o-icon {
+    svg {
+      fill: $button-icon-fill;
     }
-
-    .o-icon {
-        svg {
-            fill: $button-icon-fill;
-        }
-    }
+  }
 }
 
 .c-button__text {
-    display: inline-block;
+  display: inline-block;
 }

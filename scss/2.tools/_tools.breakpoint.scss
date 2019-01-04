@@ -8,9 +8,9 @@
 // xxl
 
 @mixin breakpoint($key) {
-    @media (min-width: map-get($breakpoints, $key)) {
-        @content;
-    }
+  @media (min-width: map-get($breakpoints, $key)) {
+    @content;
+  }
 }
 
 // @include breakpoint(xs) {

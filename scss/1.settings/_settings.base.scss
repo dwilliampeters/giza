@@ -9,27 +9,27 @@ $min-touch-size: 44px !default;
 $site-max-width: 1200px !default;
 $spacer: 1rem !default;
 $spacer-sizes: (
-    single: $spacer,
-    double: $spacer * 2,
-    triple: $spacer * 3
+  single: $spacer,
+  double: $spacer * 2,
+  triple: $spacer * 3
 ) !default;
 
 // Breakpoints
 $breakpoints: (
-    xxs: 320px,
-    xs: 480px,
-    sm: 640px,
-    md: 768px,
-    lg: 960px,
-    xl: 1180px,
-    xxl: 1400px
+  xxs: 320px,
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 960px,
+  xl: 1180px,
+  xxl: 1400px
 ) !default;
 
 // Colours
 // Use http://chir.ag/projects/name-that-color/#51284F
 // for colour variable names
 
-// Colours Types
+// Colour Types
 $light: #fff !default;
 $medium: #afb1b8 !default;
 $dark: #000 !default;
@@ -39,7 +39,8 @@ $secondary: #e52b50 !default;
 // Fonts
 $font: Helvetica, Arial, sans-serif !default;
 $font-loaded: Helvetica, Arial, sans-serif !default;
-$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'Courier', monospace !default;
+$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
+  'Courier', monospace !default;
 $font-size: 16px !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 600 !default;

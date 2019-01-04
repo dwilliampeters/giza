@@ -2,81 +2,77 @@
 // from HTML5 Boilerplate - https://github.com/h5bp/html5-boilerplate
 
 @media print {
-    *,
-    *::before,
-    *::after,
-    *::first-letter,
-    *::first-line {
-        background: transparent !important;
-        box-shadow: none !important;
-        color: $dark !important; // Black prints faster: http://www.sanbeiji.com/archives/953 */
-        text-shadow: none !important;
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: $dark !important; // Black prints faster: http://www.sanbeiji.com/archives/953 */
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  [href]::after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr {
+    &[title]::after {
+      content: ' (' attr(title) ')';
     }
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  //
 
-    [href]::after {
-        content: ' (' attr(href) ')';
-    }
+  // * Don't show links that are fragment identifiers,
+  // * or use the `javascript:` pseudo protocol
+  //
 
-    abbr {
-        &[title]::after {
-            content: ' (' attr(title) ')';
-        }
-    }
+  [href^='#']::after,
+  [href^='javascript:']::after {
+    content: '';
+  }
 
-    //
+  pre,
+  blockquote {
+    border: 1px solid $dark;
+    page-break-inside: avoid;
+  }
 
+  //
 
-    // * Don't show links that are fragment identifiers,
-    // * or use the `javascript:` pseudo protocol
-    //
+  // * Printing Tables:
+  // * http://css-discuss.incutio.com/wiki/Printing_Tables
+  //
 
+  thead {
+    display: table-header-group;
+  }
 
-    [href^='#']::after,
-    [href^='javascript:']::after {
-        content: '';
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid $dark;
-        page-break-inside: avoid;
-    }
+  img {
+    max-width: 100% !important;
+  }
 
-    //
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-
-    // * Printing Tables:
-    // * http://css-discuss.incutio.com/wiki/Printing_Tables
-    //
-
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

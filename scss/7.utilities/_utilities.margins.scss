@@ -3,34 +3,34 @@ $margin-sides: 'top', 'right', 'bottom', 'left' !default;
 
 // Mixins
 @mixin margin($side, $name, $size, $breakpoint: '') {
-    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-    .u-margin-#{$side}-#{$name + $breakpoint-suffix} {
-        margin-#{$side}: $size !important;
-    }
+  .u-margin-#{$side}-#{$name + $breakpoint-suffix} {
+    margin-#{$side}: $size !important;
+  }
 }
 // LOOP THROUGH MARGIN PROPERTIES AND RUN MIXINS FOR EACH
 @each $side in $margin-sides {
-    @include margin($side, auto, auto);
+  @include margin($side, auto, auto);
 
-    @each $spacing-key, $spacing-value in $spacer-sizes {
-        @include margin($side, $spacing-key + '-spacing', $spacing-value);
-    }
+  @each $spacing-key, $spacing-value in $spacer-sizes {
+    @include margin($side, $spacing-key + '-spacing', $spacing-value);
+  }
 }
 // LOOP THROUGH BREAKPOINTS, THEN MARGIN PROPERTIES AND RUN MIXINS FOR EACH
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
-    @include breakpoint($breakpoint-key) {
-        @each $side in $margin-sides {
-            @include margin($side, auto, auto, $breakpoint-key);
+  @include breakpoint($breakpoint-key) {
+    @each $side in $margin-sides {
+      @include margin($side, auto, auto, $breakpoint-key);
 
-            @each $spacing-key, $spacing-value in $spacer-sizes {
-                @include margin(
-                    $side,
-                    $spacing-key + '-spacing',
-                    $spacing-value,
-                    $breakpoint-key
-                );
-            }
-        }
+      @each $spacing-key, $spacing-value in $spacer-sizes {
+        @include margin(
+          $side,
+          $spacing-key + '-spacing',
+          $spacing-value,
+          $breakpoint-key
+        );
+      }
     }
+  }
 }

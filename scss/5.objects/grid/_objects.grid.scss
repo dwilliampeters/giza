@@ -1,61 +1,57 @@
 // Mixins
 @mixin grid-column($column-number, $breakpoint: '') {
-    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-    .o-grid > .o-grid__cell--span-#{$column-number + $breakpoint-suffix} {
-        grid-column: span #{$column-number};
-    }
+  .o-grid > .o-grid__cell--span-#{$column-number + $breakpoint-suffix} {
+    grid-column: span #{$column-number};
+  }
 }
 
 @mixin grid-gutters($spacing-prop, $spacing-value, $breakpoint: '') {
-    $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-    .o-grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
-        grid-gap: $spacing-value;
-    }
+  .o-grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
+    grid-gap: $spacing-value;
+  }
 
-    .o-grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
-        grid-column-gap: $spacing-value;
-    }
+  .o-grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
+    grid-column-gap: $spacing-value;
+  }
 
-    .o-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
-        grid-row-gap: $spacing-value;
-    }
+  .o-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
+    grid-row-gap: $spacing-value;
+  }
 }
 // DEFINITIONS
 .o-grid {
-    display: grid;
-    grid-template-columns: repeat($grid-columns, 1fr);
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
 
-    > .o-grid__cell {
-        grid-column: span $grid-columns;
-    }
+  > .o-grid__cell {
+    grid-column: span $grid-columns;
+  }
 }
 // LOOP THROUGH BREAKPOINTS AND RUN MIXINS FOR EACH
 @each $spacing-key, $spacing-value in $spacer-sizes {
-    @include grid-gutters($spacing-key, $spacing-value);
+  @include grid-gutters($spacing-key, $spacing-value);
 }
 // LOOP THROUGH BREAKPOINTS, THEN SPACINGS AND RUN MIXINS FOR EACH
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
-    @include breakpoint($breakpoint-key) {
-        @each $spacing-key, $spacing-value in $spacer-sizes {
-            @include grid-gutters(
-                $spacing-key,
-                $spacing-value,
-                $breakpoint-key
-            );
-        }
+  @include breakpoint($breakpoint-key) {
+    @each $spacing-key, $spacing-value in $spacer-sizes {
+      @include grid-gutters($spacing-key, $spacing-value, $breakpoint-key);
     }
+  }
 }
 // LOOP THROUGH GRID COLUMNS AND RUN MIXINS FOR EACH
 @for $i from 1 through $grid-columns {
-    @include grid-column($i);
+  @include grid-column($i);
 }
 // LOOP THROUGH BREAKPOINTS, THEN GRID COLUMNS AND RUN MIXINS FOR EACH
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
-    @include breakpoint($breakpoint-key) {
-        @for $i from 1 through $grid-columns {
-            @include grid-column($i, $breakpoint-key);
-        }
+  @include breakpoint($breakpoint-key) {
+    @for $i from 1 through $grid-columns {
+      @include grid-column($i, $breakpoint-key);
     }
+  }
 }
