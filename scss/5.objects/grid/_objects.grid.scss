@@ -1,11 +1,4 @@
-// SETTINGS
-$spacing: (
-    single: $spacer,
-    double: $spacer * 2,
-    triple: $spacer * 3
-) !default;
-
-// MIXINS
+// Mixins
 @mixin grid-column($column-number, $breakpoint: '') {
     $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 

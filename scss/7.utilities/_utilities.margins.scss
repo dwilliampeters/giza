@@ -1,13 +1,7 @@
-// SETTINGS
+// Settings
 $margin-sides: 'top', 'right', 'bottom', 'left' !default;
 
-$spacing: (
-    single: $spacer,
-    double: $spacer * 2,
-    triple: $spacer * 3
-) !default;
-
-// MIXINS
+// Mixins
 @mixin margin($side, $name, $size, $breakpoint: '') {
     $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
