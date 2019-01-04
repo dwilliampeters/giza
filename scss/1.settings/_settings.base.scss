@@ -8,7 +8,7 @@ $grid-columns: 12 !default;
 $min-touch-size: 44px !default;
 $site-max-width: 1200px !default;
 $spacer: 1rem !default;
-$spacing: (
+$spacer-sizes: (
     single: $spacer,
     double: $spacer * 2,
     triple: $spacer * 3

@@ -13,7 +13,7 @@ $margin-sides: 'top', 'right', 'bottom', 'left' !default;
 @each $side in $margin-sides {
     @include margin($side, auto, auto);
 
-    @each $spacing-key, $spacing-value in $spacing {
+    @each $spacing-key, $spacing-value in $spacer-sizes {
         @include margin($side, $spacing-key + '-spacing', $spacing-value);
     }
 }
@@ -23,7 +23,7 @@ $margin-sides: 'top', 'right', 'bottom', 'left' !default;
         @each $side in $margin-sides {
             @include margin($side, auto, auto, $breakpoint-key);
 
-            @each $spacing-key, $spacing-value in $spacing {
+            @each $spacing-key, $spacing-value in $spacer-sizes {
                 @include margin(
                     $side,
                     $spacing-key + '-spacing',

@@ -52,13 +52,13 @@
     }
 }
 // LOOP THROUGH BREAKPOINTS AND RUN MIXINS FOR EACH
-@each $spacing-key, $spacing-value in $spacing {
+@each $spacing-key, $spacing-value in $spacer-sizes {
     @include flex-grid-gutters($spacing-key, $spacing-value);
 }
 // LOOP THROUGH BREAKPOINTS, THEN SPACINGS AND RUN MIXINS FOR EACH
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
     @include breakpoint($breakpoint-key) {
-        @each $spacing-key, $spacing-value in $spacing {
+        @each $spacing-key, $spacing-value in $spacer-sizes {
             @include flex-grid-gutters(
                 $spacing-key,
                 $spacing-value,
