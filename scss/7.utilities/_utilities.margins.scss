@@ -1,10 +1,10 @@
 // SETTINGS
 $margin-sides: 'top', 'right', 'bottom', 'left' !default;
-$single-spacing: 1rem !default;
+
 $spacing: (
-    single: $single-spacing,
-    double: $single-spacing * 2,
-    triple: $single-spacing * 3
+    single: $spacer,
+    double: $spacer * 2,
+    triple: $spacer * 3
 ) !default;
 
 // MIXINS

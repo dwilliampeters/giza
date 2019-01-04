@@ -2,6 +2,7 @@
 
 // Options
 $healthcheck: false !default;
+$grid-columns: 12 !default;
 
 // Sizes
 $min-touch-size: 44px !default;
@@ -37,6 +38,7 @@ $breakpoints: (
     xxl: 1400px
 ) !default;
 
+// Type
 $type-settings: (
     'canon': (
         'group-a': (
@@ -159,8 +161,3 @@ $type-settings: (
         )
     )
 ) !default;
-//
-
-// Grid
-$grid-columns: 12 !default;
-$single-spacing: 1rem !default;
