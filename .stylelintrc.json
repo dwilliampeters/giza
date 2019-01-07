@@ -1,12 +1,12 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-idiomatic-order", "stylelint-config-standard"],
   "rules": {
-    "at-rule-no-unknown": [ true, {
-      "ignoreAtRules": [
-        "include",
-        "ignores"
-      ]
-    }],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["include", "ignores"]
+      }
+    ],
     "string-quotes": "single"
   }
 }

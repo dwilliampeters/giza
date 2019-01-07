@@ -58,63 +58,75 @@
 
 @mixin typography($type) {
   @if map-has-key(map-get($type-settings, $type), 'group-a') {
-    font-size: map-get(
-      map-get(map-get($type-settings, $type), 'group-a'),
-      'font-size'
-    );
-    font-size: rem(
-      map-get(map-get(map-get($type-settings, $type), 'group-a'), 'font-size')
-    );
-    line-height: map-get(
-      map-get(map-get($type-settings, $type), 'group-a'),
-      'line-height'
-    );
-    line-height: rem(
-      map-get(map-get(map-get($type-settings, $type), 'group-a'), 'line-height')
-    );
+    font-size:
+      map-get(
+        map-get(map-get($type-settings, $type), 'group-a'),
+        'font-size'
+      );
+    font-size:
+      rem(
+        map-get(map-get(map-get($type-settings, $type), 'group-a'), 'font-size')
+      );
+    line-height:
+      map-get(
+        map-get(map-get($type-settings, $type), 'group-a'),
+        'line-height'
+      );
+    line-height:
+      rem(
+        map-get(map-get(map-get($type-settings, $type), 'group-a'), 'line-height')
+      );
   }
 
   @if map-has-key(map-get($type-settings, $type), 'group-b') {
     @include md {
-      font-size: map-get(
-        map-get(map-get($type-settings, $type), 'group-b'),
-        'font-size'
-      );
-      font-size: rem(
-        map-get(map-get(map-get($type-settings, $type), 'group-b'), 'font-size')
-      );
-      line-height: map-get(
-        map-get(map-get($type-settings, $type), 'group-b'),
-        'line-height'
-      );
-      line-height: rem(
+      font-size:
+        map-get(
+          map-get(map-get($type-settings, $type), 'group-b'),
+          'font-size'
+        );
+      font-size:
+        rem(
+          map-get(map-get(map-get($type-settings, $type), 'group-b'), 'font-size')
+        );
+      line-height:
         map-get(
           map-get(map-get($type-settings, $type), 'group-b'),
           'line-height'
-        )
-      );
+        );
+      line-height:
+        rem(
+          map-get(
+            map-get(map-get($type-settings, $type), 'group-b'),
+            'line-height'
+          )
+        );
     }
   }
 
   @if map-has-key(map-get($type-settings, $type), 'group-c') {
     @include lg {
-      font-size: map-get(
-        map-get(map-get($type-settings, $type), 'group-c'),
-        'font-size'
-      );
-      font-size: rem(
-        map-get(map-get(map-get($type-settings, $type), 'group-c'), 'font-size')
-      );
-      line-height: map-get(
-        map-get(map-get($type-settings, $type), 'group-c'),
-        'line-height'
-      );
-      line-height: rem(
+      font-size:
+        map-get(
+          map-get(map-get($type-settings, $type), 'group-c'),
+          'font-size'
+        );
+      font-size:
+        rem(
+          map-get(map-get(map-get($type-settings, $type), 'group-c'), 'font-size')
+        );
+      line-height:
         map-get(
           map-get(map-get($type-settings, $type), 'group-c'),
           'line-height'
-        )
-      );
+        );
+      line-height:
+        rem(
+          map-get(
+            map-get(map-get($type-settings, $type), 'group-c'),
+            'line-height'
+          )
+        );
     }
   }
 }

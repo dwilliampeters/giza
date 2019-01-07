@@ -13,8 +13,8 @@ $dropdown-nav-border: $dark 1px solid !default;
   display: none;
   width: auto;
   min-width: $dropdown-nav-min-width;
-  border: $dropdown-nav-border;
   margin: 0;
+  border: $dropdown-nav-border;
   background: $dropdown-nav-bg;
 
   .c-nav__link {

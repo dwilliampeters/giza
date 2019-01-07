@@ -14,8 +14,8 @@ $pagination-disabled-color: $medium !default;
 
 .c-pagination__link {
   padding: $pagination-link-padding;
-  border: $pagination-link-border;
   margin-left: -$pagination-link-border-width;
+  border: $pagination-link-border;
 
   .is-active & {
     background: $pagination-active-bg;

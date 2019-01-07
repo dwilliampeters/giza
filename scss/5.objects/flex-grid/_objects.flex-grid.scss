@@ -2,9 +2,7 @@
 @mixin flex-grid-column($column-number, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-  .o-flex-grid
-  > .o-flex-grid__cell--span-#{$column-number
-  + $breakpoint-suffix} {
+  .o-flex-grid > .o-flex-grid__cell--span-#{$column-number + $breakpoint-suffix} {
     max-width: #{(100/12 * $column-number) + '%'};
     flex: 0 0 #{(100/12 * $column-number) + '%'};
   }

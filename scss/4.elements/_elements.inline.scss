@@ -31,9 +31,9 @@ code {
 hr {
   max-width: $hr-width;
   height: 0;
+  margin: $hr-margin;
   border: 0;
   border-bottom: $hr-border;
-  margin: $hr-margin;
   clear: both;
 }
 
