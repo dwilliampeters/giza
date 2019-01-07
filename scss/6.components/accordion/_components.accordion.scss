@@ -1,7 +1,7 @@
 // Components: Accordion
 
 $accordion-item-border: 1px solid $dark !default;
-$accordion-title-padding: $spacer !default;
+$accordion-toggle-padding: $spacer !default;
 $accordion-content-padding: 0 $spacer $spacer !default;
 
 .c-accordion {
@@ -15,9 +15,9 @@ $accordion-content-padding: 0 $spacer $spacer !default;
   }
 }
 
-.c-accordion__title {
+.c-accordion__toggle {
   display: block;
-  padding: $accordion-title-padding;
+  padding: $accordion-toggle-padding;
 }
 
 .c-accordion__content {
