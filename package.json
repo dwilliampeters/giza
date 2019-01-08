@@ -1,7 +1,7 @@
 {
   "name": "giza-framework",
   "version": "0.0.21",
-  "description": "Frontend (Fender) framework",
+  "description": "Frontend framework",
   "license": "MIT",
   "engines": {
     "node": ">=6.11.1",
