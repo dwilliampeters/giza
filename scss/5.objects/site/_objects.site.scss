@@ -1,6 +1,6 @@
 // Objects: Site
 
-$site-content-padding: $spacer;
+$site-content-padding: $spacer !default;
 
 .o-site {
   display: flex;
