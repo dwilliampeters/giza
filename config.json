@@ -1,6 +1,38 @@
 {
   "BASE": "./",
-  "DEST_BUILD": "./_build",
-  "DEST_PROD": "./dist",
-  "DEST_LAB_BUILD": "./_build/lab"
+  "dest": "./_build",
+  "dist": "./dist",
+
+  "html": {
+    "src": "html"
+  },
+
+  "static": {
+    "src": "static"
+  },
+
+  "javascripts": {
+    "src": "javascripts",
+    "dest": "javascripts"
+  },
+
+  "stylesheets": {
+    "src": "stylesheets",
+    "dest": "stylesheets"
+  },
+
+  "images": {
+    "src": "images",
+    "dest": "images"
+  },
+
+  "fonts": {
+    "src": "fonts",
+    "dest": "fonts"
+  },
+
+  "icons": {
+    "src": "icons",
+    "dest": "images"
+  }
 }

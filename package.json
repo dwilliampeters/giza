@@ -1,6 +1,6 @@
 {
   "name": "giza-framework",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Frontend framework",
   "license": "MIT",
   "engines": {
@@ -29,7 +29,6 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgstore": "^7.0.0",
     "gulp-watch": "^5.0.1",
