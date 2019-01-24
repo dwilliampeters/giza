@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giza</title>
+        <link rel="stylesheet" href="/stylesheets/giza.css">
+        <script>
+            if (document.documentElement) {
+                document
+                    .documentElement
+                    .classList
+                    .add('js');
+            }
+        </script>
+        <style type="text/css">
+            body {
+                padding: 2rem;
+            }
+            .c-demo {
+                padding: 1rem;
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        
+    <div class="c-hamburger">
+        <div class="c-hamburger__inner"></div>
+        <div class="u-sr-only">Button</div>
+    </div>
+
+    <hr>
+
+    <h3>Is active</h3>
+
+    <div class="c-hamburger is-active">
+        <div class="c-hamburger__inner"></div>
+        <div class="u-sr-only">Button</div>
+    </div>
+
+    <hr>
+
+    <h3>Inside active</h3>
+
+    <div class="is-active">
+        <div class="c-hamburger">
+            <div class="c-hamburger__inner"></div>
+            <div class="u-sr-only">Button</div>
+        </div>
+    </div>
+
+
+        <script src="/javascripts/giza.js"></script>
+    </body>
+</html>

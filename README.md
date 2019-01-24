@@ -6,5 +6,11 @@ Framework for HTML, CSS and JS.
 
 ```bash
 yarn
-yarn build
+yarn develop
+```
+
+## Production (WIP)
+
+```bash
+yarn dist
 ```
