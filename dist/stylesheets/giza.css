@@ -2542,7 +2542,10 @@ p {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
   .is-accordion-nav-parent.is-active > .is-accordion-nav {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-flex: 0;
     -webkit-flex: none;
         -ms-flex: none;
@@ -2582,7 +2585,10 @@ p {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
   .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-flex: 0;
     -webkit-flex: none;
         -ms-flex: none;
