@@ -9,8 +9,8 @@
   },
   "main": "gulpfile.js",
   "scripts": {
-    "develop": "gulp",
-    "dist": "gulp dist",
+    "start": "gulp",
+    "build": "gulp dist",
     "fix-code": "prettier-eslint --write ./js/**/*.{js,jsx}",
     "fix-styles": "prettier-stylelint --write ./scss/**/*.{css,scss}"
   },
