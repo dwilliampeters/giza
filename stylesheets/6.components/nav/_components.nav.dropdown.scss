@@ -35,7 +35,7 @@ $dropdown-nav-border: $dark 1px solid !default;
 
   &.is-active {
     > .is-dropdown-nav {
-      display: block;
+      display: flex;
       flex: none;
     }
 

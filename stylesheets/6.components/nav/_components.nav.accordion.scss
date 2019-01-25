@@ -20,7 +20,7 @@ $accordion-nav-border: none !default;
 
   &.is-active {
     > .is-accordion-nav {
-      display: block;
+      display: flex;
       flex: none;
     }
 
