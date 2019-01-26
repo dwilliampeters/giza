@@ -4,48 +4,89 @@ $dropdown-nav-min-width: 200px !default;
 $dropdown-nav-bg: $light !default;
 $dropdown-nav-border: $dark 1px solid !default;
 
-.is-dropdown-nav {
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  right: auto;
-  left: 0;
-  display: none;
-  width: auto;
-  min-width: $dropdown-nav-min-width;
-  margin: 0;
-  border: $dropdown-nav-border;
-  background: $dropdown-nav-bg;
+@mixin dropdown-nav {
+  .is-dropdown-nav {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: auto;
+    left: 0;
+    display: none;
+    width: auto;
+    min-width: $dropdown-nav-min-width;
+    margin: 0;
+    border: $dropdown-nav-border;
+    background: $dropdown-nav-bg;
 
-  .c-nav__link {
-    padding-right: $spacer;
-    padding-left: $spacer;
+    .c-nav__link {
+      padding-right: $spacer;
+      padding-left: $spacer;
+    }
   }
+
+  .is-dropdown-button {
+    display: inline-flex;
+    flex: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .is-dropdown-nav-parent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    > .c-nav__link {
+      flex: 1;
+    }
+
+    &.is-active {
+      > .is-dropdown-nav {
+        display: flex;
+        flex: none;
+      }
+
+      > .is-dropdown-button {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.c-nav--dropdown {
+  @include dropdown-nav;
 }
 
 .is-dropdown-button {
-  flex: 0;
-  padding: 0;
-  margin: 0;
+  display: none;
 }
 
-.is-dropdown-nav-parent {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-
-  > .c-nav__link {
-    flex: 1;
+@include sm {
+  .c-nav--dropdown\@sm {
+    @include dropdown-nav;
   }
+}
 
-  &.is-active {
-    > .is-dropdown-nav {
-      display: flex;
-      flex: none;
-    }
+@include md {
+  .c-nav--dropdown\@md {
+    @include dropdown-nav;
+  }
+}
 
-    > .is-dropdown-button {
-      transform: rotate(-180deg);
-    }
+@include lg {
+  .c-nav--dropdown\@lg {
+    @include dropdown-nav;
+  }
+}
+
+@include xl {
+  .c-nav--dropdown\@xl {
+    @include dropdown-nav;
+  }
+}
+
+@include xxl {
+  .c-nav--dropdown\@xxl {
+    @include dropdown-nav;
   }
 }

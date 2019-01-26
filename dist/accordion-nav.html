@@ -16,9 +16,10 @@
     </script>
     <style type="text/css">
       body {
-        padding: 2rem;
+        border: 2rem solid #f2f2f2;
       }
       .c-demo {
+        width: 100%;
         padding: 1rem;
         background-color: #ddd;
       }
@@ -32,7 +33,7 @@
         Item 1
       </a>
       <button class="c-button is-accordion-button">
-        <span class="o-icon o-icon--chevron-down ">
+        <span class="o-icon o-icon--chevron-down">
           
   <span class='o-icon o-icon--chevron-down'>
     <svg viewbox="0 0 1 1">
@@ -43,6 +44,91 @@
         </span>
       </button>
       <ul class="c-nav is-accordion-nav c-nav--vertical">
+        <li class="c-nav__item ">
+          <a href="#" class="c-nav__link">
+            Item 1 - 1
+          </a>
+        </li>
+        <li class="c-nav__item ">
+          <a href="#" class="c-nav__link">
+            Item 1 - 2
+          </a>
+        </li>
+        <li class="c-nav__item ">
+          <a href="#" class="c-nav__link">
+            Item 1 - 3
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="c-nav__item ">
+      <a href="#" class="c-nav__link">
+        Item 2
+      </a>
+    </li>
+    <li class="c-nav__item ">
+      <a href="#" class="c-nav__link">
+        Item 3
+      </a>
+    </li>
+  </ul>
+
+  <h3>Accordion @size</h3>
+
+  <ul class="c-nav c-nav--vertical c-nav--accordion@md" data-module="Nav">
+    <li class="c-nav__item is-accordion-nav-parent">
+      <a href="#" class="c-nav__link">
+        Item 1
+      </a>
+      <button class="c-button is-accordion-button">
+        <span class="o-icon o-icon--chevron-down">
+          
+  <span class='o-icon o-icon--chevron-down'>
+    <svg viewbox="0 0 1 1">
+      <use xlink:href='images/icons.svg#chevron-down'></use>
+    </svg>
+  </span>
+
+        </span>
+      </button>
+      <ul class="c-nav is-accordion-nav c-nav--vertical ">
+        <li class="c-nav__item ">
+          <a href="#" class="c-nav__link">
+            Item 1 - 1
+          </a>
+        </li>
+        <li class="c-nav__item ">
+          <a href="#" class="c-nav__link">
+            Item 1 - 2
+          </a>
+        </li>
+        <li class="c-nav__item ">
+          <a href="#" class="c-nav__link">
+            Item 1 - 3
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Dropdown @lg</h3>
+  <ul class="c-nav c-nav--vertical c-nav--horizontal@lg c-nav--accordion c-nav--dropdown@lg" data-module="Nav">
+    <li class="c-nav__item is-accordion-nav-parent is-dropdown-nav-parent">
+      <a href="#" class="c-nav__link">
+        Item 1
+      </a>
+      <button class="c-button is-accordion-button">
+        <span class="o-icon o-icon--chevron-down">
+          
+  <span class='o-icon o-icon--chevron-down'>
+    <svg viewbox="0 0 1 1">
+      <use xlink:href='images/icons.svg#chevron-down'></use>
+    </svg>
+  </span>
+
+        </span>
+      </button>
+      <ul class="c-nav is-accordion-nav is-dropdown-nav c-nav--vertical">
         <li class="c-nav__item ">
           <a href="#" class="c-nav__link">
             Item 1 - 1

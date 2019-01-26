@@ -3,34 +3,75 @@
 $accordion-nav-bg: $light !default;
 $accordion-nav-border: none !default;
 
-.is-accordion-nav {
-  display: none;
-  border: $accordion-nav-border;
-  background: $accordion-nav-bg;
+@mixin accordion-nav {
+  .is-accordion-nav {
+    display: none;
+    border: $accordion-nav-border;
+    background: $accordion-nav-bg;
+  }
+
+  .is-accordion-button {
+    display: inline-flex;
+    flex: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .is-accordion-nav-parent {
+    display: flex;
+    flex-wrap: wrap;
+
+    > .c-nav__link {
+      flex: 1;
+    }
+
+    &.is-active {
+      > .is-accordion-nav {
+        display: flex;
+        flex: none;
+      }
+
+      > .is-accordion-button {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.c-nav--accordion {
+  @include accordion-nav;
 }
 
 .is-accordion-button {
-  flex: 0;
-  padding: 0;
-  margin: 0;
+  display: none;
 }
 
-.is-accordion-nav-parent {
-  display: flex;
-  flex-wrap: wrap;
-
-  > .c-nav__link {
-    flex: 1;
+@include sm {
+  .c-nav--accordion\@sm {
+    @include accordion-nav;
   }
+}
 
-  &.is-active {
-    > .is-accordion-nav {
-      display: flex;
-      flex: none;
-    }
+@include md {
+  .c-nav--accordion\@md {
+    @include accordion-nav;
+  }
+}
 
-    > .is-accordion-button {
-      transform: rotate(-180deg);
-    }
+@include lg {
+  .c-nav--accordion\@lg {
+    @include accordion-nav;
+  }
+}
+
+@include xl {
+  .c-nav--accordion\@xl {
+    @include accordion-nav;
+  }
+}
+
+@include xxl {
+  .c-nav--accordion\@xxl {
+    @include accordion-nav;
   }
 }
