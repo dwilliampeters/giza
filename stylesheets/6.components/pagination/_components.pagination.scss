@@ -13,6 +13,7 @@ $pagination-disabled-color: $medium !default;
 }
 
 .c-pagination__link {
+  display: block;
   padding: $pagination-link-padding;
   margin-left: -$pagination-link-border-width;
   border: $pagination-link-border;

@@ -3392,6 +3392,7 @@ p {
   list-style: none; }
 
 .c-pagination__link {
+  display: block;
   padding: 0.5rem;
   margin-left: -1px;
   border: 1px solid #afb1b8; }
