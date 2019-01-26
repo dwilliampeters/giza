@@ -2615,35 +2615,35 @@ p {
             transform: rotate(-180deg); }
 
 @media (min-width: 640px) {
-  .c-nav-horizontal\@sm > .c-nav__item {
+  .c-nav--horizontal\@sm > .c-nav__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; } }
 
 @media (min-width: 768px) {
-  .c-nav-horizontal\@md > .c-nav__item {
+  .c-nav--horizontal\@md > .c-nav__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; } }
 
 @media (min-width: 960px) {
-  .c-nav-horizontal\@lg > .c-nav__item {
+  .c-nav--horizontal\@lg > .c-nav__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; } }
 
 @media (min-width: 1180px) {
-  .c-nav-horizontal\@xl > .c-nav__item {
+  .c-nav--horizontal\@xl > .c-nav__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto; } }
 
 @media (min-width: 1400px) {
-  .c-nav-horizontal\@xxl > .c-nav__item {
+  .c-nav--horizontal\@xxl > .c-nav__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
