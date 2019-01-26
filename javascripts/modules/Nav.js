@@ -11,27 +11,17 @@ export default class Nav {
 
   cacheDom() {
     return {
-      dropdownMenuParent: this.el.querySelectorAll(".is-dropdown-button"),
-      accordionMenuParent: this.el.querySelectorAll(".is-accordion-button")
+      menuParent: this.el.querySelectorAll(
+        ".is-dropdown-button, .is-accordion-button"
+      )
     };
   }
 
   addEventListeners() {
-    for (let i = 0, len = this.dom.dropdownMenuParent.length; i < len; i++) {
-      this.dom.dropdownMenuParent[i].addEventListener("click", e => {
+    for (let i = 0, len = this.dom.menuParent.length; i < len; i++) {
+      this.dom.menuParent[i].addEventListener("click", e => {
         e.preventDefault();
-        this.handleParentClick(e, i, this.dom.dropdownMenuParent[i].parentNode);
-      });
-    }
-
-    for (let i = 0, len = this.dom.accordionMenuParent.length; i < len; i++) {
-      this.dom.accordionMenuParent[i].addEventListener("click", e => {
-        e.preventDefault();
-        this.handleParentClick(
-          e,
-          i,
-          this.dom.accordionMenuParent[i].parentNode
-        );
+        this.handleParentClick(e, i, this.dom.menuParent[i].parentNode);
       });
     }
   }
