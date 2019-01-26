@@ -22,7 +22,6 @@ $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
 .c-button {
-  // display: inline-block;
   display: inline-flex;
   min-width: $button-min-width;
   min-height: $button-min-height;

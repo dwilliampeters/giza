@@ -1,28 +1,28 @@
 {% extends 'layouts/giza.html' %}
 
 {% block body %}
+  <div class="c-hamburger">
+    <div class="c-hamburger__inner"></div>
+    <div class="u-sr-only">Button</div>
+  </div>
+
+  <hr>
+
+  <h3>Is active</h3>
+
+  <div class="c-hamburger is-active">
+    <div class="c-hamburger__inner"></div>
+    <div class="u-sr-only">Button</div>
+  </div>
+
+  <hr>
+
+  <h3>Inside active</h3>
+
+  <div class="is-active">
     <div class="c-hamburger">
-        <div class="c-hamburger__inner"></div>
-        <div class="u-sr-only">Button</div>
+      <div class="c-hamburger__inner"></div>
+      <div class="u-sr-only">Button</div>
     </div>
-
-    <hr>
-
-    <h3>Is active</h3>
-
-    <div class="c-hamburger is-active">
-        <div class="c-hamburger__inner"></div>
-        <div class="u-sr-only">Button</div>
-    </div>
-
-    <hr>
-
-    <h3>Inside active</h3>
-
-    <div class="is-active">
-        <div class="c-hamburger">
-            <div class="c-hamburger__inner"></div>
-            <div class="u-sr-only">Button</div>
-        </div>
-    </div>
+  </div>
 {% endblock %}

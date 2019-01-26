@@ -1,17 +1,17 @@
 {% extends 'layouts/giza.html' %}
 
 {% block body %}
-    <div class="c-button" data-module="Toggle">Toggle</div>
+  <div class="c-button" data-module="Toggle">Toggle</div>
 
-    <br><br>
+  <br><br>
 
-    <div>
-        <div class="c-button" data-module="Toggle" data-options='{"target": "parent"}'>Toggle Parent</div>
-    </div>
+  <div>
+    <div class="c-button" data-module="Toggle" data-options='{"target": "parent"}'>Toggle Parent</div>
+  </div>
 
-    <br><br>
+  <br><br>
 
-    <div id="ToggleTarget">
-        <div class="c-button" data-module="Toggle" data-options='{"target": "#ToggleTarget"}'>Toggle Parent</div>
-    </div>
+  <div id="ToggleTarget">
+    <div class="c-button" data-module="Toggle" data-options='{"target": "#ToggleTarget"}'>Toggle Parent</div>
+  </div>
 {% endblock %}

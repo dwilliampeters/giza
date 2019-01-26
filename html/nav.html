@@ -1,66 +1,153 @@
 {% extends 'layouts/giza.html' %}
 
 {% block body %}
-    <ul class="c-nav">
-        <li class="c-nav__item">
-            <a class="c-nav__link is-active" href="#">Active</a>
-        </li>
-        <li class="c-nav__item">
-            <a class="c-nav__link" href="#">Link</a>
-        </li>
-        <li class="c-nav__item">
-            <a class="c-nav__link" href="#">Link</a>
-        </li>
-        <li class="c-nav__item">
-            <a class="c-nav__link is-disabled" href="#">Disabled</a>
-        </li>
-    </ul>
+  <ul class="c-nav">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
 
-    <h3>Vertical</h3>
+  <h3>Vertical</h3>
 
-    <ul class="c-nav c-nav--vertical">
-        <li class="c-nav__item">
-            <a class="c-nav__link is-active" href="#">Active</a>
-        </li>
-        <li class="c-nav__item">
-            <a class="c-nav__link" href="#">Link</a>
-        </li>
-        <li class="c-nav__item">
-            <a class="c-nav__link" href="#">Link</a>
-        </li>
-        <li class="c-nav__item">
-            <a class="c-nav__link is-disabled" href="#">Disabled</a>
-        </li>
-    </ul>
+  <ul class="c-nav c-nav--vertical">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
 
-    <h3>Nested</h3>
+  <h3>Nested</h3>
 
-    <ul class="c-nav c-nav--vertical">
+  <ul class="c-nav c-nav--vertical">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+      <ul class="c-nav c-nav--vertical c-nav--nested">
         <li class="c-nav__item">
-            <a class="c-nav__link is-active" href="#">Active</a>
-            <ul class="c-nav c-nav--vertical c-nav--nested">
-                <li class="c-nav__item">
-                    <a class="c-nav__link" href="#">Link</a>
-                </li>
-                <li class="c-nav__item">
-                    <a class="c-nav__link" href="#">Link</a>
-                </li>
-                <li class="c-nav__item">
-                    <a class="c-nav__link" href="#">Link</a>
-                </li>
-                <li class="c-nav__item">
-                    <a class="c-nav__link" href="#">Link</a>
-                </li>
-            </ul>
+          <a class="c-nav__link" href="#">Link</a>
         </li>
         <li class="c-nav__item">
-            <a class="c-nav__link" href="#">Link</a>
+          <a class="c-nav__link" href="#">Link</a>
         </li>
         <li class="c-nav__item">
-            <a class="c-nav__link" href="#">Link</a>
+          <a class="c-nav__link" href="#">Link</a>
         </li>
         <li class="c-nav__item">
-            <a class="c-nav__link is-disabled" href="#">Disabled</a>
+          <a class="c-nav__link" href="#">Link</a>
         </li>
-    </ul>
+      </ul>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+  <h3>Responsive</h3>
+
+  <h4>@sm</h4>
+
+  <ul class="c-nav c-nav--vertical c-nav-horizontal@sm">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+  <h4>@md</h4>
+
+  <ul class="c-nav c-nav--vertical c-nav-horizontal@md">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+  <h4>@lg</h4>
+
+  <ul class="c-nav c-nav--vertical c-nav-horizontal@lg">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+  <h4>@xl</h4>
+
+  <ul class="c-nav c-nav--vertical c-nav-horizontal@xl">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+
+  <h4>@xxl</h4>
+
+  <ul class="c-nav c-nav--vertical c-nav-horizontal@xxl">
+    <li class="c-nav__item">
+      <a class="c-nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link" href="#">Link</a>
+    </li>
+    <li class="c-nav__item">
+      <a class="c-nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
 {% endblock %}
