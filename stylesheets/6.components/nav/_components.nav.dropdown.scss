@@ -61,32 +61,10 @@ $dropdown-nav-border: $dark 1px solid !default;
   display: none;
 }
 
-@include sm {
-  .c-nav--dropdown\@sm {
-    @include dropdown-nav;
-  }
-}
-
-@include md {
-  .c-nav--dropdown\@md {
-    @include dropdown-nav;
-  }
-}
-
-@include lg {
-  .c-nav--dropdown\@lg {
-    @include dropdown-nav;
-  }
-}
-
-@include xl {
-  .c-nav--dropdown\@xl {
-    @include dropdown-nav;
-  }
-}
-
-@include xxl {
-  .c-nav--dropdown\@xxl {
-    @include dropdown-nav;
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    .c-nav--dropdown\@#{$key} {
+      @include dropdown-nav;
+    }
   }
 }

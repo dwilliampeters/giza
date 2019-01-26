@@ -46,32 +46,10 @@ $accordion-nav-border: none !default;
   display: none;
 }
 
-@include sm {
-  .c-nav--accordion\@sm {
-    @include accordion-nav;
-  }
-}
-
-@include md {
-  .c-nav--accordion\@md {
-    @include accordion-nav;
-  }
-}
-
-@include lg {
-  .c-nav--accordion\@lg {
-    @include accordion-nav;
-  }
-}
-
-@include xl {
-  .c-nav--accordion\@xl {
-    @include accordion-nav;
-  }
-}
-
-@include xxl {
-  .c-nav--accordion\@xxl {
-    @include accordion-nav;
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    .c-nav--accordion\@#{$key} {
+      @include accordion-nav;
+    }
   }
 }

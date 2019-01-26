@@ -1,39 +1,9 @@
-@include sm {
-  .c-nav--horizontal\@sm {
-    > .c-nav__item {
-      flex: 0 0 auto;
-    }
-  }
-}
-
-@include md {
-  .c-nav--horizontal\@md {
-    > .c-nav__item {
-      flex: 0 0 auto;
-    }
-  }
-}
-
-@include lg {
-  .c-nav--horizontal\@lg {
-    > .c-nav__item {
-      flex: 0 0 auto;
-    }
-  }
-}
-
-@include xl {
-  .c-nav--horizontal\@xl {
-    > .c-nav__item {
-      flex: 0 0 auto;
-    }
-  }
-}
-
-@include xxl {
-  .c-nav--horizontal\@xxl {
-    > .c-nav__item {
-      flex: 0 0 auto;
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    .c-nav--horizontal\@#{$key} {
+      > .c-nav__item {
+        flex: 0 0 auto;
+      }
     }
   }
 }
