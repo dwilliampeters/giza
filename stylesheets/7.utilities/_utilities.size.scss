@@ -39,3 +39,27 @@
 .u-size-height-auto {
   height: auto;
 }
+
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    .u-size-width-25\@#{$key} {
+      width: 25%;
+    }
+
+    .u-size-width-50\@#{$key} {
+      width: 50%;
+    }
+
+    .u-size-width-75\@#{$key} {
+      width: 75%;
+    }
+
+    .u-size-width-100\@#{$key} {
+      width: 100%;
+    }
+
+    .u-size-width-auto\@#{$key} {
+      width: auto;
+    }
+  }
+}
