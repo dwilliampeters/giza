@@ -2188,6 +2188,7 @@ p {
   color: #fff;
   cursor: pointer;
   line-height: 1;
+  outline: none;
   text-decoration: none;
   vertical-align: baseline;
   background-color: #007bff;
