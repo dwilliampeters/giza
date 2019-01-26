@@ -3,9 +3,13 @@
 $container-max-width: $site-max-width !default;
 $container-side-padding: $spacer !default;
 $container-thin-max-width: $site-max-width / 2 !default;
+$container-body-width: 100% !default;
+$container-sidebar-width: 100% !default;
 
 .o-container {
+  display: flex;
   max-width: $container-max-width;
+  flex-wrap: wrap;
   padding-right: $container-side-padding;
   padding-left: $container-side-padding;
 }
@@ -26,4 +30,12 @@ $container-thin-max-width: $site-max-width / 2 !default;
 
 .o-container--thin {
   max-width: $container-thin-max-width;
+}
+
+.o-container__body {
+  width: $container-body-width;
+}
+
+.o-container__sidebar {
+  width: $container-sidebar-width;
 }
