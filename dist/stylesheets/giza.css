@@ -2535,6 +2535,12 @@ p {
 .c-nav--vertical.c-nav--center .c-nav__item {
   text-align: center; }
 
+.c-nav--horizontal .c-nav__item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
 .c-nav--accordion .is-accordion-nav {
   display: none;
   border: none;
