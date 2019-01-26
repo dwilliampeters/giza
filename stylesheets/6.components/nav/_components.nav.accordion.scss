@@ -10,6 +10,7 @@ $accordion-nav-border: none !default;
 }
 
 .is-accordion-button {
+  flex: 0;
   padding: 0;
   margin: 0;
 }
@@ -17,6 +18,10 @@ $accordion-nav-border: none !default;
 .is-accordion-nav-parent {
   display: flex;
   flex-wrap: wrap;
+
+  > .c-nav__link {
+    flex: 1;
+  }
 
   &.is-active {
     > .is-accordion-nav {

@@ -24,6 +24,7 @@ $dropdown-nav-border: $dark 1px solid !default;
 }
 
 .is-dropdown-button {
+  flex: 0;
   padding: 0;
   margin: 0;
 }
@@ -32,6 +33,10 @@ $dropdown-nav-border: $dark 1px solid !default;
   position: relative;
   display: flex;
   flex-wrap: wrap;
+
+  > .c-nav__link {
+    flex: 1;
+  }
 
   &.is-active {
     > .is-dropdown-nav {
