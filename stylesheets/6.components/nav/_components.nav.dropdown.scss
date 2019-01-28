@@ -18,10 +18,10 @@ $dropdown-nav-border: $dark 1px solid !default;
     border: $dropdown-nav-border;
     background: $dropdown-nav-bg;
 
-    .c-nav__link {
-      padding-right: $nav-link-padding;
-      padding-left: $nav-link-padding;
-    }
+    // .c-nav__link {
+    //   padding-right: $nav-link-padding;
+    //   padding-left: $nav-link-padding;
+    // }
   }
 
   .is-dropdown-button {
