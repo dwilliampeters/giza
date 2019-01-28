@@ -19,8 +19,8 @@ $dropdown-nav-border: $dark 1px solid !default;
     background: $dropdown-nav-bg;
 
     .c-nav__link {
-      padding-right: $spacer;
-      padding-left: $spacer;
+      padding-right: $nav-link-padding;
+      padding-left: $nav-link-padding;
     }
   }
 
