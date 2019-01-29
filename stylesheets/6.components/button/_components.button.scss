@@ -1,5 +1,6 @@
 // Components: Button
 
+$button-display: inline-flex !default;
 $button-padding: $spacer !default;
 $button-min-width: $min-touch-size !default;
 $button-min-height: 1em !default;
@@ -22,7 +23,7 @@ $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
 .c-button {
-  display: inline-flex;
+  display: $button-display;
   min-width: $button-min-width;
   min-height: $button-min-height;
   flex: 1;
