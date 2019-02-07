@@ -7,7 +7,6 @@ $container-body-width: 100% !default;
 $container-sidebar-width: 100% !default;
 
 .o-container {
-  display: flex;
   max-width: $container-max-width;
   flex-wrap: wrap;
   padding-right: $container-side-padding;
