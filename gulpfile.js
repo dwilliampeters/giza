@@ -87,9 +87,6 @@ var webpackConfig = {
         loader: "babel-loader",
         test: /\.js$/,
         exclude: path.resolve("node_modules")
-        // query: {
-        //   presets: [["es2015", { modules: false }], "stage-1"]
-        // }
       }
     ]
   }
