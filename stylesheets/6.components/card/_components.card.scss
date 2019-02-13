@@ -9,6 +9,8 @@ $card-body-padding: $spacer !default;
 $card-title-margin: 0 0 $spacer !default;
 
 .c-card {
+  display: flex;
+  flex-direction: column;
   border: $card-border;
   background: $card-bg;
 }
@@ -24,6 +26,7 @@ $card-title-margin: 0 0 $spacer !default;
 }
 
 .c-card__body {
+  flex: 1 1 auto;
   padding: $card-body-padding;
 }
 

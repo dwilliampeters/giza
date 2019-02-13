@@ -578,9 +578,6 @@ p {
 
 .o-container {
   max-width: 1200px;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   padding-right: 1rem;
   padding-left: 1rem; }
 
@@ -2225,6 +2222,15 @@ p {
   display: inline-block; }
 
 .c-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid #afb1b8;
   background: #fff; }
 
@@ -2237,6 +2243,10 @@ p {
   width: 100%; }
 
 .c-card__body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding: 1rem; }
 
 .c-card__title {
