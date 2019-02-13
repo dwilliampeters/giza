@@ -1,5 +1,6 @@
 node_modules
 _build
+npm-debug.log
 
 # VS Code Local History Extension files
 .history
