@@ -3,10 +3,10 @@ $margin-sides: 'top', 'right', 'bottom', 'left' !default;
 
 // Mixins
 @mixin margin($side, $name, $size, $breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
   .u-margin-#{$side}-#{$name + $breakpoint-suffix} {
-    margin-#{$side}: $size !important;
+    margin-#{$side}: #{$size} !important;
   }
 }
 // LOOP THROUGH MARGIN PROPERTIES AND RUN MIXINS FOR EACH
