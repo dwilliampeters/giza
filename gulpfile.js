@@ -86,7 +86,10 @@ var webpackConfig = {
       {
         loader: "babel-loader",
         test: /\.js$/,
-        exclude: path.resolve("node_modules")
+        exclude: path.resolve("node_modules"),
+        query: {
+          presets: ["es2015"]
+        }
       }
     ]
   }
@@ -122,7 +125,7 @@ gulp.task("stylesheets", function() {
       postcss([
         autoprefixer({
           grid: true,
-          browsers: ["last 2 versions", "ie >= 9", "Android >= 2.3", "ios >= 7"]
+          browsers: ["> 1%"]
         })
       ])
     )

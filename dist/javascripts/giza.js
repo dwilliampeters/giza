@@ -3831,11 +3831,11 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /*!*****************!*\
   !*** ./giza.js ***!
   \*****************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules */ \"./modules/index.js\");\n/* harmony import */ var _modules__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(`app.js has loaded!`);\n\n//# sourceURL=webpack:///./giza.js?");
+eval("\n\n__webpack_require__(/*! ./modules */ \"./modules/index.js\");\n\nconsole.log(\"app.js has loaded!\");\n\n//# sourceURL=webpack:///./giza.js?");
 
 /***/ }),
 
@@ -3854,11 +3854,11 @@ eval("var map = {\n\t\"./\": \"./modules/index.js\",\n\t\"./Accordion\": \"./mod
 /*!******************************!*\
   !*** ./modules/Accordion.js ***!
   \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Accordion; });\nclass Accordion {\n  constructor(el) {\n    this.el = el;\n    this.init();\n  }\n\n  init() {\n    this.dom = this.cacheDom();\n    this.addEventListeners();\n  }\n\n  cacheDom() {\n    return {\n      accordionParent: this.el.querySelectorAll(\".c-accordion__toggle\")\n    };\n  }\n\n  addEventListeners() {\n    for (let i = 0, len = this.dom.accordionParent.length; i < len; i++) {\n      this.dom.accordionParent[i].addEventListener(\"click\", e => {\n        e.preventDefault();\n        this.handleParentClick(e, i, this.dom.accordionParent[i].parentNode);\n      });\n    }\n  }\n\n  handleParentClick(e, item, itemParent) {\n    if (itemParent.classList.contains(\"is-active\")) {\n      itemParent.classList.remove(\"is-active\");\n    } else {\n      itemParent.classList.add(\"is-active\");\n    }\n  }\n\n}\n\n//# sourceURL=webpack:///./modules/Accordion.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Accordion = function () {\n  function Accordion(el) {\n    _classCallCheck(this, Accordion);\n\n    this.el = el;\n    this.init();\n  }\n\n  _createClass(Accordion, [{\n    key: \"init\",\n    value: function init() {\n      this.dom = this.cacheDom();\n      this.addEventListeners();\n    }\n  }, {\n    key: \"cacheDom\",\n    value: function cacheDom() {\n      return {\n        accordionParent: this.el.querySelectorAll(\".c-accordion__toggle\")\n      };\n    }\n  }, {\n    key: \"addEventListeners\",\n    value: function addEventListeners() {\n      var _this = this;\n\n      var _loop = function _loop(i, len) {\n        _this.dom.accordionParent[i].addEventListener(\"click\", function (e) {\n          e.preventDefault();\n          _this.handleParentClick(e, i, _this.dom.accordionParent[i].parentNode);\n        });\n      };\n\n      for (var i = 0, len = this.dom.accordionParent.length; i < len; i++) {\n        _loop(i, len);\n      }\n    }\n  }, {\n    key: \"handleParentClick\",\n    value: function handleParentClick(e, item, itemParent) {\n      if (itemParent.classList.contains(\"is-active\")) {\n        itemParent.classList.remove(\"is-active\");\n      } else {\n        itemParent.classList.add(\"is-active\");\n      }\n    }\n  }]);\n\n  return Accordion;\n}();\n\nexports.default = Accordion;\n\n//# sourceURL=webpack:///./modules/Accordion.js?");
 
 /***/ }),
 
@@ -3866,11 +3866,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!****************************!*\
   !*** ./modules/Example.js ***!
   \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Example; });\nclass Example {\n  constructor(el) {\n    this.el = el;\n    console.log(el.textContent, \"- From the example module\");\n  }\n\n}\n\n//# sourceURL=webpack:///./modules/Example.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Example = function Example(el) {\n  _classCallCheck(this, Example);\n\n  this.el = el;\n  console.log(el.textContent, \"- From the example module\");\n};\n\nexports.default = Example;\n\n//# sourceURL=webpack:///./modules/Example.js?");
 
 /***/ }),
 
@@ -3878,11 +3878,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!************************!*\
   !*** ./modules/Nav.js ***!
   \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Nav; });\nclass Nav {\n  constructor(el) {\n    this.el = el;\n    this.init();\n  }\n\n  init() {\n    this.dom = this.cacheDom();\n    this.addEventListeners();\n  }\n\n  cacheDom() {\n    return {\n      menuParent: this.el.querySelectorAll(\".is-dropdown-button, .is-accordion-button\")\n    };\n  }\n\n  addEventListeners() {\n    for (let i = 0, len = this.dom.menuParent.length; i < len; i++) {\n      this.dom.menuParent[i].addEventListener(\"click\", e => {\n        e.preventDefault();\n        this.handleParentClick(e, i, this.dom.menuParent[i].parentNode);\n      });\n    }\n  }\n\n  handleParentClick(e, item, itemParent) {\n    let items = itemParent.parentNode.querySelectorAll(\".c-nav__item\");\n\n    if (itemParent.classList.contains(\"is-active\")) {\n      itemParent.classList.remove(\"is-active\");\n    } else {\n      for (let i = 0, len = items.length; i < len; i++) {\n        items[i].classList.remove(\"is-active\");\n      }\n\n      itemParent.classList.add(\"is-active\");\n    }\n  }\n\n}\n\n//# sourceURL=webpack:///./modules/Nav.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Nav = function () {\n  function Nav(el) {\n    _classCallCheck(this, Nav);\n\n    this.el = el;\n    this.init();\n  }\n\n  _createClass(Nav, [{\n    key: \"init\",\n    value: function init() {\n      this.dom = this.cacheDom();\n      this.addEventListeners();\n    }\n  }, {\n    key: \"cacheDom\",\n    value: function cacheDom() {\n      return {\n        menuParent: this.el.querySelectorAll(\".is-dropdown-button, .is-accordion-button\")\n      };\n    }\n  }, {\n    key: \"addEventListeners\",\n    value: function addEventListeners() {\n      var _this = this;\n\n      var _loop = function _loop(i, len) {\n        _this.dom.menuParent[i].addEventListener(\"click\", function (e) {\n          e.preventDefault();\n          _this.handleParentClick(e, i, _this.dom.menuParent[i].parentNode);\n        });\n      };\n\n      for (var i = 0, len = this.dom.menuParent.length; i < len; i++) {\n        _loop(i, len);\n      }\n    }\n  }, {\n    key: \"handleParentClick\",\n    value: function handleParentClick(e, item, itemParent) {\n      var items = itemParent.parentNode.querySelectorAll(\".c-nav__item\");\n      if (itemParent.classList.contains(\"is-active\")) {\n        itemParent.classList.remove(\"is-active\");\n      } else {\n        for (var i = 0, len = items.length; i < len; i++) {\n          items[i].classList.remove(\"is-active\");\n        }\n        itemParent.classList.add(\"is-active\");\n      }\n    }\n  }]);\n\n  return Nav;\n}();\n\nexports.default = Nav;\n\n//# sourceURL=webpack:///./modules/Nav.js?");
 
 /***/ }),
 
@@ -3890,11 +3890,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***************************!*\
   !*** ./modules/Toggle.js ***!
   \***************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Toggle; });\nclass Toggle {\n  constructor(el, options) {\n    const defaults = {\n      activeClass: \"is-active\",\n      target: \"\"\n    };\n    this.el = el;\n    this.settings = Object.assign(defaults, options);\n    this.init();\n  }\n\n  init() {\n    const toggle = () => {\n      let target = this.settings.target;\n\n      if (target === \"\") {\n        this.el.classList.toggle(this.settings.activeClass);\n      } else {\n        if (typeof target === \"string\") {\n          this.el.classList.toggle(this.settings.activeClass);\n\n          if (target === \"parent\") {\n            this.el.parentNode.classList.toggle(this.settings.activeClass);\n          } else {\n            document.querySelector(target).classList.toggle(this.settings.activeClass);\n          }\n        }\n      }\n    };\n\n    this.el.addEventListener(\"click\", toggle);\n  }\n\n}\n\n//# sourceURL=webpack:///./modules/Toggle.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Toggle = function () {\n  function Toggle(el, options) {\n    _classCallCheck(this, Toggle);\n\n    var defaults = {\n      activeClass: \"is-active\",\n      target: \"\"\n    };\n    this.el = el;\n    this.settings = Object.assign(defaults, options);\n    this.init();\n  }\n\n  _createClass(Toggle, [{\n    key: \"init\",\n    value: function init() {\n      var _this = this;\n\n      var toggle = function toggle() {\n        var target = _this.settings.target;\n        if (target === \"\") {\n          _this.el.classList.toggle(_this.settings.activeClass);\n        } else {\n          if (typeof target === \"string\") {\n            _this.el.classList.toggle(_this.settings.activeClass);\n            if (target === \"parent\") {\n              _this.el.parentNode.classList.toggle(_this.settings.activeClass);\n            } else {\n              document.querySelector(target).classList.toggle(_this.settings.activeClass);\n            }\n          }\n        }\n      };\n\n      this.el.addEventListener(\"click\", toggle);\n    }\n  }]);\n\n  return Toggle;\n}();\n\nexports.default = Toggle;\n\n//# sourceURL=webpack:///./modules/Toggle.js?");
 
 /***/ }),
 
@@ -3905,7 +3905,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/*\r\n  Automatically instantiates modules based on data-attributes\r\n  specifying module file-names.\r\n*/\nconst moduleElements = document.querySelectorAll(\"[data-module]\");\n\nfor (var i = 0; i < moduleElements.length; i++) {\n  const el = moduleElements[i];\n  const name = el.getAttribute(\"data-module\");\n  let options = {};\n  const dataOptions = el.getAttribute(\"data-options\");\n\n  if (dataOptions) {\n    options = JSON.parse(dataOptions);\n  }\n\n  const Module = __webpack_require__(\"./modules sync recursive ^\\\\.\\\\/.*$\")(`./${name}`).default;\n\n  new Module(el, options);\n}\n/*\r\n  Usage:\r\n  ======\r\n  html\r\n  ----\r\n  <button data-module=\"disappear\">disappear!</button>\r\n  js\r\n  --\r\n  // modules/disappear.js\r\n  export default class Disappear {\r\n    constructor(el) {\r\n      el.style.display = 'none'\r\n    }\r\n  }\r\n*/\n\n//# sourceURL=webpack:///./modules/index.js?");
+"use strict";
+eval("\n\n/*\r\n  Automatically instantiates modules based on data-attributes\r\n  specifying module file-names.\r\n*/\n\nvar moduleElements = document.querySelectorAll(\"[data-module]\");\n\nfor (var i = 0; i < moduleElements.length; i++) {\n  var el = moduleElements[i];\n  var name = el.getAttribute(\"data-module\");\n  var options = {};\n  var dataOptions = el.getAttribute(\"data-options\");\n  if (dataOptions) {\n    options = JSON.parse(dataOptions);\n  }\n  var Module = __webpack_require__(\"./modules sync recursive ^\\\\.\\\\/.*$\")(\"./\" + name).default;\n  new Module(el, options);\n}\n\n/*\r\n  Usage:\r\n  ======\r\n  html\r\n  ----\r\n  <button data-module=\"disappear\">disappear!</button>\r\n  js\r\n  --\r\n  // modules/disappear.js\r\n  export default class Disappear {\r\n    constructor(el) {\r\n      el.style.display = 'none'\r\n    }\r\n  }\r\n*/\n\n//# sourceURL=webpack:///./modules/index.js?");
 
 /***/ }),
 
