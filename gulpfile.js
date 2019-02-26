@@ -71,7 +71,7 @@ var webpackConfig = {
   mode: "development",
   context: path.resolve("javascripts/"),
   entry: {
-    app: ["babel-polyfill", "giza.js"]
+    app: ["giza.js"]
   },
   output: {
     path: path.resolve("_build/site/javascripts/"),
@@ -88,7 +88,7 @@ var webpackConfig = {
         test: /\.js$/,
         exclude: path.resolve("node_modules"),
         query: {
-          presets: ["es2015"]
+          presets: [["es2015", { modules: false }], "stage-1"]
         }
       }
     ]
