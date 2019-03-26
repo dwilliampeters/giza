@@ -22,7 +22,7 @@ $accordion-nav-border: none !default;
     flex-wrap: wrap;
 
     > .c-nav__link {
-      flex: 1;
+      flex: 1 1 auto;
     }
 
     &.is-active {
