@@ -71,7 +71,7 @@ var webpackConfig = {
   mode: "development",
   context: path.resolve("javascripts/"),
   entry: {
-    app: ["giza.js"]
+    app: ["babel-polyfill", "./giza.js"]
   },
   output: {
     path: path.resolve("_build/site/javascripts/"),
