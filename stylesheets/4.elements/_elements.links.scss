@@ -3,7 +3,6 @@
 $link-color: $dark !default;
 $link-hover-color: $dark !default;
 $link-visited-color: $dark !default;
-$link-visited-hover-color: $dark !default;
 
 $link-trans-speed: 200 !default;
 $link-underline: underline !default;
@@ -12,17 +11,13 @@ a {
   color: $link-color;
   text-decoration: $link-underline;
 
+  &:visited {
+    color: $link-visited-color;
+  }
+
   @include color-swap-on-hover(
     $link-color,
     $link-hover-color,
     $link-trans-speed
   );
-
-  &:visited {
-    @include color-swap-on-hover(
-      $link-visited-color,
-      $link-visited-hover-color,
-      $link-trans-speed
-    );
-  }
 }
