@@ -16,7 +16,7 @@
     margin-right: -$column-spacing;
     margin-left: -$column-spacing;
 
-    .o-flex-grid__cell {
+    > .o-flex-grid__cell {
       padding-right: $column-spacing;
       padding-left: $column-spacing;
       margin-bottom: $spacing-value;
@@ -27,14 +27,14 @@
     margin-right: -$column-spacing;
     margin-left: -$column-spacing;
 
-    .o-flex-grid__cell {
+    > .o-flex-grid__cell {
       padding-right: $column-spacing;
       padding-left: $column-spacing;
     }
   }
 
   .o-flex-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
-    .o-flex-grid__cell {
+    > .o-flex-grid__cell {
       margin-bottom: $spacing-value;
     }
   }
