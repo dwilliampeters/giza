@@ -23,6 +23,7 @@ $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
 .c-button {
+  position: relative;
   display: $button-display;
   min-width: $button-min-width;
   min-height: $button-min-height;
@@ -66,7 +67,14 @@ $button-text-decoration: none !default;
     display: block;
   }
 
+  &.has-icon {
+    padding-left: ($spacer * 3);
+  }
+
   .o-icon {
+    position: absolute;
+    left: ($spacer / 2);
+
     svg {
       fill: $button-icon-fill;
     }
