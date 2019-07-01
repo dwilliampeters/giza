@@ -3714,44 +3714,6 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-giza-framework@*:
-  version "0.0.46"
-  resolved "https://registry.yarnpkg.com/giza-framework/-/giza-framework-0.0.46.tgz#505a8677a110c113004f35978d601303eb70f5c0"
-  integrity sha512-BhdvsSx43dU9KwXDXGSXKlHW+04oxIf/9HuCpvUbofHWIbV+lw4P49g8ZpdvvFjYvUAFu0UqLV015IAdbBd1Tw==
-  dependencies:
-    babel-core "^6.25.0"
-    babel-loader "^7.1.1"
-    babel-polyfill "^6.26.0"
-    babel-preset-es2015 "^6.24.1"
-    babel-preset-react-app "^2.2.0"
-    babel-preset-stage-1 "^6.24.1"
-    browser-sync "^2.26.3"
-    del "^3.0.0"
-    gulp "^3.9.1"
-    gulp-if "^2.0.2"
-    gulp-nunjucks-render "^2.2.2"
-    gulp-plumber "^1.2.1"
-    gulp-postcss "^8.0.0"
-    gulp-sass "^4.0.2"
-    gulp-sequence "^1.0.0"
-    gulp-sourcemaps "^2.6.4"
-    gulp-svgstore "^7.0.0"
-    gulp-watch "^5.0.1"
-    react "^16.7.0"
-    react-dom "^16.7.0"
-    require-dir "^1.2.0"
-    svgxuse "^1.1.23"
-    webpack "^4.26.1"
-    webpack-stream "^5.1.1"
-
-giza-lab@*:
-  version "0.0.45"
-  resolved "https://registry.yarnpkg.com/giza-lab/-/giza-lab-0.0.45.tgz#a83e7368c323ac7fff8ea5d8dbc1287f75bfb6e9"
-  integrity sha512-LLdaSiU0CUmvLSbgHEQ70NhlrJo87frhFjcgmRxQFrJ6qm9b6Pt9QNJphzOeAyUvblkFERDrq6/S+3A6O6Qz5Q==
-  dependencies:
-    giza-framework "*"
-    gulp-data "^1.2.1"
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -3992,15 +3954,6 @@ graceful-fs@~1.2.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
   integrity sha1-FaSAaldUfLLS2/J/QuiajDRRs2Q=
-
-gulp-data@^1.2.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/gulp-data/-/gulp-data-1.3.1.tgz#3304d5d1203d554d3385e42de78ee9204f61c8a2"
-  integrity sha512-fvpQJvgVyhkwRcFP3Y9QUS9sWvIFsAlJDinQjhLuknmHZz52jH0gHmTujYBFjr9aTlTHlrAayY5m1d0tA1HzGQ==
-  dependencies:
-    plugin-error "^0.1.2"
-    through2 "^2.0.0"
-    util-extend "^1.0.1"
 
 gulp-if@^2.0.2:
   version "2.0.2"
@@ -4925,14 +4878,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
-
-jaywing-frontend-starter-kit@*:
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/jaywing-frontend-starter-kit/-/jaywing-frontend-starter-kit-0.0.34.tgz#2dbf5ecc7cce7a523f2ccea7084b2920963652c8"
-  integrity sha512-5RMKRbSzTrGolYanw+Cwq4xjkEaz82Rjq+AhD/Wh0rSKtBmQMkM2zPzljOsJCgXxd4DLdcx3oJJ6ocTdplC8qQ==
-  dependencies:
-    giza-framework "*"
-    giza-lab "*"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.5.0"
@@ -9045,11 +8990,6 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
-
-util-extend@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/util-extend/-/util-extend-1.0.3.tgz#a7c216d267545169637b3b6edc6ca9119e2ff93f"
-  integrity sha1-p8IW0mdUUWljeztu3GypEZ4v+T8=
 
 util@0.10.3:
   version "0.10.3"
