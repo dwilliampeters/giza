@@ -1732,6 +1732,7 @@ p {
     display: block; }
 
 .c-button {
+  position: relative;
   display: inline-flex;
   min-width: 44px;
   min-height: 1em;
@@ -1773,8 +1774,13 @@ p {
       color: #fff; }
   .c-button--block {
     display: block; }
-  .c-button .o-icon svg {
-    fill: #fff; }
+  .c-button.has-icon {
+    padding-left: 3rem; }
+  .c-button .o-icon {
+    position: absolute;
+    left: 0.5rem; }
+    .c-button .o-icon svg {
+      fill: #fff; }
 
 .c-button__text {
   display: inline-block; }
