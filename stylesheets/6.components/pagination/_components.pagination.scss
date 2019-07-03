@@ -12,6 +12,14 @@ $pagination-disabled-color: $medium !default;
   list-style: none;
 }
 
+.c-pagination__item {
+  &:first-child {
+    .c-pagination__link {
+      margin-left: 0;
+    }
+  }
+}
+
 .c-pagination__link {
   display: block;
   padding: $pagination-link-padding;
