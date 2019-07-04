@@ -1776,11 +1776,11 @@ p {
     display: block; }
   .c-button.has-icon {
     padding-left: 3rem; }
-  .c-button .o-icon {
-    position: absolute;
-    left: 0.5rem; }
-    .c-button .o-icon svg {
-      fill: #fff; }
+    .c-button.has-icon .o-icon {
+      position: absolute;
+      left: 0.5rem; }
+  .c-button .o-icon svg {
+    fill: #fff; }
 
 .c-button__text {
   display: inline-block; }
@@ -2470,6 +2470,9 @@ p {
   display: flex;
   margin: 0;
   list-style: none; }
+
+.c-pagination__item:first-child .c-pagination__link {
+  margin-left: 0; }
 
 .c-pagination__link {
   display: block;

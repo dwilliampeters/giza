@@ -69,12 +69,14 @@ $button-text-decoration: none !default;
 
   &.has-icon {
     padding-left: ($spacer * 3);
+
+    .o-icon {
+      position: absolute;
+      left: ($spacer / 2);
+    }
   }
 
   .o-icon {
-    position: absolute;
-    left: ($spacer / 2);
-
     svg {
       fill: $button-icon-fill;
     }
