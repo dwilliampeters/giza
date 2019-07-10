@@ -6,21 +6,21 @@ $pagination-link-border: $pagination-link-border-width solid $medium !default;
 $pagination-active-bg: $medium !default;
 $pagination-disabled-color: $medium !default;
 
-.c-pagination {
+.pagination {
   display: flex;
   margin: 0;
   list-style: none;
 }
 
-.c-pagination__item {
+.pagination__item {
   &:first-child {
-    .c-pagination__link {
+    .pagination__link {
       margin-left: 0;
     }
   }
 }
 
-.c-pagination__link {
+.pagination__link {
   display: block;
   padding: $pagination-link-padding;
   margin-left: -$pagination-link-border-width;

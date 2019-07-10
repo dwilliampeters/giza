@@ -2,18 +2,18 @@
 
 $site-content-padding: $spacer !default;
 
-.o-site {
+.site {
   display: flex;
   min-height: 100%;
   flex-direction: column;
 }
 
-.o-site__header,
-.o-site__footer {
+.site__header,
+.site__footer {
   flex: none;
 }
 
-.o-site__content {
+.site__content {
   width: 100%;
   flex: 1 0 auto;
   padding: $site-content-padding 0 0;
@@ -27,12 +27,12 @@ $site-content-padding: $spacer !default;
   }
 }
 
-.o-site--collapse {
-  .o-site__content {
+.site--collapse {
+  .site__content {
     padding: 0;
   }
 
-  .o-site__content::after {
+  .site__content::after {
     content: none;
   }
 }

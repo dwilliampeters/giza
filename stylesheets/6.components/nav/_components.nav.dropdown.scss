@@ -31,7 +31,7 @@ $dropdown-nav-border: $dark 1px solid !default;
     display: flex;
     flex-wrap: wrap;
 
-    > .c-nav__link {
+    > .nav__link {
       flex: 1 1 auto;
     }
 
@@ -48,7 +48,7 @@ $dropdown-nav-border: $dark 1px solid !default;
   }
 }
 
-.c-nav--dropdown {
+.nav--dropdown {
   @include dropdown-nav;
 }
 
@@ -58,7 +58,7 @@ $dropdown-nav-border: $dark 1px solid !default;
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
-    .c-nav--dropdown\@#{$key} {
+    .nav--dropdown\@#{$key} {
       @include dropdown-nav;
     }
   }

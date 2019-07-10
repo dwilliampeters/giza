@@ -27,7 +27,7 @@ export default class Nav {
   }
 
   handleParentClick(e, item, itemParent) {
-    let items = itemParent.parentNode.querySelectorAll(".c-nav__item");
+    let items = itemParent.parentNode.querySelectorAll(".nav__item");
     if (itemParent.classList.contains("is-active")) {
       itemParent.classList.remove("is-active");
     } else {

@@ -22,7 +22,7 @@ $button-active-hover-color: $button-hover-color !default;
 $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
-.c-button {
+.button {
   position: relative;
   display: $button-display;
   min-width: $button-min-width;
@@ -70,19 +70,19 @@ $button-text-decoration: none !default;
   &.has-icon {
     padding-left: ($spacer * 3);
 
-    .o-icon {
+    .icon {
       position: absolute;
       left: ($spacer / 2);
     }
   }
 
-  .o-icon {
+  .icon {
     svg {
       fill: $button-icon-fill;
     }
   }
 }
 
-.c-button__text {
+.button__text {
   display: inline-block;
 }

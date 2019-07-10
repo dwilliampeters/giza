@@ -1,25 +1,25 @@
 // Components: Nav Vertical
 
-.c-nav--vertical {
-  .c-nav__item {
+.nav--vertical {
+  .nav__item {
     flex: 0 0 100%;
     text-align: left;
   }
 
-  .c-nav__link {
+  .nav__link {
     align-items: flex-start;
     justify-content: flex-start;
     text-align: inherit;
   }
 
-  &.c-nav--right {
-    .c-nav__item,
-    .c-nav__item--left {
+  &.nav--right {
+    .nav__item,
+    .nav__item--left {
       text-align: right;
     }
   }
 
-  &.c-nav--center .c-nav__item {
+  &.nav--center .nav__item {
     text-align: center;
   }
 }

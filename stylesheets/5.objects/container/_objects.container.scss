@@ -6,34 +6,34 @@ $container-thin-max-width: $site-max-width / 2 !default;
 $container-body-width: 100% !default;
 $container-sidebar-width: 100% !default;
 
-.o-container {
+.container {
   max-width: $container-max-width;
   padding-right: $container-side-padding;
   padding-left: $container-side-padding;
 }
 
-.o-container--centered {
+.container--centered {
   margin-right: auto;
   margin-left: auto;
 }
 
-.o-container--fluid {
+.container--fluid {
   max-width: 100%;
 }
 
-.o-container--collapse {
+.container--collapse {
   padding-right: 0;
   padding-left: 0;
 }
 
-.o-container--thin {
+.container--thin {
   max-width: $container-thin-max-width;
 }
 
-.o-container__body {
+.container__body {
   width: $container-body-width;
 }
 
-.o-container__sidebar {
+.container__sidebar {
   width: $container-sidebar-width;
 }

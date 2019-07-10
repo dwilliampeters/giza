@@ -8,28 +8,28 @@ $card-header-color: $dark !default;
 $card-body-padding: $spacer !default;
 $card-title-margin: 0 0 $spacer !default;
 
-.c-card {
+.card {
   display: flex;
   flex-direction: column;
   border: $card-border;
   background: $card-bg;
 }
 
-.c-card__header {
+.card__header {
   padding: $card-header-padding;
   background: $card-header-bg;
   color: $card-header-color;
 }
 
-.c-card__img {
+.card__img {
   width: 100%;
 }
 
-.c-card__body {
+.card__body {
   flex: 1 1 auto;
   padding: $card-body-padding;
 }
 
-.c-card__title {
+.card__title {
   margin: $card-title-margin;
 }

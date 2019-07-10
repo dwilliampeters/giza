@@ -7,7 +7,7 @@ $display-prop-values: 'none', 'block', 'inline-block', 'flex' !default;
 @mixin display($prop-value, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
-  .u-display-#{$prop-value + $breakpoint-suffix} {
+  .display-#{$prop-value + $breakpoint-suffix} {
     display: #{$prop-value} !important;
   }
 }

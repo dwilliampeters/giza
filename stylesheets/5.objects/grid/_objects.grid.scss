@@ -2,7 +2,7 @@
 @mixin grid-column($column-number, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-  .o-grid > .o-grid__cell--span-#{$column-number + $breakpoint-suffix} {
+  .grid > .grid__cell--span-#{$column-number + $breakpoint-suffix} {
     grid-column: span #{$column-number};
   }
 }
@@ -10,24 +10,24 @@
 @mixin grid-gutters($spacing-prop, $spacing-value, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-  .o-grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
+  .grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
     grid-gap: $spacing-value;
   }
 
-  .o-grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
+  .grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
     grid-column-gap: $spacing-value;
   }
 
-  .o-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
+  .grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
     grid-row-gap: $spacing-value;
   }
 }
 // DEFINITIONS
-.o-grid {
+.grid {
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
 
-  > .o-grid__cell {
+  > .grid__cell {
     grid-column: span $grid-columns;
   }
 }

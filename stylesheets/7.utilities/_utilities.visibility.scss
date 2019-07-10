@@ -1,23 +1,23 @@
 // Utilities: Visibility
 
-.u-hide {
+.hide {
   display: none !important;
 }
 
-.u-show {
+.show {
   display: block !important;
 }
 
-.u-invisible {
+.invisible {
   visibility: hidden !important;
 }
 
-.u-visible {
+.visible {
   visibility: visible !important;
 }
 
 // screen readers only
-.u-sr-only {
+.sr-only {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -29,8 +29,8 @@
 }
 
 // allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
-.u-sr-only--focusable:active,
-.u-sr-only--focusable:focus {
+.sr-only--focusable:active,
+.sr-only--focusable:focus {
   position: static;
   overflow: visible;
   width: auto;
@@ -40,6 +40,6 @@
 }
 
 // Print visibility class
-.u-print-only {
+.print-only {
   display: none !important;
 }

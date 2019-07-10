@@ -5,7 +5,7 @@ $margin-sides: 'top', 'right', 'bottom', 'left' !default;
 @mixin margin($side, $name, $size, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
-  .u-margin-#{$side}-#{$name + $breakpoint-suffix} {
+  .margin-#{$side}-#{$name + $breakpoint-suffix} {
     margin-#{$side}: #{$size} !important;
   }
 }

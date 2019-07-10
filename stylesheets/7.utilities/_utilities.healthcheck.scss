@@ -17,14 +17,14 @@
   }
 
   // Outline all Object classes.
-  [class^='o-'],
-  [class*=' o-'] {
+  [class^=''],
+  [class*=' '] {
     outline: 5px solid orange;
   }
 
   // Outline all Component classes.
-  [class^='c-'],
-  [class*=' c-'] {
+  [class^=''],
+  [class*=' '] {
     outline: 5px solid cyan;
   }
 

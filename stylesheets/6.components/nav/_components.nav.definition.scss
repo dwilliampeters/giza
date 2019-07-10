@@ -13,7 +13,7 @@ $nav-item-padding: 0 !default;
 $nav-link-padding: $spacer !default;
 $nav-link-font-weight: $font-weight-normal !default;
 
-.c-nav {
+.nav {
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -23,37 +23,37 @@ $nav-link-font-weight: $font-weight-normal !default;
   list-style: none;
 }
 
-.c-nav--right {
+.nav--right {
   justify-content: flex-end;
 }
 
-.c-nav--center {
+.nav--center {
   justify-content: center;
 }
 
-.c-nav--expanded {
-  > .c-nav__item {
+.nav--expanded {
+  > .nav__item {
     min-width: 0;
     flex: 1 1 0%;
   }
 }
 
-.c-nav__item {
+.nav__item {
   flex: 0 0 auto;
   padding: $nav-item-padding;
 }
 
-.c-nav__item--right {
+.nav__item--right {
   display: flex;
   margin-left: auto;
 }
 
-.c-nav__item--left {
+.nav__item--left {
   display: flex;
   margin-right: auto;
 }
 
-.c-nav__link {
+.nav__link {
   @include color-swap-on-hover(
     $nav-link-color $nav-link-bg,
     $nav-link-hover-color $nav-link-hover-bg,

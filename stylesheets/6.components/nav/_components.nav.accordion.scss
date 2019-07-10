@@ -21,7 +21,7 @@ $accordion-nav-border: none !default;
     display: flex;
     flex-wrap: wrap;
 
-    > .c-nav__link {
+    > .nav__link {
       flex: 1 1 auto;
     }
 
@@ -38,7 +38,7 @@ $accordion-nav-border: none !default;
   }
 }
 
-.c-nav--accordion {
+.nav--accordion {
   @include accordion-nav;
 }
 
@@ -48,7 +48,7 @@ $accordion-nav-border: none !default;
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
-    .c-nav--accordion\@#{$key} {
+    .nav--accordion\@#{$key} {
       @include accordion-nav;
     }
   }

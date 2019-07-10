@@ -13,13 +13,13 @@ $list-group-item-action-active-hover-bg: $button-hover-bg !default;
 $list-group-item-action-active-hover-color: $button-hover-color !default;
 $list-group-item-action-text-decoration: none !default;
 
-.c-list-group {
+.list-group {
   display: flex;
   flex-direction: column;
   margin: $list-group-margin;
 }
 
-.c-list-group__item {
+.list-group__item {
   position: relative;
   display: block;
   padding: $list-group-item-padding;
@@ -27,7 +27,7 @@ $list-group-item-action-text-decoration: none !default;
   border: $list-group-item-border;
 }
 
-.c-list-group__item--action {
+.list-group__item--action {
   background: $list-group-item-action-bg;
   color: $list-group-item-action-color;
   cursor: pointer;

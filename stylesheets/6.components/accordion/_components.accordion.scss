@@ -4,23 +4,23 @@ $accordion-item-border: 1px solid $dark !default;
 $accordion-toggle-padding: $spacer !default;
 $accordion-content-padding: 0 $spacer $spacer !default;
 
-.c-accordion {
+.accordion {
   margin: 0;
   list-style: none;
 }
 
-.c-accordion__item {
+.accordion__item {
   &:not(:first-child) {
     border-top: $accordion-item-border;
   }
 }
 
-.c-accordion__toggle {
+.accordion__toggle {
   display: block;
   padding: $accordion-toggle-padding;
 }
 
-.c-accordion__content {
+.accordion__content {
   display: none;
   padding: $accordion-content-padding;
 

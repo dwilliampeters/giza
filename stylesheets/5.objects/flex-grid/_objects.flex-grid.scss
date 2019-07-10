@@ -2,7 +2,7 @@
 @mixin flex-grid-column($column-number, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-  .o-flex-grid > .o-flex-grid__cell--span-#{$column-number + $breakpoint-suffix} {
+  .flex-grid > .flex-grid__cell--span-#{$column-number + $breakpoint-suffix} {
     max-width: #{(100/12 * $column-number) + '%'};
     flex: 0 0 #{(100/12 * $column-number) + '%'};
   }
@@ -12,39 +12,39 @@
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
   $column-spacing: ($spacing-value/2);
 
-  .o-flex-grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
+  .flex-grid--gutters-#{$spacing-prop + $breakpoint-suffix} {
     margin-right: -$column-spacing;
     margin-left: -$column-spacing;
 
-    > .o-flex-grid__cell {
+    > .flex-grid__cell {
       padding-right: $column-spacing;
       padding-left: $column-spacing;
       margin-bottom: $spacing-value;
     }
   }
 
-  .o-flex-grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
+  .flex-grid--gutters-#{$spacing-prop}-horizontal#{$breakpoint-suffix} {
     margin-right: -$column-spacing;
     margin-left: -$column-spacing;
 
-    > .o-flex-grid__cell {
+    > .flex-grid__cell {
       padding-right: $column-spacing;
       padding-left: $column-spacing;
     }
   }
 
-  .o-flex-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
-    > .o-flex-grid__cell {
+  .flex-grid--gutters-#{$spacing-prop}-vertical#{$breakpoint-suffix} {
+    > .flex-grid__cell {
       margin-bottom: $spacing-value;
     }
   }
 }
 // DEFINITIONS
-.o-flex-grid {
+.flex-grid {
   display: flex;
   flex-wrap: wrap;
 
-  > .o-flex-grid__cell {
+  > .flex-grid__cell {
     max-width: 100%;
     flex: 0 0 100%;
   }
