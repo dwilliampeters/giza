@@ -7,6 +7,7 @@ $card-header-bg: $medium !default;
 $card-header-color: $dark !default;
 $card-body-padding: $spacer !default;
 $card-title-margin: 0 0 $spacer !default;
+$card-title-font-weight: $font-weight-bold !default;
 
 .card {
   display: flex;
@@ -32,4 +33,5 @@ $card-title-margin: 0 0 $spacer !default;
 
 .card__title {
   margin: $card-title-margin;
+  font-weight: $card-title-font-weight;
 }

@@ -1788,12 +1788,12 @@ p {
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #afb1b8;
+  border: 1px solid #ddd;
   background: #fff; }
 
 .card__header {
   padding: 1rem;
-  background: #afb1b8;
+  background: #ddd;
   color: #000; }
 
 .card__img {
@@ -1804,7 +1804,8 @@ p {
   padding: 1rem; }
 
 .card__title {
-  margin: 0 0 1rem; }
+  margin: 0 0 1rem;
+  font-weight: 700; }
 
 .form-group {
   margin-bottom: 1rem; }
@@ -1916,7 +1917,7 @@ p {
   display: block;
   padding: 1rem;
   margin-bottom: -1px;
-  border: 1px solid #afb1b8; }
+  border: 1px solid #ddd; }
 
 .list-group__item--action {
   background: transparent;
@@ -2478,11 +2479,11 @@ p {
   display: block;
   padding: 0.5rem;
   margin-left: -1px;
-  border: 1px solid #afb1b8; }
+  border: 1px solid #ddd; }
   .is-active .pagination__link {
-    background: #afb1b8; }
+    background: #ddd; }
   .is-disabled .pagination__link {
-    color: #afb1b8; }
+    color: #ddd; }
 
 .table {
   width: 100%; }
@@ -2490,14 +2491,14 @@ p {
     padding: 1rem;
     border-top: none;
     border-right: none;
-    border-bottom: 2px solid #afb1b8;
+    border-bottom: 2px solid #ddd;
     border-left: none;
     text-align: inherit; }
   .table td {
     padding: 1rem;
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid #afb1b8;
+    border-bottom: 1px solid #ddd;
     border-left: none;
     text-align: inherit; }
 
