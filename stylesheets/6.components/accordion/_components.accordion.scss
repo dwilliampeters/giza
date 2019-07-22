@@ -2,6 +2,7 @@
 
 $accordion-item-border: 1px solid $dark !default;
 $accordion-toggle-padding: $spacer !default;
+$accordion-toggle-text-hover-decoration: underline !default;
 $accordion-content-padding: 0 $spacer $spacer !default;
 
 .accordion {
@@ -18,6 +19,21 @@ $accordion-content-padding: 0 $spacer $spacer !default;
 .accordion__toggle {
   display: block;
   padding: $accordion-toggle-padding;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: $accordion-toggle-text-hover-decoration;
+  }
+}
+
+.accordion__title {
+  @include pica;
+
+  margin: 0;
 }
 
 .accordion__content {
