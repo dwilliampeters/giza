@@ -1752,7 +1752,7 @@ p {
 
 .accordion__content {
   display: none;
-  padding: 0 1rem 1rem; }
+  padding: 1rem; }
   .is-active > .accordion__content {
     display: block; }
 

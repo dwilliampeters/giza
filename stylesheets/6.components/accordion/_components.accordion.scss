@@ -3,7 +3,7 @@
 $accordion-item-border: 1px solid $dark !default;
 $accordion-toggle-padding: $spacer !default;
 $accordion-toggle-text-hover-decoration: underline !default;
-$accordion-content-padding: 0 $spacer $spacer !default;
+$accordion-content-padding: $spacer !default;
 
 .accordion {
   margin: 0;
