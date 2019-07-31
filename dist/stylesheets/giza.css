@@ -1693,26 +1693,8 @@ p {
   min-height: 100%;
   flex-direction: column; }
 
-.site__header,
 .site__footer {
-  flex: none; }
-
-.site__content {
-  width: 100%;
-  flex: 1 0 auto;
-  padding: 1rem 0 0; }
-  .site__content::after {
-    display: block;
-    height: 0;
-    margin-top: 1rem;
-    content: '\00a0';
-    visibility: hidden; }
-
-.site--collapse .site__content {
-  padding: 0; }
-
-.site--collapse .site__content::after {
-  content: none; }
+  margin-top: auto; }
 
 .accordion {
   margin: 0;
