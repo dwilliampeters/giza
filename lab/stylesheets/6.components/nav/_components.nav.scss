@@ -1,0 +1,68 @@
+.app-nav {
+  padding-top: $spacer;
+
+  .nav__item {
+    padding: ($spacer / 3) $spacer;
+
+    &.is-active {
+      > .nav__link {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .nav__link {
+    @include long-primer;
+
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .nav__item-level-1 {
+    > .nav {
+      display: none;
+    }
+
+    &.is-active {
+      > .nav__link {
+        border-bottom: 3px solid $denim;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          border-color: transparent;
+        }
+      }
+
+      > .nav {
+        display: block;
+      }
+    }
+
+    > .nav__link {
+      @include pica;
+
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .nav--nested {
+    padding-left: 0;
+  }
+}
+
+@include md {
+  .app-nav {
+    border-right: 1px solid $gallery;
+  }
+}

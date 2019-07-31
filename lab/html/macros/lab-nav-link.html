@@ -1,0 +1,38 @@
+{#
+  id,
+  title,
+  url,
+  currentPageId,
+  classes,
+  activeClass
+#}
+{% macro LabNavLink(modal, categoryId, currentPageId, loop, level) %}
+
+  {% if modal.id == categoryId %}
+    {% set activeClass = " is-active" %}
+  {% endif %}
+
+  {% if modal.id == currentPageId %}
+    {% set activeClass = " is-active" %}
+  {% endif %}
+
+  {% if level == 'level-1' %}
+    {% set level = " nav__item-level-1" %}
+  {% endif %}
+
+  {% if modal.children %}
+    {% set parent = " nav__item-parent" %}
+  {% endif %}
+
+  <li class="nav__item{{modal.classes}}{{level}}{{parent}}{{activeClass}}">
+    <a class="nav__link" href="{{modal.url}}">{{modal.title}}</a>
+    {% if modal.children %}
+      <ul class="nav nav--vertical nav--nested">
+        {% for page in modal.children %}
+          {{ LabNavLink(page, currentPageId, loop) }}
+        {% endfor %}
+    </ul>
+  {% endif %}
+</li>
+
+{% endmacro %}

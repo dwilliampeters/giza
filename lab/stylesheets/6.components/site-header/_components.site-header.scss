@@ -1,0 +1,67 @@
+body {
+  padding-top: 59px + 56px;
+}
+
+.app-header {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: $spacer;
+  background-color: $woodsmoke;
+  box-shadow: 0 2px 20px rgba($dark, 0.6);
+  color: $light;
+
+  .sidebar-toggle {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+  }
+}
+
+.app-logo {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include color-swap-on-hover($light, $light);
+
+  &:visited {
+    @include color-swap-on-hover($light, $light);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.lab-version {
+  @include minion;
+
+  display: inline-block;
+  padding: 0 ($spacer / 2);
+  font-style: italic;
+}
+
+@include md {
+  body {
+    padding-top: 59px;
+  }
+
+  .app-header {
+    .sidebar-toggle {
+      display: none;
+    }
+  }
+}

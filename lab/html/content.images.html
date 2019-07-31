@@ -1,0 +1,29 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "content" %}
+{% set pageId = "images" %}
+
+{% block content %}
+  <h1>Images</h1>
+
+  <h3>Usage</h3>
+
+  {{LabExample(pageType, pageId)}}
+  {{LabCode('html', '
+  <img src="//placehold.it/780x250" alt="...">
+  ')}}
+
+  <h3>Picture</h3>
+
+  {{LabExample(pageType, pageId, 'picture')}}
+  {{LabCode('html', '
+  <picture>
+    <source srcset="//placehold.it/780x250" media="(min-width: 768px)">
+    <source srcset="//placehold.it/420x250" media="(max-width: 768px)">
+    <img src="//placehold.it/480x250" alt="...">
+  </picture>
+  ')}}
+{% endblock %}

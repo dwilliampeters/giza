@@ -1,0 +1,10 @@
+{% extends 'layouts/lab.html' %}
+
+{% block body %}
+  <div class="app-main__sidebar">
+    {% include 'shared/lab-sidebar.html' %}
+  </div>
+  <main class="app-main__content">
+    {% block content %}{% endblock %}
+  </main>
+{% endblock %}

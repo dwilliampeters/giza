@@ -6,6 +6,7 @@ const projectPath = require("../lib/projectPath");
 gulp.task("html", function() {
   paths = {
     src: [
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
       "!" +
         projectPath(
@@ -14,7 +15,10 @@ gulp.task("html", function() {
           "**/{components,layouts,shared,macros,data}/**"
         )
     ],
-    src_render: [projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)],
+    src_render: [
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
+    ],
     dest: projectPath(PATH_CONFIG.buildDest)
   };
 

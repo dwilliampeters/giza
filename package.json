@@ -27,6 +27,7 @@
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
     "gulp-if": "^2.0.2",
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-plumber": "^1.2.1",
@@ -37,6 +38,7 @@
     "gulp-svgstore": "^7.0.0",
     "gulp-watch": "^5.0.1",
     "require-dir": "^1.2.0",
+    "strip-loader": "^0.1.2",
     "svgxuse": "^1.1.23",
     "webpack": "^4.26.1",
     "webpack-stream": "^5.1.1"
