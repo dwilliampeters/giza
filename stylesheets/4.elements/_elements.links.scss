@@ -1,11 +1,15 @@
 // Elements: Links
 
-$link-color: $dark !default;
-$link-hover-color: $dark !default;
-$link-visited-color: $dark !default;
+$link-color: $denim !default;
+$link-hover-color: darken($denim, 50%) !default;
+$link-visited-color: $denim !default;
+$link-focus-bg-color: #ffcd3d !default;
+$link-focus-box-shadow: 0 -2px #ffcd3d, 0 4px #0b0c0c !default;
 
 $link-trans-speed: 200 !default;
 $link-underline: underline !default;
+$link-hover-underline: underline !default;
+$link-focus-underline: none !default;
 
 a {
   color: $link-color;
@@ -13,6 +17,16 @@ a {
 
   &:visited {
     color: $link-visited-color;
+  }
+
+  &:hover {
+    text-decoration: $link-hover-underline;
+  }
+
+  &:focus {
+    background-color: $link-focus-bg-color;
+    box-shadow: $link-focus-box-shadow;
+    text-decoration: $link-focus-underline;
   }
 
   @include color-swap-on-hover(

@@ -24,18 +24,15 @@ $breakpoints: (
   xl: 1180px,
   xxl: 1400px
 ) !default;
-
 // Colours
+
 // Use http://chir.ag/projects/name-that-color/#51284F
 // for colour variable names
-
 // Colour Types
 $light: #fff !default;
 $medium: #ddd !default;
 $dark: #000 !default;
-$primary: #007bff !default;
-$secondary: #e52b50 !default;
-
+$denim: #1d70b8 !default;
 // Fonts
 $font: Helvetica, Arial, sans-serif !default;
 $font-loaded: Helvetica, Arial, sans-serif !default;

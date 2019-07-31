@@ -30,9 +30,11 @@ $dropdown-nav-border: $dark 1px solid !default;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
     > .nav__link {
       flex: 1 1 auto;
+      padding-right: $spacer;
     }
 
     &.is-active {

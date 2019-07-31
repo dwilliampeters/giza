@@ -474,15 +474,21 @@ u {
   text-decoration: none; }
 
 a {
-  color: #000;
+  color: #1d70b8;
   text-decoration: underline;
-  color: #000;
+  color: #1d70b8;
   transition-duration: 200;
   transition-property: color; }
   a:visited {
-    color: #000; }
+    color: #1d70b8; }
+  a:hover {
+    text-decoration: underline; }
+  a:focus {
+    background-color: #ffcd3d;
+    box-shadow: 0 -2px #ffcd3d, 0 4px #0b0c0c;
+    text-decoration: none; }
   a:hover, a:focus {
-    color: #000; }
+    color: black; }
 
 ul,
 ol,
@@ -1749,35 +1755,35 @@ p {
   justify-content: center;
   padding: 1rem;
   border: 0;
-  background: #007bff;
+  background: #1d70b8;
   color: #fff;
   cursor: pointer;
   line-height: 1;
   outline: none;
   text-decoration: none;
   vertical-align: baseline;
-  background-color: #007bff;
+  background-color: #1d70b8;
   color: #fff;
   transition-duration: 200;
   transition-property: background-color, color; }
   .button:hover, .button:focus {
-    background-color: #e52b50;
+    background-color: #16558c;
     color: #fff; }
   .button:visited {
-    background-color: #007bff;
+    background-color: #1d70b8;
     color: #fff;
     transition-duration: 200;
     transition-property: background-color, color; }
     .button:visited:hover, .button:visited:focus {
-      background-color: #e52b50;
+      background-color: #16558c;
       color: #fff; }
   .button.is-active {
-    background-color: #e52b50;
+    background-color: #16558c;
     color: #fff;
     transition-duration: 200;
     transition-property: background-color, color; }
     .button.is-active:hover, .button.is-active:focus {
-      background-color: #e52b50;
+      background-color: #16558c;
       color: #fff; }
   .button--block {
     display: block; }
@@ -1926,35 +1932,13 @@ p {
   margin-bottom: -1px;
   border: 1px solid #ddd; }
 
-.list-group__item--action {
-  background: transparent;
-  color: #000;
-  cursor: pointer;
-  text-align: left;
-  text-decoration: none;
-  background-color: transparent;
-  color: #000;
-  transition-duration: 200;
-  transition-property: background-color, color; }
-  .list-group__item--action:hover, .list-group__item--action:focus {
-    background-color: #e52b50;
-    color: #fff; }
-  .list-group__item--action.is-active {
-    background-color: #007bff;
-    color: #fff;
-    transition-duration: 200;
-    transition-property: background-color, color; }
-    .list-group__item--action.is-active:hover, .list-group__item--action.is-active:focus {
-      background-color: #e52b50;
-      color: #fff; }
-  .list-group__item--action:visited {
-    background-color: transparent;
-    color: #000;
-    transition-duration: 200;
-    transition-property: background-color, color; }
-    .list-group__item--action:visited:hover, .list-group__item--action:visited:focus {
-      background-color: #e52b50;
-      color: #fff; }
+.list-group__link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ''; }
 
 .nav {
   display: flex;
@@ -1976,8 +1960,12 @@ p {
   flex: 1 1 0%; }
 
 .nav__item {
+  position: relative;
   flex: 0 0 auto;
-  padding: 0; }
+  padding: 1rem; }
+  .nav__item.is-current > .nav__link {
+    background-color: transparent;
+    color: #1d70b8; }
 
 .nav__item--right {
   display: flex;
@@ -1987,29 +1975,16 @@ p {
   display: flex;
   margin-right: auto; }
 
-.nav__link {
-  background-color: transparent;
-  color: #000;
-  transition-duration: 200;
-  transition-property: background-color, color;
-  display: block;
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none; }
-  .nav__link:hover, .nav__link:focus {
-    background-color: transparent;
-    color: #000; }
-  .is-active > .nav__link, .nav__link.is-active {
-    background-color: transparent;
-    color: #000;
-    transition-duration: 200;
-    transition-property: background-color, color; }
-    .is-active > .nav__link:hover, .is-active > .nav__link:focus, .nav__link.is-active:hover, .nav__link.is-active:focus {
-      background-color: transparent;
-      color: #000; }
+.nav__link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ''; }
 
 .nav--nested {
-  margin-left: 1rem; }
+  padding-left: 1rem; }
 
 .nav--vertical .nav__item {
   flex: 0 0 100%;
@@ -2224,9 +2199,11 @@ p {
 .nav--dropdown .is-dropdown-nav-parent {
   position: relative;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: center; }
   .nav--dropdown .is-dropdown-nav-parent > .nav__link {
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    padding-right: 1rem; }
   .nav--dropdown .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
     display: flex;
     flex: none; }
@@ -2257,9 +2234,11 @@ p {
   .nav--dropdown\@xxs .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@xxs .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@xxs .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2287,9 +2266,11 @@ p {
   .nav--dropdown\@xs .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@xs .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@xs .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2317,9 +2298,11 @@ p {
   .nav--dropdown\@sm .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@sm .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@sm .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2347,9 +2330,11 @@ p {
   .nav--dropdown\@md .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@md .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@md .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2377,9 +2362,11 @@ p {
   .nav--dropdown\@lg .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@lg .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@lg .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2407,9 +2394,11 @@ p {
   .nav--dropdown\@xl .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@xl .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@xl .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2437,9 +2426,11 @@ p {
   .nav--dropdown\@xxl .is-dropdown-nav-parent {
     position: relative;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
     .nav--dropdown\@xxl .is-dropdown-nav-parent > .nav__link {
-      flex: 1 1 auto; }
+      flex: 1 1 auto;
+      padding-right: 1rem; }
     .nav--dropdown\@xxl .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
@@ -2479,18 +2470,22 @@ p {
   margin: 0;
   list-style: none; }
 
-.pagination__item:first-child .pagination__link {
-  margin-left: 0; }
-
-.pagination__link {
-  display: block;
+.pagination__item {
+  position: relative;
   padding: 0.5rem;
-  margin-left: -1px;
   border: 1px solid #ddd; }
-  .is-active .pagination__link {
+  .pagination__item.is-active {
     background: #ddd; }
-  .is-disabled .pagination__link {
+  .pagination__item.is-disabled .pagination__link {
     color: #ddd; }
+
+.pagination__link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ''; }
 
 .table {
   width: 100%; }
