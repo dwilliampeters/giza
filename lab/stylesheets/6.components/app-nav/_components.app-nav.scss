@@ -2,7 +2,7 @@
   padding-top: $spacer;
 
   .nav__item {
-    @include long-primer;
+    @include double-pica;
 
     padding: ($spacer / 3) $spacer;
 
@@ -27,7 +27,7 @@
   }
 
   .nav__item-level-1 {
-    @include great-primer;
+    @include paragon;
 
     > .nav {
       display: none;
@@ -64,5 +64,13 @@
 @include md {
   .app-nav {
     padding-top: 0;
+
+    .nav__item {
+      @include long-primer;
+    }
+
+    .nav__item-level-1 {
+      @include great-primer;
+    }
   }
 }

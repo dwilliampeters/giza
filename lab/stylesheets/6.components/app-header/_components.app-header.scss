@@ -1,5 +1,5 @@
 body {
-  padding-top: 59px + 56px;
+  padding-top: 58px + 56px;
 }
 
 .app-header {
@@ -14,18 +14,11 @@ body {
   border-bottom: 10px solid $azure-radiance;
   background-color: $woodsmoke;
   color: $light;
-
-  .sidebar-toggle {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-  }
 }
 
 .app-logo {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: $font-weight-bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -54,14 +47,39 @@ body {
   font-style: italic;
 }
 
-@include md {
-  body {
-    padding-top: 59px;
+.sidebar-toggle {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  align-self: flex-end;
+
+  .hamburger {
+    &:hover,
+    &:focus {
+      .hamburger__inner,
+      ::before,
+      ::after {
+        background-color: $light;
+      }
+    }
   }
 
-  .app-header {
-    .sidebar-toggle {
-      display: none;
+  .hamburger__inner {
+    background-color: $light;
+
+    &::before,
+    &::after {
+      background-color: $light;
     }
+  }
+}
+
+@include md {
+  body {
+    padding-top: 58px;
+  }
+
+  .sidebar-toggle {
+    display: none;
   }
 }

@@ -22,7 +22,9 @@
     </style>
   </head>
   <body>
-    
+
+    <div class="container container--centered">
+      
   <ul class="nav nav--dropdown" data-module="Nav">
     <li class="nav__item is-dropdown-nav-parent">
       <a href="#" class="nav__link">
@@ -57,24 +59,9 @@
         </li>
       </ul>
     </li>
-    <li class="nav__item ">
-      <a href="#" class="nav__link">
-        Item 2
-      </a>
-    </li>
-    <li class="nav__item ">
-      <a href="#" class="nav__link">
-        Item 3
-      </a>
-    </li>
-  </ul>
-
-  <h3>Dropdown @size</h3>
-
-  <ul class="nav nav--vertical nav--horizontal@md nav--dropdown@md" data-module="Nav">
     <li class="nav__item is-dropdown-nav-parent">
       <a href="#" class="nav__link">
-        Item 1
+        Item 2
       </a>
       <button class="button is-dropdown-button">
         <span class="Icon icon--chevron-down">
@@ -105,9 +92,53 @@
         </li>
       </ul>
     </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">
+        Item 3
+      </a>
+    </li>
+  </ul>
+
+  <h3>Dropdown @size</h3>
+
+  <ul class="nav nav--vertical nav--horizontal@md nav--dropdown@md" data-module="Nav">
+    <li class="nav__item is-dropdown-nav-parent">
+      <a href="#" class="nav__link">
+        Item 1
+      </a>
+      <button class="button is-dropdown-button">
+        <span class="Icon icon--chevron-down">
+          
+  <span class='icon icon--chevron-down'>
+    <svg viewbox="0 0 1 1">
+      <use xlink:href='../images/icons.svg#chevron-down'></use>
+    </svg>
+  </span>
+
+        </span>
+      </button>
+      <ul class="nav is-dropdown-nav nav--vertical ">
+        <li class="nav__item ">
+          <a href="#" class="nav__link">
+            Item 1 - 1
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            Item 1 - 2
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">
+            Item 1 - 3
+          </a>
+        </li>
+      </ul>
+    </li>
   </ul>
 
 
+    </div>
 
     <script src="/javascripts/giza.js"></script>
   </body>

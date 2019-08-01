@@ -19,32 +19,6 @@
   }
 }
 
-.sidebar-toggle {
-  width: 100%;
-  align-self: flex-end;
-  box-shadow: 0 2px 20px rgba($dark, 0.6);
-
-  .hamburger {
-    &:hover,
-    &:focus {
-      .hamburger__inner,
-      ::before,
-      ::after {
-        background-color: $light;
-      }
-    }
-  }
-
-  .hamburger__inner {
-    background-color: $light;
-
-    &::before,
-    &::after {
-      background-color: $light;
-    }
-  }
-}
-
 @include md {
   .app-sidebar {
     position: relative;

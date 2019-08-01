@@ -400,14 +400,14 @@ h4 {
   line-height: 1.375rem; }
   @media (min-width: 960px) {
     h4 {
-      font-size: 21px;
-      font-size: 1.3125rem;
-      line-height: 24px;
-      line-height: 1.5rem; } }
+      font-size: 22px;
+      font-size: 1.375rem;
+      line-height: 26px;
+      line-height: 1.625rem; } }
 
 h5 {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem; }
   @media (min-width: 768px) {
@@ -418,22 +418,28 @@ h5 {
       line-height: 1.25rem; } }
   @media (min-width: 960px) {
     h5 {
-      font-size: 18px;
-      font-size: 1.125rem;
-      line-height: 22px;
-      line-height: 1.375rem; } }
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 h6 {
   font-size: 15px;
   font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem; }
+  line-height: 20px;
+  line-height: 1.25rem; }
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 22px;
+      line-height: 1.375rem; } }
   @media (min-width: 960px) {
     h6 {
-      font-size: 15px;
-      font-size: 0.9375rem;
-      line-height: 20px;
-      line-height: 1.25rem; } }
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 b {
   font-weight: normal; }
@@ -474,13 +480,13 @@ u {
   text-decoration: none; }
 
 a {
-  color: #1d70b8;
+  color: #0d7adf;
   text-decoration: underline;
-  color: #1d70b8;
+  color: #0d7adf;
   transition-duration: 200;
   transition-property: color; }
   a:visited {
-    color: #1d70b8; }
+    color: #0d7adf; }
   a:hover {
     text-decoration: underline; }
   a:focus {
@@ -1720,8 +1726,8 @@ p {
     text-decoration: underline; }
 
 .accordion__title {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem;
   margin: 0; }
@@ -1733,10 +1739,10 @@ p {
       line-height: 1.25rem; } }
   @media (min-width: 960px) {
     .accordion__title {
-      font-size: 18px;
-      font-size: 1.125rem;
-      line-height: 22px;
-      line-height: 1.375rem; } }
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 .accordion__content {
   display: none;
@@ -1755,35 +1761,35 @@ p {
   justify-content: center;
   padding: 1rem;
   border: 0;
-  background: #1d70b8;
+  background: #0d7adf;
   color: #fff;
   cursor: pointer;
   line-height: 1;
   outline: none;
   text-decoration: none;
   vertical-align: baseline;
-  background-color: #1d70b8;
+  background-color: #0d7adf;
   color: #fff;
   transition-duration: 200;
   transition-property: background-color, color; }
   .button:hover, .button:focus {
-    background-color: #16558c;
+    background-color: #0a60af;
     color: #fff; }
   .button:visited {
-    background-color: #1d70b8;
+    background-color: #0d7adf;
     color: #fff;
     transition-duration: 200;
     transition-property: background-color, color; }
     .button:visited:hover, .button:visited:focus {
-      background-color: #16558c;
+      background-color: #0a60af;
       color: #fff; }
   .button.is-active {
-    background-color: #16558c;
+    background-color: #0a60af;
     color: #fff;
     transition-duration: 200;
     transition-property: background-color, color; }
     .button.is-active:hover, .button.is-active:focus {
-      background-color: #16558c;
+      background-color: #0a60af;
       color: #fff; }
   .button--block {
     display: block; }
@@ -1965,7 +1971,7 @@ p {
   padding: 1rem; }
   .nav__item.is-current > .nav__link {
     background-color: transparent;
-    color: #1d70b8; }
+    color: #0d7adf; }
 
 .nav__item--right {
   display: flex;
@@ -3205,14 +3211,14 @@ p {
   line-height: 1.375rem; }
   @media (min-width: 960px) {
     .great-primer {
-      font-size: 21px;
-      font-size: 1.3125rem;
-      line-height: 24px;
-      line-height: 1.5rem; } }
+      font-size: 22px;
+      font-size: 1.375rem;
+      line-height: 26px;
+      line-height: 1.625rem; } }
 
 .pica {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem; }
   @media (min-width: 768px) {
@@ -3223,34 +3229,46 @@ p {
       line-height: 1.25rem; } }
   @media (min-width: 960px) {
     .pica {
-      font-size: 18px;
-      font-size: 1.125rem;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
+
+.long-primer {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  line-height: 1.25rem; }
+  @media (min-width: 768px) {
+    .long-primer {
+      font-size: 16px;
+      font-size: 1rem;
       line-height: 22px;
       line-height: 1.375rem; } }
+  @media (min-width: 960px) {
+    .long-primer {
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 .long-primer {
   font-size: 15px;
   font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem; }
+  line-height: 20px;
+  line-height: 1.25rem; }
+  @media (min-width: 768px) {
+    .long-primer {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 22px;
+      line-height: 1.375rem; } }
   @media (min-width: 960px) {
     .long-primer {
-      font-size: 15px;
-      font-size: 0.9375rem;
-      line-height: 20px;
-      line-height: 1.25rem; } }
-
-.long-primer {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 18px;
-  line-height: 1.125rem; }
-  @media (min-width: 960px) {
-    .long-primer {
-      font-size: 15px;
-      font-size: 0.9375rem;
-      line-height: 20px;
-      line-height: 1.25rem; } }
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 .brevier {
   font-size: 14px;
