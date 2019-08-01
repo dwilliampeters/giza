@@ -17,9 +17,11 @@
   </head>
   <body class="site">
     <header class="app-header">
-      {% include 'shared/lab-header.html' %}
+      <div class="app-header__inner container container--centered">
+        {% include 'shared/lab-header.html' %}
+      </div>
     </header>
-    <div class="app-main">
+    <div class="app-main container container--centered">
       {% block body %}{% endblock %}
     </div>
     <script src="javascripts/giza-lab.js"></script>

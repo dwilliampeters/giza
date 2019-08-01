@@ -4,7 +4,7 @@
   .nav__item {
     @include double-pica;
 
-    padding: ($spacer / 3) $spacer;
+    padding: ($spacer / 3) 0;
 
     &.is-active {
       > .nav__link {
@@ -16,6 +16,10 @@
   .nav__link {
     display: inline-block;
     text-decoration: none;
+
+    &::after {
+      display: none;
+    }
 
     &:hover {
       text-decoration: underline;

@@ -12,12 +12,15 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  padding: ($spacer / 2) $spacer;
+  padding: ($spacer / 2) 0;
   border-bottom: $app-header-bottom-border;
   background-color: $app-header-background-color;
   color: $app-header-text-color;
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
 }
 
 .app-logo {
