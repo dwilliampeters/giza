@@ -1,6 +1,6 @@
 $app-header-background-color: $woodsmoke !default;
 $app-header-bottom-border: 10px solid $azure-radiance !default;
-$app-header-text-color: $light; !default;
+$app-header-text-color: $light !default;
 
 body {
   padding-top: 58px + 56px;
@@ -30,7 +30,10 @@ body {
   @include color-swap-on-hover($app-header-text-color, $app-header-text-color);
 
   &:visited {
-    @include color-swap-on-hover($app-header-text-color, $app-header-text-color);
+    @include color-swap-on-hover(
+      $app-header-text-color,
+      $app-header-text-color
+    );
   }
 
   &:hover {
