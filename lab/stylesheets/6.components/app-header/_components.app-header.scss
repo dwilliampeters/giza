@@ -1,3 +1,7 @@
+$app-header-background-color: $woodsmoke !default;
+$app-header-bottom-border: 10px solid $azure-radiance !default;
+$app-header-text-color: $light; !default;
+
 body {
   padding-top: 58px + 56px;
 }
@@ -11,9 +15,9 @@ body {
   display: flex;
   align-items: center;
   padding: ($spacer / 2) $spacer;
-  border-bottom: 10px solid $azure-radiance;
-  background-color: $woodsmoke;
-  color: $light;
+  border-bottom: $app-header-bottom-border;
+  background-color: $app-header-background-color;
+  color: $app-header-text-color;
 }
 
 .app-logo {
@@ -23,10 +27,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 
-  @include color-swap-on-hover($light, $light);
+  @include color-swap-on-hover($app-header-text-color, $app-header-text-color);
 
   &:visited {
-    @include color-swap-on-hover($light, $light);
+    @include color-swap-on-hover($app-header-text-color, $app-header-text-color);
   }
 
   &:hover {
