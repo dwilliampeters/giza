@@ -2,15 +2,10 @@
 
 $nav-link-color: $link-color !default;
 $nav-link-bg: transparent !default;
-$nav-link-hover-color: $nav-link-color !default;
-$nav-link-hover-bg: $nav-link-bg !default;
-$nav-link-text-decoration: none !default;
-$nav-link-text-align: center !default;
 $nav-link-trans-speed: 200 !default;
 $nav-link-active-color: $nav-link-color !default;
 $nav-link-active-bg: transparent !default;
-$nav-item-padding: 0 !default;
-$nav-link-padding: $spacer !default;
+$nav-item-padding: $spacer !default;
 $nav-link-font-weight: $font-weight-normal !default;
 
 .nav {
@@ -39,8 +34,14 @@ $nav-link-font-weight: $font-weight-normal !default;
 }
 
 .nav__item {
+  position: relative;
   flex: 0 0 auto;
   padding: $nav-item-padding;
+
+  &.is-current > .nav__link {
+    background-color: $nav-link-active-bg;
+    color: $nav-link-active-color;
+  }
 }
 
 .nav__item--right {
@@ -54,23 +55,12 @@ $nav-link-font-weight: $font-weight-normal !default;
 }
 
 .nav__link {
-  @include color-swap-on-hover(
-    $nav-link-color $nav-link-bg,
-    $nav-link-hover-color $nav-link-hover-bg,
-    $nav-link-trans-speed
-  );
-
-  display: block;
-  padding: $nav-link-padding;
-  text-align: $nav-link-text-align;
-  text-decoration: $nav-link-text-decoration;
-
-  .is-active > &,
-  &.is-active {
-    @include color-swap-on-hover(
-      $nav-link-active-color $nav-link-active-bg,
-      $nav-link-active-color $nav-link-active-bg,
-      $nav-link-trans-speed
-    );
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
   }
 }

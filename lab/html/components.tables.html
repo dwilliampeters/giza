@@ -1,0 +1,36 @@
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% set pageType = "components" %}
+{% set pageId = "tables" %}
+
+{% block content %}
+  <h1>Tables</h1>
+
+  <p>Easily create nicely looking tables, which come in different styles.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(pageType, pageId)}}
+  {{LabCode('html', '
+  <table class="table">
+    <thead>
+      <tr>
+        <th>...</th>
+        <th>...</th>
+        ...
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>...</td>
+        <td>...</td>
+        ...
+      </tr>
+      ...
+    </tbody>
+  </table>
+  ')}}
+{% endblock %}

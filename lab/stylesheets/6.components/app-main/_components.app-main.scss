@@ -1,0 +1,22 @@
+.app-content {
+  padding: $spacer;
+}
+
+@include md {
+  .app-main {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    overflow-x: hidden;
+  }
+
+  .app-content {
+    flex: 1;
+    padding: ($spacer * 2) ($spacer * 2) $spacer;
+    overflow-x: hidden;
+
+    > h1 {
+      margin-top: 0;
+    }
+  }
+}

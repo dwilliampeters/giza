@@ -1,6 +1,6 @@
 // Elements: Headings
 
-$heading-margin: ($spacer/2) 0 ($spacer + $spacer/2) !default;
+$heading-margin: ($spacer + $spacer/2) 0 $spacer !default;
 $heading-font: $font !default;
 $heading-font-weight: $font-weight-bold !default;
 $heading-color: inherit !default;

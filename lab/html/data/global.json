@@ -1,0 +1,46 @@
+{
+  "meta_title": "Giza Lab",
+  "lab_title": "Giza Lab",
+  "version": "0.1.1",
+  "nav": [
+    {
+      "id": "getting-started",
+      "url": "index.html",
+      "title": "Getting started",
+      "children": [
+        {
+          "id": "introduction",
+          "url": "index.html",
+          "title": "Introduction"
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "url": "content.icons.html",
+      "title": "Content",
+      "children": [
+        { "id": "icons", "url": "content.icons.html", "title": "Icons" },
+        { "id": "images", "url": "content.images.html", "title": "Images" },
+        {
+          "id": "typography",
+          "url": "content.typography.html",
+          "title": "Typography"
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "url": "components.buttons.html",
+      "title": "Components",
+      "children": [
+        {
+          "id": "buttons",
+          "url": "components.buttons.html",
+          "title": "Buttons"
+        },
+        { "id": "tables", "url": "components.tables.html", "title": "Tables" }
+      ]
+    }
+  ]
+}

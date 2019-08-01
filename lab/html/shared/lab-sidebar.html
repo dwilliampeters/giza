@@ -1,0 +1,9 @@
+{% from 'macros/lab-nav-link.html' import LabNavLink %}
+
+<nav class="app-nav">
+  <ul class="nav nav--vertical">
+    {% for page in nav %}
+      {{ LabNavLink(page, pageType, pageId, loop, 'level-1') }}
+    {% endfor %}
+  </ul>
+</nav>

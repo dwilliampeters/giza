@@ -1,0 +1,76 @@
+.app-nav {
+  padding-top: $spacer;
+
+  .nav__item {
+    @include double-pica;
+
+    padding: ($spacer / 3) $spacer;
+
+    &.is-active {
+      > .nav__link {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .nav__link {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .nav__item-level-1 {
+    @include paragon;
+
+    > .nav {
+      display: none;
+    }
+
+    &.is-active {
+      > .nav__link {
+        border-bottom: 3px solid $azure-radiance;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          border-color: transparent;
+        }
+      }
+
+      > .nav {
+        display: block;
+      }
+    }
+
+    > .nav__link {
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .nav--nested {
+    padding-left: 0;
+  }
+}
+
+@include md {
+  .app-nav {
+    padding-top: 0;
+
+    .nav__item {
+      @include long-primer;
+    }
+
+    .nav__item-level-1 {
+      @include great-primer;
+    }
+  }
+}

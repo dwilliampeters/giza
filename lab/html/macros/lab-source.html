@@ -1,0 +1,9 @@
+{% macro LabIframe(type, name, child) %}
+
+  {% if child %}
+    {% include type + '/' + type + '.' + name + '.' + child + '.html' %}
+  {% else %}
+    {% include type + '/' + type + '.' + name + '.html' %}
+  {% endif %}
+
+{% endmacro %}
