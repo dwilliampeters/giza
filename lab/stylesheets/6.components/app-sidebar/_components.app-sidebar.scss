@@ -24,6 +24,7 @@
     position: relative;
     top: 0;
     display: block;
+    height: auto;
     flex: 0 0 200px;
     padding: ($spacer * 2) 0 0;
     box-shadow: none;
@@ -36,6 +37,7 @@
 
 @include lg {
   .app-sidebar {
-    flex: 0 0 300px;
+    width: 300px;
+    flex: 0 0 auto;
   }
 }
