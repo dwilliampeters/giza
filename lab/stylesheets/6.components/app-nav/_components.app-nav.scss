@@ -1,6 +1,4 @@
 .app-nav {
-  padding-top: $spacer;
-
   .nav__item {
     @include double-pica;
 
@@ -67,8 +65,6 @@
 
 @include md {
   .app-nav {
-    padding-top: 0;
-
     .nav__item {
       @include long-primer;
     }
