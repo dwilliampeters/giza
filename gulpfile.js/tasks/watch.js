@@ -19,6 +19,10 @@ gulp.task("watch", function() {
   };
 
   gulp.watch(paths.htmlSrc, ["html", "lab:html", browser.reload]);
-  gulp.watch(paths.stylesheetsSrc, ["stylesheets", browser.reload]);
+  gulp.watch(paths.stylesheetsSrc, [
+    "stylesheets",
+    "lab:stylesheets",
+    browser.reload
+  ]);
   gulp.watch(paths.javascriptsSrc, ["webpack", browser.reload]);
 });

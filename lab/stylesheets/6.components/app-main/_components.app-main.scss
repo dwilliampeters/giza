@@ -1,4 +1,4 @@
-.app-main__content {
+.app-content {
   padding: $spacer;
 }
 
@@ -10,13 +10,9 @@
     overflow-x: hidden;
   }
 
-  .app-site__content {
-    display: flex;
-  }
-
-  .app-main__content {
+  .app-content {
     flex: 1;
-    padding: ($spacer * 2) ($spacer * 4) $spacer;
+    padding: ($spacer * 2) ($spacer * 2) $spacer;
     overflow-x: hidden;
 
     > h1 {

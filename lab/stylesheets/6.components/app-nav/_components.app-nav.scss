@@ -2,6 +2,8 @@
   padding-top: $spacer;
 
   .nav__item {
+    @include long-primer;
+
     padding: ($spacer / 3) $spacer;
 
     &.is-active {
@@ -12,8 +14,6 @@
   }
 
   .nav__link {
-    @include long-primer;
-
     display: inline-block;
     text-decoration: none;
 
@@ -27,13 +27,15 @@
   }
 
   .nav__item-level-1 {
+    @include great-primer;
+
     > .nav {
       display: none;
     }
 
     &.is-active {
       > .nav__link {
-        border-bottom: 3px solid $denim;
+        border-bottom: 3px solid $azure-radiance;
 
         &:hover {
           text-decoration: none;
@@ -50,8 +52,6 @@
     }
 
     > .nav__link {
-      @include pica;
-
       font-weight: $font-weight-medium;
     }
   }
@@ -63,6 +63,6 @@
 
 @include md {
   .app-nav {
-    border-right: 1px solid $gallery;
+    padding-top: 0;
   }
 }

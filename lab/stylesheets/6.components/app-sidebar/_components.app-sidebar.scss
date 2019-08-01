@@ -1,4 +1,4 @@
-.app-main__sidebar {
+.app-sidebar {
   position: fixed;
   z-index: 98;
   top: 0;
@@ -46,7 +46,7 @@
 }
 
 @include md {
-  .app-main__sidebar {
+  .app-sidebar {
     position: relative;
     top: 0;
     display: block;
@@ -61,7 +61,7 @@
 }
 
 @include lg {
-  .app-main__sidebar {
+  .app-sidebar {
     flex: 0 0 300px;
   }
 }

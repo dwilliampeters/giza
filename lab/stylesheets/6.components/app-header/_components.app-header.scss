@@ -10,9 +10,9 @@ body {
   left: 0;
   display: flex;
   align-items: center;
-  padding: $spacer;
+  padding: ($spacer / 2) $spacer;
+  border-bottom: 10px solid $azure-radiance;
   background-color: $woodsmoke;
-  box-shadow: 0 2px 20px rgba($dark, 0.6);
   color: $light;
 
   .sidebar-toggle {
@@ -25,7 +25,7 @@ body {
 
 .app-logo {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: $font-weight-bold;
   text-decoration: none;
   text-transform: uppercase;

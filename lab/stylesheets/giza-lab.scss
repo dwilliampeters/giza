@@ -18,12 +18,11 @@
 // Objects
 
 // Components
+@import '6.components/app-header/components.app-header';
+@import '6.components/app-main/components.app-main';
+@import '6.components/app-nav/components.app-nav';
+@import '6.components/app-sidebar/components.app-sidebar';
 @import '6.components/code/components.code';
 @import '6.components/example/components.example';
-@import '6.components/main/components.main';
-@import '6.components/nav/components.nav';
-@import '6.components/sidebar/components.sidebar';
-@import '6.components/site-footer/components.site-footer';
-@import '6.components/site-header/components.site-header';
 
 // Utilities
