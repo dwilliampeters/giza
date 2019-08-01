@@ -1,7 +1,5 @@
 .code {
-  margin-right: -$spacer;
   margin-bottom: $spacer * 2;
-  margin-left: -$spacer;
   background-color: $gallery;
 
   pre {
@@ -10,12 +8,5 @@
     code {
       background-color: transparent;
     }
-  }
-}
-
-@include md {
-  .code {
-    margin-right: 0;
-    margin-left: 0;
   }
 }
