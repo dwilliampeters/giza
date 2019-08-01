@@ -1835,6 +1835,16 @@ p {
   margin-bottom: 0.5rem;
   cursor: pointer; }
 
+.c-form-required {
+  display: inline-block;
+  color: red; }
+  .c-form-required::before {
+    display: inline-block;
+    content: '\2731';
+    font-size: 10px;
+    font-weight: 700;
+    vertical-align: super; }
+
 .form-control {
   display: block;
   width: 100%;
