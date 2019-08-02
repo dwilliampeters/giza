@@ -1,13 +1,4 @@
-{#
-  id,
-  title,
-  url,
-  currentPageId,
-  classes,
-  activeClass
-#}
 {% macro LabNavLink(modal, categoryId, currentPageId, loop, level) %}
-
   {% if modal.id == categoryId %}
     {% set activeClass = " is-active" %}
   {% endif %}
@@ -34,5 +25,4 @@
     </ul>
   {% endif %}
 </li>
-
 {% endmacro %}

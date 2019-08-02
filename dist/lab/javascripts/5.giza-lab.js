@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{136:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});e.default=function n(e){!function(n,e){if(!(n instanceof e))throw new TypeError("Cannot call a class as a function")}(this,n),this.el=e}}}]);

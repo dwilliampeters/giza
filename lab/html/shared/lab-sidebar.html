@@ -3,7 +3,7 @@
 <nav class="app-nav">
   <ul class="nav nav--vertical">
     {% for page in nav %}
-      {{ LabNavLink(page, pageType, pageId, loop, 'level-1') }}
+      {{ LabNavLink(page, AppParentId, AppCurrentId, loop, 'level-1') }}
     {% endfor %}
   </ul>
 </nav>

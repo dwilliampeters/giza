@@ -1,4 +1,4 @@
-.example {
+.app-example {
   position: relative;
   padding: ($spacer * 3) $spacer $spacer;
   border: 2px solid $gallery;
@@ -10,7 +10,7 @@
     background-color: $bonjour;
   }
 
-  .example__display.is-active {
+  .app-example__display.is-active {
     display: block !important;
 
     .is-active--inline {
@@ -19,13 +19,13 @@
   }
 }
 
-.example__tabs {
+.app-example__tabs {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.example__tab {
+.app-example__tab {
   @include minion;
 
   display: inline-flex;
@@ -49,7 +49,7 @@
   }
 }
 
-.example__iframe {
+.app-example__iframe {
   width: 100%;
   border: none;
 }
