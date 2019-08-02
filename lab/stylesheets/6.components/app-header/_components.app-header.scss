@@ -1,9 +1,12 @@
+$header-offset-sm: 48px + 56px;
+$header-offset-md: 48px;
+
 $app-header-background-color: $woodsmoke !default;
-$app-header-bottom-border: 10px solid $azure-radiance !default;
 $app-header-text-color: $light !default;
 
-body {
-  padding-top: 58px + 56px;
+body,
+.app-sidebar {
+  padding-top: $header-offset-sm !important;
 }
 
 .app-header {
@@ -13,7 +16,6 @@ body {
   right: 0;
   left: 0;
   padding: ($spacer / 2) 0;
-  border-bottom: $app-header-bottom-border;
   background-color: $app-header-background-color;
   color: $app-header-text-color;
 }
@@ -86,7 +88,11 @@ body {
 
 @include md {
   body {
-    padding-top: 58px;
+    padding-top: $header-offset-md !important;
+  }
+
+  .app-sidebar {
+    padding-top: ($spacer * 2) !important;
   }
 
   .sidebar-toggle {
