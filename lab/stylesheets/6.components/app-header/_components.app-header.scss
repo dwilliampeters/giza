@@ -1,5 +1,5 @@
-$header-offset-sm: 48px + 56px;
-$header-offset-md: 48px;
+$header-offset-sm: 48px + 56px !default;
+$header-offset-md: 48px !default;
 
 $app-header-background-color: $woodsmoke !default;
 $app-header-text-color: $light !default;
