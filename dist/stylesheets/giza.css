@@ -2036,11 +2036,13 @@ p {
 .nav--accordion .is-accordion-nav-parent {
   display: flex;
   flex-wrap: wrap; }
+  .nav--accordion .is-accordion-nav-parent > div > .nav__link,
   .nav--accordion .is-accordion-nav-parent > .nav__link {
     flex: 1 1 auto; }
   .nav--accordion .is-accordion-nav-parent.is-active > .is-accordion-nav {
     display: flex;
     flex: none; }
+  .nav--accordion .is-accordion-nav-parent.is-active > div > .is-accordion-button,
   .nav--accordion .is-accordion-nav-parent.is-active > .is-accordion-button {
     transform: rotate(-180deg); }
 
@@ -2060,11 +2062,13 @@ p {
   .nav--accordion\@xxs .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@xxs .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@xxs .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@xxs .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@xxs .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xxs .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2081,11 +2085,13 @@ p {
   .nav--accordion\@xs .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@xs .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@xs .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@xs .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@xs .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xs .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2102,11 +2108,13 @@ p {
   .nav--accordion\@sm .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@sm .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@sm .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@sm .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@sm .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@sm .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2123,11 +2131,13 @@ p {
   .nav--accordion\@md .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@md .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@md .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@md .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@md .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@md .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2144,11 +2154,13 @@ p {
   .nav--accordion\@lg .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@lg .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@lg .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@lg .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@lg .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@lg .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2165,11 +2177,13 @@ p {
   .nav--accordion\@xl .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@xl .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@xl .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@xl .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@xl .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xl .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2186,11 +2200,13 @@ p {
   .nav--accordion\@xxl .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
+    .nav--accordion\@xxl .is-accordion-nav-parent > div > .nav__link,
     .nav--accordion\@xxl .is-accordion-nav-parent > .nav__link {
       flex: 1 1 auto; }
     .nav--accordion\@xxl .is-accordion-nav-parent.is-active > .is-accordion-nav {
       display: flex;
       flex: none; }
+    .nav--accordion\@xxl .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xxl .is-accordion-nav-parent.is-active > .is-accordion-button {
       transform: rotate(-180deg); } }
 
@@ -2218,12 +2234,14 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center; }
+  .nav--dropdown .is-dropdown-nav-parent > div > .nav__link,
   .nav--dropdown .is-dropdown-nav-parent > .nav__link {
     flex: 1 1 auto;
     padding-right: 1rem; }
   .nav--dropdown .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
     display: flex;
     flex: none; }
+  .nav--dropdown .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
   .nav--dropdown .is-dropdown-nav-parent.is-active > .is-dropdown-button {
     transform: rotate(-180deg); }
 
@@ -2253,12 +2271,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@xxs .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@xxs .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@xxs .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@xxs .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@xxs .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 
@@ -2285,12 +2305,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@xs .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@xs .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@xs .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@xs .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@xs .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 
@@ -2317,12 +2339,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@sm .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@sm .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@sm .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@sm .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@sm .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 
@@ -2349,12 +2373,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@md .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@md .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@md .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@md .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@md .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 
@@ -2381,12 +2407,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@lg .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@lg .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@lg .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@lg .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@lg .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 
@@ -2413,12 +2441,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@xl .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@xl .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@xl .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@xl .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@xl .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 
@@ -2445,12 +2475,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
+    .nav--dropdown\@xxl .is-dropdown-nav-parent > div > .nav__link,
     .nav--dropdown\@xxl .is-dropdown-nav-parent > .nav__link {
       flex: 1 1 auto;
       padding-right: 1rem; }
     .nav--dropdown\@xxl .is-dropdown-nav-parent.is-active > .is-dropdown-nav {
       display: flex;
       flex: none; }
+    .nav--dropdown\@xxl .is-dropdown-nav-parent.is-active > div > .is-dropdown-button,
     .nav--dropdown\@xxl .is-dropdown-nav-parent.is-active > .is-dropdown-button {
       transform: rotate(-180deg); } }
 

@@ -32,6 +32,7 @@ $dropdown-nav-border: $dark 1px solid !default;
     flex-wrap: wrap;
     align-items: center;
 
+    > div > .nav__link,
     > .nav__link {
       flex: 1 1 auto;
       padding-right: $spacer;
@@ -43,6 +44,7 @@ $dropdown-nav-border: $dark 1px solid !default;
         flex: none;
       }
 
+      > div > .is-dropdown-button,
       > .is-dropdown-button {
         transform: rotate(-180deg);
       }
