@@ -1978,8 +1978,7 @@ p {
 
 .nav__item {
   position: relative;
-  flex: 0 0 auto;
-  padding: 1rem; }
+  flex: 0 0 auto; }
   .nav__item.is-current > .nav__link {
     background-color: transparent;
     color: #0d7adf; }
@@ -1992,13 +1991,25 @@ p {
   display: flex;
   margin-right: auto; }
 
-.nav__link::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: ''; }
+.nav__item-toggle {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-right: 44px; }
+  .nav__item-toggle .button {
+    width: 44px; }
+
+.nav__link {
+  display: inline-block;
+  padding: 1rem; }
+  .nav__link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ''; }
 
 .nav--nested {
   padding-left: 1rem; }
@@ -2028,10 +2039,15 @@ p {
   background: #fff; }
 
 .nav--accordion .is-accordion-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
   display: inline-flex;
+  height: 100%;
   flex: 0;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  transform: translateY(-50%); }
 
 .nav--accordion .is-accordion-nav-parent {
   display: flex;
@@ -2044,7 +2060,7 @@ p {
     flex: none; }
   .nav--accordion .is-accordion-nav-parent.is-active > div > .is-accordion-button,
   .nav--accordion .is-accordion-nav-parent.is-active > .is-accordion-button {
-    transform: rotate(-180deg); }
+    transform: translateY(-50%) rotate(-180deg); }
 
 .is-accordion-button {
   display: none; }
@@ -2055,10 +2071,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@xxs .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@xxs .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2070,7 +2091,7 @@ p {
       flex: none; }
     .nav--accordion\@xxs .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xxs .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 @media (min-width: 480px) {
   .nav--accordion\@xs .is-accordion-nav {
@@ -2078,10 +2099,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@xs .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@xs .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2093,7 +2119,7 @@ p {
       flex: none; }
     .nav--accordion\@xs .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xs .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 @media (min-width: 640px) {
   .nav--accordion\@sm .is-accordion-nav {
@@ -2101,10 +2127,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@sm .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@sm .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2116,7 +2147,7 @@ p {
       flex: none; }
     .nav--accordion\@sm .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@sm .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 @media (min-width: 768px) {
   .nav--accordion\@md .is-accordion-nav {
@@ -2124,10 +2155,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@md .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@md .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2139,7 +2175,7 @@ p {
       flex: none; }
     .nav--accordion\@md .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@md .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 @media (min-width: 960px) {
   .nav--accordion\@lg .is-accordion-nav {
@@ -2147,10 +2183,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@lg .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@lg .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2162,7 +2203,7 @@ p {
       flex: none; }
     .nav--accordion\@lg .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@lg .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 @media (min-width: 1180px) {
   .nav--accordion\@xl .is-accordion-nav {
@@ -2170,10 +2211,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@xl .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@xl .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2185,7 +2231,7 @@ p {
       flex: none; }
     .nav--accordion\@xl .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xl .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 @media (min-width: 1400px) {
   .nav--accordion\@xxl .is-accordion-nav {
@@ -2193,10 +2239,15 @@ p {
     border: none;
     background: #fff; }
   .nav--accordion\@xxl .is-accordion-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
     display: inline-flex;
+    height: 100%;
     flex: 0;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    transform: translateY(-50%); }
   .nav--accordion\@xxl .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap; }
@@ -2208,7 +2259,7 @@ p {
       flex: none; }
     .nav--accordion\@xxl .is-accordion-nav-parent.is-active > div > .is-accordion-button,
     .nav--accordion\@xxl .is-accordion-nav-parent.is-active > .is-accordion-button {
-      transform: rotate(-180deg); } }
+      transform: translateY(-50%) rotate(-180deg); } }
 
 .nav--dropdown .is-dropdown-nav {
   position: absolute;

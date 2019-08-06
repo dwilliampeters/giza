@@ -21,20 +21,33 @@ export default class Nav {
     for (let i = 0, len = this.dom.menuParent.length; i < len; i++) {
       this.dom.menuParent[i].addEventListener("click", e => {
         e.preventDefault();
-        this.handleParentClick(e, i, this.dom.menuParent[i].parentNode);
+        this.handleParentClick(e);
       });
     }
   }
 
-  handleParentClick(e, item, itemParent) {
-    let items = itemParent.parentNode.querySelectorAll(".nav__item");
-    if (itemParent.classList.contains("is-active")) {
-      itemParent.classList.remove("is-active");
-    } else {
-      for (let i = 0, len = items.length; i < len; i++) {
-        items[i].classList.remove("is-active");
+  handleParentClick(e) {
+    var getClosest = function(elem, selector) {
+      for (; elem && elem !== document; elem = elem.parentNode) {
+        if (elem.matches(selector)) return elem;
       }
-      itemParent.classList.add("is-active");
+      return null;
+    };
+
+    let clickedParent = getClosest(e.target, ".nav__item");
+    console.log(clickedParent);
+
+    if (clickedParent.classList.contains("is-active")) {
+      clickedParent.classList.remove("is-active");
+      return;
     }
+
+    let items = clickedParent.parentNode.querySelectorAll(".nav__item");
+
+    for (let i = 0, len = items.length; i < len; i++) {
+      items[i].classList.remove("is-active");
+    }
+
+    clickedParent.classList.add("is-active");
   }
 }

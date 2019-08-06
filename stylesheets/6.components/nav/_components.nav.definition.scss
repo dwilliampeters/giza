@@ -5,7 +5,7 @@ $nav-link-bg: transparent !default;
 $nav-link-trans-speed: 200 !default;
 $nav-link-active-color: $nav-link-color !default;
 $nav-link-active-bg: transparent !default;
-$nav-item-padding: $spacer !default;
+$nav-link-padding: $spacer !default;
 $nav-link-font-weight: $font-weight-normal !default;
 
 .nav {
@@ -36,7 +36,6 @@ $nav-link-font-weight: $font-weight-normal !default;
 .nav__item {
   position: relative;
   flex: 0 0 auto;
-  padding: $nav-item-padding;
 
   &.is-current > .nav__link {
     background-color: $nav-link-active-bg;
@@ -54,7 +53,22 @@ $nav-link-font-weight: $font-weight-normal !default;
   margin-right: auto;
 }
 
+.nav__item-toggle {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-right: 44px;
+
+  .button {
+    width: 44px;
+  }
+}
+
 .nav__link {
+  display: inline-block;
+  padding: $nav-link-padding;
+
   &::after {
     position: absolute;
     top: 0;
