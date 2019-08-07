@@ -24,5 +24,9 @@ gulp.task("watch", function() {
     "lab:stylesheets",
     browser.reload
   ]);
-  gulp.watch(paths.javascriptsSrc, ["webpack", browser.reload]);
+  gulp.watch(paths.javascriptsSrc, [
+    "webpack",
+    "lab:javascripts",
+    browser.reload
+  ]);
 });

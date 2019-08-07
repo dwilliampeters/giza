@@ -4,14 +4,16 @@
       <div class="app-example__tabs">
         <a class="app-example__tab" href="../source-test/{{type}}.{{name}}.{{child}}.html" target="_blank">Open this example in a new window</a>
       </div>
-      <iframe class="app-example__iframe" src="../source-test/{{type}}.{{name}}.{{child}}.html" data-module="LabFrame"></iframe>
+      {# <iframe class="app-example__iframe" src="../source-test/{{type}}.{{name}}.{{child}}.html" data-module="LabFrame" data-options='{"src": "../source-test/{{type}}.{{name}}.{{child}}.html"}'></iframe> #}
+      <div data-module="LabFrame" data-options='{"src": "../source-test/{{type}}.{{name}}.{{child}}.html"}'></div>
     </div>
   {% else %}
     <div class="app-example">
       <div class="app-example__tabs">
         <a class="app-example__tab" href="../source-test/{{type}}.{{name}}.html" target="_blank">Open this example in a new window</a>
       </div>
-      <iframe class="app-example__iframe" src="../source-test/{{type}}.{{name}}.html" data-module="LabFrame"></iframe>
+      <div data-module="LabFrame" data-options='{"src": "../source-test/{{type}}.{{name}}.html"}'></div>
+      {# <iframe class="app-example__iframe" src="../source-test/{{type}}.{{name}}.html"></iframe> #}
     </div>
   {% endif %}
 {% endmacro %}
