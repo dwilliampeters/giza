@@ -1,65 +1,65 @@
 // Utilities: Size
 
 .size-width-25 {
-  width: 25%;
+  width: 25% !important;
 }
 
 .size-width-50 {
-  width: 50%;
+  width: 50% !important;
 }
 
 .size-width-75 {
-  width: 75%;
+  width: 75% !important;
 }
 
 .size-width-100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .size-width-auto {
-  width: auto;
+  width: auto !important;
 }
 
 .size-height-25 {
-  height: 25%;
+  height: 25% !important;
 }
 
 .size-height-50 {
-  height: 50%;
+  height: 50% !important;
 }
 
 .size-height-75 {
-  height: 75%;
+  height: 75% !important;
 }
 
 .size-height-100 {
-  height: 100%;
+  height: 100% !important;
 }
 
 .size-height-auto {
-  height: auto;
+  height: auto !important;
 }
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
     .size-width-25\@#{$key} {
-      width: 25%;
+      width: 25% !important;
     }
 
     .size-width-50\@#{$key} {
-      width: 50%;
+      width: 50% !important;
     }
 
     .size-width-75\@#{$key} {
-      width: 75%;
+      width: 75% !important;
     }
 
     .size-width-100\@#{$key} {
-      width: 100%;
+      width: 100% !important;
     }
 
     .size-width-auto\@#{$key} {
-      width: auto;
+      width: auto !important;
     }
   }
 }
