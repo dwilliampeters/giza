@@ -36,8 +36,9 @@ $nav-link-font-weight: $font-weight-normal !default;
 .nav__item {
   position: relative;
   flex: 0 0 auto;
+  padding: $nav-link-padding;
 
-  &.is-current > .nav__link {
+  &.is-current {
     background-color: $nav-link-active-bg;
     color: $nav-link-active-color;
   }
@@ -53,28 +54,28 @@ $nav-link-font-weight: $font-weight-normal !default;
   margin-right: auto;
 }
 
-.nav__item-toggle {
-  position: relative;
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  padding-right: 44px;
+// .nav__item-toggle {
+//   position: relative;
+//   display: flex;
+//   width: 100%;
+//   flex-wrap: wrap;
+//   padding-right: 44px;
 
-  .button {
-    width: 44px;
-  }
-}
+//   .button {
+//     width: 44px;
+//   }
+// }
 
 .nav__link {
+  position: relative;
   display: inline-block;
-  padding: $nav-link-padding;
 
   &::after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: -$nav-link-padding;
+    right: -$nav-link-padding;
+    bottom: -$nav-link-padding;
+    left: -$nav-link-padding;
     content: '';
   }
 }

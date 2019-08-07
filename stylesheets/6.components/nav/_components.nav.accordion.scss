@@ -11,24 +11,25 @@ $accordion-nav-border: none !default;
   }
 
   .is-accordion-button {
-    position: absolute;
-    top: 50%;
-    right: 0;
+    // position: absolute;
+    // top: 50%;
+    // right: 0;
     display: inline-flex;
     height: 100%;
     flex: 0;
     padding: 0;
     margin: 0;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
   }
 
   .is-accordion-nav-parent {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
-    > div > .nav__link,
     > .nav__link {
-      flex: 1 1 auto;
+      margin-right: $spacer;
     }
 
     &.is-active {
@@ -39,7 +40,7 @@ $accordion-nav-border: none !default;
 
       > div > .is-accordion-button,
       > .is-accordion-button {
-        transform: translateY(-50%) rotate(-180deg);
+        transform: rotate(-180deg);
       }
     }
   }

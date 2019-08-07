@@ -3,6 +3,7 @@
 $dropdown-nav-min-width: 200px !default;
 $dropdown-nav-bg: $light !default;
 $dropdown-nav-border: $dark 1px solid !default;
+$dropdown-button-width: 44px !default;
 
 @mixin dropdown-nav {
   .is-dropdown-nav {
@@ -20,15 +21,16 @@ $dropdown-nav-border: $dark 1px solid !default;
   }
 
   .is-dropdown-button {
-    position: absolute;
-    top: 50%;
-    right: 0;
+    // position: absolute;
+    // top: 50%;
+    // right: 0;
     display: inline-flex;
-    height: 100%;
+    width: $dropdown-button-width;
+    // height: 100%;
     flex: 0;
     padding: 0;
     margin: 0;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
   }
 
   .is-dropdown-nav-parent {
@@ -37,10 +39,10 @@ $dropdown-nav-border: $dark 1px solid !default;
     flex-wrap: wrap;
     align-items: center;
 
-    > div > .nav__link,
     > .nav__link {
       flex: 1 1 auto;
-      padding-right: $spacer;
+      // margin-right: $dropdown-button-width;
+      margin-right: $spacer;
     }
 
     &.is-active {
@@ -51,7 +53,7 @@ $dropdown-nav-border: $dark 1px solid !default;
 
       > div > .is-dropdown-button,
       > .is-dropdown-button {
-        transform: translateY(-50%) rotate(-180deg);
+        transform: rotate(-180deg);
       }
     }
   }
