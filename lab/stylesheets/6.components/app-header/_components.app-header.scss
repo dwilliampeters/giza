@@ -1,13 +1,5 @@
-$header-offset-sm: 48px + 56px !default;
-$header-offset-md: 48px !default;
-
 $app-header-background-color: $woodsmoke !default;
 $app-header-text-color: $light !default;
-
-body,
-.app-sidebar {
-  padding-top: $header-offset-sm !important;
-}
 
 .app-header {
   position: fixed;
@@ -15,20 +7,23 @@ body,
   top: 0;
   right: 0;
   left: 0;
-  padding: ($spacer / 2) 0;
+  padding: $spacer 0;
   background-color: $app-header-background-color;
   color: $app-header-text-color;
 }
 
 .app-header__inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .app-logo {
-  display: inline-block;
-  font-size: 1.75rem;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.4rem;
   font-weight: $font-weight-bold;
+  line-height: 1rem;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -51,21 +46,27 @@ body,
   }
 }
 
-.lab-version {
-  @include minion;
-
-  display: inline-block;
-  padding: 0 ($spacer / 2);
-  font-style: italic;
+.app-logo__image {
+  max-height: 30px;
+  margin-right: ($spacer / 2);
 }
 
-.sidebar-toggle {
+.app-version {
+  display: none;
+}
+
+.app-sidebar-toggle {
   position: absolute;
   top: 100%;
   left: 0;
+  width: 60px;
+  height: 60px;
   align-self: flex-end;
+  padding: 0;
 
   .hamburger {
+    transform: scale(0.8);
+
     &:hover,
     &:focus {
       .hamburger__inner,
@@ -87,15 +88,20 @@ body,
 }
 
 @include md {
-  body {
-    padding-top: $header-offset-md !important;
+  .app-header__inner {
+    flex-direction: row;
   }
 
-  .app-sidebar {
-    padding-top: ($spacer * 2) !important;
+  .app-version {
+    display: inline-block;
+    padding: 0 ($spacer / 2);
+    margin-left: auto;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 0.8rem;
   }
 
-  .sidebar-toggle {
+  .app-sidebar-toggle {
     display: none;
   }
 }

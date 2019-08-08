@@ -19,7 +19,6 @@ export default class LabFrame {
     let iframe = document.createElement("iframe");
     iframe.className = "app-example__iframe";
     iframe.onload = function() {
-      console.log(frame);
       iframe.style.height =
         iframe.contentWindow.document.body.scrollHeight + "px";
     }; // before setting 'src'

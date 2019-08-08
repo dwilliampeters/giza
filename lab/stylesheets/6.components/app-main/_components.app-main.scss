@@ -5,7 +5,7 @@
 }
 
 .app-content {
-  padding: $spacer 0;
+  padding: ($spacer * 3) 0 $spacer;
   overflow-x: auto;
 }
 
