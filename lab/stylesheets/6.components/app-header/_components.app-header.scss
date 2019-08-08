@@ -48,8 +48,13 @@ $app-header-text-color: $light !default;
 }
 
 .app-logo__image {
-  max-height: 30px;
+  display: block;
+  width: 60px;
   margin-right: ($spacer / 2);
+}
+
+.app-logo__text {
+  display: block;
 }
 
 .app-version {
