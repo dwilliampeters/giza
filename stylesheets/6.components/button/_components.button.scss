@@ -1,7 +1,7 @@
 // Components: Button
 
 $button-display: inline-flex !default;
-$button-padding: $spacer !default;
+$button-padding: ($spacer / 2) $spacer !default;
 $button-min-width: $min-touch-size !default;
 $button-min-height: 1em !default;
 $button-border: 0 !default;
@@ -23,6 +23,8 @@ $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
 .button {
+  @include long-primer;
+
   position: relative;
   display: $button-display;
   min-width: $button-min-width;

@@ -61,6 +61,10 @@ $app-header-text-color: $light !default;
   display: none;
 }
 
+.app-download {
+  display: none;
+}
+
 .app-sidebar-toggle {
   position: absolute;
   top: 100%;
@@ -105,6 +109,12 @@ $app-header-text-color: $light !default;
     font-size: 0.8rem;
     font-style: italic;
     line-height: 0.8rem;
+  }
+
+  .app-download {
+    display: block;
+    flex: 0 0 auto;
+    margin-left: $spacer;
   }
 
   .app-sidebar-toggle {

@@ -3,6 +3,9 @@
   <span class="app-logo__text">{{lab_title}}</span>
 </a>
 <span class="app-version">v{{version}}</span>
+{% if download %}
+  <a class="button app-download" href="{{download}}">Download</a>
+{% endif %}
 <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}'>
   <div class="hamburger">
     <div class="hamburger__inner"></div>
