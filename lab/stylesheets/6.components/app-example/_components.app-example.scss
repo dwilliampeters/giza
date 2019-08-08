@@ -26,7 +26,7 @@
 }
 
 .app-example__tab {
-  @include minion;
+  @include font-size-xs;
 
   display: inline-flex;
   padding: ($spacer / 2);

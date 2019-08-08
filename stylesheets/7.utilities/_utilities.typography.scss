@@ -1,41 +1,37 @@
 // Utilities: Typography
 
-.canon {
-  @include canon;
+.font-size-display {
+  @include font-size-display;
 }
 
-.paragon {
-  @include paragon;
+.font-size-xxxl {
+  @include font-size-xxxl;
 }
 
-.double-pica {
-  @include double-pica;
+.font-size-xxl {
+  @include font-size-xxl;
 }
 
-.great-primer {
-  @include great-primer;
+.font-size-xl {
+  @include font-size-xl;
 }
 
-.pica {
-  @include pica;
+.font-size-lg {
+  @include font-size-lg;
 }
 
-.long-primer {
-  @include long-primer;
+.font-size-md {
+  @include font-size-md;
 }
 
-.long-primer {
-  @include long-primer;
+.font-size-base {
+  @include font-size-base;
 }
 
-.brevier {
-  @include brevier;
+.font-size-sm {
+  @include font-size-sm;
 }
 
-.minion {
-  @include minion;
-}
-
-.body-copy {
-  @include body-copy;
+.font-size-xs {
+  @include font-size-xs;
 }

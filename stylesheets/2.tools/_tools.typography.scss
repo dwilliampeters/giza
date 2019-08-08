@@ -4,44 +4,40 @@
 //     @include canon-bold;
 // }
 
-@mixin canon {
-  @include typography('canon');
+@mixin font-size-display {
+  @include typography('display');
 }
 
-@mixin trafalgar {
-  @include typography('trafalgar');
+@mixin font-size-xxxl {
+  @include typography('xxxl');
 }
 
-@mixin paragon {
-  @include typography('paragon');
+@mixin font-size-xxl {
+  @include typography('xxl');
 }
 
-@mixin double-pica {
-  @include typography('double-pica');
+@mixin font-size-xl {
+  @include typography('xl');
 }
 
-@mixin great-primer {
-  @include typography('great-primer');
+@mixin font-size-lg {
+  @include typography('lg');
 }
 
-@mixin pica {
-  @include typography('pica');
+@mixin font-size-md {
+  @include typography('md');
 }
 
-@mixin long-primer {
-  @include typography('long-primer');
+@mixin font-size-base {
+  @include typography('base');
 }
 
-@mixin brevier {
-  @include typography('brevier');
+@mixin font-size-sm {
+  @include typography('sm');
 }
 
-@mixin minion {
-  @include typography('minion');
-}
-
-@mixin body-copy {
-  @include typography('body-copy');
+@mixin font-size-xs {
+  @include typography('xs');
 }
 
 @function rem($pixels, $context: $font-size) {

@@ -31,7 +31,7 @@ $accordion-content-padding: $spacer !default;
 }
 
 .accordion__title {
-  @include pica;
+  @include font-size-lg;
 
   margin: 0;
 }

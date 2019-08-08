@@ -23,25 +23,25 @@ h6 {
 }
 
 h1 {
-  @include trafalgar;
+  @include font-size-xxxl;
 }
 
 h2 {
-  @include paragon;
+  @include font-size-xxl;
 }
 
 h3 {
-  @include double-pica;
+  @include font-size-xl;
 }
 
 h4 {
-  @include great-primer;
+  @include font-size-lg;
 }
 
 h5 {
-  @include pica;
+  @include font-size-md;
 }
 
 h6 {
-  @include long-primer;
+  @include font-size-base;
 }

@@ -23,7 +23,7 @@ $button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
 
 .button {
-  @include long-primer;
+  // @include font-size-md;
 
   position: relative;
   display: $button-display;

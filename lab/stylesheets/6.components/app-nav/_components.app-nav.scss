@@ -2,7 +2,7 @@
   padding: $spacer 0;
 
   .nav__item {
-    @include double-pica;
+    @include font-size-md;
 
     padding: ($spacer / 3) 0;
 
@@ -32,7 +32,7 @@
   }
 
   .nav__item-level-1 {
-    @include paragon;
+    @include font-size-lg;
 
     > .nav {
       display: none;
@@ -71,11 +71,11 @@
     padding: 0;
 
     .nav__item {
-      @include long-primer;
+      @include font-size-base;
     }
 
     .nav__item-level-1 {
-      @include great-primer;
+      @include font-size-md;
     }
   }
 }
