@@ -20,6 +20,7 @@ $app-header-text-color: $light !default;
 
 .app-logo {
   display: flex;
+  flex: 1 0 auto;
   align-items: flex-end;
   font-size: 1.4rem;
   font-weight: $font-weight-bold;
