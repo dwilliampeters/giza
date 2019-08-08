@@ -2,11 +2,40 @@
 
 {% block body %}
   <div class="container container--thin container--centered" style="padding: 2rem;">
+
     <h1>Giza Frontend Framework</h1>
+
     <p class="pica">Welcome to the Giza frontend framework.</p>
+
     <p class="pica">Get started with
       <a href="tests.html">tests</a>
       and the
       <a href="/lab/">lab</a>.</p>
-  </div>
-{% endblock %}
+
+    <h2>Setup</h2>
+
+    <p>Requires
+      <a href="https://nodejs.org/en/" target="_blank">Node 6</a>
+      or above and
+      <a href="https://yarnpkg.com/lang/en/" target="_blank">Yarn</a>.
+
+      <h3>Installation</h3>
+
+      <code>
+        <pre>yarn</pre>
+      </code>
+
+      <h3>Prototyping</h3>
+
+      <code>
+        <pre>yarn start</pre>
+      </code>
+
+      <h3>Production</h3>
+
+      <code>
+        <pre>yarn build</pre>
+      </code>
+
+    </div>
+  {% endblock %}
