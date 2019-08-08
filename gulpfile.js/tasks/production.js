@@ -19,6 +19,8 @@ gulp.task("production", function(cb) {
     "lab:html",
     "lab:stylesheets",
     "lab:javascripts",
+    "lab:images",
+    "migrate",
     cb
   );
 });

@@ -4,6 +4,7 @@
   "buildLab": "lab",
   "buildDest": "./_build",
   "finalDest": "./dist",
+  "migrateDest": "./docs",
 
   "html": {
     "src": "html"
