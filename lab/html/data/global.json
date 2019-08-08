@@ -43,5 +43,11 @@
         { "id": "tables", "url": "components.tables.html", "title": "Tables" }
       ]
     }
+  ],
+  "resources": [
+    {
+      "title": "Github",
+      "url": "https://github.com/r500dwp/giza"
+    }
   ]
 }

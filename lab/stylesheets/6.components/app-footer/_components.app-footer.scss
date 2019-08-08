@@ -1,0 +1,14 @@
+.app-footer {
+  padding: ($spacer * 2) 0;
+  background-color: $gallery;
+
+  .nav__item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.app-footer__title {
+  padding: 0 0 $spacer;
+  border-bottom: $bombay 1px solid;
+}
