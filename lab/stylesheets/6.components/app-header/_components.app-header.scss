@@ -61,7 +61,7 @@ $app-header-text-color: $light !default;
   display: none;
 }
 
-.app-download {
+a.app-download {
   display: none;
 }
 
@@ -111,8 +111,8 @@ $app-header-text-color: $light !default;
     line-height: 0.8rem;
   }
 
-  .app-download {
-    display: block;
+  a.app-download {
+    display: inline-flex;
     flex: 0 0 auto;
     margin-left: $spacer;
   }
