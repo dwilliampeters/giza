@@ -1753,17 +1753,6 @@ a.button,
     a.button:focus .icon svg,
     .button:focus .icon svg {
       fill: #0b0c0c; }
-  a.button:visited,
-  .button:visited {
-    background-color: #0d7adf;
-    color: #fff;
-    transition-duration: 200;
-    transition-property: background-color, color; }
-    a.button:visited:hover, a.button:visited:focus,
-    .button:visited:hover,
-    .button:visited:focus {
-      background-color: #0a60af;
-      color: #fff; }
   a.button.is-active,
   .button.is-active {
     background-color: #0a60af;
@@ -1777,7 +1766,7 @@ a.button,
       color: #fff; }
   a.button--block,
   .button--block {
-    display: block; }
+    display: flex; }
   a.button .icon,
   .button .icon {
     width: 24px;

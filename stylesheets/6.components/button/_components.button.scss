@@ -64,14 +64,6 @@ a.button,
     }
   }
 
-  &:visited {
-    @include color-swap-on-hover(
-      $button-visited-color $button-visited-bg,
-      $button-visited-hover-color $button-visited-hover-bg,
-      $link-trans-speed
-    );
-  }
-
   &.is-active {
     @include color-swap-on-hover(
       $button-active-color $button-active-bg,
@@ -81,7 +73,7 @@ a.button,
   }
 
   &--block {
-    display: block;
+    display: flex;
   }
 
   .icon {
