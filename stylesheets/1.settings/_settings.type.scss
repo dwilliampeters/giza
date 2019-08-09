@@ -3,91 +3,79 @@
 $type-settings: (
   'display': (
     'group-a': (
-      'font-size': 32px,
-      'line-height': 36px
+      'font-size': 36px,
+      'line-height': 40px
     ),
     'group-c': (
-      'font-size': 64px,
-      'line-height': 68px
+      'font-size': 46px,
+      'line-height': 50px
     )
   ),
   'xxxl': (
+    'group-a': (
+      'font-size': 26px,
+      'line-height': 30px
+    ),
+    'group-c': (
+      'font-size': 36px,
+      'line-height': 40px
+    )
+  ),
+  'xxl': (
     'group-a': (
       'font-size': 24px,
       'line-height': 28px
     ),
     'group-c': (
-      'font-size': 48px,
-      'line-height': 52px
-    )
-  ),
-  'xxl': (
-    'group-a': (
-      'font-size': 22px,
-      'line-height': 26px
-    ),
-    'group-c': (
-      'font-size': 42px,
-      'line-height': 46px
+      'font-size': 32px,
+      'line-height': 36px
     )
   ),
   'xl': (
     'group-a': (
-      'font-size': 20px,
-      'line-height': 24px
-    ),
-    'group-c': (
-      'font-size': 34px,
-      'line-height': 38px
-    )
-  ),
-  'lg': (
-    'group-a': (
-      'font-size': 18px,
-      'line-height': 22px
+      'font-size': 22px,
+      'line-height': 26px
     ),
     'group-c': (
       'font-size': 28px,
       'line-height': 32px
     )
   ),
-  'md': (
+  'lg': (
     'group-a': (
-      'font-size': 16px,
-      'line-height': 20px
+      'font-size': 20px,
+      'line-height': 24px
     ),
     'group-c': (
-      'font-size': 22px,
-      'line-height': 26px
+      'font-size': 24px,
+      'line-height': 28px
+    )
+  ),
+  'md': (
+    'group-a': (
+      'font-size': 18px,
+      'line-height': 22px
+    ),
+    'group-c': (
+      'font-size': 20px,
+      'line-height': 24px
     )
   ),
   'base': (
     'group-a': (
-      'font-size': 15px,
-      'line-height': 20px
-    ),
-    'group-c': (
       'font-size': 16px,
-      'line-height': 22px
+      'line-height': 20px
     )
   ),
   'sm': (
     'group-a': (
       'font-size': 14px,
       'line-height': 16px
-    ),
-    'group-b': (
-      'font-size': 14px,
-      'line-height': 18px
     )
   ),
   'xs': (
     'group-a': (
       'font-size': 12px,
-      'line-height': 16px
-    ),
-    'group-c': (
-      'font-size': 13px,
       'line-height': 16px
     )
   )

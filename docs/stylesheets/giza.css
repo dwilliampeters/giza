@@ -347,76 +347,70 @@ h6 {
     font-size: 75%; }
 
 h1 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 30px;
+  line-height: 1.875rem; }
+  @media (min-width: 960px) {
+    h1 {
+      font-size: 36px;
+      font-size: 2.25rem;
+      line-height: 40px;
+      line-height: 2.5rem; } }
+
+h2 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 28px;
   line-height: 1.75rem; }
   @media (min-width: 960px) {
-    h1 {
-      font-size: 48px;
-      font-size: 3rem;
-      line-height: 52px;
-      line-height: 3.25rem; } }
+    h2 {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 36px;
+      line-height: 2.25rem; } }
 
-h2 {
+h3 {
   font-size: 22px;
   font-size: 1.375rem;
   line-height: 26px;
   line-height: 1.625rem; }
   @media (min-width: 960px) {
-    h2 {
-      font-size: 42px;
-      font-size: 2.625rem;
-      line-height: 46px;
-      line-height: 2.875rem; } }
-
-h3 {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem; }
-  @media (min-width: 960px) {
     h3 {
-      font-size: 34px;
-      font-size: 2.125rem;
-      line-height: 38px;
-      line-height: 2.375rem; } }
-
-h4 {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 22px;
-  line-height: 1.375rem; }
-  @media (min-width: 960px) {
-    h4 {
       font-size: 28px;
       font-size: 1.75rem;
       line-height: 32px;
       line-height: 2rem; } }
 
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+  @media (min-width: 960px) {
+    h4 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 28px;
+      line-height: 1.75rem; } }
+
 h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 22px;
+  line-height: 1.375rem; }
+  @media (min-width: 960px) {
+    h5 {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
+
+h6 {
   font-size: 16px;
   font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem; }
-  @media (min-width: 960px) {
-    h5 {
-      font-size: 22px;
-      font-size: 1.375rem;
-      line-height: 26px;
-      line-height: 1.625rem; } }
-
-h6 {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 20px;
-  line-height: 1.25rem; }
-  @media (min-width: 960px) {
-    h6 {
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 22px;
-      line-height: 1.375rem; } }
 
 b {
   font-weight: normal; }
@@ -1703,17 +1697,17 @@ p {
     text-decoration: underline; }
 
 .accordion__title {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 22px;
-  line-height: 1.375rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
   margin: 0; }
   @media (min-width: 960px) {
     .accordion__title {
-      font-size: 28px;
-      font-size: 1.75rem;
-      line-height: 32px;
-      line-height: 2rem; } }
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 28px;
+      line-height: 1.75rem; } }
 
 .accordion__content {
   display: none;
@@ -1723,8 +1717,8 @@ p {
 
 a.button,
 .button {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem;
   position: relative;
@@ -1746,13 +1740,6 @@ a.button,
   color: #fff;
   transition-duration: 200;
   transition-property: background-color, color; }
-  @media (min-width: 960px) {
-    a.button,
-    .button {
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 22px;
-      line-height: 1.375rem; } }
   a.button:hover, a.button:focus,
   .button:hover,
   .button:focus {
@@ -3220,112 +3207,94 @@ a.button,
     text-align: justify !important; } }
 
 .font-size-display {
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 36px;
-  line-height: 2.25rem; }
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 40px;
+  line-height: 2.5rem; }
   @media (min-width: 960px) {
     .font-size-display {
-      font-size: 64px;
-      font-size: 4rem;
-      line-height: 68px;
-      line-height: 4.25rem; } }
+      font-size: 46px;
+      font-size: 2.875rem;
+      line-height: 50px;
+      line-height: 3.125rem; } }
 
 .font-size-xxxl {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 30px;
+  line-height: 1.875rem; }
+  @media (min-width: 960px) {
+    .font-size-xxxl {
+      font-size: 36px;
+      font-size: 2.25rem;
+      line-height: 40px;
+      line-height: 2.5rem; } }
+
+.font-size-xxl {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 28px;
   line-height: 1.75rem; }
   @media (min-width: 960px) {
-    .font-size-xxxl {
-      font-size: 48px;
-      font-size: 3rem;
-      line-height: 52px;
-      line-height: 3.25rem; } }
+    .font-size-xxl {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 36px;
+      line-height: 2.25rem; } }
 
-.font-size-xxl {
+.font-size-xl {
   font-size: 22px;
   font-size: 1.375rem;
   line-height: 26px;
   line-height: 1.625rem; }
   @media (min-width: 960px) {
-    .font-size-xxl {
-      font-size: 42px;
-      font-size: 2.625rem;
-      line-height: 46px;
-      line-height: 2.875rem; } }
-
-.font-size-xl {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 24px;
-  line-height: 1.5rem; }
-  @media (min-width: 960px) {
     .font-size-xl {
-      font-size: 34px;
-      font-size: 2.125rem;
-      line-height: 38px;
-      line-height: 2.375rem; } }
-
-.font-size-lg {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 22px;
-  line-height: 1.375rem; }
-  @media (min-width: 960px) {
-    .font-size-lg {
       font-size: 28px;
       font-size: 1.75rem;
       line-height: 32px;
       line-height: 2rem; } }
 
+.font-size-lg {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
+  @media (min-width: 960px) {
+    .font-size-lg {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 28px;
+      line-height: 1.75rem; } }
+
 .font-size-md {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 22px;
+  line-height: 1.375rem; }
+  @media (min-width: 960px) {
+    .font-size-md {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
+
+.font-size-base {
   font-size: 16px;
   font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem; }
-  @media (min-width: 960px) {
-    .font-size-md {
-      font-size: 22px;
-      font-size: 1.375rem;
-      line-height: 26px;
-      line-height: 1.625rem; } }
-
-.font-size-base {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 20px;
-  line-height: 1.25rem; }
-  @media (min-width: 960px) {
-    .font-size-base {
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 22px;
-      line-height: 1.375rem; } }
 
 .font-size-sm {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 16px;
   line-height: 1rem; }
-  @media (min-width: 768px) {
-    .font-size-sm {
-      font-size: 14px;
-      font-size: 0.875rem;
-      line-height: 18px;
-      line-height: 1.125rem; } }
 
 .font-size-xs {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 16px;
   line-height: 1rem; }
-  @media (min-width: 960px) {
-    .font-size-xs {
-      font-size: 13px;
-      font-size: 0.8125rem;
-      line-height: 16px;
-      line-height: 1rem; } }
 
 .hide {
   display: none !important; }
