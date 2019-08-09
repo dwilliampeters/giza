@@ -3,10 +3,13 @@ html {
 }
 
 body {
+  height: auto;
   margin: 0;
 }
 
 .app-example {
+  padding: 2rem;
+
   .modal {
     position: relative;
     top: auto;
