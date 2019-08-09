@@ -1721,6 +1721,7 @@ p {
   .is-active > .accordion__content {
     display: block; }
 
+a.button,
 .button {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -1747,36 +1748,59 @@ p {
   transition-duration: 200;
   transition-property: background-color, color; }
   @media (min-width: 960px) {
+    a.button,
     .button {
       font-size: 16px;
       font-size: 1rem;
       line-height: 22px;
       line-height: 1.375rem; } }
-  .button:hover, .button:focus {
+  a.button:hover, a.button:focus,
+  .button:hover,
+  .button:focus {
     background-color: #0a60af;
     color: #fff; }
+  a.button:focus,
+  .button:focus {
+    background-color: #ffcd3d;
+    box-shadow: 0 2px #0b0c0c;
+    color: #0b0c0c; }
+    a.button:focus .icon svg,
+    .button:focus .icon svg {
+      fill: #0b0c0c; }
+  a.button:visited,
   .button:visited {
     background-color: #0d7adf;
     color: #fff;
     transition-duration: 200;
     transition-property: background-color, color; }
-    .button:visited:hover, .button:visited:focus {
+    a.button:visited:hover, a.button:visited:focus,
+    .button:visited:hover,
+    .button:visited:focus {
       background-color: #0a60af;
       color: #fff; }
+  a.button.is-active,
   .button.is-active {
     background-color: #0a60af;
     color: #fff;
     transition-duration: 200;
     transition-property: background-color, color; }
-    .button.is-active:hover, .button.is-active:focus {
+    a.button.is-active:hover, a.button.is-active:focus,
+    .button.is-active:hover,
+    .button.is-active:focus {
       background-color: #0a60af;
       color: #fff; }
+  a.button--block,
   .button--block {
     display: block; }
+  a.button .icon,
   .button .icon {
     width: 24px;
     height: 24px;
     margin: 0 0.5rem 0 0; }
+    a.button .icon:last-child,
+    .button .icon:last-child {
+      margin: 0; }
+    a.button .icon svg,
     .button .icon svg {
       fill: #fff; }
 

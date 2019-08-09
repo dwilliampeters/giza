@@ -14,6 +14,9 @@ $button-visited-bg: $button-bg !default;
 $button-visited-color: $light !default;
 $button-visited-hover-bg: $button-hover-bg !default;
 $button-visited-hover-color: $button-hover-color !default;
+$button-focus-bg-color: #ffcd3d !default;
+$button-focus-box-shadow: 0 2px #0b0c0c !default;
+$button-focus-text-color: #0b0c0c !default;
 $button-active-bg: $button-hover-bg !default;
 $button-active-color: $button-hover-color !default;
 $button-active-hover-bg: $button-hover-bg !default;
@@ -23,6 +26,7 @@ $button-icon-size: 24px !default;
 $button-icon-margin: 0 ($spacer / 2) 0 0 !default;
 $button-icon-fill: $button-color !default;
 
+a.button,
 .button {
   @include font-size-base;
 
@@ -49,6 +53,18 @@ $button-icon-fill: $button-color !default;
     $link-trans-speed
   );
 
+  &:focus {
+    background-color: $button-focus-bg-color;
+    box-shadow: $button-focus-box-shadow;
+    color: $button-focus-text-color;
+
+    .icon {
+      svg {
+        fill: $button-focus-text-color;
+      }
+    }
+  }
+
   &:visited {
     @include color-swap-on-hover(
       $button-visited-color $button-visited-bg,
@@ -73,6 +89,10 @@ $button-icon-fill: $button-color !default;
     width: $button-icon-size;
     height: $button-icon-size;
     margin: $button-icon-margin;
+
+    &:last-child {
+      margin: 0;
+    }
 
     svg {
       fill: $button-icon-fill;
