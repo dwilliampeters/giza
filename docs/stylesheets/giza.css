@@ -1731,7 +1731,6 @@ a.button,
   display: inline-flex;
   min-width: 44px;
   min-height: 1em;
-  flex: 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
