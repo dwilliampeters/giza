@@ -6,7 +6,6 @@ $button-min-width: $min-touch-size !default;
 $button-min-height: 1em !default;
 $button-border: 0 !default;
 $button-cursor: pointer !default;
-$button-line-height: 1 !default;
 $button-bg: $azure-radiance !default;
 $button-color: $light !default;
 $button-hover-bg: darken($azure-radiance, 10%) !default;
@@ -19,11 +18,13 @@ $button-active-bg: $button-hover-bg !default;
 $button-active-color: $button-hover-color !default;
 $button-active-hover-bg: $button-hover-bg !default;
 $button-active-hover-color: $button-hover-color !default;
-$button-icon-fill: $button-color !default;
 $button-text-decoration: none !default;
+$button-icon-size: 24px !default;
+$button-icon-margin: 0 ($spacer / 2) 0 0 !default;
+$button-icon-fill: $button-color !default;
 
 .button {
-  // @include font-size-md;
+  @include font-size-base;
 
   position: relative;
   display: $button-display;
@@ -38,7 +39,6 @@ $button-text-decoration: none !default;
   background: $button-bg;
   color: $button-color;
   cursor: $button-cursor;
-  line-height: $button-line-height;
   outline: none;
   text-decoration: $button-text-decoration;
   vertical-align: baseline;
@@ -69,16 +69,11 @@ $button-text-decoration: none !default;
     display: block;
   }
 
-  &.has-icon {
-    padding-left: ($spacer * 3);
-
-    .icon {
-      position: absolute;
-      left: ($spacer / 2);
-    }
-  }
-
   .icon {
+    width: $button-icon-size;
+    height: $button-icon-size;
+    margin: $button-icon-margin;
+
     svg {
       fill: $button-icon-fill;
     }
