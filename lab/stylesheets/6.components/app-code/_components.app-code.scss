@@ -1,4 +1,5 @@
 .app-code {
+  position: relative;
   margin-bottom: $spacer * 2;
   background-color: $gallery;
 
@@ -9,4 +10,10 @@
       background-color: transparent;
     }
   }
+}
+
+.app-copy-button {
+  position: absolute;
+  top: 0;
+  right: 2px;
 }

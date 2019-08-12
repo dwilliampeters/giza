@@ -1,18 +1,35 @@
 export default class ExampleCode {
   constructor(el) {
     this.el = el;
+    this.init();
     this.syntaxHighlighting();
-    // this.replaceHtmlSymbols();
   }
 
-  // replaceHtmlSymbols() {
-  //   var actualCode = this.el.querySelector("#actualCode");
-  //   var displayCode = this.el.querySelector("#displaycode");
+  init() {
+    this.el
+      .querySelector(".js-app-copy-button")
+      .addEventListener("click", e => {
+        e.preventDefault();
+        this.copyCode(e);
+      });
+  }
 
-  //   displayCode.innerHTML = actualCode.innerHTML
-  //     .replace(/</g, "&lt;")
-  //     .replace(/>/g, "&gt;");
-  // }
+  copyCode() {
+    let selection = window.getSelection();
+    let range = document.createRange();
+    let codeToCopy = this.el.querySelector("code");
+    let button = this.el.querySelector(".js-app-copy-button");
+    range.selectNodeContents(codeToCopy);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let successful = document.execCommand("copy");
+    if (successful) {
+      button.innerHTML = "Code copied";
+    } else {
+      button.innerHTML = "Copy code";
+    }
+    window.getSelection().removeAllRanges();
+  }
 
   syntaxHighlighting() {
     (function runPrism() {

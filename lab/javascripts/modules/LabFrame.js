@@ -9,13 +9,6 @@ export default class LabFrame {
   }
 
   init() {
-    const frame = this.el;
-
-    // frame.onload = function() {
-    //   frame.style.height =
-    //     frame.contentWindow.document.body.scrollHeight + "px";
-    // };
-
     let iframe = document.createElement("iframe");
     iframe.className = "app-example__iframe";
     iframe.onload = function() {
