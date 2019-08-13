@@ -1,0 +1,13 @@
+{% from 'components/components.card.html' import Card %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{Card({
+    'description': 'Some text adding to the card title and to add volume to the card\'s content.'
+  })}}
+
+{% endblock %}

@@ -9,12 +9,12 @@
 {% block content %}
   <h1>Typography</h1>
 
+  <p class="font-size-md">Our typography with global settings for headings, body text, lists and more.</p>
+
   <h3>Headings</h3>
 
   {{LabExample(AppParentId, AppCurrentId, 'headings')}}
   {{LabCode('html', '
-  <h1 class="font-size-display">...</h1>
-
   <h1>...</h1>
 
   <h2>...</h2>
@@ -32,6 +32,8 @@
 
   {{LabExample(AppParentId, AppCurrentId, 'text')}}
   {{LabCode('html', '
+  <p class="font-size-display">...</p>
+
   <p class="font-size-sm">...</p>
 
   <p class="font-size-xs">...</p>

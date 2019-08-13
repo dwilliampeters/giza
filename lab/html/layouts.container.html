@@ -1,0 +1,36 @@
+{% set AppParentId = "layouts" %}
+{% set AppCurrentId = "container" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Container</h1>
+
+  <p class="font-size-md">Options for displaying your content in layouts.</p>
+
+  <h3>Usage</h3>
+
+  {{LabCode('html', '
+  <div class="container">...</div>
+
+  <div class="container container--centered">...</div>
+
+  <div class="container container--thin">...</div>
+
+  <div class="container container--fluid">...</div>
+
+  <div class="container container--collapse">...</div>
+  ')}}
+
+  <h4>Sidebar</h4>
+
+  {{LabCode('html', '
+  <div class="container">
+    <div class="container container--sidebar">...</div>
+    <div class="container container--body">...</div>
+  </div>
+  ')}}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% from 'macros/icon.html' import Icon %}
+
+{% macro Button(model) %}
+  {% if model.url %}
+    <a class="button" href="{{modal.url}}">
+      {% if model.icon %}
+        {{Icon(model.icon)}}
+      {% endif %}
+      <span class="button__text">{{model.description}}</span>
+    </a>
+  {% else %}
+    <button class="button">
+      {% if model.icon %}
+        {{Icon(model.icon)}}
+      {% endif %}
+      <span class="button__text">{{model.description}}</span>
+    </button>
+  {% endif %}
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ Button({
+    'description': 'Primary'
+  }) }}
+
+{% endblock %}

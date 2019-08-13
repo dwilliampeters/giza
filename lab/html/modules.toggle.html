@@ -1,0 +1,32 @@
+{% set AppParentId = "modules" %}
+{% set AppCurrentId = "toggle" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Toggle</h1>
+
+  <p class="font-size-md">Hide, switch or change the appearance of different contents through a toggle.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  <button class="button" data-module="Toggle">Toggle</button>
+  ')}}
+
+  <h3>Target</h3>
+
+  {{LabExample(AppParentId, AppCurrentId, 'target')}}
+  {{LabCode('html', '
+  data-options="{"target": ".lab-example-target"}"
+  ')}}
+
+  <h3>Active class</h3>
+  {{LabCode('html', '
+  data-options="{"activeClass": "new-active-class}"
+  ')}}
+{% endblock %}

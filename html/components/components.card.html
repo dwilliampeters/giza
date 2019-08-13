@@ -1,0 +1,47 @@
+{% from 'components/components.button.html' import Button %}
+
+{% macro Card(model) %}
+  <div class="card">
+    {% if model.header %}
+      <div class="card__header">{{model.header}}</div>
+    {% endif %}
+    {% if model.img %}
+      <img class="card__img" src="{{model.img.src}}" alt="{{model.img.description}}">
+    {% endif %}
+    {% if model.title or model.description %}
+      <div class="card__body">
+        {% if model.title %}
+          <h5 class="card__title">{{model.title}}</h5>
+        {% endif %}
+        {% if model.description %}
+          <p class="card__text">{{model.description}}</p>
+        {% endif %}
+        {% if model.button %}
+          {{ Button(model.button) }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{Card({
+    'header': 'Card header',
+    'title': 'Card title',
+    'description': 'Some text adding to the card title and to add volume to the card\'s content.',
+    'img': {
+      'src': '//via.placeholder.com/350x150',
+      'description': ''
+    },
+    'button': {
+      'url': '#',
+      'description': 'Go somewhere'
+    }
+  })}}
+
+{% endblock %}

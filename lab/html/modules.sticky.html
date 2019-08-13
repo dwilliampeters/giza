@@ -1,0 +1,24 @@
+{% set AppParentId = "modules" %}
+{% set AppCurrentId = "sticky" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Sticky</h1>
+
+  <p class="font-size-md">Using
+    <a href="https://www.npmjs.com/package/stickybits" target="_blank">Stickybits</a>
+    to create sticky elements.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  <div class="sticky" data-module="Sticky">
+    <div class="sticky__item">...</div>
+  </div>
+  ')}}
+{% endblock %}

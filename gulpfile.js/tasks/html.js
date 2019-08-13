@@ -12,7 +12,7 @@ gulp.task("html", function() {
         projectPath(
           PATH_CONFIG.BASE,
           PATH_CONFIG.html.src,
-          "**/{components,layouts,shared,macros,data}/**"
+          "**/{layouts,shared,macros,data}/**"
         )
     ],
     src_render: [

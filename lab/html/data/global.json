@@ -17,6 +17,18 @@
       ]
     },
     {
+      "id": "layouts",
+      "url": "layouts.container.html",
+      "title": "Layout",
+      "children": [
+        {
+          "id": "container",
+          "url": "layouts.container.html",
+          "title": "Container"
+        }
+      ]
+    },
+    {
       "id": "content",
       "url": "content.icons.html",
       "title": "Content",
@@ -32,15 +44,33 @@
     },
     {
       "id": "components",
-      "url": "components.buttons.html",
+      "url": "components.button.html",
       "title": "Components",
       "children": [
         {
-          "id": "buttons",
-          "url": "components.buttons.html",
-          "title": "Buttons"
+          "id": "button",
+          "url": "components.button.html",
+          "title": "Button"
         },
-        { "id": "tables", "url": "components.tables.html", "title": "Tables" }
+        { "id": "card", "url": "components.card.html", "title": "Card" },
+        { "id": "table", "url": "components.table.html", "title": "Table" }
+      ]
+    },
+    {
+      "id": "modules",
+      "url": "modules.sticky.html",
+      "title": "Modules",
+      "children": [
+        {
+          "id": "sticky",
+          "url": "modules.sticky.html",
+          "title": "Sticky"
+        },
+        {
+          "id": "toggle",
+          "url": "modules.toggle.html",
+          "title": "Toggle"
+        }
       ]
     }
   ],
