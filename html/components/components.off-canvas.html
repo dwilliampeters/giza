@@ -1,0 +1,30 @@
+{% macro OffCanvas(modal) %}
+  <div class="off-canvas" data-module="OffCanvas">
+    <div class="off-canvas__aside off-canvas-left" style="padding: 1rem; background: #ddd;">
+      <p>Aside</p>
+    </div>
+    <div class="off-canvas__aside off-canvas-right" style="padding: 1rem; background: #ddd;">
+      <p>Aside</p>
+    </div>
+    <div class="off-canvas__content" style="padding: 1rem;">
+      <p>Content</p>
+    </div>
+  </div>
+
+  <p class="text-center">
+    <button class="button" data-module="Toggle" data-options='{"target": ".off-canvas", "activeClass": "is-open-left"}'>Toggle left canvas</button>
+  </p>
+  <p class="text-center">
+    <button class="button" data-module="Toggle" data-options='{"target": ".off-canvas", "activeClass": "is-open-right"}'>Toggle right canvas</button>
+  </p>
+{% endmacro %}
+
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'macros/lab-source.html' import LabIframe %}
+
+{% block body %}
+
+  {{ OffCanvas()}}
+
+{% endblock %}

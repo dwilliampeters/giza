@@ -53,6 +53,11 @@
           "title": "Button"
         },
         { "id": "card", "url": "components.card.html", "title": "Card" },
+        {
+          "id": "off-canvas",
+          "url": "components.off-canvas.html",
+          "title": "Off-canvas"
+        },
         { "id": "table", "url": "components.table.html", "title": "Table" }
       ]
     },
