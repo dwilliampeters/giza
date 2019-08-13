@@ -2,38 +2,17 @@
 
 $container-max-width: $site-max-width !default;
 $container-side-padding: $spacer !default;
-$container-thin-max-width: $site-max-width / 2 !default;
-$container-body-width: 100% !default;
-$container-sidebar-width: 100% !default;
 
 .container {
   max-width: $container-max-width;
   padding-right: $container-side-padding;
   padding-left: $container-side-padding;
-}
-
-.container--centered {
   margin-right: auto;
   margin-left: auto;
 }
 
-.container--fluid {
+.container-fluid {
   max-width: 100%;
-}
-
-.container--collapse {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.container--thin {
-  max-width: $container-thin-max-width;
-}
-
-.container__body {
-  width: $container-body-width;
-}
-
-.container__sidebar {
-  width: $container-sidebar-width;
+  padding-right: $container-side-padding;
+  padding-left: $container-side-padding;
 }

@@ -548,27 +548,14 @@ p {
 .container {
   max-width: 1200px;
   padding-right: 1rem;
-  padding-left: 1rem; }
-
-.container--centered {
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto; }
 
-.container--fluid {
-  max-width: 100%; }
-
-.container--collapse {
-  padding-right: 0;
-  padding-left: 0; }
-
-.container--thin {
-  max-width: 600px; }
-
-.container__body {
-  width: 100%; }
-
-.container__sidebar {
-  width: 100%; }
+.container-fluid {
+  max-width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem; }
 
 .flex-grid {
   display: flex;
