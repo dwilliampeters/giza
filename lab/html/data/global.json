@@ -63,7 +63,8 @@
           "url": "components.off-canvas.html",
           "title": "Off-canvas"
         },
-        { "id": "table", "url": "components.table.html", "title": "Table" }
+        { "id": "table", "url": "components.table.html", "title": "Table" },
+        { "id": "forms", "url": "components.forms.html", "title": "Forms" }
       ]
     },
     {
