@@ -1,4 +1,6 @@
-{% from 'macros/icon.html' import Icon %}
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'content/icon.html' import Icon %}
 
 {% macro Button(model) %}
   {% if model.url %}
@@ -17,10 +19,6 @@
     </button>
   {% endif %}
 {% endmacro %}
-
-{% extends 'layouts/lab-source.html' %}
-
-{% from 'macros/lab-source.html' import LabIframe %}
 
 {% block body %}
 

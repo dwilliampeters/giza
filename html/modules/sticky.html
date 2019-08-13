@@ -1,3 +1,5 @@
+{% extends 'layouts/lab-source.html' %}
+
 {% macro Sticky(modal) %}
   <div style="height: 200vh">
     <div class="sticky" data-module="Sticky" data-sticky-container="data-sticky-container" style="height: 300px; background: #ddd;">
@@ -6,10 +8,6 @@
     </div>
   </div>
 {% endmacro %}
-
-{% extends 'layouts/lab-source.html' %}
-
-{% from 'macros/lab-source.html' import LabIframe %}
 
 {% block body %}
 
