@@ -1,0 +1,85 @@
+{% set AppParentId = "layouts" %}
+{% set AppCurrentId = "breakpoints" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Breakpoints</h1>
+
+  <h2>Usage</h2>
+
+  <h3>Default breakpoints</h3>
+
+  {{LabCode('scss', '
+  $breakpoints: (
+    xxs: 320px,
+    xs: 480px,
+    sm: 640px,
+    md: 768px,
+    lg: 960px,
+    xl: 1180px,
+    xxl: 1400px
+  ) !default;
+  ')}}
+
+  <h3>Media query mixin</h3>
+
+  <p>
+    <code>@include breakpoint(xs) { ... }</code>
+  </p>
+
+  <h3>Shorthand media query mixin</h3>
+
+  <ul>
+    <li>
+      <code>@include xxs { ... }</code>
+    </li>
+    <li>
+      <code>@include xs { ... }</code>
+    </li>
+    <li>
+      <code>@include sm { ... }</code>
+    </li>
+    <li>
+      <code>@include md { ... }</code>
+    </li>
+    <li>
+      <code>@include lg { ... }</code>
+    </li>
+    <li>
+      <code>@include xl { ... }</code>
+    </li>
+    <li>
+      <code>@include xxl { ... }</code>
+    </li>
+  </ul>
+
+  <h3>HTML class breakpoint suffixes</h3>
+
+  <ul>
+    <li>
+      <code>@xxs</code>
+    </li>
+    <li>
+      <code>@xs</code>
+    </li>
+    <li>
+      <code>@sm</code>
+    </li>
+    <li>
+      <code>@md</code>
+    </li>
+    <li>
+      <code>@lg</code>
+    </li>
+    <li>
+      <code>@xl</code>
+    </li>
+    <li>
+      <code>@xxl</code>
+    </li>
+  </ul>
+{% endblock %}

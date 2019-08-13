@@ -1,0 +1,55 @@
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "size" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Size</h1>
+
+  <h3>Usage</h3>
+
+  <ul>
+    <li>
+      <code>size-width-25</code>
+    </li>
+    <li>
+      <code>size-width-50</code>
+    </li>
+    <li>
+      <code>size-width-75</code>
+    </li>
+    <li>
+      <code>size-width-100</code>
+    </li>
+    <li>
+      <code>size-width-auto</code>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <code>size-height-25</code>
+    </li>
+    <li>
+      <code>size-height-50</code>
+    </li>
+    <li>
+      <code>size-height-75</code>
+    </li>
+    <li>
+      <code>size-height-100</code>
+    </li>
+    <li>
+      <code>size-height-auto</code>
+    </li>
+  </ul>
+
+  <h3>Media Queries</h3>
+
+  <p>
+    <code>size-width-50@md</code>
+  </p>
+{% endblock %}

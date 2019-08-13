@@ -6,7 +6,8 @@ gulp.task("watch", function() {
   paths = {
     htmlSrc: [
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
-      projectPath(PATH_CONFIG.lab, "**/*.html")
+      projectPath(PATH_CONFIG.lab, "**/*.html"),
+      projectPath(PATH_CONFIG.lab, "**/*.json")
     ],
     stylesheetsSrc: [
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.stylesheets.src, "**/*.scss"),

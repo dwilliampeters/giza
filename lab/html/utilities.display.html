@@ -1,0 +1,34 @@
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "display" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Display</h1>
+
+  <h3>Usage</h3>
+
+  <ul>
+    <li>
+      <code>display-none</code>
+    </li>
+    <li>
+      <code>display-block</code>
+    </li>
+    <li>
+      <code>display-inline-block</code>
+    </li>
+    <li>
+      <code>display-flex</code>
+    </li>
+  </ul>
+
+  <h3>Media Queries</h3>
+
+  <p>
+    <code>display-block@md</code>
+  </p>
+{% endblock %}

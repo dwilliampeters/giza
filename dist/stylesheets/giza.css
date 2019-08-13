@@ -2478,6 +2478,36 @@ a.button,
   .nav--horizontal\@xxl > .nav__item {
     flex: 0 0 auto; } }
 
+.off-canvas {
+  overflow: hidden; }
+
+.off-canvas__aside {
+  position: fixed;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.25s ease-in; }
+
+.off-canvas-left {
+  left: 0;
+  transform: translateX(-250px); }
+  .is-open-left .off-canvas-left {
+    transform: translate(0); }
+
+.off-canvas-right {
+  right: 0;
+  transform: translateX(250px); }
+  .is-open-right .off-canvas-right {
+    transform: translate(0); }
+
+.off-canvas__content {
+  transition: transform 0.25s ease-in; }
+  .is-open-left .off-canvas__content {
+    transform: translateX(250px); }
+  .is-open-right .off-canvas__content {
+    transform: translateX(-250px); }
+
 .pagination {
   display: flex;
   margin: 0;

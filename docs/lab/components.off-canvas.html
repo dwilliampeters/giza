@@ -204,6 +204,8 @@
     
       
   
+    
+  
 
   
 
@@ -215,7 +217,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="components.button.html">Components</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -252,14 +254,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="components.off-canvas.html">Off-canvas</a>
     
 </li>
@@ -370,8 +374,6 @@
     
       
   
-    
-  
 
   
 
@@ -383,15 +385,13 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="modules.sticky.html">Modules</a>
     
       <ul class="nav nav--vertical nav--nested">
         
           
   
-    
-  
 
   
 
@@ -399,7 +399,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="modules.sticky.html">Sticky</a>
     
 </li>
@@ -431,11 +431,9 @@
   </div>
   <main class="app-content">
     
-  <h1>Sticky</h1>
+  <h1>Off-canvas</h1>
 
-  <p class="font-size-md">Using
-    <a href="https://www.npmjs.com/package/stickybits" target="_blank">Stickybits</a>
-    to create sticky elements.</p>
+  <p class="font-size-md">Content positioned outside of the viewport that slide in when active.</p>
 
   <h3>Usage</h3>
 
@@ -443,9 +441,9 @@
   
     <div class="app-example">
       <div class="app-example__tabs">
-        <a class="app-example__tab" href="../modules/modules.sticky.html" target="_blank">Open this example in a new window</a>
+        <a class="app-example__tab" href="../components/components.off-canvas.html" target="_blank">Open this example in a new window</a>
       </div>
-      <div data-module="LabFrame" data-options='{"src": "../modules/modules.sticky.html"}'></div>
+      <div data-module="LabFrame" data-options='{"src": "../components/components.off-canvas.html"}'></div>
     </div>
   
 
@@ -453,9 +451,28 @@
   <div class="app-code" data-module="ExampleCode">
     <button class="button app-copy-button js-app-copy-button">Copy code</button>
     <pre class="language-html"><code class="language-html">
-  &lt;div class=&quot;sticky&quot; data-module=&quot;Sticky&quot;&gt;
-    &lt;div class=&quot;sticky__item&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;off-canvas&quot;&gt;
+    &lt;div class=&quot;off-canvas__aside off-canvas-left&quot;&gt;
+      ....
+    &lt;/div&gt;
+    &lt;div class=&quot;off-canvas__aside off-canvas-right&quot;&gt;
+      ...
+    &lt;/div&gt;
+    &lt;div class=&quot;off-canvas__content&quot;&gt;
+      ...
+    &lt;/div&gt;
   &lt;/div&gt;
+  </code></pre>
+  </div>
+
+
+  
+  <div class="app-code" data-module="ExampleCode">
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  data-module=&quot;Toggle&quot; data-options=&quot;{&quot;target&quot;: &quot;.off-canvas&quot;, &quot;activeClass&quot;: &quot;is-open-left&quot;}&quot;
+
+  data-module=&quot;Toggle&quot; data-options=&quot;{&quot;target&quot;: &quot;.off-canvas&quot;, &quot;activeClass&quot;: &quot;is-open-right&quot;}&quot;
   </code></pre>
   </div>
 

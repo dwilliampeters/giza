@@ -1,0 +1,34 @@
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "text" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Text</h1>
+
+  <h3>Usage</h3>
+
+  <ul>
+    <li>
+      <code>text-left</code>
+    </li>
+    <li>
+      <code>text-center</code>
+    </li>
+    <li>
+      <code>text-right</code>
+    </li>
+    <li>
+      <code>text-justify</code>
+    </li>
+  </ul>
+
+  <h3>Media Queries</h3>
+
+  <p>
+    <code>text-right@md</code>
+  </p>
+{% endblock %}

@@ -83,6 +83,8 @@
     
       
   
+    
+  
 
   
 
@@ -94,21 +96,23 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="layouts.breakpoints.html">Layout</a>
     
       <ul class="nav nav--vertical nav--nested">
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="layouts.breakpoints.html">Breakpoints</a>
     
 </li>
@@ -370,8 +374,6 @@
     
       
   
-    
-  
 
   
 
@@ -383,15 +385,13 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="modules.sticky.html">Modules</a>
     
       <ul class="nav nav--vertical nav--nested">
         
           
   
-    
-  
 
   
 
@@ -399,7 +399,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="modules.sticky.html">Sticky</a>
     
 </li>
@@ -431,34 +431,86 @@
   </div>
   <main class="app-content">
     
-  <h1>Sticky</h1>
+  <h1>Breakpoints</h1>
 
-  <p class="font-size-md">Using
-    <a href="https://www.npmjs.com/package/stickybits" target="_blank">Stickybits</a>
-    to create sticky elements.</p>
+  <h2>Usage</h2>
 
-  <h3>Usage</h3>
-
-  
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="../modules/modules.sticky.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "../modules/modules.sticky.html"}'></div>
-    </div>
-  
+  <h3>Default breakpoints</h3>
 
   
   <div class="app-code" data-module="ExampleCode">
     <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  &lt;div class=&quot;sticky&quot; data-module=&quot;Sticky&quot;&gt;
-    &lt;div class=&quot;sticky__item&quot;&gt;...&lt;/div&gt;
-  &lt;/div&gt;
+    <pre class="language-scss"><code class="language-scss">
+  $breakpoints: (
+    xxs: 320px,
+    xs: 480px,
+    sm: 640px,
+    md: 768px,
+    lg: 960px,
+    xl: 1180px,
+    xxl: 1400px
+  ) !default;
   </code></pre>
   </div>
 
+
+  <h3>Media query mixin</h3>
+
+  <p>
+    <code>@include breakpoint(xs) { ... }</code>
+  </p>
+
+  <h3>Shorthand media query mixin</h3>
+
+  <ul>
+    <li>
+      <code>@include xxs { ... }</code>
+    </li>
+    <li>
+      <code>@include xs { ... }</code>
+    </li>
+    <li>
+      <code>@include sm { ... }</code>
+    </li>
+    <li>
+      <code>@include md { ... }</code>
+    </li>
+    <li>
+      <code>@include lg { ... }</code>
+    </li>
+    <li>
+      <code>@include xl { ... }</code>
+    </li>
+    <li>
+      <code>@include xxl { ... }</code>
+    </li>
+  </ul>
+
+  <h3>HTML class breakpoint suffixes</h3>
+
+  <ul>
+    <li>
+      <code>@xxs</code>
+    </li>
+    <li>
+      <code>@xs</code>
+    </li>
+    <li>
+      <code>@sm</code>
+    </li>
+    <li>
+      <code>@md</code>
+    </li>
+    <li>
+      <code>@lg</code>
+    </li>
+    <li>
+      <code>@xl</code>
+    </li>
+    <li>
+      <code>@xxl</code>
+    </li>
+  </ul>
 
   </main>
 
