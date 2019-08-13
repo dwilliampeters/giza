@@ -17,6 +17,8 @@ gulp.task("html", function() {
     ],
     src_render: [
       projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "components"),
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "content"),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
     ],
     dest: projectPath(PATH_CONFIG.buildDest)
