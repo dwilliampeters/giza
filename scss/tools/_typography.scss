@@ -1,9 +1,3 @@
-// Tools: Font size
-
-// .MyHero {
-//     @include canon-bold;
-// }
-
 @mixin font-size-display {
   @include typography('display');
 }

@@ -1,14 +1,13 @@
-// Settings
 $margin-sides: 'top', 'right', 'bottom', 'left' !default;
 
-// Mixins
 @mixin margin($side, $name, $size, $breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .margin-#{$side}-#{$name + $breakpoint-suffix} {
     margin-#{$side}: #{$size} !important;
   }
 }
+
 // LOOP THROUGH MARGIN PROPERTIES AND RUN MIXINS FOR EACH
 @each $side in $margin-sides {
   @include margin($side, auto, auto);
@@ -17,6 +16,7 @@ $margin-sides: 'top', 'right', 'bottom', 'left' !default;
     @include margin($side, $spacing-key + '-spacing', $spacing-value);
   }
 }
+
 // LOOP THROUGH BREAKPOINTS, THEN MARGIN PROPERTIES AND RUN MIXINS FOR EACH
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
   @include breakpoint($breakpoint-key) {

@@ -1,11 +1,7 @@
-// SETTINGS
-
 $text-align-prop-values: 'left', 'center', 'right', 'justify' !default;
 
-// MIXINS
-
 @mixin text-align($prop-value, $breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .text-#{$prop-value + $breakpoint-suffix} {
     text-align: #{$prop-value} !important;
