@@ -327,7 +327,7 @@ gulp.task("lab:html", function() {
 
   const dataFunction = function() {
     var dataPath = path.resolve(
-      `${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/data/global.json`
+      `${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/_data.json`
     );
     return JSON.parse(fs.readFileSync(dataPath, "utf8"));
   };
