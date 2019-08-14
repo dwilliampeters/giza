@@ -4,42 +4,54 @@
 @import 'vendor/normalize';
 
 // Settings
-@import '1.settings/settings';
+@import 'settings/base';
+@import 'settings/type';
 
 // Tools
-@import '2.tools/tools';
+@import 'tools/breakpoint';
+@import 'tools/clearfix';
+@import 'tools/color-swap-on-hover';
+@import 'tools/shorthand-breakpoint';
+@import 'tools/typography';
 
 // Generic
-@import '3.generic/generic.base';
+@import 'generic/base';
 
 // Elements
-@import '4.elements/elements';
+@import 'elements/blockquote';
+@import 'elements/headings';
+@import 'elements/inline';
+@import 'elements/links';
+@import 'elements/lists';
+@import 'elements/media';
+@import 'elements/paragraph';
+@import 'elements/print';
 
 // Objects
-@import '5.objects/container/objects.container';
-@import '5.objects/flex-grid/objects.flex-grid';
-@import '5.objects/grid/objects.grid';
-@import '5.objects/icon/objects.icon';
-@import '5.objects/site/objects.site';
+@import 'objects/container';
+@import 'objects/flex-grid';
+@import 'objects/grid';
+@import 'objects/icon';
+@import 'objects/site';
 
 // Components
-@import '6.components/accordion/components.accordion';
-@import '6.components/button/components.button';
-@import '6.components/card/components.card';
-@import '6.components/form/components.form';
-@import '6.components/hamburger/components.hamburger';
-@import '6.components/list-group/components.list-group';
-@import '6.components/nav/components.nav';
-@import '6.components/off-canvas/components.off-canvas';
-@import '6.components/pagination/components.pagination';
-@import '6.components/table/components.table';
+@import 'components/accordion';
+@import 'components/button';
+@import 'components/card';
+@import 'components/form';
+@import 'components/hamburger';
+@import 'components/list-group';
+@import 'components/nav';
+@import 'components/off-canvas';
+@import 'components/pagination';
+@import 'components/table';
 
 // Utilities
-@import '7.utilities/utilities.display';
-@import '7.utilities/utilities.healthcheck';
-@import '7.utilities/utilities.margins';
-@import '7.utilities/utilities.positioning';
-@import '7.utilities/utilities.size';
-@import '7.utilities/utilities.text-align';
-@import '7.utilities/utilities.typography';
-@import '7.utilities/utilities.visibility';
+@import 'utilities/display';
+@import 'utilities/healthcheck';
+@import 'utilities/margins';
+@import 'utilities/positioning';
+@import 'utilities/size';
+@import 'utilities/text-align';
+@import 'utilities/typography';
+@import 'utilities/visibility';

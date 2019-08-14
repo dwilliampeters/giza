@@ -5,25 +5,25 @@
 
 // Giza framework
 // Loads local settings allowing overrides first
-@import '1.settings/settings';
+@import 'settings/settings';
 @import '../../stylesheets/giza';
 
 // Tools
 
 // Generic
-@import '3.generic/generic.fonts';
+@import 'generic/fonts';
 
 // Elements
 
 // Objects
 
 // Components
-@import '6.components/app-code/components.app-code';
-@import '6.components/app-example/components.app-example';
-@import '6.components/app-footer/components.app-footer';
-@import '6.components/app-header/components.app-header';
-@import '6.components/app-main/components.app-main';
-@import '6.components/app-nav/components.app-nav';
-@import '6.components/app-sidebar/components.app-sidebar';
+@import 'components/app-code';
+@import 'components/app-example';
+@import 'components/app-footer';
+@import 'components/app-header';
+@import 'components/app-main';
+@import 'components/app-nav';
+@import 'components/app-sidebar';
 
 // Utilities
