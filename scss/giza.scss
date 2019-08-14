@@ -14,8 +14,8 @@
 @import 'tools/shorthand-breakpoint';
 @import 'tools/typography';
 
-// Generic
-@import 'generic/base';
+// Reboot
+@import 'reboot';
 
 // Elements
 @import 'elements/blockquote';
@@ -27,11 +27,11 @@
 @import 'elements/paragraph';
 @import 'elements/print';
 
-// Objects
-@import 'objects/app';
-@import 'objects/container';
-@import 'objects/flex-grid';
-@import 'objects/grid';
+// Layout
+@import 'layout/app';
+@import 'layout/container';
+@import 'layout/flex-grid';
+@import 'layout/grid';
 
 // Components
 @import 'components/accordion';
