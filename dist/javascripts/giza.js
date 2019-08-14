@@ -117,7 +117,7 @@ eval("/*!\n * @copyright Copyright (c) 2017 IcoMoon.io\n * @license   Licensed u
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./modules */ \"./modules/index.js\");\n\n__webpack_require__(/*! svgxuse */ \"../node_modules/svgxuse/svgxuse.js\");\n\n//Polyfill for IE11 to support \"use\" tags in SVGs\n\nconsole.log(\"app.js has loaded!\");\n\n//# sourceURL=webpack:///./giza.js?");
+eval("\n\n__webpack_require__(/*! ./modules */ \"./modules/index.js\");\n\n__webpack_require__(/*! svgxuse */ \"../node_modules/svgxuse/svgxuse.js\");\n\n//Polyfill for IE11 to support \"use\" tags in SVGs\n\n// Open external links in a new window\nfunction externalLinks() {\n  for (var c = document.getElementsByTagName(\"a\"), a = 0; a < c.length; a++) {\n    var b = c[a];\n    b.getAttribute(\"href\") && b.hostname !== location.hostname && (b.target = \"_blank\");\n  }\n}\nexternalLinks();\n\nconsole.log(\"app.js has loaded!\");\n\n//# sourceURL=webpack:///./giza.js?");
 
 /***/ }),
 
