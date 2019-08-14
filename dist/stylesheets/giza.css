@@ -545,6 +545,14 @@ p {
   h3 {
     page-break-after: avoid; } }
 
+.app {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column; }
+
+.app__footer {
+  margin-top: auto; }
+
 .container {
   max-width: 1200px;
   padding-right: 1rem;
@@ -1651,14 +1659,6 @@ p {
     grid-column: span 11; }
   .grid > .grid__cell--span-12\@xxl {
     grid-column: span 12; } }
-
-.site {
-  display: flex;
-  min-height: 100%;
-  flex-direction: column; }
-
-.site__footer {
-  margin-top: auto; }
 
 .accordion {
   margin: 0;
