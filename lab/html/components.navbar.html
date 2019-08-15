@@ -1,0 +1,19 @@
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "navbar" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Navbar</h1>
+
+  <p class="font-size-md">A responsive navigation header for brranding and navigation.</p>
+
+  <h2>Usage</h2>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  ')}}
+{% endblock %}
