@@ -9,6 +9,10 @@
     {% if model.nav %}
       {{ Button({
         'icon': 'plus',
+        'toggle': {
+          'target': 'parent',
+          'class': 'has-nav-open'
+        },
         'aria': {
           'label': 'Toggle navigation'
         },

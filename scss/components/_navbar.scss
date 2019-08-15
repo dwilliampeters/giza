@@ -5,6 +5,12 @@
   justify-content: space-between;
   padding: ($spacer / 2) $spacer;
   background: $medium;
+
+  &.has-nav-open {
+    .navbar__nav {
+      display: flex;
+    }
+  }
 }
 
 .navbar__brand {
