@@ -13,7 +13,7 @@
       {% endif %}
     </a>
   {% else %}
-    <button class="button{{model.classes}}" {% if model.toggle %} data-module="Toggle" data-options='{"target": "{{model.toggle.target}}", "activeClass": "{{model.toggle.class}}"}' {% endif %} aria-label="{{model.aria.label}}">
+    <button class="button{{model.classes}}" {% if model.toggle %} data-module="Toggle" data-options='{"target": "{{model.toggle.target}}", "activeClass": "{{model.toggle.class}}"}' {% endif %} {% if model.aria.label %} aria-label="{{model.aria.label}}" {% endif %}>
       {% if model.icon %}
         {{Icon(model.icon)}}
       {% endif %}
