@@ -5,11 +5,11 @@
 
 {% macro Toggler(model) %}
   <button class="navbar__toggler{{model.classes}}" data-module="Toggle" data-options='{"target": "{{model.target}}", "activeClass": "{{model.class}}"}' {% if model.aria.label %} aria-label="{{model.aria.label}}" {% endif %}>
-    <div class="hamburger">
+    <span class="navbar__toggler-icon">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </span>
   </button>
 {% endmacro %}
 

@@ -1,3 +1,9 @@
+$spacer-sizes: (
+  single: $spacer,
+  double: $spacer * 2,
+  triple: $spacer * 3
+) !default;
+
 @mixin grid-column($column-number, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 

@@ -4,32 +4,25 @@ $grid-columns: 12 !default;
 // Sizes
 $min-touch-size: 44px !default;
 $site-max-width: 1200px !default;
-$spacer: 1rem !default;
-$spacer-sizes: (
-  single: $spacer,
-  double: $spacer * 2,
-  triple: $spacer * 3
-) !default;
 
-// Breakpoints
-$breakpoints: (
-  xxs: 320px,
-  xs: 480px,
-  sm: 640px,
-  md: 768px,
-  lg: 960px,
-  xl: 1180px,
-  xxl: 1400px
-) !default;
+// Spacer
+$spacer: 1rem !default; // 1
+$spacer-xxs: $spacer / 4 !default; // 0.25
+$spacer-xs: $spacer / 2 !default; // 0.50
+$spacer-sm: $spacer / 4 * 3 !default; // 0.75
+$spacer-md: $spacer * 1.25 !default; // 1.25
+$spacer-lg: $spacer * 1.5 !default; // 1.50
+$spacer-xl: $spacer * 1.75 !default; // 1.75
+$spacer-xxl: $spacer * 2 !default; // 2
+
 // Colours
-
 // Use http://chir.ag/projects/name-that-color/#51284F
 // for colour variable names
-// Colour Types
 $light: #fff !default;
 $medium: #ddd !default;
 $dark: #000 !default;
 $azure-radiance: #0d7adf !default;
+
 // Fonts
 $font: Helvetica, Arial, sans-serif !default;
 $font-loaded: Helvetica, Arial, sans-serif !default;
