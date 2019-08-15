@@ -1,17 +1,21 @@
-.hide {
-  display: none !important;
-}
-
-.show {
-  display: block !important;
-}
-
-.invisible {
+.visibility-hidden {
   visibility: hidden !important;
 }
 
-.visible {
+.visibility-visible {
   visibility: visible !important;
+}
+
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    .visibility-hidden\@#{$key} {
+      visibility: hidden !important;
+    }
+
+    .visibility-visible\@#{$key} {
+      visibility: visible !important;
+    }
+  }
 }
 
 // screen readers only
@@ -24,20 +28,4 @@
   margin: -1px;
   border: 0;
   clip: rect(0, 0, 0, 0);
-}
-
-// allows keyboard focus when tabbed to when used in conjunction with .srOnly. (Could be used for skip-links)
-.sr-only--focusable:active,
-.sr-only--focusable:focus {
-  position: static;
-  overflow: visible;
-  width: auto;
-  height: auto;
-  margin: 0;
-  clip: auto;
-}
-
-// Print visibility class
-.print-only {
-  display: none !important;
 }

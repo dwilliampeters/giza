@@ -80,6 +80,11 @@
           "title": "Display"
         },
         {
+          "id": "margin",
+          "url": "utilities.margin.html",
+          "title": "Margin"
+        },
+        {
           "id": "position",
           "url": "utilities.position.html",
           "title": "Position"
@@ -93,6 +98,16 @@
           "id": "text",
           "url": "utilities.text.html",
           "title": "Text"
+        },
+        {
+          "id": "type",
+          "url": "utilities.type.html",
+          "title": "Type"
+        },
+        {
+          "id": "visibility",
+          "url": "utilities.visibility.html",
+          "title": "Visibility"
         }
       ]
     },

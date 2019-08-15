@@ -8,13 +8,9 @@ $display-prop-values: 'none', 'block', 'inline-block', 'flex' !default;
   }
 }
 
-// LOOP THROUGH DISPLAY PROPERTY VALUES AND RUN MIXINS FOR EACH
-
 @each $value in $display-prop-values {
   @include display($value);
 }
-
-// LOOP THROUGH BREAKPOINTS, THEN DISPLAY PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {

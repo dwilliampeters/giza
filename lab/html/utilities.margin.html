@@ -1,0 +1,36 @@
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "margin" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Margin</h1>
+
+  <h2>Usage</h2>
+
+  <ul>
+    <li>
+      <code>margin-top</code>
+    </li>
+    <li>
+      <code>margin-right</code>
+    </li>
+    <li>
+      <code>margin-bottom</code>
+    </li>
+    <li>
+      <code>margin-left</code>
+    </li>
+  </ul>
+
+  <h3>Media Queries</h3>
+
+  <ul>
+    <li>
+      <code>margin-top@md</code>
+    </li>
+  </ul>
+{% endblock %}

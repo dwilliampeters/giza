@@ -8,13 +8,9 @@ $text-align-prop-values: 'left', 'center', 'right', 'justify' !default;
   }
 }
 
-// LOOP THROUGH TEXT-ALIGN PROPERTY VALUES AND RUN MIXINS FOR EACH
-
 @each $value in $text-align-prop-values {
   @include text-align($value);
 }
-
-// LOOP THROUGH BREAKPOINTS, THEN TEXT-ALIGN PROPERTY VALUES AND RUN MIXINS FOR EACH
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {

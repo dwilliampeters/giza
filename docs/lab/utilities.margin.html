@@ -204,8 +204,6 @@
     
       
   
-    
-  
 
   
 
@@ -217,15 +215,13 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="components.button.html">Components</a>
     
       <ul class="nav nav--vertical nav--nested">
         
           
   
-    
-  
 
   
 
@@ -233,7 +229,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="components.button.html">Button</a>
     
 </li>
@@ -306,6 +302,8 @@
     
       
   
+    
+  
 
   
 
@@ -317,7 +315,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="utilities.display.html">Utilities</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -339,14 +337,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="utilities.margin.html">Margin</a>
     
 </li>
@@ -491,83 +491,32 @@
   </div>
   <main class="app-content">
     
-  <h1>Button</h1>
-
-  <p class="font-size-md">Easily create versatile buttons in a variety of styles.</p>
+  <h1>Margin</h1>
 
   <h2>Usage</h2>
 
-  
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="../components/button.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "../components/button.html"}'></div>
-    </div>
-  
+  <ul>
+    <li>
+      <code>margin-top</code>
+    </li>
+    <li>
+      <code>margin-right</code>
+    </li>
+    <li>
+      <code>margin-bottom</code>
+    </li>
+    <li>
+      <code>margin-left</code>
+    </li>
+  </ul>
 
-  
-  <div class="app-code" data-module="ExampleCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  &lt;button class=&quot;button&quot;&gt;
-    &lt;span class=&quot;button__text&quot;&gt;Primary&lt;/span&gt;
-  &lt;/button&gt;
-  </code></pre>
-  </div>
+  <h3>Media Queries</h3>
 
-
-  <h2>Link</h2>
-
-  
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="../components/button.link.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "../components/button.link.html"}'></div>
-    </div>
-  
-
-  
-  <div class="app-code" data-module="ExampleCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  &lt;a class=&quot;button&quot; href=&quot;&quot;&gt;
-    &lt;span class=&quot;button__text&quot;&gt;Link&lt;/span&gt;
-  &lt;/a&gt;
-  </code></pre>
-  </div>
-
-
-  <h2>Icon</h2>
-
-  
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="../components/button.icon.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "../components/button.icon.html"}'></div>
-    </div>
-  
-
-  
-  <div class="app-code" data-module="ExampleCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  &lt;button class=&quot;button&quot;&gt;
-    &lt;span class=&quot;icon icon--plus&quot;&gt;
-        &lt;svg viewBox=&quot;0 0 1 1&quot;&gt;
-            &lt;use xlink:href=&quot;../images/icons.svg#plus&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;button__text&quot;&gt;Primary&lt;/span&gt;
-  &lt;/button&gt;
-  </code></pre>
-  </div>
-
+  <ul>
+    <li>
+      <code>margin-top@md</code>
+    </li>
+  </ul>
 
   </main>
 

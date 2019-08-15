@@ -1,0 +1,43 @@
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "type" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Type</h1>
+
+  <h2>Usage</h2>
+
+  <ul>
+    <li>
+      <code>font-size-display</code>
+    </li>
+    <li>
+      <code>font-size-xxxl</code>
+    </li>
+    <li>
+      <code>font-size-xxl</code>
+    </li>
+    <li>
+      <code>font-size-xl</code>
+    </li>
+    <li>
+      <code>font-size-lg</code>
+    </li>
+    <li>
+      <code>font-size-md</code>
+    </li>
+    <li>
+      <code>font-size-base</code>
+    </li>
+    <li>
+      <code>font-size-sm</code>
+    </li>
+    <li>
+      <code>font-size-xs</code>
+    </li>
+  </ul>
+{% endblock %}
