@@ -1,0 +1,58 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% from 'nav.html' import Nav %}
+{% from 'button.html' import Button %}
+
+{% macro Toggler(model) %}
+  <button class="navbar__toggler{{model.classes}}" data-module="Toggle" data-options='{"target": "{{model.target}}", "activeClass": "{{model.class}}"}' {% if model.aria.label %} aria-label="{{model.aria.label}}" {% endif %}>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+{% endmacro %}
+
+{% macro Navbar(model) %}
+  <nav class="navbar">
+    <a class="navbar__brand" href="{{model.brand.url}}">{{model.brand.title}}</a>
+    {% if model.nav %}
+      {{ Toggler({
+        'target': 'parent',
+        'class': 'has-nav-open',
+        'aria': {
+          'label': 'Toggle navigation'
+        }
+      }) }}
+      {{ Nav(model.nav) }}
+    {% endif %}
+  </nav>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Navbar({
+    'brand': {
+      'title': 'Navbar',
+      'url': '#'
+    },
+    'nav': {
+      'items': [
+        {
+          'title': 'Link 1',
+          'url': '#'
+        },
+        {
+          'title': 'Link 2',
+          'url': '#'
+        },
+        {
+          'title': 'Link 3',
+          'url': '#'
+        }
+      ],
+      'classes': ' navbar__nav'
+    }
+  }) }}
+
+{% endblock %}

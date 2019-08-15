@@ -5,9 +5,10 @@
 {% block body %}
 
   {{ Button({
-    'icon': 'plus',
-    'aria': {
-      'label': 'Toggle'
+  'description': 'Toggle button',
+    'toggle': {
+      'target': 'parent',
+      'class': 'is-active'
     }
   }) }}
 

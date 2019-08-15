@@ -1,0 +1,37 @@
+{% extends 'layouts/lab-source.html' %}
+
+{% macro Nav(model) %}
+  <ul class="nav{{model.classes}}">
+    {% for item in model.items %}
+
+      {% if item.children %}
+        {% set parent = " is-parent" %}
+      {% endif %}
+
+      <li class="nav__item{{item.classes}}{{level}}{{parent}}{{activeClass}}">
+        <a class="nav__link" href="{{item.url}}">{{item.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Nav({
+    'items': [
+      {
+        'title': 'Link 1',
+        'url': '#'
+      },
+      {
+        'title': 'Link 2',
+        'url': '#'
+      },
+      {
+        'title': 'Link 3',
+        'url': '#'
+      }
+    ]
+  }) }}
+
+{% endblock %}
