@@ -2227,8 +2227,6 @@ a.button,
   justify-content: space-between;
   padding: 0.5rem 1rem;
   background: #ddd; }
-  .navbar.has-nav-open .navbar__nav {
-    display: flex; }
 
 .navbar__brand {
   flex: 0 0 auto;
@@ -2274,18 +2272,29 @@ a.button,
       bottom: inherit;
       transform: translateY(-50%) rotate(-45deg); }
 
-.navbar__nav {
+.navbar__toggle {
   display: none;
+  flex-wrap: wrap; }
+  .has-nav-open .navbar__toggle {
+    display: flex; }
+
+.navbar__nav {
   flex-direction: column;
   align-items: flex-start; }
+
+.navbar__form {
+  display: flex; }
 
 @media (min-width: 768px) {
   .navbar__toggler {
     display: none; }
+  .navbar__toggle {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between; }
   .navbar__nav {
     display: flex;
     width: auto;
-    flex: 1 0 auto;
     flex-direction: row;
     align-items: center; } }
 

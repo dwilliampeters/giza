@@ -7,12 +7,6 @@ $navbar-padding: $spacer-sm $spacer;
   justify-content: space-between;
   padding: $spacer-xs $spacer;
   background: $medium;
-
-  &.has-nav-open {
-    .navbar__nav {
-      display: flex;
-    }
-  }
 }
 
 .navbar__brand {
@@ -78,10 +72,22 @@ $navbar-padding: $spacer-sm $spacer;
   }
 }
 
-.navbar__nav {
+.navbar__toggle {
   display: none;
+  flex-wrap: wrap;
+
+  .has-nav-open & {
+    display: flex;
+  }
+}
+
+.navbar__nav {
   flex-direction: column;
   align-items: flex-start;
+}
+
+.navbar__form {
+  display: flex;
 }
 
 @include md {
@@ -89,10 +95,15 @@ $navbar-padding: $spacer-sm $spacer;
     display: none;
   }
 
+  .navbar__toggle {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+  }
+
   .navbar__nav {
     display: flex;
     width: auto;
-    flex: 1 0 auto;
     flex-direction: row;
     align-items: center;
   }
