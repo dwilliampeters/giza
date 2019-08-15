@@ -6,10 +6,11 @@ $min-touch-size: 44px !default;
 $site-max-width: 1200px !default;
 
 // Spacer
-$spacer: 1rem !default; // 1
+$spacer: 1rem !default;
 $spacer-xxs: $spacer / 4 !default; // 0.25
 $spacer-xs: $spacer / 2 !default; // 0.50
 $spacer-sm: $spacer / 4 * 3 !default; // 0.75
+$spacer-base: $spacer !default; // 1
 $spacer-md: $spacer * 1.25 !default; // 1.25
 $spacer-lg: $spacer * 1.5 !default; // 1.50
 $spacer-xl: $spacer * 1.75 !default; // 1.75
