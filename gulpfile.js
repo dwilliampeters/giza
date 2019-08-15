@@ -108,8 +108,16 @@ gulp.task("html", function() {
     dest: projectPath(PATH_CONFIG.buildDest)
   };
 
+  const dataFunction = function() {
+    var dataPath = path.resolve(
+      `${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/_data.json`
+    );
+    return JSON.parse(fs.readFileSync(dataPath, "utf8"));
+  };
+
   return gulp
     .src(htmlPaths.src)
+    .pipe(data(dataFunction))
     .pipe(
       nunjucksRender({
         path: htmlPaths.src_render
