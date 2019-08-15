@@ -1,9 +1,9 @@
-{% macro LabNavLink(modal, categoryId, currentPageId, loop, level) %}
-  {% if modal.id == categoryId %}
+{% macro LabNavLink(model, categoryId, currentPageId, loop, level) %}
+  {% if model.id == categoryId %}
     {% set activeClass = " is-active" %}
   {% endif %}
 
-  {% if modal.id == currentPageId %}
+  {% if model.id == currentPageId %}
     {% set activeClass = " is-active" %}
   {% endif %}
 
@@ -11,15 +11,15 @@
     {% set level = " nav__item-level-1" %}
   {% endif %}
 
-  {% if modal.children %}
+  {% if model.children %}
     {% set parent = " nav__item-parent" %}
   {% endif %}
 
-  <li class="nav__item{{modal.classes}}{{level}}{{parent}}{{activeClass}}">
-    <a class="nav__link" href="{{modal.url}}">{{modal.title}}</a>
-    {% if modal.children %}
+  <li class="nav__item{{model.classes}}{{level}}{{parent}}{{activeClass}}">
+    <a class="nav__link" href="{{model.url}}">{{model.title}}</a>
+    {% if model.children %}
       <ul class="nav nav--vertical nav--nested">
-        {% for page in modal.children %}
+        {% for page in model.children %}
           {{ LabNavLink(page, currentPageId, loop) }}
         {% endfor %}
     </ul>

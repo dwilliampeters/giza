@@ -4,14 +4,14 @@
 
 {% macro Button(model) %}
   {% if model.url %}
-    <a class="button" href="{{model.url}}">
+    <a class="button{{model.classes}}" href="{{model.url}}" {% if model.aria.label %} aria-label="{{model.aria.label}}" {% endif %}>
       {% if model.icon %}
         {{Icon(model.icon)}}
       {% endif %}
       <span class="button__text">{{model.description}}</span>
     </a>
   {% else %}
-    <button class="button">
+    <button class="button{{model.classes}}" aria-label="{{model.aria.label}}">
       {% if model.icon %}
         {{Icon(model.icon)}}
       {% endif %}
@@ -23,7 +23,11 @@
 {% block body %}
 
   {{ Button({
-    'description': 'Primary'
+    'description': 'Primary',
+    'aria': {
+      'label': 'Aria label'
+    },
+    'classes': ' button--class'
   }) }}
 
 {% endblock %}

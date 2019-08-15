@@ -1,11 +1,47 @@
 {% extends 'layouts/lab-source.html' %}
 
-{% macro Navbar(modal) %}
-  <nav class="navbar"></nav>
+{% from 'nav.html' import Nav %}
+{% from 'button.html' import Button %}
+
+{% macro Navbar(model) %}
+  <nav class="navbar">
+    <a class="navbar__brand" href="{{model.brand.url}}">{{model.brand.title}}</a>
+    {% if model.nav %}
+      {{ Button({
+        'description': 'Toggle Nav',
+        'aria': {
+          'label': 'Toggle navigation'
+        },
+        'classes': ' navbar__toggler'
+      }) }}
+      {{ Nav(model.nav) }}
+    {% endif %}
+  </nav>
 {% endmacro %}
 
 {% block body %}
 
-  {{ Navbar() }}
+  {{ Navbar(
+    {
+      'brand': {
+        'title': 'Navbar',
+        'url': '#'
+      },
+      'nav': [
+        {
+          'title': 'Link 1',
+          'url': '#'
+        },
+        {
+          'title': 'Link 2',
+          'url': '#'
+        },
+        {
+          'title': 'Link 3',
+          'url': '#'
+        }
+      ]
+    }
+  ) }}
 
 {% endblock %}

@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar__brand {
+  flex: 1 0 auto;
+}
+
+.navbar__toggler {
+  flex: 0 0 auto;
+}

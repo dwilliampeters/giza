@@ -1,8 +1,8 @@
 {% extends 'layouts/lab-source.html' %}
 
-{% macro Nav(modal) %}
+{% macro Nav(model) %}
   <ul class="nav">
-    {% for item in modal %}
+    {% for item in model %}
 
       {% if item.children %}
         {% set parent = " is-parent" %}
