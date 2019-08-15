@@ -32,6 +32,11 @@
           "id": "container",
           "url": "layouts.container.html",
           "title": "Container"
+        },
+        {
+          "id": "spacer",
+          "url": "layouts.spacer.html",
+          "title": "Spacer"
         }
       ]
     },

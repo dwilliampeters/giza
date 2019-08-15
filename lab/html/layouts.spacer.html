@@ -1,0 +1,42 @@
+{% set AppParentId = "layouts" %}
+{% set AppCurrentId = "spacer" %}
+
+{% extends 'layouts/lab-side-content.html' %}
+
+{% from 'macros/lab-example.html' import LabExample %}
+{% from 'macros/lab-code.html' import LabCode %}
+
+{% block content %}
+  <h1>Spacer</h1>
+
+  <p class="font-size-md">Use our spacers to uniformly space your content.</p>
+
+  <h2>Usage</h2>
+
+  <ul>
+    <li>
+      <code>$spacer-xxs</code>
+    </li>
+    <li>
+      <code>$spacer-xs</code>
+    </li>
+    <li>
+      <code>$spacer-sm</code>
+    </li>
+    <li>
+      <code>$spacer-base</code>
+    </li>
+    <li>
+      <code>$spacer-md</code>
+    </li>
+    <li>
+      <code>$spacer-lg</code>
+    </li>
+    <li>
+      <code>$spacer-xl</code>
+    </li>
+    <li>
+      <code>$spacer-xxl</code>
+    </li>
+  </ul>
+{% endblock %}
