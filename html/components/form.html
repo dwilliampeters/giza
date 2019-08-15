@@ -1,20 +1,8 @@
-{% set AppParentId = "components" %}
-{% set AppCurrentId = "form" %}
+{% extends 'layouts/lab-source.html' %}
 
-{% extends 'layouts/lab-side-content.html' %}
+{% from 'icon.html' import Icon %}
 
-{% from 'macros/lab-example.html' import LabExample %}
-{% from 'macros/lab-code.html' import LabCode %}
-
-{% block content %}
-  <h1>Forms</h1>
-
-  <p class="font-size-md">Examples of form controls.</p>
-
-  <h2>Usage</h2>
-
-  {{LabExample(AppParentId, AppCurrentId)}}
-  {{LabCode('html', '
+{% macro Form(model) %}
   <form>
     <div class="form-group">
       <label class="form-label" for="exampleInputEmail1">Email address</label>
@@ -30,5 +18,8 @@
     </div>
     <button type="submit" class="button">Submit</button>
   </form>
-  ')}}
-{% endblock %}
+{% endmacro %}
+
+{% block body %}
+
+  {{ Form() }}{% endblock %}
