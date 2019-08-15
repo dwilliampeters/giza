@@ -15,5 +15,26 @@
 
   {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
+  <nav class="navbar">
+    <a class="navbar__brand" href="#">Navbar</a>
+    <button class="navbar__toggler" data-module="Toggle" data-options="{target: parent, activeClass: has-nav-open}" aria-label="Toggle navigation">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <ul class="nav navbar__nav">
+      <li class="nav__item">
+        <a class="nav__link" href="#">Link 1</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Link 2</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </nav>
   ')}}
 {% endblock %}
