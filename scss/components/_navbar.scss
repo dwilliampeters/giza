@@ -3,12 +3,31 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding: ($spacer / 2) $spacer;
+  background: $medium;
 }
 
 .navbar__brand {
   flex: 0 0 auto;
+  margin-right: $spacer;
 }
 
 .navbar__toggler {
   flex: 0 0 auto;
+}
+
+.navbar__nav {
+  display: none;
+}
+
+@include md {
+  .navbar__toggler {
+    display: none;
+  }
+
+  .navbar__nav {
+    display: flex;
+    width: auto;
+    flex: 1 0 auto;
+  }
 }
