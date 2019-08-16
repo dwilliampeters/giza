@@ -1,21 +1,29 @@
-$display-prop-values: 'none', 'block', 'inline-block', 'flex' !default;
+$display-breakpoints: md, lg !default;
 
-@mixin display($prop-value, $breakpoint: '') {
+@mixin display($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-  .display-#{$prop-value + $breakpoint-suffix} {
-    display: #{$prop-value} !important;
+  .display-none#{$breakpoint-suffix} {
+    display: none !important;
+  }
+
+  .display-block#{$breakpoint-suffix} {
+    display: block !important;
+  }
+
+  .display-inlne-block#{$breakpoint-suffix} {
+    display: inline-block !important;
+  }
+
+  .display-flex#{$breakpoint-suffix} {
+    display: flex !important;
   }
 }
 
-@each $value in $display-prop-values {
-  @include display($value);
-}
+@include display();
 
-@each $key, $value in $breakpoints {
+@each $key in $display-breakpoints {
   @include breakpoint($key) {
-    @each $value in $display-prop-values {
-      @include display($value, $key);
-    }
+    @include display($key);
   }
 }
