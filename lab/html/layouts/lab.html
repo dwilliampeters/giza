@@ -15,7 +15,7 @@
       }
     </script>
   </head>
-  <body class="app">
+  <body class="display-flex flex-column min-height-100">
     <header class="app-header" data-module="AppHeader">
       <div class="container app-header__inner">
         {% include 'shared/lab-header.html' %}
@@ -24,7 +24,7 @@
     <div class="container app-main">
       {% block body %}{% endblock %}
     </div>
-    <footer class="app__footer app-footer">
+    <footer class="margin-top-auto app-footer">
       <div class="container app-footer__inner">
         {% include 'shared/lab-footer.html' %}
       </div>

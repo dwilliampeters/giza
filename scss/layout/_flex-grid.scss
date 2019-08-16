@@ -4,6 +4,14 @@ $spacer-sizes: (
   triple: $spacer * 3
 ) !default;
 
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
 @mixin flex-grid-column($column-number, $breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 

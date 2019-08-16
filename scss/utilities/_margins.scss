@@ -1,34 +1,34 @@
-.margin-top {
+.margin-top-auto {
   margin-top: auto !important;
 }
 
-.margin-right {
+.margin-right-auto {
   margin-right: auto !important;
 }
 
-.margin-bottom {
+.margin-bottom-auto {
   margin-bottom: auto !important;
 }
 
-.margin-left {
+.margin-left-auto {
   margin-left: auto !important;
 }
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
-    .margin-top\@#{$key} {
+    .margin-top-auto\@#{$key} {
       margin-top: auto !important;
     }
 
-    .margin-right\@#{$key} {
+    .margin-right-auto\@#{$key} {
       margin-right: auto !important;
     }
 
-    .margin-bottom\@#{$key} {
+    .margin-bottom-auto\@#{$key} {
       margin-bottom: auto !important;
     }
 
-    .margin-left\@#{$key} {
+    .margin-left-auto\@#{$key} {
       margin-left: auto !important;
     }
   }
