@@ -1,6 +1,7 @@
 node_modules
 _build
 npm-debug.log
+yarn-error.log
 
 # VS Code Local History Extension files
 .history
