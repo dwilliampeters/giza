@@ -320,13 +320,11 @@ gulp.task("lab:html", function() {
   labHtmlPaths = {
     src: [
       projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "**/*.html"),
-      "!" +
-        projectPath(
-          PATH_CONFIG.lab,
-          "**/{components,layouts,shared,macros,data}/**"
-        )
+      "!" + projectPath(PATH_CONFIG.lab, "**/{components,layouts,data}/**")
     ],
     src_render: [
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "components"),
+      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "layouts"),
       projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
     ],

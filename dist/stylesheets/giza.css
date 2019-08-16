@@ -2376,48 +2376,18 @@ a.button,
 .display-block {
   display: block !important; }
 
-.display-inline-block {
+.display-inlne-block {
   display: inline-block !important; }
 
 .display-flex {
   display: flex !important; }
-
-@media (min-width: 320px) {
-  .display-none\@xxs {
-    display: none !important; }
-  .display-block\@xxs {
-    display: block !important; }
-  .display-inline-block\@xxs {
-    display: inline-block !important; }
-  .display-flex\@xxs {
-    display: flex !important; } }
-
-@media (min-width: 480px) {
-  .display-none\@xs {
-    display: none !important; }
-  .display-block\@xs {
-    display: block !important; }
-  .display-inline-block\@xs {
-    display: inline-block !important; }
-  .display-flex\@xs {
-    display: flex !important; } }
-
-@media (min-width: 640px) {
-  .display-none\@sm {
-    display: none !important; }
-  .display-block\@sm {
-    display: block !important; }
-  .display-inline-block\@sm {
-    display: inline-block !important; }
-  .display-flex\@sm {
-    display: flex !important; } }
 
 @media (min-width: 768px) {
   .display-none\@md {
     display: none !important; }
   .display-block\@md {
     display: block !important; }
-  .display-inline-block\@md {
+  .display-inlne-block\@md {
     display: inline-block !important; }
   .display-flex\@md {
     display: flex !important; } }
@@ -2427,29 +2397,9 @@ a.button,
     display: none !important; }
   .display-block\@lg {
     display: block !important; }
-  .display-inline-block\@lg {
+  .display-inlne-block\@lg {
     display: inline-block !important; }
   .display-flex\@lg {
-    display: flex !important; } }
-
-@media (min-width: 1180px) {
-  .display-none\@xl {
-    display: none !important; }
-  .display-block\@xl {
-    display: block !important; }
-  .display-inline-block\@xl {
-    display: inline-block !important; }
-  .display-flex\@xl {
-    display: flex !important; } }
-
-@media (min-width: 1400px) {
-  .display-none\@xxl {
-    display: none !important; }
-  .display-block\@xxl {
-    display: block !important; }
-  .display-inline-block\@xxl {
-    display: inline-block !important; }
-  .display-flex\@xxl {
     display: flex !important; } }
 
 .margin-top-auto {
@@ -2463,36 +2413,6 @@ a.button,
 
 .margin-left-auto {
   margin-left: auto !important; }
-
-@media (min-width: 320px) {
-  .margin-top-auto\@xxs {
-    margin-top: auto !important; }
-  .margin-right-auto\@xxs {
-    margin-right: auto !important; }
-  .margin-bottom-auto\@xxs {
-    margin-bottom: auto !important; }
-  .margin-left-auto\@xxs {
-    margin-left: auto !important; } }
-
-@media (min-width: 480px) {
-  .margin-top-auto\@xs {
-    margin-top: auto !important; }
-  .margin-right-auto\@xs {
-    margin-right: auto !important; }
-  .margin-bottom-auto\@xs {
-    margin-bottom: auto !important; }
-  .margin-left-auto\@xs {
-    margin-left: auto !important; } }
-
-@media (min-width: 640px) {
-  .margin-top-auto\@sm {
-    margin-top: auto !important; }
-  .margin-right-auto\@sm {
-    margin-right: auto !important; }
-  .margin-bottom-auto\@sm {
-    margin-bottom: auto !important; }
-  .margin-left-auto\@sm {
-    margin-left: auto !important; } }
 
 @media (min-width: 768px) {
   .margin-top-auto\@md {
@@ -2512,26 +2432,6 @@ a.button,
   .margin-bottom-auto\@lg {
     margin-bottom: auto !important; }
   .margin-left-auto\@lg {
-    margin-left: auto !important; } }
-
-@media (min-width: 1180px) {
-  .margin-top-auto\@xl {
-    margin-top: auto !important; }
-  .margin-right-auto\@xl {
-    margin-right: auto !important; }
-  .margin-bottom-auto\@xl {
-    margin-bottom: auto !important; }
-  .margin-left-auto\@xl {
-    margin-left: auto !important; } }
-
-@media (min-width: 1400px) {
-  .margin-top-auto\@xxl {
-    margin-top: auto !important; }
-  .margin-right-auto\@xxl {
-    margin-right: auto !important; }
-  .margin-bottom-auto\@xxl {
-    margin-bottom: auto !important; }
-  .margin-left-auto\@xxl {
     margin-left: auto !important; } }
 
 .position-relative {

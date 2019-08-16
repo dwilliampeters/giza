@@ -1,8 +1,12 @@
-{% extends 'layouts/lab.html' %}
+{% extends 'lab.html' %}
+
+{% from 'lab-example.html' import LabExample %}
+{% from 'lab-code.html' import LabCode %}
+{% from 'lab-css-table.html' import LabCssTable %}
 
 {% block body %}
   <div class="app-sidebar">
-    {% include 'shared/lab-sidebar.html' %}
+    {% include 'lab-sidebar.html' %}
   </div>
   <main class="app-content">
     {% block content %}{% endblock %}
