@@ -25,11 +25,11 @@ $color-dark: #000 !default;
 $color-azure-radiance: #0d7adf !default;
 
 // Fonts
-$font: Helvetica, Arial, sans-serif !default;
+$font: sans-serif !default;
 $font-loaded: Helvetica, Arial, sans-serif !default;
 $font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier', monospace !default;
-$font-size: 16px !default;
+$font-size: 1rem !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 600 !default;
 $font-weight-bold: 700 !default;

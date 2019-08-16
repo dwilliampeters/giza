@@ -10,16 +10,18 @@ body {
 
 html {
   height: 100%;
-  background-color: #fff;
   color: #000;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: sans-serif;
   line-height: 1.15;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%; }
-  html.fonts-loaded {
-    font-family: Helvetica, Arial, sans-serif; }
+
+body {
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5; }
 
 main {
   display: block; }
@@ -172,7 +174,7 @@ h5,
 h6 {
   margin: 1.5rem 0 1rem;
   color: inherit;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-weight: 700; }
   h1 small,
   h2 small,
@@ -184,69 +186,69 @@ h6 {
 
 h1 {
   font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 26px;
   line-height: 30px;
-  line-height: 1.875rem; }
+  line-height: 30px; }
   @media (min-width: 960px) {
     h1 {
       font-size: 36px;
-      font-size: 2.25rem;
+      font-size: 36px;
       line-height: 40px;
-      line-height: 2.5rem; } }
+      line-height: 40px; } }
 
 h2 {
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 28px;
-  line-height: 1.75rem; }
+  line-height: 28px; }
   @media (min-width: 960px) {
     h2 {
       font-size: 32px;
-      font-size: 2rem;
+      font-size: 32px;
       line-height: 36px;
-      line-height: 2.25rem; } }
+      line-height: 36px; } }
 
 h3 {
   font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 22px;
   line-height: 26px;
-  line-height: 1.625rem; }
+  line-height: 26px; }
   @media (min-width: 960px) {
     h3 {
       font-size: 28px;
-      font-size: 1.75rem;
+      font-size: 28px;
       line-height: 32px;
-      line-height: 2rem; } }
+      line-height: 32px; } }
 
 h4 {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 24px;
-  line-height: 1.5rem; }
+  line-height: 24px; }
   @media (min-width: 960px) {
     h4 {
       font-size: 24px;
-      font-size: 1.5rem;
+      font-size: 24px;
       line-height: 28px;
-      line-height: 1.75rem; } }
+      line-height: 28px; } }
 
 h5 {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 22px;
-  line-height: 1.375rem; }
+  line-height: 22px; }
   @media (min-width: 960px) {
     h5 {
       font-size: 20px;
-      font-size: 1.25rem;
+      font-size: 20px;
       line-height: 24px;
-      line-height: 1.5rem; } }
+      line-height: 24px; } }
 
 h6 {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 20px;
-  line-height: 1.25rem; }
+  line-height: 20px; }
 
 b {
   font-weight: normal; }
@@ -1513,16 +1515,16 @@ p {
 
 .accordion__title {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 24px;
-  line-height: 1.5rem;
+  line-height: 24px;
   margin: 0; }
   @media (min-width: 960px) {
     .accordion__title {
       font-size: 24px;
-      font-size: 1.5rem;
+      font-size: 24px;
       line-height: 28px;
-      line-height: 1.75rem; } }
+      line-height: 28px; } }
 
 .accordion__content {
   display: none;
@@ -1533,9 +1535,9 @@ p {
 a.button,
 .button {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 20px;
-  line-height: 1.25rem;
+  line-height: 20px;
   position: relative;
   display: inline-flex;
   min-width: 44px;
@@ -1638,10 +1640,13 @@ a.button,
     vertical-align: super; }
 
 .form-control {
+  font-size: 16px;
+  font-size: 16px;
+  line-height: 20px;
+  line-height: 20px;
   display: block;
   width: 100%;
-  padding: 0.5rem;
-  font-size: 16px; }
+  padding: 0.5rem; }
 
 .form-control--check,
 .form-control--radio {
@@ -2964,93 +2969,93 @@ a.button,
 
 .font-size-display {
   font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 36px;
   line-height: 40px;
-  line-height: 2.5rem; }
+  line-height: 40px; }
   @media (min-width: 960px) {
     .font-size-display {
       font-size: 46px;
-      font-size: 2.875rem;
+      font-size: 46px;
       line-height: 50px;
-      line-height: 3.125rem; } }
+      line-height: 50px; } }
 
 .font-size-xxxl {
   font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 26px;
   line-height: 30px;
-  line-height: 1.875rem; }
+  line-height: 30px; }
   @media (min-width: 960px) {
     .font-size-xxxl {
       font-size: 36px;
-      font-size: 2.25rem;
+      font-size: 36px;
       line-height: 40px;
-      line-height: 2.5rem; } }
+      line-height: 40px; } }
 
 .font-size-xxl {
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 28px;
-  line-height: 1.75rem; }
+  line-height: 28px; }
   @media (min-width: 960px) {
     .font-size-xxl {
       font-size: 32px;
-      font-size: 2rem;
+      font-size: 32px;
       line-height: 36px;
-      line-height: 2.25rem; } }
+      line-height: 36px; } }
 
 .font-size-xl {
   font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 22px;
   line-height: 26px;
-  line-height: 1.625rem; }
+  line-height: 26px; }
   @media (min-width: 960px) {
     .font-size-xl {
       font-size: 28px;
-      font-size: 1.75rem;
+      font-size: 28px;
       line-height: 32px;
-      line-height: 2rem; } }
+      line-height: 32px; } }
 
 .font-size-lg {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 24px;
-  line-height: 1.5rem; }
+  line-height: 24px; }
   @media (min-width: 960px) {
     .font-size-lg {
       font-size: 24px;
-      font-size: 1.5rem;
+      font-size: 24px;
       line-height: 28px;
-      line-height: 1.75rem; } }
+      line-height: 28px; } }
 
 .font-size-md {
   font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 22px;
-  line-height: 1.375rem; }
+  line-height: 22px; }
   @media (min-width: 960px) {
     .font-size-md {
       font-size: 20px;
-      font-size: 1.25rem;
+      font-size: 20px;
       line-height: 24px;
-      line-height: 1.5rem; } }
+      line-height: 24px; } }
 
 .font-size-base {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 20px;
-  line-height: 1.25rem; }
+  line-height: 20px; }
 
 .font-size-sm {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 16px;
-  line-height: 1rem; }
+  line-height: 16px; }
 
 .font-size-xs {
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 16px;
-  line-height: 1rem; }
+  line-height: 16px; }
 
 .visibility-hidden {
   visibility: hidden !important; }

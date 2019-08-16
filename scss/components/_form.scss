@@ -1,7 +1,6 @@
 $form-group-margin: $spacer !default;
 $form-label-margin: $spacer / 2 !default;
 $form-control-padding: $spacer / 2 !default;
-$form-control-font-size: $base-font-size !default;
 
 .form-group {
   margin-bottom: $form-group-margin;
@@ -27,10 +26,11 @@ $form-control-font-size: $base-font-size !default;
 }
 
 .form-control {
+  @include font-size-base;
+
   display: block;
   width: 100%;
   padding: $form-control-padding;
-  font-size: $form-control-font-size;
 }
 
 .form-control--check,

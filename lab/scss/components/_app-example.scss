@@ -31,21 +31,13 @@
   display: inline-flex;
   padding: ($spacer / 2);
   background-color: $gallery;
-  color: $base-text-color;
+  color: $woodsmoke;
   text-decoration: none;
 
-  @include color-swap-on-hover(
-    $base-text-color,
-    $base-text-color,
-    $link-trans-speed
-  );
+  @include color-swap-on-hover($woodsmoke, $woodsmoke, $link-trans-speed);
 
   &:visited {
-    @include color-swap-on-hover(
-      $base-text-color,
-      $base-text-color,
-      $link-trans-speed
-    );
+    @include color-swap-on-hover($woodsmoke, $woodsmoke, $link-trans-speed);
   }
 }
 
