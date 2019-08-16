@@ -5,6 +5,7 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
   <h1>Spacer</h1>
@@ -13,30 +14,14 @@
 
   <h2>Usage</h2>
 
-  <ul>
-    <li>
-      <code>$spacer-xxs</code>
-    </li>
-    <li>
-      <code>$spacer-xs</code>
-    </li>
-    <li>
-      <code>$spacer-sm</code>
-    </li>
-    <li>
-      <code>$spacer-base</code>
-    </li>
-    <li>
-      <code>$spacer-md</code>
-    </li>
-    <li>
-      <code>$spacer-lg</code>
-    </li>
-    <li>
-      <code>$spacer-xl</code>
-    </li>
-    <li>
-      <code>$spacer-xxl</code>
-    </li>
-  </ul>
+  {{ LabCssTable([
+    { "class": "$spacer-xxs", "rule": "0.25"},
+    { "class": "$spacer-xxs", "rule": "0.50"},
+    { "class": "spacer-xs", "rule": "0.75"},
+    { "class": "spacer-base", "rule": "1"},
+    { "class": "spacer-md", "rule": "1.25"},
+    { "class": "spacer-lg", "rule": "1.50"},
+    { "class": "spacer-xl", "rule": "1.75"},
+    { "class": "spacer-xxl", "rule": "2"}
+  ])}}
 {% endblock %}
