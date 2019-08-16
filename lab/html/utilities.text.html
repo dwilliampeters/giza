@@ -5,30 +5,23 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
+
   <h1>Text</h1>
 
-  <h2>Usage</h2>
+  {{ LabCssTable([
+    { "class": ".text-left", "rule": "text-align: left;"},
+    { "class": ".text-center", "rule": "text-align: center;"},
+    { "class": ".text-right", "rule": "text-align: right;"},
+    { "class": ".text-justify", "rule": "text-align: jusify;"}
+  ])}}
 
-  <ul>
-    <li>
-      <code>text-left</code>
-    </li>
-    <li>
-      <code>text-center</code>
-    </li>
-    <li>
-      <code>text-right</code>
-    </li>
-    <li>
-      <code>text-justify</code>
-    </li>
-  </ul>
-
-  <h3>Media Queries</h3>
+  <h2>Media Queries</h2>
 
   <p>
     <code>text-right@md</code>
   </p>
+
 {% endblock %}

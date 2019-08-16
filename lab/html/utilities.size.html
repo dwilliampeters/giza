@@ -5,99 +5,56 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
+
   <h1>Size</h1>
 
-  <h2>Usage</h2>
+  <h3>Width</h3>
 
-  <p>
-    <code>width-25</code>
-  </p>
-
-  <h2>Width</h2>
-
-  <ul>
-    <li>
-      <code>width-25</code>
-    </li>
-    <li>
-      <code>width-50</code>
-    </li>
-    <li>
-      <code>width-75</code>
-    </li>
-    <li>
-      <code>width-100</code>
-    </li>
-    <li>
-      <code>width-auto</code>
-    </li>
-  </ul>
+  {{ LabCssTable([
+    { "class": ".width-25", "rule": "width: 25%;"},
+    { "class": ".width-50", "rule": "width: 50%;"},
+    { "class": ".width-75", "rule": "width: 75%;"},
+    { "class": ".width-100", "rule": "width: 100%;"},
+    { "class": ".width-auto", "rule": "width: auto;"}
+  ])}}
 
   <h3>Min width</h3>
 
-  <ul>
-    <li>
-      <code>min-width-25</code>
-    </li>
-    <li>
-      <code>min-width-50</code>
-    </li>
-    <li>
-      <code>min-width-75</code>
-    </li>
-    <li>
-      <code>min-width-100</code>
-    </li>
-    <li>
-      <code>min-width-auto</code>
-    </li>
-  </ul>
+  {{ LabCssTable([
+    { "class": ".min-width-25", "rule": "min-width: 25%;"},
+    { "class": ".min-width-50", "rule": "min-width: 50%;"},
+    { "class": ".min-width-75", "rule": "min-width: 75%;"},
+    { "class": ".min-width-100", "rule": "min-width: 100%;"},
+    { "class": ".min-width-auto", "rule": "min-width: auto;"}
+  ])}}
 
-  <h2>Height</h2>
+  <h3>Height</h3>
 
-  <ul>
-    <li>
-      <code>height-25</code>
-    </li>
-    <li>
-      <code>height-50</code>
-    </li>
-    <li>
-      <code>height-75</code>
-    </li>
-    <li>
-      <code>height-100</code>
-    </li>
-    <li>
-      <code>height-auto</code>
-    </li>
-  </ul>
+  {{ LabCssTable([
+    { "class": ".height-25", "rule": "height: 25%;"},
+    { "class": ".height-50", "rule": "height: 50%;"},
+    { "class": ".height-75", "rule": "height: 75%;"},
+    { "class": ".height-100", "rule": "height: 100%;"},
+    { "class": ".height-auto", "rule": "width: auto;"}
+  ])}}
 
   <h3>Min height</h3>
 
-  <ul>
-    <li>
-      <code>min-height-25</code>
-    </li>
-    <li>
-      <code>min-height-50</code>
-    </li>
-    <li>
-      <code>min-height-75</code>
-    </li>
-    <li>
-      <code>min-height-100</code>
-    </li>
-    <li>
-      <code>min-height-auto</code>
-    </li>
-  </ul>
+  {{ LabCssTable([
+    { "class": ".min-height-25", "rule": "min-height: 25%;"},
+    { "class": ".min-height-50", "rule": "min-height: 50%;"},
+    { "class": ".min-height-75", "rule": "min-height: 75%;"},
+    { "class": ".min-height-100", "rule": "min-height: 100%;"},
+    { "class": ".min-height-auto", "rule": "min-height: auto;"}
+  ])}}
 
-  <h3>Media Queries</h3>
+  <h2>Media Queries</h2>
 
   <p>
     <code>width-50@md</code>
   </p>
+
 {% endblock %}

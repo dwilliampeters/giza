@@ -5,30 +5,23 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
+
   <h1>Position</h1>
 
-  <h2>Usage</h2>
+  {{ LabCssTable([
+    { "class": ".position-relative", "rule": "position: relative;"},
+    { "class": ".position-absolote", "rule": "position: absolute;"},
+    { "class": ".position-fixed", "rule": "position: fixed;"},
+    { "class": ".position-static", "rule": "position: static;"}
+  ])}}
 
-  <ul>
-    <li>
-      <code>position-relative</code>
-    </li>
-    <li>
-      <code>position-absolute</code>
-    </li>
-    <li>
-      <code>position-fixed</code>
-    </li>
-    <li>
-      <code>position-static</code>
-    </li>
-  </ul>
-
-  <h3>Media Queries</h3>
+  <h2>Media Queries</h2>
 
   <p>
     <code>position-relative@md</code>
   </p>
+
 {% endblock %}

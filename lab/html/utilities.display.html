@@ -5,30 +5,23 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
+
   <h1>Display</h1>
 
-  <h2>Usage</h2>
+  {{ LabCssTable([
+    { "class": ".display-none", "rule": "display: none;"},
+    { "class": ".display-block", "rule": "display: block;"},
+    { "class": ".display-inline-block", "rule": "display: inline-block;"},
+    { "class": ".display-flex", "rule": "display: flex;"}
+  ])}}
 
-  <ul>
-    <li>
-      <code>display-none</code>
-    </li>
-    <li>
-      <code>display-block</code>
-    </li>
-    <li>
-      <code>display-inline-block</code>
-    </li>
-    <li>
-      <code>display-flex</code>
-    </li>
-  </ul>
-
-  <h3>Media Queries</h3>
+  <h2>Media Queries</h2>
 
   <p>
     <code>display-block@md</code>
   </p>
+
 {% endblock %}

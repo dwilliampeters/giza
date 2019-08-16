@@ -5,39 +5,22 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
+
   <h1>Type</h1>
 
-  <h2>Usage</h2>
+  {{ LabCssTable([
+    { "class": ".font-size-display", "rule": ""},
+    { "class": ".font-size-xxxl", "rule": ""},
+    { "class": ".font-size-xxl", "rule": ""},
+    { "class": ".font-size-xl", "rule": ""},
+    { "class": ".font-size-lg", "rule": ""},
+    { "class": ".font-size-md", "rule": ""},
+    { "class": ".font-size-base", "rule": ""},
+    { "class": ".font-size-sm", "rule": ""},
+    { "class": ".font-size-xs", "rule": ""}
+  ])}}
 
-  <ul>
-    <li>
-      <code>font-size-display</code>
-    </li>
-    <li>
-      <code>font-size-xxxl</code>
-    </li>
-    <li>
-      <code>font-size-xxl</code>
-    </li>
-    <li>
-      <code>font-size-xl</code>
-    </li>
-    <li>
-      <code>font-size-lg</code>
-    </li>
-    <li>
-      <code>font-size-md</code>
-    </li>
-    <li>
-      <code>font-size-base</code>
-    </li>
-    <li>
-      <code>font-size-sm</code>
-    </li>
-    <li>
-      <code>font-size-xs</code>
-    </li>
-  </ul>
 {% endblock %}

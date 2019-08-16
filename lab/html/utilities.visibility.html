@@ -5,22 +5,18 @@
 
 {% from 'macros/lab-example.html' import LabExample %}
 {% from 'macros/lab-code.html' import LabCode %}
+{% from 'macros/lab-css-table.html' import LabCssTable %}
 
 {% block content %}
+
   <h1>Visibility</h1>
 
-  <h2>Usage</h2>
+  {{ LabCssTable([
+    { "class": ".visibility-hidden", "rule": "visibility: hidden;"},
+    { "class": ".visibility-visible", "rule": "visibility: visible;"}
+  ])}}
 
-  <ul>
-    <li>
-      <code>visibility-hidden</code>
-    </li>
-    <li>
-      <code>visibility-visible</code>
-    </li>
-  </ul>
-
-  <h3>Media Queries</h3>
+  <h2>Media Queries</h2>
 
   <ul>
     <li>
@@ -30,4 +26,5 @@
       <code>visibility-visible@md</code>
     </li>
   </ul>
+
 {% endblock %}
