@@ -1,35 +1,29 @@
-.margin-top-auto {
-  margin-top: auto !important;
+$margin-breakpoints: md, lg !default;
+
+@mixin margin($breakpoint: '') {
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+  .margin-top-auto#{$breakpoint-suffix} {
+    margin-top: auto !important;
+  }
+
+  .margin-right-auto#{$breakpoint-suffix} {
+    margin-right: auto !important;
+  }
+
+  .margin-bottom-auto#{$breakpoint-suffix} {
+    margin-bottom: auto !important;
+  }
+
+  .margin-left-auto#{$breakpoint-suffix} {
+    margin-left: auto !important;
+  }
 }
 
-.margin-right-auto {
-  margin-right: auto !important;
-}
+@include margin();
 
-.margin-bottom-auto {
-  margin-bottom: auto !important;
-}
-
-.margin-left-auto {
-  margin-left: auto !important;
-}
-
-@each $key, $value in $breakpoints {
+@each $key in $margin-breakpoints {
   @include breakpoint($key) {
-    .margin-top-auto\@#{$key} {
-      margin-top: auto !important;
-    }
-
-    .margin-right-auto\@#{$key} {
-      margin-right: auto !important;
-    }
-
-    .margin-bottom-auto\@#{$key} {
-      margin-bottom: auto !important;
-    }
-
-    .margin-left-auto\@#{$key} {
-      margin-left: auto !important;
-    }
+    @include margin($key);
   }
 }
