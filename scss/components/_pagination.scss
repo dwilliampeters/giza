@@ -1,7 +1,7 @@
 $pagination-item-padding: $spacer / 2 !default;
-$pagination-item-border: 1px solid $medium !default;
-$pagination-active-bg: $medium !default;
-$pagination-disabled-color: $medium !default;
+$pagination-item-border: 1px solid $color-medium !default;
+$pagination-active-bg: $color-medium !default;
+$pagination-disabled-color: $color-medium !default;
 
 .pagination {
   display: flex;

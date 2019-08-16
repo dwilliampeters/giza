@@ -1,5 +1,5 @@
 $app-header-background-color: $woodsmoke !default;
-$app-header-text-color: $light !default;
+$app-header-text-color: $color-light !default;
 
 .app-header {
   position: fixed;
@@ -83,17 +83,17 @@ a.app-download {
       .hamburger__inner,
       ::before,
       ::after {
-        background-color: $light;
+        background-color: $color-light;
       }
     }
   }
 
   .hamburger__inner {
-    background-color: $light;
+    background-color: $color-light;
 
     &::before,
     &::after {
-      background-color: $light;
+      background-color: $color-light;
     }
   }
 }

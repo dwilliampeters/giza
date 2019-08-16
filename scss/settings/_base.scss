@@ -19,10 +19,10 @@ $spacer-xxl: $spacer * 2 !default; // 2
 // Colours
 // Use http://chir.ag/projects/name-that-color/#51284F
 // for colour variable names
-$light: #fff !default;
-$medium: #ddd !default;
-$dark: #000 !default;
-$azure-radiance: #0d7adf !default;
+$color-light: #fff !default;
+$color-medium: #ddd !default;
+$color-dark: #000 !default;
+$color-azure-radiance: #0d7adf !default;
 
 // Fonts
 $font: Helvetica, Arial, sans-serif !default;

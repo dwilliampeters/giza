@@ -1,6 +1,6 @@
 $dropdown-nav-min-width: 200px !default;
-$dropdown-nav-bg: $light !default;
-$dropdown-nav-border: $dark 1px solid !default;
+$dropdown-nav-bg: $color-light !default;
+$dropdown-nav-border: $color-dark 1px solid !default;
 
 @mixin dropdown-nav {
   .is-dropdown-nav {

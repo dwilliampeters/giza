@@ -10,8 +10,8 @@
   height: 100%;
   flex-wrap: wrap;
   padding: $spacer $spacer $spacer ($spacer * 5);
-  background: $light;
-  box-shadow: 0 2px 20px rgba($dark, 0.6);
+  background: $color-light;
+  box-shadow: 0 2px 20px rgba($color-dark, 0.6);
 
   &.is-active {
     display: block;

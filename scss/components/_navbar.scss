@@ -6,7 +6,7 @@ $navbar-padding: $spacer-sm $spacer;
   align-items: center;
   justify-content: space-between;
   padding: $spacer-xs $spacer;
-  background: $medium;
+  background: $color-medium;
 }
 
 .navbar__brand {
@@ -16,7 +16,7 @@ $navbar-padding: $spacer-sm $spacer;
 
 .navbar__toggler {
   padding: $spacer-xs $spacer-sm;
-  border: 1px solid $dark;
+  border: 1px solid $color-dark;
   background: none;
 }
 
@@ -37,7 +37,7 @@ $navbar-padding: $spacer-sm $spacer;
     display: block;
     width: 100%;
     height: 4px;
-    background-color: $dark;
+    background-color: $color-dark;
 
     &:nth-child(1) {
       top: 0;
