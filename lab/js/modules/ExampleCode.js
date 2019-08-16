@@ -1,17 +1,28 @@
 export default class ExampleCode {
   constructor(el) {
     this.el = el;
+    this.dom = this.cacheDom();
     this.init();
-    this.syntaxHighlighting();
   }
 
   init() {
-    this.el
-      .querySelector(".js-app-copy-button")
-      .addEventListener("click", e => {
+    this.addEventListeners();
+    this.syntaxHighlighting();
+  }
+
+  cacheDom() {
+    return {
+      copyButton: this.el.querySelector(".js-app-copy-button")
+    };
+  }
+
+  addEventListeners() {
+    if (this.dom.copyButton) {
+      this.dom.copyButton.addEventListener("click", e => {
         e.preventDefault();
         this.copyCode(e);
       });
+    }
   }
 
   copyCode() {
