@@ -1,5 +1,9 @@
 {
-  "app_file": "giza",
+  "lab_stylesheet": "stylesheets/giza-lab.css",
+  "lab_javascript": "javascripts/giza.js",
+  "lab_iframe_stylesheet": "../stylesheets/giza.css",
+  "lab_iframe_stylesheet_demo": "../stylesheets/giza-lab-demo.css",
+  "lab_iframe_javascript": "../javascripts/giza.js",
   "meta_title": "Giza Lab",
   "lab_logo": "Giza",
   "lab_title": "Lab",

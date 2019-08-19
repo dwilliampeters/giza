@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{meta_title}}</title>
-    <link rel="stylesheet" href="../stylesheets/{{app_file}}.css">
-    <link rel="stylesheet" href="../stylesheets/giza-lab-example.css">
+    <link rel="stylesheet" href="{{lab_iframe_stylesheet}}">
+    <link rel="stylesheet" href="{{lab_iframe_stylesheet_demo}}">
     <script>
       if (document.documentElement) {
         document
@@ -18,6 +18,6 @@
   </head>
   <body class="app-example">
     {% block body %}{% endblock %}
-    <script src="../javascripts/{{app_file}}.js"></script>
+    <script src="{{lab_iframe_javascript}}"></script>
   </body>
 </html>
