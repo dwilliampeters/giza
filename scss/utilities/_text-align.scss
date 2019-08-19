@@ -1,21 +1,29 @@
-$text-align-prop-values: 'left', 'center', 'right', 'justify' !default;
+$text-align-breakpoints: null !default;
 
-@mixin text-align($prop-value, $breakpoint: '') {
+@mixin textAlignMxn($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
-  .text-#{$prop-value + $breakpoint-suffix} {
-    text-align: #{$prop-value} !important;
+  .text-left#{$breakpoint-suffix} {
+    text-align: left !important;
+  }
+
+  .text-center#{$breakpoint-suffix} {
+    text-align: center !important;
+  }
+
+  .text-right#{$breakpoint-suffix} {
+    text-align: right !important;
+  }
+
+  .text-justify#{$breakpoint-suffix} {
+    text-align: justify !important;
   }
 }
 
-@each $value in $text-align-prop-values {
-  @include text-align($value);
-}
+@include textAlignMxn();
 
-@each $key, $value in $breakpoints {
+@each $key in $text-align-breakpoints {
   @include breakpoint($key) {
-    @each $value in $text-align-prop-values {
-      @include text-align($value, $key);
-    }
+    @include textAlignMxn($key);
   }
 }

@@ -1,123 +1,73 @@
-.width-25 {
-  width: 25% !important;
+$size-breakpoints: null !default;
+
+@mixin sizeMxn($breakpoint: '') {
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+  .width-25#{$breakpoint-suffix} {
+    width: 25% !important;
+  }
+
+  .width-50#{$breakpoint-suffix} {
+    width: 50% !important;
+  }
+
+  .width-75#{$breakpoint-suffix} {
+    width: 75% !important;
+  }
+
+  .width-100#{$breakpoint-suffix} {
+    width: 100% !important;
+  }
+
+  .width-auto#{$breakpoint-suffix} {
+    width: auto !important;
+  }
+
+  .height-25#{$breakpoint-suffix} {
+    height: 25% !important;
+  }
+
+  .height-50#{$breakpoint-suffix} {
+    height: 50% !important;
+  }
+
+  .height-75#{$breakpoint-suffix} {
+    height: 75% !important;
+  }
+
+  .height-100#{$breakpoint-suffix} {
+    height: 100% !important;
+  }
+
+  .height-auto#{$breakpoint-suffix} {
+    height: auto !important;
+  }
+
+  .min-height-25#{$breakpoint-suffix} {
+    min-height: 25% !important;
+  }
+
+  .min-height-50#{$breakpoint-suffix} {
+    min-height: 50% !important;
+  }
+
+  .min-height-75#{$breakpoint-suffix} {
+    min-height: 75% !important;
+  }
+
+  .min-height-100#{$breakpoint-suffix} {
+    min-height: 100% !important;
+  }
+
+  .min-height-auto#{$breakpoint-suffix} {
+    min-height: auto !important;
+  }
 }
 
-.width-50 {
-  width: 50% !important;
-}
+@include sizeMxn();
 
-.width-75 {
-  width: 75% !important;
-}
-
-.width-100 {
-  width: 100% !important;
-}
-
-.width-auto {
-  width: auto !important;
-}
-
-.height-25 {
-  height: 25% !important;
-}
-
-.height-50 {
-  height: 50% !important;
-}
-
-.height-75 {
-  height: 75% !important;
-}
-
-.height-100 {
-  height: 100% !important;
-}
-
-.height-auto {
-  height: auto !important;
-}
-
-.min-height-25 {
-  min-height: 25% !important;
-}
-
-.min-height-50 {
-  min-height: 50% !important;
-}
-
-.min-height-75 {
-  min-height: 75% !important;
-}
-
-.min-height-100 {
-  min-height: 100% !important;
-}
-
-.min-height-auto {
-  min-height: auto !important;
-}
-
-@each $key, $value in $breakpoints {
+@each $key in $size-breakpoints {
   @include breakpoint($key) {
-    .width-25\@#{$key} {
-      width: 25% !important;
-    }
-
-    .width-50\@#{$key} {
-      width: 50% !important;
-    }
-
-    .width-75\@#{$key} {
-      width: 75% !important;
-    }
-
-    .width-100\@#{$key} {
-      width: 100% !important;
-    }
-
-    .width-auto\@#{$key} {
-      width: auto !important;
-    }
-
-    .height-25\@#{$key} {
-      height: 25% !important;
-    }
-
-    .height-50\@#{$key} {
-      height: 50% !important;
-    }
-
-    .height-75\@#{$key} {
-      height: 75% !important;
-    }
-
-    .height-100\@#{$key} {
-      height: 100% !important;
-    }
-
-    .height-auto\@#{$key} {
-      height: auto !important;
-    }
-
-    .min-height-25\@#{$key} {
-      min-height: 25% !important;
-    }
-
-    .min-height-50\@#{$key} {
-      min-height: 50% !important;
-    }
-
-    .min-height-75\@#{$key} {
-      min-height: 75% !important;
-    }
-
-    .min-height-100\@#{$key} {
-      min-height: 100% !important;
-    }
-
-    .min-height-auto\@#{$key} {
-      min-height: auto !important;
-    }
+    @include sizeMxn($key);
   }
 }

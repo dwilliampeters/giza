@@ -1,6 +1,6 @@
-$display-breakpoints: md, lg !default;
+$display-breakpoints: null;
 
-@mixin display($breakpoint: '') {
+@mixin displayMxn($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .display-none#{$breakpoint-suffix} {
@@ -20,10 +20,10 @@ $display-breakpoints: md, lg !default;
   }
 }
 
-@include display();
+@include displayMxn();
 
 @each $key in $display-breakpoints {
   @include breakpoint($key) {
-    @include display($key);
+    @include displayMxn($key);
   }
 }
