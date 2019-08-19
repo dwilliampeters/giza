@@ -157,7 +157,7 @@ gulp.task("images", function() {
   return gulp.src(imagesPaths.src).pipe(gulp.dest(imagesPaths.dest));
 });
 
-const webpackConfig = {
+const webpackConfig_dev = {
   context: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
   entry: {
     app: "./giza.js"
@@ -166,7 +166,40 @@ const webpackConfig = {
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
     filename: "giza.js",
-    publicPath: "javascripts/"
+    publicPath: "/javascripts/"
+  },
+  plugins: [],
+  resolve: {
+    extensions: [".js", ".jsx"],
+    modules: [
+      path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
+      path.resolve(PATH_CONFIG.BASE, "node_modules")
+    ]
+  },
+  module: {
+    rules: [
+      {
+        loader: "babel-loader",
+        // test: /\.js$/,
+        exclude: path.resolve(PATH_CONFIG.BASE, "node_modules"),
+        query: {
+          presets: [["es2015", { modules: false }], "stage-1", "react-app"]
+        }
+      }
+    ]
+  }
+};
+
+const webpackConfig_production = {
+  context: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
+  entry: {
+    app: "./giza.js"
+  },
+  mode: "development",
+  output: {
+    path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
+    filename: "giza.js",
+    publicPath: "/giza/javascripts/"
   },
   plugins: [],
   resolve: {
@@ -200,7 +233,8 @@ gulp.task("webpack", function() {
 
   return gulp
     .src(webpackPaths.src)
-    .pipe(webpackStream(webpackConfig, webpack))
+    .pipe(gulpif(!production, webpackStream(webpackConfig_dev, webpack)))
+    .pipe(gulpif(production, webpackStream(webpackConfig_production, webpack)))
     .pipe(gulp.dest(webpackPaths.dest));
 });
 
