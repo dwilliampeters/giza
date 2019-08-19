@@ -1,35 +1,29 @@
-.position-relative {
-  position: relative !important;
+$position-breakpoints: null !default;
+
+@mixin positionMxn($breakpoint: '') {
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+  .position-relative#{$breakpoint-suffix} {
+    position: relative !important;
+  }
+
+  .position-absolute#{$breakpoint-suffix} {
+    position: absolute !important;
+  }
+
+  .position-fixed#{$breakpoint-suffix} {
+    position: fixed !important;
+  }
+
+  .position-static#{$breakpoint-suffix} {
+    position: static !important;
+  }
 }
 
-.position-absolute {
-  position: absolute !important;
-}
+@include positionMxn();
 
-.position-fixed {
-  position: fixed !important;
-}
-
-.position-static {
-  position: static !important;
-}
-
-@each $key, $value in $breakpoints {
+@each $key in $position-breakpoints {
   @include breakpoint($key) {
-    .position-relative\@#{$key} {
-      position: relative !important;
-    }
-
-    .position-absolute\@#{$key} {
-      position: absolute !important;
-    }
-
-    .position-fixed\@#{$key} {
-      position: fixed !important;
-    }
-
-    .position-static\@#{$key} {
-      position: static !important;
-    }
+    @include positionMxn($key);
   }
 }
