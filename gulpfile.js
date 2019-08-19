@@ -166,7 +166,7 @@ const webpackConfig = {
   output: {
     path: path.resolve(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src),
     filename: "giza.js",
-    publicPath: "/javascripts/"
+    publicPath: "javascripts/"
   },
   plugins: [],
   resolve: {
