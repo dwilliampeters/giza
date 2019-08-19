@@ -1,0 +1,60 @@
+{% from 'lab-nav-link.html' import LabNavLink %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="stylesheets/giza-lab.css">
+    <script>
+      if (document.documentElement) {
+        document
+          .documentElement
+          .classList
+          .add('js');
+      }
+    </script>
+  </head>
+  <body class="display-flex flex-column min-height-100">
+    <header class="app-header" data-module="LabHeader">
+      <div class="container app-header__inner">
+        <a class="app-logo" href="index.html">
+          <img class="app-logo__image" src="../images/app-logo-light.svg" alt="{{lab_logo}}">
+          <span class="app-logo__text">{{lab_title}}</span>
+        </a>
+        <span class="app-version">v{{version}}</span>
+        {% if download %}
+          <a class="button app-download" href="{{download}}">Download</a>
+        {% endif %}
+        <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}'>
+          <div class="hamburger">
+            <div class="hamburger__inner"></div>
+            <div class="sr-only">Menu</div>
+          </div>
+        </button>
+      </div>
+    </header>
+    <div class="container app-main">
+      {% block body %}{% endblock %}
+    </div>
+    <footer class="margin-top-auto app-footer">
+      <div class="container app-footer__inner">
+        {% if resources %}
+          <h3 class="app-footer__title">Resources</h3>
+
+          <ul class="nav nav--vertical">
+            {% for page in resources %}
+              {{ LabNavLink(page, AppParentId, AppCurrentId, loop) }}
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <p class="brevier">Currently v{{version}}.</p>
+
+      </div>
+    </footer>
+    <script src="javascripts/giza.js"></script>
+  </body>
+</html>

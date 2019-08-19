@@ -37,10 +37,6 @@ gulp.task("default", function(cb) {
     "icons",
     "fonts",
     "static",
-    "lab:html",
-    "lab:stylesheets",
-    "lab:javascripts",
-    "lab:images",
     "serve",
     "watch",
     cb
@@ -62,10 +58,6 @@ gulp.task("production", function(cb) {
     "icons",
     "fonts",
     "static",
-    "lab:html",
-    "lab:stylesheets",
-    "lab:javascripts",
-    "lab:images",
     "migrate",
     cb
   );
@@ -95,14 +87,13 @@ gulp.task("html", function() {
         projectPath(
           PATH_CONFIG.BASE,
           PATH_CONFIG.html.src,
-          "**/{layouts,data}/**"
+          "**/{layouts,macros,data}/**"
         )
     ],
     src_render: [
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "components"),
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "layouts"),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "components"),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "content"),
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "macros"),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "layouts"),
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
     ],
@@ -111,7 +102,7 @@ gulp.task("html", function() {
 
   const dataFunction = function() {
     var dataPath = path.resolve(
-      `${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/_data.json`
+      `${PATH_CONFIG.BASE}/${PATH_CONFIG.html.src}/_data.json`
     );
     return JSON.parse(fs.readFileSync(dataPath, "utf8"));
   };
@@ -259,40 +250,24 @@ gulp.task("watch", function() {
   watchPaths = {
     htmlSrc: [
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
-      projectPath(PATH_CONFIG.lab, "**/*.html"),
-      projectPath(PATH_CONFIG.lab, "**/*.json")
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.json")
     ],
     stylesheetsSrc: [
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.stylesheets.src, "**/*.scss"),
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss")
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.stylesheets.src, "**/*.scss")
     ],
     javascriptsSrc: [
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src, "**/*.js"),
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src, "**/*.js")
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.javascripts.src, "**/*.js")
     ],
     imagesSrc: [
-      projectPath(
-        PATH_CONFIG.BASE,
-        PATH_CONFIG.images.src,
-        "**/*{jpg,png,svg}"
-      ),
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.images.src, "**/*{jpg,png,svg}")
+      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.images.src, "**/*{jpg,png,svg}")
     ],
     iconsSrc: [projectPath(PATH_CONFIG.BASE, PATH_CONFIG.icons.src, "*.svg")]
   };
 
-  gulp.watch(watchPaths.htmlSrc, ["html", "lab:html", browser.reload]);
-  gulp.watch(watchPaths.stylesheetsSrc, [
-    "stylesheets",
-    "lab:stylesheets",
-    browser.reload
-  ]);
-  gulp.watch(watchPaths.javascriptsSrc, [
-    "webpack",
-    "lab:javascripts",
-    browser.reload
-  ]);
-  gulp.watch(watchPaths.imagesSrc, ["images, lab:images", browser.reload]);
+  gulp.watch(watchPaths.htmlSrc, ["html", browser.reload]);
+  gulp.watch(watchPaths.stylesheetsSrc, ["stylesheets", browser.reload]);
+  gulp.watch(watchPaths.javascriptsSrc, ["webpack", browser.reload]);
+  gulp.watch(watchPaths.imagesSrc, ["images", browser.reload]);
   gulp.watch(watchPaths.iconsSrc, ["icons", browser.reload]);
 });
 
@@ -313,180 +288,4 @@ gulp.task("migrate", function(cb) {
 
   clean([projectPath(PATH_CONFIG.migrateDest)], { force: true });
   return gulp.src(migratePaths.src).pipe(gulp.dest(migratePaths.dest));
-});
-
-// Lab
-
-gulp.task("lab:html", function() {
-  labHtmlPaths = {
-    src: [
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "**/*.html"),
-      "!" + projectPath(PATH_CONFIG.lab, "**/{components,layouts,data}/**")
-    ],
-    src_render: [
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "components"),
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src, "layouts"),
-      projectPath(PATH_CONFIG.lab, PATH_CONFIG.html.src),
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src)
-    ],
-    dest: projectPath(PATH_CONFIG.buildDest, PATH_CONFIG.buildLab)
-  };
-
-  const dataFunction = function() {
-    var dataPath = path.resolve(
-      `${PATH_CONFIG.lab}/${PATH_CONFIG.html.src}/_data.json`
-    );
-    return JSON.parse(fs.readFileSync(dataPath, "utf8"));
-  };
-
-  return gulp
-    .src(labHtmlPaths.src)
-    .pipe(data(dataFunction))
-    .pipe(
-      nunjucksRender({
-        path: labHtmlPaths.src_render
-      })
-    )
-    .pipe(gulp.dest(labHtmlPaths.dest));
-});
-
-gulp.task("lab:stylesheets", function() {
-  labStylesheetsPaths = {
-    src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.stylesheets.src, "**/*.scss"),
-    dest: projectPath(
-      PATH_CONFIG.buildDest,
-      PATH_CONFIG.buildLab,
-      PATH_CONFIG.stylesheets.dest
-    )
-  };
-
-  return gulp
-    .src(labStylesheetsPaths.src)
-    .pipe(gulpif(!production, sourcemaps.init()))
-    .pipe(plumber())
-    .pipe(
-      sass({
-        includePaths: ["node_modules", "scss"]
-      }).on("error", sass.logError)
-    )
-    .pipe(
-      postcss([
-        autoprefixer({
-          browsers: ["> 1%"]
-        })
-      ])
-    )
-    .pipe(gulpif(production, sass({ outputStyle: "compressed" })))
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(labStylesheetsPaths.dest));
-});
-
-const labWebpackConfig = {
-  context: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-  entry: {
-    app: ["babel-polyfill", "./giza-lab.js"]
-  },
-  mode: "development",
-  output: {
-    path: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-    filename: "giza-lab.js",
-    publicPath: "/lab/javascripts/"
-  },
-  plugins: [],
-  resolve: {
-    extensions: [".js", ".jsx"],
-    modules: [
-      path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-      path.resolve(PATH_CONFIG.BASE, "node_modules")
-    ]
-  },
-  module: {
-    rules: [
-      {
-        loader: "babel-loader",
-        exclude: path.resolve(PATH_CONFIG.BASE, "node_modules"),
-        query: {
-          presets: [["es2015", { modules: false }], "stage-1", "react-app"]
-        }
-      }
-    ]
-  }
-};
-
-const labWebpackConfig_production = {
-  context: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-  entry: {
-    app: ["babel-polyfill", "./giza-lab.js"]
-  },
-  mode: "production",
-  output: {
-    path: path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-    filename: "giza-lab.js",
-    publicPath: "javascripts/"
-  },
-  plugins: [],
-  resolve: {
-    extensions: [".js", ".jsx"],
-    modules: [
-      path.resolve(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src),
-      path.resolve(PATH_CONFIG.BASE, "node_modules")
-    ]
-  },
-  module: {
-    rules: [
-      {
-        test: /.js$/,
-        exclude: path.resolve(PATH_CONFIG.BASE, "node_modules"),
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [["es2015", { modules: false }], "stage-1", "react-app"]
-            }
-          },
-          {
-            loader: WebpackStrip.loader("debug", "console.log")
-          }
-        ]
-      }
-    ]
-  }
-};
-
-gulp.task("lab:javascripts", function() {
-  labPaths = {
-    src: projectPath(PATH_CONFIG.lab, PATH_CONFIG.javascripts.src, "**/*.js"),
-    dest: projectPath(
-      PATH_CONFIG.buildDest,
-      PATH_CONFIG.buildLab,
-      PATH_CONFIG.javascripts.dest
-    )
-  };
-
-  return gulp
-    .src(labPaths.src)
-    .pipe(gulpif(!production, webpackStream(labWebpackConfig, webpack)))
-    .pipe(
-      gulpif(production, webpackStream(labWebpackConfig_production, webpack))
-    )
-    .pipe(gulp.dest(labPaths.dest));
-});
-
-gulp.task("lab:images", function() {
-  labImagesPaths = {
-    src: [
-      projectPath(
-        PATH_CONFIG.lab,
-        PATH_CONFIG.images.src,
-        "**/*{jpg,png,svg,mp4,webm}"
-      )
-    ],
-    dest: projectPath(
-      PATH_CONFIG.buildDest,
-      PATH_CONFIG.buildLab,
-      PATH_CONFIG.images.dest
-    )
-  };
-
-  return gulp.src(labImagesPaths.src).pipe(gulp.dest(labImagesPaths.dest));
 });

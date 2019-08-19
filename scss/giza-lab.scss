@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+// Dependencies
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
+@import 'vendor/prism-github';
+
+// Giza framework
+// Loads local settings allowing overrides first
+$color-bombay: #afb1b8;
+$color-bonjour: #e5e0e1;
+$color-azure-radiance: #0d7adf;
+$color-gallery: #f0f0f0;
+$color-woodsmoke: #0b0c0c;
+
+$font: sans-serif !default;
+$font-loaded: 'Fira Sans', sans-serif !default;
+$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
+  'Courier', monospace !default;
+
+$body-text-color: $color-woodsmoke !default;
+
+@import 'giza';
+@import 'lab';

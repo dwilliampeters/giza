@@ -1,9 +1,0 @@
-{% from 'lab-nav-link.html' import LabNavLink %}
-
-<nav class="app-nav">
-  <ul class="nav nav--vertical">
-    {% for page in nav %}
-      {{ LabNavLink(page, AppParentId, AppCurrentId, loop, 'level-1') }}
-    {% endfor %}
-  </ul>
-</nav>

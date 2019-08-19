@@ -1,0 +1,22 @@
+{% macro LabCssTable(data) %}
+
+  <table class="table" data-module="LabCode">
+    <tr>
+      <td style="padding: 1rem 0;" class="font-size-xs">Class</td>
+      <td style="padding: 1rem 0;" class="font-size-xs">Rule</td>
+    </tr>
+
+    {% for i in data %}
+      <tr>
+        <td style="padding: 0;">
+          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">{{ i.class }}</code></pre>
+        </td>
+
+        <td style="padding: 0;">
+          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">{{ i.rule }}</code></pre>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+
+{% endmacro %}

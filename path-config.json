@@ -1,7 +1,5 @@
 {
   "BASE": "./",
-  "lab": "./lab",
-  "buildLab": "lab",
   "buildDest": "./_build",
   "finalDest": "./dist",
   "migrateDest": "./docs",

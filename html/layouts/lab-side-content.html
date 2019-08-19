@@ -1,0 +1,21 @@
+{% extends 'lab-master.html' %}
+
+{% from 'lab-example.html' import LabExample %}
+{% from 'lab-code.html' import LabCode %}
+{% from 'lab-css-table.html' import LabCssTable %}
+
+{% block body %}
+  <div class="app-sidebar">
+    <nav class="app-nav">
+      <ul class="nav nav--vertical">
+        {% for page in nav %}
+          {{ LabNavLink(page, AppParentId, AppCurrentId, loop, 'level-1') }}
+        {% endfor %}
+      </ul>
+    </nav>
+
+  </div>
+  <main class="app-content">
+    {% block content %}{% endblock %}
+  </main>
+{% endblock %}
