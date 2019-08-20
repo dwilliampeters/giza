@@ -7,14 +7,11 @@ $site-max-width: 1200px !default;
 
 // Spacer
 $spacer: 1rem !default;
-$spacer-xxs: $spacer / 4 !default; // 0.25
-$spacer-xs: $spacer / 2 !default; // 0.50
-$spacer-sm: $spacer / 4 * 3 !default; // 0.75
-$spacer-base: $spacer !default; // 1
-$spacer-md: $spacer * 1.25 !default; // 1.25
+$spacer-xs: $spacer * 0.25 !default; // 0.25
+$spacer-sm: $spacer * 0.5 !default; // 0.50
+$spacer-md: $spacer !default;
 $spacer-lg: $spacer * 1.5 !default; // 1.50
-$spacer-xl: $spacer * 1.75 !default; // 1.75
-$spacer-xxl: $spacer * 2 !default; // 2
+$spacer-xl: $spacer * 2 !default; // 2
 
 // Colours
 // Use http://chir.ag/projects/name-that-color/#51284F
