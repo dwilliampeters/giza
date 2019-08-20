@@ -74,6 +74,11 @@
         },
         { "id": "card", "url": "components.card.html", "title": "Card" },
         { "id": "form", "url": "components.forms.html", "title": "Forms" },
+        {
+          "id": "list-group",
+          "url": "components.list-group.html",
+          "title": "List Group"
+        },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Navs" },
         { "id": "navbar", "url": "components.navbar.html", "title": "Navbar" },

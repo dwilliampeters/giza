@@ -9,20 +9,8 @@ $list-group-item-border: 1px solid $color-medium !default;
 }
 
 .list-group__item {
-  position: relative;
   display: block;
   padding: $list-group-item-padding;
   margin-bottom: -1px;
   border: $list-group-item-border;
-}
-
-.list-group__link {
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-  }
 }
