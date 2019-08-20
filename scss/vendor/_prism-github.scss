@@ -12,8 +12,8 @@ pre[class*='language-'] {
   -ms-hyphens: none;
   hyphens: none;
   line-height: 1.2em;
-  -moz-tab-size: 2;
   -tab-size: 2;
+  -moz-tab-size: 2;
   tab-size: 2;
   text-align: left;
   white-space: pre;
@@ -35,7 +35,6 @@ code[class*='language-'] ::selection {
   background: #b3d4fc;
 }
 
-/* Code blocks */
 pre[class*='language-'] {
   overflow: auto;
 }
@@ -59,7 +58,7 @@ pre[class*='language-'] {
 
 .token.punctuation,
 .token.operator {
-  color: #393a34; /* no highlight */
+  color: #393a34;
 }
 
 .token.entity,
