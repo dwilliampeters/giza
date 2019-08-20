@@ -44,6 +44,8 @@
         
           
   
+    
+  
 
   
 
@@ -55,7 +57,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="index.html">Getting started</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -77,14 +79,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="getting-started.download.html">Download</a>
     
 </li>
@@ -406,8 +410,6 @@
         
           
   
-    
-  
 
   
 
@@ -419,15 +421,13 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="utilities.display.html">Utilities</a>
     
       <ul class="nav nav--vertical nav--nested">
         
           
   
-    
-  
 
   
 
@@ -435,7 +435,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="utilities.display.html">Display</a>
     
 </li>
@@ -595,67 +595,43 @@
   </div>
   <main class="app-content">
     
+  <h1>Download</h1>
 
-  <h1>Display</h1>
+  <p>To start using the Giza Frontend in your project
+    <a href="https://github.com/r500dwp/giza/archive/master.zip" target="_blank">download the source files</a>.</p>
+
+  <h3>Installation</h3>
 
   
-
-  <table class="table" data-module="LabCode">
-    <tr>
-      <td style="padding: 1rem 0;" class="font-size-xs">Class</td>
-      <td style="padding: 1rem 0;" class="font-size-xs">Rule</td>
-    </tr>
-
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.display-none</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">display: none;</code></pre>
-        </td>
-      </tr>
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.display-block</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">display: block;</code></pre>
-        </td>
-      </tr>
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.display-inline-block</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">display: inline-block;</code></pre>
-        </td>
-      </tr>
-    
-      <tr>
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">.display-flex</code></pre>
-        </td>
-
-        <td style="padding: 0;">
-          <pre class="language-css" style="margin: 0;"><code class="language-css" style="padding: 1rem 0;">display: flex;</code></pre>
-        </td>
-      </tr>
-    
-  </table>
+  <div class="app-code" data-module="LabCode">
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  $ yarn
+  </code></pre>
+  </div>
 
 
+  <h3>Prototyping</h3>
 
-  <h2>Media Queries</h2>
+  
+  <div class="app-code" data-module="LabCode">
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  $ yarn start
+  </code></pre>
+  </div>
 
-  <p>
-    <code>display-block@md</code>
-  </p>
+
+  <h3>Production</h3>
+
+  
+  <div class="app-code" data-module="LabCode">
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  $ yarn build
+  </code></pre>
+  </div>
+
 
 
   </main>
