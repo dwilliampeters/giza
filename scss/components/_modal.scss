@@ -1,0 +1,51 @@
+$modal-background-color: rgba($color-light, 0.6) !default;
+$modal-content-border: 1px solid $color-medium !default;
+$modal-content-background-color: $color-light !default;
+$modal-content-padding: $spacer !default;
+$modal-header-background-color: $color-medium !default;
+$modal-footer-border: 1px solid $color-medium !default;
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: $modal-background-color;
+
+  &.is-active {
+    display: flex;
+  }
+}
+
+.modal__content {
+  max-width: 500px;
+  flex: 1;
+  margin: 0 auto;
+  border: $modal-content-border;
+  background: $modal-content-background-color;
+}
+
+.modal__header {
+  padding: $modal-content-padding;
+  background-color: $modal-header-background-color;
+}
+
+.modal__body {
+  padding: $modal-content-padding;
+}
+
+.modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: $modal-content-padding;
+  border-top: $modal-footer-border;
+
+  .button {
+    flex: none;
+  }
+}

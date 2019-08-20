@@ -1,11 +1,25 @@
 {% extends 'lab-source.html' %}
 
 {% macro Modal(model) %}
-  // Overlay content
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__header">{{model.header}}</div>
+      <div class="modal__body">
+        {{model.description|safe}}
+      </div>
+      <div class="modal__footer">
+        <a class="button" href="#">{{model.button}}</a>
+      </div>
+    </div>
+  </div>
 {% endmacro %}
 
 {% block body %}
 
-  {{ Modal() }}
+  {{ Modal({
+    'header': 'Modal header',
+    'description': '<p>Modal text.</p>',
+    'button': 'Close'
+  })}}
 
 {% endblock %}

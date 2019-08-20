@@ -13,4 +13,15 @@ body {
   > .card {
     max-width: 18rem;
   }
+
+  > .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }

@@ -74,6 +74,7 @@
         },
         { "id": "card", "url": "components.card.html", "title": "Card" },
         { "id": "form", "url": "components.forms.html", "title": "Forms" },
+        { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Navs" },
         { "id": "navbar", "url": "components.navbar.html", "title": "Navbar" },
         {
