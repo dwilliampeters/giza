@@ -60,12 +60,22 @@ $body-text-color: $color-woodsmoke;
   }
 
   .app-example {
-    // border-color: $color-tuatara-light;
     background-color: $color-light;
   }
 
   .app-code {
     background-color: $color-tuatara-light;
+  }
+
+  code {
+    background-color: $color-tuatara-light;
+  }
+
+  .table {
+    th,
+    td {
+      border-color: $color-tuatara-light;
+    }
   }
 
   .app-example__tab {
@@ -89,6 +99,12 @@ $body-text-color: $color-woodsmoke;
     code {
       padding-top: ($spacer + $spacer / 2);
       background-color: transparent;
+    }
+  }
+
+  table {
+    td {
+      padding: 0;
     }
   }
 }
