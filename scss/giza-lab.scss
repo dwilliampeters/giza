@@ -54,6 +54,14 @@ $body-text-color: $color-woodsmoke;
     }
   }
 
+  .app-sidebar {
+    background-color: $color-tuatara;
+
+    @include md {
+      background-color: transparent;
+    }
+  }
+
   .app-footer {
     background-color: $color-tuatara-light;
     color: $color-wild-sand;
