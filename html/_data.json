@@ -18,6 +18,11 @@
           "id": "introduction",
           "url": "index.html",
           "title": "Introduction"
+        },
+        {
+          "id": "download",
+          "url": "getting-started.download.html",
+          "title": "Download"
         }
       ]
     },
@@ -139,7 +144,7 @@
       ]
     }
   ],
-  "download": "#",
+  "download": "getting-started.download.html",
   "resources": [
     {
       "title": "Github",

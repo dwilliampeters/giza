@@ -1,7 +1,229 @@
-@import 'nav.definition';
-@import 'nav.nested';
-@import 'nav.vertical';
-@import 'nav.horizontal';
-@import 'nav.accordion';
-@import 'nav.dropdown';
-@import 'nav.responsive';
+$nav-link-color: $link-color !default;
+$nav-link-bg: transparent !default;
+$nav-link-trans-speed: 200 !default;
+$nav-link-active-color: $nav-link-color !default;
+$nav-link-active-bg: transparent !default;
+$nav-link-padding: $spacer-xs $spacer !default;
+$nav-link-font-weight: $font-weight-normal !default;
+
+$accordion-nav-bg: $color-light !default;
+$accordion-nav-border: none !default;
+
+$dropdown-nav-min-width: 200px !default;
+$dropdown-nav-bg: $color-light !default;
+$dropdown-nav-border: $color-dark 1px solid !default;
+
+.nav {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+}
+
+.nav--right {
+  justify-content: flex-end;
+}
+
+.nav--center {
+  justify-content: center;
+}
+
+.nav--expanded {
+  > .nav__item {
+    min-width: 0;
+    flex: 1 1 0%;
+  }
+}
+
+.nav__item {
+  position: relative;
+  flex: 0 0 auto;
+  padding: $nav-link-padding;
+
+  &.is-current {
+    background-color: $nav-link-active-bg;
+    color: $nav-link-active-color;
+  }
+}
+
+.nav__item--right {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav__item--left {
+  display: flex;
+  margin-right: auto;
+}
+
+.nav__link {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    position: absolute;
+    top: -$nav-link-padding;
+    right: -$nav-link-padding;
+    bottom: -$nav-link-padding;
+    left: -$nav-link-padding;
+    content: '';
+  }
+}
+
+.nav--nested {
+  padding-left: $spacer;
+}
+
+.nav--horizontal {
+  .nav__item {
+    flex: 0 1 auto;
+  }
+}
+
+.nav--vertical {
+  .nav__item {
+    flex: 0 0 100%;
+    text-align: left;
+  }
+
+  .nav__link {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: inherit;
+  }
+
+  &.nav--right {
+    .nav__item,
+    .nav__item--left {
+      text-align: right;
+    }
+  }
+
+  &.nav--center .nav__item {
+    text-align: center;
+  }
+}
+
+@mixin accordion-nav {
+  .is-accordion-nav {
+    display: none;
+    border: $accordion-nav-border;
+    background: $accordion-nav-bg;
+  }
+
+  .is-accordion-button {
+    display: inline-flex;
+    height: 100%;
+    flex: 0 1 auto;
+    margin: 0;
+  }
+
+  .is-accordion-nav-parent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    > .nav__link {
+      margin-right: $spacer;
+    }
+
+    &.is-active {
+      > .is-accordion-nav {
+        display: flex;
+        flex: none;
+      }
+
+      > .is-accordion-button {
+        .icon {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
+
+.nav--accordion {
+  @include accordion-nav;
+}
+
+.is-accordion-button {
+  display: none;
+}
+
+@mixin dropdown-nav {
+  .is-dropdown-nav {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: auto;
+    left: 0;
+    display: none;
+    width: auto;
+    min-width: $dropdown-nav-min-width;
+    margin: 0;
+    border: $dropdown-nav-border;
+    background: $dropdown-nav-bg;
+  }
+
+  .is-dropdown-button {
+    display: inline-flex;
+    height: 100%;
+    flex: 0 1 auto;
+    margin: 0;
+  }
+
+  .is-dropdown-nav-parent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > .nav__link {
+      flex: 1 1 auto;
+      margin-right: $spacer;
+    }
+
+    &.is-active {
+      > .is-dropdown-nav {
+        display: flex;
+        flex: none;
+      }
+
+      > .is-dropdown-button {
+        .icon {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
+
+.nav--dropdown {
+  @include dropdown-nav;
+}
+
+.is-dropdown-button {
+  display: none;
+}
+
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    .nav--accordion\@#{$key} {
+      @include accordion-nav;
+    }
+
+    .nav--dropdown\@#{$key} {
+      @include dropdown-nav;
+    }
+
+    .nav--horizontal\@#{$key} {
+      > .nav__item {
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

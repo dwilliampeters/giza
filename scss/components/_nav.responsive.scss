@@ -1,9 +1,0 @@
-@each $key, $value in $breakpoints {
-  @include breakpoint($key) {
-    .nav--horizontal\@#{$key} {
-      > .nav__item {
-        flex: 0 0 auto;
-      }
-    }
-  }
-}
