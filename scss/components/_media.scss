@@ -1,0 +1,22 @@
+.media {
+  display: flex;
+  flex-direction: column;
+}
+
+.media__body {
+  padding: $spacer 0;
+}
+
+.media__title {
+  margin: 0 0 $spacer;
+}
+
+@include md {
+  .media {
+    flex-direction: row;
+  }
+
+  .media__body {
+    padding: 0 $spacer;
+  }
+}

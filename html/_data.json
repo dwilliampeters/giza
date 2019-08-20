@@ -79,6 +79,7 @@
           "url": "components.list-group.html",
           "title": "List Group"
         },
+        { "id": "media", "url": "components.media.html", "title": "Media" },
         { "id": "modal", "url": "components.modal.html", "title": "Modal" },
         { "id": "nav", "url": "components.nav.html", "title": "Navs" },
         { "id": "navbar", "url": "components.navbar.html", "title": "Navbar" },

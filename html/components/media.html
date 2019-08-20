@@ -1,0 +1,26 @@
+{% extends 'lab-source.html' %}
+
+{% macro Media(model) %}
+  <div class="media">
+    <div class="media__image">
+      <img src="{{model.img.src}}" alt="{{model.img.description}}">
+    </div>
+    <div class="media__body">
+      <h5 class="media__title">{{model.title}}</h5>
+      {{model.description|safe}}
+    </div>
+  </div>
+{% endmacro %}
+
+{% block body %}
+
+  {{ Media({
+    'title': 'Heading',
+    'description': '<p>Some text adding to the card title and to add volume to the card\'s content.</p>',
+    'img': {
+      'src': '//placehold.it/64x64',
+      'description': ''
+    }
+  }) }}
+
+{% endblock %}
