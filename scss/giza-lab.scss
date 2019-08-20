@@ -3,6 +3,7 @@
 // Dependencies
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
 @import 'vendor/prism-github';
+@import 'vendor/prism-dark';
 
 // Giza framework
 // Loads local settings allowing overrides first
@@ -12,15 +13,70 @@ $color-azure-radiance: #0d7adf;
 $color-gallery: #f0f0f0;
 $color-woodsmoke: #0b0c0c;
 
-$font: sans-serif !default;
-$font-loaded: 'Fira Sans', sans-serif !default;
-$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
-  'Courier', monospace !default;
+// Dark theme colors
+$color-wild-sand: #f5f4f4;
+$color-tuatara: #201f1e;
+$color-tuatara-medium: #252423;
+$color-tuatara-light: #323130;
 
-$body-text-color: $color-woodsmoke !default;
+$font: sans-serif;
+$font-loaded: 'Fira Sans', sans-serif;
+$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
+  'Courier', monospace;
+
+$body-text-color: $color-woodsmoke;
 
 // Import Giza
 @import 'giza';
+
+.theme-dark {
+  background-color: $color-tuatara-medium;
+  color: $color-wild-sand;
+
+  a {
+    &:focus {
+      color: $link-hover-color !important;
+    }
+
+    @include color-swap-on-hover(
+      $link-color,
+      $color-wild-sand,
+      $link-trans-speed
+    );
+  }
+
+  .app-header {
+    background-color: $color-tuatara;
+    color: $color-wild-sand;
+
+    a {
+      color: $color-light;
+    }
+  }
+
+  .app-footer {
+    background-color: $color-tuatara-light;
+    color: $color-wild-sand;
+  }
+
+  .app-example {
+    // border-color: $color-tuatara-light;
+    background-color: $color-light;
+  }
+
+  .app-code {
+    background-color: $color-tuatara-light;
+  }
+
+  .app-example__tab {
+    background-color: $color-tuatara-light;
+    color: $color-wild-sand;
+
+    &:visited {
+      color: $color-wild-sand;
+    }
+  }
+}
 
 .app-code {
   position: relative;
@@ -364,6 +420,7 @@ a.app-download {
     height: auto;
     flex: 0 0 200px;
     padding-top: ($spacer * 2);
+    background: transparent;
     box-shadow: none;
 
     > .button {

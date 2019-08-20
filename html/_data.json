@@ -1,4 +1,5 @@
 {
+  "lab_theme": " theme-dark",
   "lab_stylesheet": "stylesheets/giza-lab.css",
   "lab_javascript": "javascripts/giza.js",
   "lab_iframe_stylesheet": "../stylesheets/giza.css",
