@@ -28,11 +28,12 @@
         {% if download %}
           <a class="button app-download" href="{{download}}">Download</a>
         {% endif %}
-        <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}'>
-          <div class="hamburger">
-            <div class="hamburger__inner"></div>
-            <div class="sr-only">Menu</div>
-          </div>
+        <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}' aria-label="Menu">
+          <span class="navbar__toggler-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
       </div>
     </header>
