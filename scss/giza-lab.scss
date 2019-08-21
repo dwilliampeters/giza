@@ -456,7 +456,7 @@ a.app-download {
     display: block;
     height: auto;
     flex: 0 0 200px;
-    padding-top: ($spacer * 2);
+    padding: ($spacer * 2) 0 !important;
     background: transparent;
     box-shadow: none;
 
@@ -468,8 +468,6 @@ a.app-download {
 
 @include lg {
   .app-sidebar {
-    width: 250px;
-    flex: 0 0 auto;
-    padding: ($spacer * 2) 0 0 0 !important;
+    flex: 0 0 250px;
   }
 }
