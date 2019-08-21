@@ -1,0 +1,13 @@
+{% extends 'lab-master.html' %}
+
+{% from 'lab-example.html' import LabExample %}
+{% from 'lab-code.html' import LabCode %}
+{% from 'lab-css-table.html' import LabCssTable %}
+
+{% block body %}
+  <div class="container">
+    <main class="app-content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+{% endblock %}

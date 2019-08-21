@@ -5,17 +5,19 @@
 {% from 'lab-css-table.html' import LabCssTable %}
 
 {% block body %}
-  <div class="app-sidebar">
-    <nav class="app-nav">
-      <ul class="nav nav--vertical">
-        {% for page in nav %}
-          {{ LabNavLink(page, AppParentId, AppCurrentId, loop, 'level-1') }}
-        {% endfor %}
-      </ul>
-    </nav>
+  <div class="container app-main">
+    <div class="app-sidebar">
+      <nav class="app-nav">
+        <ul class="nav nav--vertical">
+          {% for page in nav %}
+            {{ LabNavLink(page, AppParentId, AppCurrentId, loop, 'level-1') }}
+          {% endfor %}
+        </ul>
+      </nav>
 
+    </div>
+    <main class="app-content-sibling">
+      {% block content %}{% endblock %}
+    </main>
   </div>
-  <main class="app-content">
-    {% block content %}{% endblock %}
-  </main>
 {% endblock %}
