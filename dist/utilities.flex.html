@@ -406,6 +406,8 @@
         
           
   
+    
+  
 
   
 
@@ -417,7 +419,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="utilities.display.html">Utilities</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -439,14 +441,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="utilities.flex.html">Flex</a>
     
 </li>
@@ -549,8 +553,6 @@
         
           
   
-    
-  
 
   
 
@@ -562,7 +564,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="modules.sticky.html">Modules</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -584,8 +586,6 @@
         
           
   
-    
-  
 
   
 
@@ -593,7 +593,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="modules.toggle.html">Toggle</a>
     
 </li>
@@ -610,60 +610,41 @@
   </div>
   <main class="app-content">
     
-  <h1>Toggle</h1>
 
-  <p class="font-size-md">Hide, switch or change the appearance of different contents through a toggle.</p>
-
-  <h2>Usage</h2>
+  <h1>Flex</h1>
 
   
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="modules/toggle.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "modules/toggle.html"}'></div>
-    </div>
-  
 
-  
   <div class="app-code" data-module="LabCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  &lt;button class=&quot;button&quot; data-module=&quot;Toggle&quot;&gt;Toggle&lt;/button&gt;
-  </code></pre>
+    <table class="table">
+      <tr>
+        <th class="font-size-xs">Class</th>
+        <th class="font-size-xs">Rule</th>
+      </tr>
+
+      
+        <tr>
+          <td>
+            <pre class="language-css"><code class="language-css">.flex-row</code></pre>
+          </td>
+          <td>
+            <pre class="language-css"><code class="language-css">flex-direction: row;</code></pre>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <pre class="language-css"><code class="language-css">.flex-column</code></pre>
+          </td>
+          <td>
+            <pre class="language-css"><code class="language-css">flex-direction: column;</code></pre>
+          </td>
+        </tr>
+      
+    </table>
   </div>
 
 
-  <h2>Target</h2>
-
-  
-  
-    <div class="app-example">
-      <div class="app-example__tabs">
-        <a class="app-example__tab" href="modules/toggle.target.html" target="_blank">Open this example in a new window</a>
-      </div>
-      <div data-module="LabFrame" data-options='{"src": "modules/toggle.target.html"}'></div>
-    </div>
-  
-
-  
-  <div class="app-code" data-module="LabCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  data-options=&quot;{&quot;target&quot;: &quot;.lab-example-target&quot;}&quot;
-  </code></pre>
-  </div>
-
-
-  <h2>Active class</h2>
-  
-  <div class="app-code" data-module="LabCode">
-    <button class="button app-copy-button js-app-copy-button">Copy code</button>
-    <pre class="language-html"><code class="language-html">
-  data-options=&quot;{&quot;activeClass&quot;: &quot;new-active-class}&quot;
-  </code></pre>
-  </div>
 
 
   </main>

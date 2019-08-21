@@ -107,6 +107,11 @@
           "title": "Display"
         },
         {
+          "id": "flex",
+          "url": "utilities.flex.html",
+          "title": "Flex"
+        },
+        {
           "id": "margin",
           "url": "utilities.margin.html",
           "title": "Margin"

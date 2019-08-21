@@ -1,16 +1,28 @@
 $container-max-width: $site-max-width !default;
-$container-side-padding: $spacer !default;
+$column-spacing: $spacer !default;
+$column-breakpoint-spacings: () !default;
+
+.container,
+.container-fluid {
+  max-width: 100%;
+  padding-right: $column-spacing;
+  padding-left: $column-spacing;
+}
 
 .container {
-  max-width: $container-max-width;
-  padding-right: $container-side-padding;
-  padding-left: $container-side-padding;
+  width: $container-max-width;
   margin-right: auto;
   margin-left: auto;
 }
 
-.container-fluid {
-  max-width: 100%;
-  padding-right: $container-side-padding;
-  padding-left: $container-side-padding;
+@each $key, $value in $breakpoints {
+  @include breakpoint($key) {
+    @if map-has-key($column-breakpoint-spacings, $key) {
+      .container,
+      .container-fluid {
+        padding-right: map-get($column-breakpoint-spacings, $key);
+        padding-left: map-get($column-breakpoint-spacings, $key);
+      }
+    }
+  }
 }

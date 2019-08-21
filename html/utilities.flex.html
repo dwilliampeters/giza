@@ -1,0 +1,15 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "flex" %}
+
+{% block content %}
+
+  <h1>Flex</h1>
+
+  {{ LabCssTable([
+    { "class": ".flex-row", "rule": "flex-direction: row;"},
+    { "class": ".flex-column", "rule": "flex-direction: column;"}
+  ])}}
+
+{% endblock %}

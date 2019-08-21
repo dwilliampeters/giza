@@ -1,6 +1,10 @@
 // Options
 $grid-columns: 12 !default;
 
+// Column spacing
+$column-spacing: 1rem !default;
+$column-breakpoint-spacings: () !default;
+
 // Sizes
 $min-touch-size: 44px !default;
 $site-max-width: 1200px !default;
