@@ -113,15 +113,14 @@ $body-text-color: $color-woodsmoke;
   top: 0;
   right: 0;
   left: 0;
-  // z-index: 99;
-  // position: fixed; // z-index: 99; // top: 0; // right: 0; // left: 0;
-  padding: ($spacer / 2) 0;
+  height: 50px;
   background-color: $color-woodsmoke;
   color: $color-light;
 }
 
 .app-header__inner {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -129,33 +128,12 @@ $body-text-color: $color-woodsmoke;
 .app-logo {
   display: flex;
   flex: 1 0 auto;
-  align-items: flex-end;
-  padding: ($spacer / 4) 0;
-  font-size: 1.4rem;
-  font-weight: $font-weight-bold;
-  line-height: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  @include color-swap-on-hover($color-light, $color-light);
-
-  &:visited {
-    @include color-swap-on-hover($color-light, $color-light);
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
-    background: none;
-    box-shadow: none;
-  }
+  align-items: center;
 }
 
 .app-logo__image {
   display: block;
-  width: 60px;
+  height: 30px;
 }
 
 .app-logo__text {
