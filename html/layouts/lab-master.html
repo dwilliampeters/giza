@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{meta_title}}</title>
-    <link rel="stylesheet" href="{{lab_stylesheet}}">
+    <link rel="stylesheet" href="{{settings.lab_stylesheet}}">
     <script>
       if (document.documentElement) {
         document
@@ -17,12 +17,11 @@
       }
     </script>
   </head>
-  <body class="display-flex flex-column min-height-100{{lab_theme}}">
+  <body class="display-flex flex-column min-height-100{{settings.theme}}">
     <header class="app-header" data-module="LabHeader">
       <div class="container app-header__inner">
         <a class="app-logo" href="index.html">
-          <img class="app-logo__image" src="images/app-logo-light.svg" alt="{{lab_logo}}">
-          <span class="app-logo__text">{{lab_title}}</span>
+          <img class="app-logo__image" src="{{settings.logo.src}}" alt="{{settings.logo.description}}">
         </a>
         <span class="app-version">v{{version}}</span>
         {% if download %}
@@ -56,6 +55,6 @@
 
       </div>
     </footer>
-    <script src="{{lab_javascript}}"></script>
+    <script src="{{settings.lab_javascript}}"></script>
   </body>
 </html>

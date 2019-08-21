@@ -9,7 +9,6 @@
 // Loads local settings allowing overrides first
 $color-bombay: #afb1b8;
 $color-bonjour: #e5e0e1;
-$color-azure-radiance: #0d7adf;
 $color-gallery: #f0f0f0;
 $color-woodsmoke: #0b0c0c;
 
@@ -46,7 +45,7 @@ $body-text-color: $color-woodsmoke;
   }
 
   .app-header {
-    background-color: $color-tuatara;
+    background-color: $color-azure-radiance;
     color: $color-wild-sand;
 
     a {
@@ -388,8 +387,24 @@ a.app-download {
 }
 
 @include md {
+  .app-header {
+    a.button,
+    .button {
+      @include color-swap-on-hover(
+        $button-color darken($color-azure-radiance, 10%),
+        $button-hover-color darken($color-azure-radiance, 20%),
+        $link-trans-speed
+      );
+    }
+  }
+
   .app-header__inner {
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .app-logo {
+    flex: 0 0 auto;
   }
 
   .app-version {
