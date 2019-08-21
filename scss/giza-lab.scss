@@ -5,8 +5,7 @@
 @import 'vendor/prism-github';
 @import 'vendor/prism-dark';
 
-// Giza framework
-// Loads local settings allowing overrides first
+// Colors
 $color-bombay: #afb1b8;
 $color-bonjour: #e5e0e1;
 $color-gallery: #f0f0f0;
@@ -18,11 +17,13 @@ $color-tuatara: #201f1e;
 $color-tuatara-medium: #252423;
 $color-tuatara-light: #323130;
 
+// Fonts
 $font: sans-serif;
 $font-loaded: 'Fira Sans', sans-serif;
 $font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier', monospace;
 
+// Base
 $body-text-color: $color-woodsmoke;
 
 // Import Giza
@@ -67,6 +68,7 @@ $body-text-color: $color-woodsmoke;
   }
 
   .app-example {
+    border-color: $color-wild-sand;
     background-color: $color-light;
   }
 
@@ -78,19 +80,14 @@ $body-text-color: $color-woodsmoke;
     background-color: $color-tuatara-light;
   }
 
+  .app-example__tabs {
+    background-color: $color-tuatara-light;
+  }
+
   .table {
     th,
     td {
       border-color: $color-tuatara-light;
-    }
-  }
-
-  .app-example__tab {
-    background-color: $color-tuatara-light;
-    color: $color-wild-sand;
-
-    &:visited {
-      color: $color-wild-sand;
     }
   }
 }
@@ -325,13 +322,13 @@ a.app-download {
 .app-copy-button {
   position: absolute;
   top: 0;
-  right: 2px;
+  right: 0;
 }
 
 .app-example {
   position: relative;
   padding-top: ($spacer * 2);
-  border: 2px solid $color-gallery;
+  border: 1px solid $color-gallery;
 
   .grid .grid__cell,
   .flex-grid .flex-grid__cell {
@@ -353,6 +350,7 @@ a.app-download {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: $color-gallery;
 }
 
 .app-example__tab {
@@ -360,23 +358,7 @@ a.app-download {
 
   display: inline-flex;
   padding: ($spacer / 2);
-  background-color: $color-gallery;
-  color: $color-woodsmoke;
   text-decoration: none;
-
-  @include color-swap-on-hover(
-    $color-woodsmoke,
-    $color-woodsmoke,
-    $link-trans-speed
-  );
-
-  &:visited {
-    @include color-swap-on-hover(
-      $color-woodsmoke,
-      $color-woodsmoke,
-      $link-trans-speed
-    );
-  }
 }
 
 .app-example__iframe {
@@ -385,17 +367,6 @@ a.app-download {
 }
 
 @include md {
-  .app-header {
-    a.button,
-    .button {
-      @include color-swap-on-hover(
-        $button-color darken($color-azure-radiance, 10%),
-        $button-hover-color darken($color-azure-radiance, 20%),
-        $link-trans-speed
-      );
-    }
-  }
-
   .app-header__inner {
     flex-direction: row;
     justify-content: space-between;
