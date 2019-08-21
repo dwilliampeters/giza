@@ -17,8 +17,8 @@
       }
     </script>
   </head>
-  <body class="display-flex flex-column min-height-100 theme-dark">
-    <header class="app-header" data-module="LabHeader">
+  <body class="display-flex flex-column min-height-100 theme-dark" data-module="Sticky" data-sticky-container="data-sticky-container">
+    <header class="app-header">
       <div class="container app-header__inner">
         <a class="app-logo" href="index.html">
           <img class="app-logo__image" src="images/app-logo-light.svg" alt="Giza">
@@ -27,15 +27,15 @@
         
           <a class="button app-download" href="getting-started.download.html">Download</a>
         
-        <button class="button app-sidebar-toggle" data-module="Toggle" data-options='{"target": ".app-sidebar"}' aria-label="Menu">
-          <span class="navbar__toggler-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
       </div>
     </header>
+    <button class="button app-sidebar-toggle sticky__item" data-module="Toggle" data-options='{"target": ".app-sidebar"}' aria-label="Menu">
+      <span class="navbar__toggler-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
     <div class="container app-main">
       
   <div class="app-sidebar">

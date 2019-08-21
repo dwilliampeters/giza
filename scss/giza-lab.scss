@@ -108,11 +108,13 @@ $body-text-color: $color-woodsmoke;
 }
 
 .app-header {
-  position: fixed;
-  z-index: 99;
+  position: absolute;
+  z-index: 98;
   top: 0;
   right: 0;
   left: 0;
+  // z-index: 99;
+  // position: fixed; // z-index: 99; // top: 0; // right: 0; // left: 0;
   padding: ($spacer / 2) 0;
   background-color: $color-woodsmoke;
   color: $color-light;
@@ -170,11 +172,10 @@ a.app-download {
 
 .app-sidebar-toggle {
   position: absolute;
-  top: 100%;
+  z-index: 100;
   left: 0;
-  width: 60px;
-  height: 60px;
-  align-self: flex-end;
+  width: 50px;
+  height: 50px;
   padding: 0;
 
   .hamburger {
@@ -206,7 +207,7 @@ a.app-download {
 }
 
 .app-content {
-  padding: ($spacer * 3) 0 $spacer;
+  padding: $spacer 0;
   overflow-x: auto;
 }
 
@@ -367,6 +368,10 @@ a.app-download {
 }
 
 @include md {
+  .app-header {
+    position: relative;
+  }
+
   .app-header__inner {
     flex-direction: row;
     justify-content: space-between;
