@@ -15,7 +15,7 @@ $navbar-padding: $spacer-sm $spacer;
 }
 
 .navbar__toggler {
-  padding: $spacer-xs $spacer-sm;
+  padding: $spacer-sm $spacer-sm;
   border: 1px solid $black;
   background: none;
 }
@@ -75,6 +75,8 @@ $navbar-padding: $spacer-sm $spacer;
 .navbar__toggle {
   display: none;
   flex-wrap: wrap;
+  margin-right: -$spacer;
+  margin-left: -$spacer;
 
   .has-nav-open & {
     display: flex;
@@ -88,6 +90,7 @@ $navbar-padding: $spacer-sm $spacer;
 
 .navbar__form {
   display: flex;
+  padding: $spacer;
 }
 
 @include md {
