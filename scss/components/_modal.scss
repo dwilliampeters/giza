@@ -1,9 +1,9 @@
-$modal-background-color: rgba($color-light, 0.6) !default;
-$modal-content-border: 1px solid $color-medium !default;
-$modal-content-background-color: $color-light !default;
+$modal-background-color: rgba($white, 0.6) !default;
+$modal-content-border: 1px solid $gray !default;
+$modal-content-background-color: $white !default;
 $modal-content-padding: $spacer !default;
-$modal-header-background-color: $color-medium !default;
-$modal-footer-border: 1px solid $color-medium !default;
+$modal-header-background-color: $gray !default;
+$modal-footer-border: 1px solid $gray !default;
 
 .modal {
   position: fixed;

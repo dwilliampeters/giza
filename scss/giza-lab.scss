@@ -6,16 +6,17 @@
 @import 'vendor/prism-dark';
 
 // Colors
-$color-bombay: #afb1b8;
-$color-bonjour: #e5e0e1;
-$color-gallery: #f0f0f0;
-$color-woodsmoke: #0b0c0c;
+$bombay: #afb1b8;
+$bonjour: #e5e0e1;
+$gallery: #f0f0f0;
+$woodsmoke: #0b0c0c;
+$denim: #1a50bc;
 
 // Dark theme colors
-$color-wild-sand: #f5f4f4;
-$color-tuatara: #201f1e;
-$color-tuatara-medium: #252423;
-$color-tuatara-light: #323130;
+$wild-sand: #f5f4f4;
+$tuatara: #201f1e;
+$tuatara-medium: #252423;
+$tuatara-light: #323130;
 
 // Fonts
 $font: sans-serif;
@@ -24,38 +25,34 @@ $font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier', monospace;
 
 // Base
-$body-text-color: $color-woodsmoke;
+$body-text-color: $woodsmoke;
 
 // Import Giza
 @import 'giza';
 
 .theme-dark {
-  background-color: $color-tuatara-medium;
-  color: $color-wild-sand;
+  background-color: $tuatara-medium;
+  color: $wild-sand;
 
   a:not(.button) {
     &:focus {
       color: $link-hover-color !important;
     }
 
-    @include color-swap-on-hover(
-      $link-color,
-      $color-wild-sand,
-      $link-trans-speed
-    );
+    @include color-swap-on-hover($link-color, $wild-sand, $link-trans-speed);
   }
 
   .app-header {
-    background-color: $color-azure-radiance;
-    color: $color-wild-sand;
+    background-color: $denim;
+    color: $wild-sand;
 
     a:not(.button) {
-      color: $color-light;
+      color: $white;
     }
   }
 
   .app-sidebar {
-    background-color: $color-tuatara;
+    background-color: $tuatara;
 
     @include md {
       background-color: transparent;
@@ -63,38 +60,38 @@ $body-text-color: $color-woodsmoke;
   }
 
   .app-footer {
-    background-color: $color-tuatara-light;
-    color: $color-wild-sand;
+    background-color: $tuatara-light;
+    color: $wild-sand;
   }
 
   .app-example {
-    border-color: $color-wild-sand;
-    background-color: $color-light;
+    border-color: $wild-sand;
+    background-color: $white;
   }
 
   .app-code {
-    background-color: $color-tuatara-light;
+    background-color: $tuatara-light;
   }
 
   code {
-    background-color: $color-tuatara-light;
+    background-color: $tuatara-light;
   }
 
   .app-example__tabs {
-    background-color: $color-tuatara-light;
+    background-color: $tuatara-light;
   }
 
   .table {
     th,
     td {
-      border-color: $color-tuatara-light;
+      border-color: $tuatara-light;
     }
   }
 }
 
 .app-footer {
   padding: ($spacer * 2) 0;
-  background-color: $color-gallery;
+  background-color: $gallery;
 
   .nav__item {
     padding-right: 0;
@@ -104,7 +101,7 @@ $body-text-color: $color-woodsmoke;
 
 .app-footer__title {
   padding: 0 0 $spacer;
-  border-bottom: $color-bombay 1px solid;
+  border-bottom: $bombay 1px solid;
 }
 
 .app-header {
@@ -114,8 +111,8 @@ $body-text-color: $color-woodsmoke;
   right: 0;
   left: 0;
   height: 50px;
-  background-color: $color-woodsmoke;
-  color: $color-light;
+  background-color: $woodsmoke;
+  color: $white;
 }
 
 .app-header__inner {
@@ -164,17 +161,17 @@ a.app-download {
       .hamburger__inner,
       ::before,
       ::after {
-        background-color: $color-light;
+        background-color: $white;
       }
     }
   }
 
   .hamburger__inner {
-    background-color: $color-light;
+    background-color: $white;
 
     &::before,
     &::after {
-      background-color: $color-light;
+      background-color: $white;
     }
   }
 }
@@ -209,8 +206,8 @@ a.app-download {
   height: 100%;
   flex-wrap: wrap;
   padding: $spacer $spacer $spacer ($spacer * 4);
-  background: $color-light;
-  box-shadow: 0 2px 20px rgba($color-dark, 0.6);
+  background: $white;
+  box-shadow: 0 2px 20px rgba($black, 0.6);
 
   &.is-active {
     display: block;
@@ -257,7 +254,7 @@ a.app-download {
 
     &.is-active {
       > .nav__link {
-        border-bottom: 3px solid $color-azure-radiance;
+        border-bottom: 3px solid $blue;
 
         &:hover {
           text-decoration: none;
@@ -286,7 +283,7 @@ a.app-download {
 .app-code {
   position: relative;
   margin-bottom: $spacer * 2;
-  background-color: $color-gallery;
+  background-color: $gallery;
 
   pre {
     margin: 0;
@@ -313,13 +310,13 @@ a.app-download {
 .app-example {
   position: relative;
   padding-top: ($spacer * 2);
-  border: 1px solid $color-gallery;
+  border: 1px solid $gallery;
 
   .grid .grid__cell,
   .flex-grid .flex-grid__cell {
     padding: $spacer;
-    border: 1px solid $color-bombay;
-    background-color: $color-bonjour;
+    border: 1px solid $bombay;
+    background-color: $bonjour;
   }
 
   .app-example__display.is-active {
@@ -335,7 +332,7 @@ a.app-download {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: $color-gallery;
+  background-color: $gallery;
 }
 
 .app-example__tab {

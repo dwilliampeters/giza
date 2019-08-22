@@ -21,17 +21,17 @@
 ///
 /// @example scss - Usage - changes color of **text** from dark to light on hover/focus with no transition
 ///   .my__link {
-///     @include color-swap-on-hover($color-dark, $color-light);
+///     @include color-swap-on-hover($black, $white);
 ///   }
 ///
 /// @example scss - Usage - changes color of **background** from dark to light on hover/focus with 0.5 second transition
 ///   .my__link {
-///     @include color-swap-on-hover($color-dark, $color-light, 0.5s,true);
+///     @include color-swap-on-hover($black, $white, 0.5s,true);
 ///   }
 ///
 /// @example scss - Usage - changes color element from **light on dark** to **dark on light** on hover with a 300ms tranition
 ///   .my__link {
-///     @include color-swap-on-hover($color-dark $color-light, $color-light $color-dark, 300ms);
+///     @include color-swap-on-hover($black $white, $white $black, 300ms);
 ///   }
 
 @mixin color-swap-on-hover($off, $on, $duration: 0, $bg: false) {

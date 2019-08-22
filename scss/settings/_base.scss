@@ -18,12 +18,19 @@ $spacer-lg: $spacer * 1.5 !default; // 1.50
 $spacer-xl: $spacer * 2 !default; // 2
 
 // Colours
-// Use http://chir.ag/projects/name-that-color/#51284F
-// for colour variable names
-$color-light: #fff !default;
-$color-medium: #ddd !default;
-$color-dark: #000 !default;
-$color-azure-radiance: #0d7adf !default;
+$white: #fff !default;
+$gray: #ddd !default;
+$black: #000 !default;
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
 
 // Fonts
 $font: sans-serif !default;

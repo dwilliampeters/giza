@@ -6,12 +6,12 @@ $nav-link-active-bg: transparent !default;
 $nav-link-padding: $spacer-sm $spacer !default;
 $nav-link-font-weight: $font-weight-normal !default;
 
-$accordion-nav-bg: $color-light !default;
+$accordion-nav-bg: $white !default;
 $accordion-nav-border: none !default;
 
 $dropdown-nav-min-width: 200px !default;
-$dropdown-nav-bg: $color-light !default;
-$dropdown-nav-border: $color-dark 1px solid !default;
+$dropdown-nav-bg: $white !default;
+$dropdown-nav-border: $black 1px solid !default;
 
 .nav {
   display: flex;
