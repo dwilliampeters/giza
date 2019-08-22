@@ -3,6 +3,10 @@ $size-breakpoints: null !default;
 @mixin spacing($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
+  .margin-auto#{$breakpoint-suffix} {
+    margin: auto !important;
+  }
+
   .margin-0#{$breakpoint-suffix} {
     margin: 0 !important;
   }
@@ -25,6 +29,10 @@ $size-breakpoints: null !default;
 
   .margin-5#{$breakpoint-suffix} {
     margin: $spacer-xl !important;
+  }
+
+  .margin-top-auto#{$breakpoint-suffix} {
+    margin-top: auto !important;
   }
 
   .margin-top-0#{$breakpoint-suffix} {
@@ -51,6 +59,10 @@ $size-breakpoints: null !default;
     margin-top: $spacer-xl !important;
   }
 
+  .margin-right-auto#{$breakpoint-suffix} {
+    margin-right: auto !important;
+  }
+
   .margin-right-0#{$breakpoint-suffix} {
     margin-right: 0 !important;
   }
@@ -75,6 +87,10 @@ $size-breakpoints: null !default;
     margin-right: $spacer-xl !important;
   }
 
+  .margin-bottom-auto#{$breakpoint-suffix} {
+    margin-bottom: auto !important;
+  }
+
   .margin-bottom-0#{$breakpoint-suffix} {
     margin-bottom: 0 !important;
   }
@@ -97,6 +113,10 @@ $size-breakpoints: null !default;
 
   .margin-bottom-5#{$breakpoint-suffix} {
     margin-bottom: $spacer-xl !important;
+  }
+
+  .margin-left-auto#{$breakpoint-suffix} {
+    margin-left: auto !important;
   }
 
   .margin-left-0#{$breakpoint-suffix} {
@@ -346,8 +366,8 @@ $size-breakpoints: null !default;
 
 @include spacing();
 
-// @each $key in $size-breakpoints {
-//   @include breakpoint($key) {
-//     @include spacing($key);
-//   }
-// }
+@each $key in $size-breakpoints {
+  @include breakpoint($key) {
+    @include spacing($key);
+  }
+}

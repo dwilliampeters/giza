@@ -112,11 +112,6 @@
           "title": "Flex"
         },
         {
-          "id": "margin",
-          "url": "utilities.margin.html",
-          "title": "Margin"
-        },
-        {
           "id": "position",
           "url": "utilities.position.html",
           "title": "Position"
