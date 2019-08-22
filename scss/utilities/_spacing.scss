@@ -28,27 +28,27 @@ $size-breakpoints: null !default;
   }
 
   .margin-top-0#{$breakpoint-suffix} {
-    margin-left: 0 !important;
+    margin-top: 0 !important;
   }
 
   .margin-top-1#{$breakpoint-suffix} {
-    margin-left: $spacer-xs !important;
+    margin-top: $spacer-xs !important;
   }
 
   .margin-top-2#{$breakpoint-suffix} {
-    margin-left: $spacer-sm !important;
+    margin-top: $spacer-sm !important;
   }
 
   .margin-top-3#{$breakpoint-suffix} {
-    margin-left: $spacer-md !important;
+    margin-top: $spacer-md !important;
   }
 
   .margin-top-4#{$breakpoint-suffix} {
-    margin-left: $spacer-lg !important;
+    margin-top: $spacer-lg !important;
   }
 
   .margin-top-5#{$breakpoint-suffix} {
-    margin-left: $spacer-xl !important;
+    margin-top: $spacer-xl !important;
   }
 
   .margin-right-0#{$breakpoint-suffix} {
