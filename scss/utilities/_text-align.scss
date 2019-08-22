@@ -1,6 +1,6 @@
 $text-align-breakpoints: null !default;
 
-@mixin textAlignMxn($breakpoint: '') {
+@mixin text-align($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .text-left#{$breakpoint-suffix} {
@@ -20,10 +20,10 @@ $text-align-breakpoints: null !default;
   }
 }
 
-@include textAlignMxn();
+@include text-align();
 
 @each $key in $text-align-breakpoints {
   @include breakpoint($key) {
-    @include textAlignMxn($key);
+    @include text-align($key);
   }
 }

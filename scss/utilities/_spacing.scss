@@ -1,0 +1,61 @@
+$size-breakpoints: null !default;
+
+@mixin spacing($breakpoint: '') {
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+
+  .margin-0#{$breakpoint-suffix} {
+    margin: 0 !important;
+  }
+
+  .margin-1#{$breakpoint-suffix} {
+    margin: $spacer-xs !important;
+  }
+
+  .margin-2#{$breakpoint-suffix} {
+    margin: $spacer-sm !important;
+  }
+
+  .margin-3#{$breakpoint-suffix} {
+    margin: $spacer-md !important;
+  }
+
+  .margin-4#{$breakpoint-suffix} {
+    margin: $spacer-lg !important;
+  }
+
+  .margin-5#{$breakpoint-suffix} {
+    margin: $spacer-xl !important;
+  }
+
+  .padding-0#{$breakpoint-suffix} {
+    padding: 0 !important;
+  }
+
+  .padding-1#{$breakpoint-suffix} {
+    padding: $spacer-xs !important;
+  }
+
+  .padding-2#{$breakpoint-suffix} {
+    padding: $spacer-sm !important;
+  }
+
+  .padding-3#{$breakpoint-suffix} {
+    padding: $spacer-md !important;
+  }
+
+  .padding-4#{$breakpoint-suffix} {
+    padding: $spacer-lg !important;
+  }
+
+  .padding-5#{$breakpoint-suffix} {
+    padding: $spacer-xl !important;
+  }
+}
+
+@include spacing();
+
+@each $key in $size-breakpoints {
+  @include breakpoint($key) {
+    @include spacing($key);
+  }
+}

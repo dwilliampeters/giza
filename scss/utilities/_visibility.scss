@@ -12,7 +12,7 @@
 
 $visibility-breakpoints: null !default;
 
-@mixin visibilityMxn($breakpoint: '') {
+@mixin visibility($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .visibility-hidden#{$breakpoint-suffix} {
@@ -24,10 +24,10 @@ $visibility-breakpoints: null !default;
   }
 }
 
-@include visibilityMxn();
+@include visibility();
 
 @each $key in $visibility-breakpoints {
   @include breakpoint($key) {
-    @include visibilityMxn($key);
+    @include visibility($key);
   }
 }

@@ -1,6 +1,6 @@
 $margin-breakpoints: null !default;
 
-@mixin marginMxn($breakpoint: '') {
+@mixin margin($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .margin-top-auto#{$breakpoint-suffix} {
@@ -20,10 +20,10 @@ $margin-breakpoints: null !default;
   }
 }
 
-@include marginMxn();
+@include margin();
 
 @each $key in $margin-breakpoints {
   @include breakpoint($key) {
-    @include marginMxn($key);
+    @include margin($key);
   }
 }

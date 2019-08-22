@@ -1,6 +1,6 @@
 $position-breakpoints: null !default;
 
-@mixin positionMxn($breakpoint: '') {
+@mixin position($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   .position-relative#{$breakpoint-suffix} {
@@ -20,10 +20,10 @@ $position-breakpoints: null !default;
   }
 }
 
-@include positionMxn();
+@include position();
 
 @each $key in $position-breakpoints {
   @include breakpoint($key) {
-    @include positionMxn($key);
+    @include position($key);
   }
 }
