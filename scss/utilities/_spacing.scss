@@ -143,24 +143,24 @@ $size-breakpoints: null !default;
     margin: -$spacer-xl !important;
   }
 
-  .margin-left-negative-1#{$breakpoint-suffix} {
-    margin-left: -$spacer-xs !important;
+  .margin-top-negative-1#{$breakpoint-suffix} {
+    margin-top: -$spacer-xs !important;
   }
 
-  .margin-left-negative-2#{$breakpoint-suffix} {
-    margin-left: -$spacer-sm !important;
+  .margin-top-negative-2#{$breakpoint-suffix} {
+    margin-top: -$spacer-sm !important;
   }
 
-  .margin-left-negative-3#{$breakpoint-suffix} {
-    margin-left: -$spacer-md !important;
+  .margin-top-negative-3#{$breakpoint-suffix} {
+    margin-top: -$spacer-md !important;
   }
 
-  .margin-left-negative-4#{$breakpoint-suffix} {
-    margin-left: -$spacer-lg !important;
+  .margin-top-negative-4#{$breakpoint-suffix} {
+    margin-top: -$spacer-lg !important;
   }
 
-  .margin-left-negative-5#{$breakpoint-suffix} {
-    margin-left: -$spacer-xl !important;
+  .margin-top-negative-5#{$breakpoint-suffix} {
+    margin-top: -$spacer-xl !important;
   }
 
   .margin-right-negative-1#{$breakpoint-suffix} {
@@ -181,6 +181,46 @@ $size-breakpoints: null !default;
 
   .margin-right-negative-5#{$breakpoint-suffix} {
     margin-right: -$spacer-xl !important;
+  }
+
+  .margin-bottom-negative-1#{$breakpoint-suffix} {
+    margin-bottom: -$spacer-xs !important;
+  }
+
+  .margin-bottom-negative-2#{$breakpoint-suffix} {
+    margin-bottom: -$spacer-sm !important;
+  }
+
+  .margin-bottom-negative-3#{$breakpoint-suffix} {
+    margin-bottom: -$spacer-md !important;
+  }
+
+  .margin-bottom-negative-4#{$breakpoint-suffix} {
+    margin-bottom: -$spacer-lg !important;
+  }
+
+  .margin-bottom-negative-5#{$breakpoint-suffix} {
+    margin-bottom: -$spacer-xl !important;
+  }
+
+  .margin-left-negative-1#{$breakpoint-suffix} {
+    margin-left: -$spacer-xs !important;
+  }
+
+  .margin-left-negative-2#{$breakpoint-suffix} {
+    margin-left: -$spacer-sm !important;
+  }
+
+  .margin-left-negative-3#{$breakpoint-suffix} {
+    margin-left: -$spacer-md !important;
+  }
+
+  .margin-left-negative-4#{$breakpoint-suffix} {
+    margin-left: -$spacer-lg !important;
+  }
+
+  .margin-left-negative-5#{$breakpoint-suffix} {
+    margin-left: -$spacer-xl !important;
   }
 
   .padding-0#{$breakpoint-suffix} {
@@ -205,6 +245,102 @@ $size-breakpoints: null !default;
 
   .padding-5#{$breakpoint-suffix} {
     padding: $spacer-xl !important;
+  }
+
+  .padding-top-0#{$breakpoint-suffix} {
+    padding-top: 0 !important;
+  }
+
+  .padding-top-1#{$breakpoint-suffix} {
+    padding-top: $spacer-xs !important;
+  }
+
+  .padding-top-2#{$breakpoint-suffix} {
+    padding-top: $spacer-sm !important;
+  }
+
+  .padding-top-3#{$breakpoint-suffix} {
+    padding-top: $spacer-md !important;
+  }
+
+  .padding-top-4#{$breakpoint-suffix} {
+    padding-top: $spacer-lg !important;
+  }
+
+  .padding-top-5#{$breakpoint-suffix} {
+    padding-top: $spacer-xl !important;
+  }
+
+  .padding-right-0#{$breakpoint-suffix} {
+    padding-right: 0 !important;
+  }
+
+  .padding-right-1#{$breakpoint-suffix} {
+    padding-right: $spacer-xs !important;
+  }
+
+  .padding-right-2#{$breakpoint-suffix} {
+    padding-right: $spacer-sm !important;
+  }
+
+  .padding-right-3#{$breakpoint-suffix} {
+    padding-right: $spacer-md !important;
+  }
+
+  .padding-right-4#{$breakpoint-suffix} {
+    padding-right: $spacer-lg !important;
+  }
+
+  .padding-right-5#{$breakpoint-suffix} {
+    padding-right: $spacer-xl !important;
+  }
+
+  .padding-bottom-0#{$breakpoint-suffix} {
+    padding-bottom: 0 !important;
+  }
+
+  .padding-bottom-1#{$breakpoint-suffix} {
+    padding-bottom: $spacer-xs !important;
+  }
+
+  .padding-bottom-2#{$breakpoint-suffix} {
+    padding-bottom: $spacer-sm !important;
+  }
+
+  .padding-bottom-3#{$breakpoint-suffix} {
+    padding-bottom: $spacer-md !important;
+  }
+
+  .padding-bottom-4#{$breakpoint-suffix} {
+    padding-bottom: $spacer-lg !important;
+  }
+
+  .padding-bottom-5#{$breakpoint-suffix} {
+    padding-bottom: $spacer-xl !important;
+  }
+
+  .padding-left-0#{$breakpoint-suffix} {
+    padding-left: 0 !important;
+  }
+
+  .padding-left-1#{$breakpoint-suffix} {
+    padding-left: $spacer-xs !important;
+  }
+
+  .padding-left-2#{$breakpoint-suffix} {
+    padding-left: $spacer-sm !important;
+  }
+
+  .padding-left-3#{$breakpoint-suffix} {
+    padding-left: $spacer-md !important;
+  }
+
+  .padding-left-4#{$breakpoint-suffix} {
+    padding-left: $spacer-lg !important;
+  }
+
+  .padding-left-5#{$breakpoint-suffix} {
+    padding-left: $spacer-xl !important;
   }
 }
 
