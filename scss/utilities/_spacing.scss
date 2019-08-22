@@ -27,27 +27,27 @@ $size-breakpoints: null !default;
     margin: $spacer-xl !important;
   }
 
-  .margin-left-0#{$breakpoint-suffix} {
+  .margin-top-0#{$breakpoint-suffix} {
     margin-left: 0 !important;
   }
 
-  .margin-left-1#{$breakpoint-suffix} {
+  .margin-top-1#{$breakpoint-suffix} {
     margin-left: $spacer-xs !important;
   }
 
-  .margin-left-2#{$breakpoint-suffix} {
+  .margin-top-2#{$breakpoint-suffix} {
     margin-left: $spacer-sm !important;
   }
 
-  .margin-left-3#{$breakpoint-suffix} {
+  .margin-top-3#{$breakpoint-suffix} {
     margin-left: $spacer-md !important;
   }
 
-  .margin-left-4#{$breakpoint-suffix} {
+  .margin-top-4#{$breakpoint-suffix} {
     margin-left: $spacer-lg !important;
   }
 
-  .margin-left-5#{$breakpoint-suffix} {
+  .margin-top-5#{$breakpoint-suffix} {
     margin-left: $spacer-xl !important;
   }
 
@@ -73,6 +73,54 @@ $size-breakpoints: null !default;
 
   .margin-right-5#{$breakpoint-suffix} {
     margin-right: $spacer-xl !important;
+  }
+
+  .margin-bottom-0#{$breakpoint-suffix} {
+    margin-bottom: 0 !important;
+  }
+
+  .margin-bottom-1#{$breakpoint-suffix} {
+    margin-bottom: $spacer-xs !important;
+  }
+
+  .margin-bottom-2#{$breakpoint-suffix} {
+    margin-bottom: $spacer-sm !important;
+  }
+
+  .margin-bottom-3#{$breakpoint-suffix} {
+    margin-bottom: $spacer-md !important;
+  }
+
+  .margin-bottom-4#{$breakpoint-suffix} {
+    margin-bottom: $spacer-lg !important;
+  }
+
+  .margin-bottom-5#{$breakpoint-suffix} {
+    margin-bottom: $spacer-xl !important;
+  }
+
+  .margin-left-0#{$breakpoint-suffix} {
+    margin-left: 0 !important;
+  }
+
+  .margin-left-1#{$breakpoint-suffix} {
+    margin-left: $spacer-xs !important;
+  }
+
+  .margin-left-2#{$breakpoint-suffix} {
+    margin-left: $spacer-sm !important;
+  }
+
+  .margin-left-3#{$breakpoint-suffix} {
+    margin-left: $spacer-md !important;
+  }
+
+  .margin-left-4#{$breakpoint-suffix} {
+    margin-left: $spacer-lg !important;
+  }
+
+  .margin-left-5#{$breakpoint-suffix} {
+    margin-left: $spacer-xl !important;
   }
 
   .margin-negative-1#{$breakpoint-suffix} {
@@ -162,8 +210,8 @@ $size-breakpoints: null !default;
 
 @include spacing();
 
-@each $key in $size-breakpoints {
-  @include breakpoint($key) {
-    @include spacing($key);
-  }
-}
+// @each $key in $size-breakpoints {
+//   @include breakpoint($key) {
+//     @include spacing($key);
+//   }
+// }
