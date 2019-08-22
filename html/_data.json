@@ -127,6 +127,11 @@
           "title": "Size"
         },
         {
+          "id": "spacing",
+          "url": "utilities.spacing.html",
+          "title": "Spacing"
+        },
+        {
           "id": "text",
           "url": "utilities.text.html",
           "title": "Text"

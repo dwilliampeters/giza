@@ -1,0 +1,38 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "spacing" %}
+
+{% block content %}
+
+  <h1>Spacing</h1>
+
+  <h3>Margin</h3>
+
+  {{ LabCssTable([
+    { "class": ".margin-0", "rule": "0"},
+    { "class": ".margin-1", "rule": "$spacer * 0.25"},
+    { "class": ".margin-2", "rule": "$spacer * 0.5"},
+    { "class": ".margin-3", "rule": "$spacer"},
+    { "class": ".margin-4", "rule": "$spacer * 1.5"},
+    { "class": ".margin-5", "rule": "$spacer * 2"}
+  ])}}
+
+  <h3>Padding</h3>
+
+  {{ LabCssTable([
+    { "class": ".padding-0", "rule": "0"},
+    { "class": ".padding-1", "rule": "$spacer * 0.25"},
+    { "class": ".padding-2", "rule": "$spacer * 0.5"},
+    { "class": ".padding-3", "rule": "$spacer"},
+    { "class": ".padding-4", "rule": "$spacer * 1.5"},
+    { "class": ".padding-5", "rule": "$spacer * 2"}
+  ])}}
+
+  <h2>Media Queries</h2>
+
+  <p>
+    <code>padding-3@md</code>
+  </p>
+
+{% endblock %}
