@@ -32,7 +32,7 @@ $grid-columns: 12 !default;
   }
 }
 
-@mixin flexColMxn($breakpoint: '') {
+@mixin flex-col($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   @for $i from 1 through $grid-columns {
@@ -43,10 +43,10 @@ $grid-columns: 12 !default;
   }
 }
 
-@include flexColMxn();
+@include flex-col();
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
-    @include flexColMxn($key);
+    @include flex-col($key);
   }
 }

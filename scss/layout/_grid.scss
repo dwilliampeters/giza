@@ -18,7 +18,7 @@
   }
 }
 
-@mixin gridColMxn($breakpoint: '') {
+@mixin grid-col($breakpoint: '') {
   $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
 
   @for $i from 1 through $grid-columns {
@@ -28,10 +28,10 @@
   }
 }
 
-@include gridColMxn();
+@include grid-col();
 
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
-    @include gridColMxn($key);
+    @include grid-col($key);
   }
 }
