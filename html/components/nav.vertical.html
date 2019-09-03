@@ -1,0 +1,24 @@
+{% extends 'lab-source.html' %}
+
+{% macro NavVertical(modal) %}
+  <ul class="nav nav--vertical">
+    <li class="nav__item">
+      <a class="nav__link is-active" href="#">Active</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Link</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="#">Link</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link is-disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+{% endmacro %}
+
+{% block body %}
+
+  {{ NavVertical() }}
+
+{% endblock %}
