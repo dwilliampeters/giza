@@ -12,7 +12,7 @@ export default class Nav {
   cacheDom() {
     return {
       menuParent: this.el.querySelectorAll(
-        ".is-dropdown-button, .is-accordion-button"
+        ".is-dropdown-button, .is-accordion-button, .nav--tabs .nav__link"
       )
     };
   }
@@ -50,4 +50,6 @@ export default class Nav {
 
     clickedParent.classList.add("is-active");
   }
+
+  handleTabs() {}
 }

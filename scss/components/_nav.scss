@@ -210,6 +210,25 @@ $dropdown-nav-border: $black 1px solid !default;
   display: none;
 }
 
+.nav--tabs {
+  margin-bottom: $spacer;
+  border-bottom: 1px solid $gray;
+
+  .nav__item {
+    margin-bottom: -1px;
+    border-top: 1px solid $gray;
+    border-left: 1px solid $gray;
+
+    &.is-active {
+      background-color: $white;
+    }
+
+    &:last-child {
+      border-right: 1px solid $gray;
+    }
+  }
+}
+
 @each $key, $value in $breakpoints {
   @include breakpoint($key) {
     .nav--accordion\@#{$key} {
