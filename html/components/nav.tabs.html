@@ -1,0 +1,34 @@
+{% extends 'lab-source.html' %}
+
+{% from 'icon.html' import Icon %}
+
+{% macro NavDropdown(modal) %}
+  <nav class="nav nav--tabs" data-module="Nav">
+    <li class="nav__item is-active">
+      <a href="#nav-tab-one" class="nav__link">Item 1</a>
+    </li>
+    <li class="nav__item">
+      <a href="#nav-tab-two" class="nav__link">Item 2</a>
+    </li>
+    <li class="nav__item">
+      <a href="#nav-tab-three" class="nav__link">Item 3</a>
+    </li>
+  </nav>
+  <div class="tab-content">
+    <div class="tab-pane is-active" id="nav-tab-one">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus orci ac enim finibus, nec auctor est volutpat. Mauris vitae.
+    </div>
+    <div class="tab-pane" id="nav-tab-two">
+      Fusce tincidunt sodales mauris, sit amet consectetur enim luctus id. Phasellus iaculis condimentum odio. Integer nisi turpis, consectetur posuere lobortis.
+    </div>
+    <div class="tab-pane" id="nav-tab-three">
+      Vestibulum vitae vulputate neque. Vivamus sit amet lobortis metus. Aliquam eget imperdiet urna, hendrerit blandit quam. Pellentesque tempus sapien sed.
+    </div>
+  </div>
+{% endmacro %}
+
+{% block body %}
+
+  {{ NavDropdown() }}
+
+{% endblock %}

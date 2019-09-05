@@ -1,8 +1,25 @@
-{% extends 'lab-source.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giza Framework for Frontend, HTML, CSS, JS</title>
+    <link rel="stylesheet" href="../stylesheets/giza.css">
+    <link rel="stylesheet" href="../stylesheets/giza-lab-demo.css">
+    <script>
+      if (document.documentElement) {
+        document
+          .documentElement
+          .classList
+          .add('js');
+      }
+    </script>
+  </head>
+  <body class="app-example">
+    
 
-{% from 'icon.html' import Icon %}
-
-{% macro NavDropdown(modal) %}
+  
   <nav class="nav nav--tabs" data-module="Nav">
     <li class="nav__item is-active">
       <a href="#nav-tab-one" class="nav__link">Item 1</a>
@@ -15,7 +32,7 @@
     </li>
   </nav>
   <div class="tab-content">
-    <div class="tab-pane" id="nav-tab-one">
+    <div class="tab-pane is-active" id="nav-tab-one">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus orci ac enim finibus, nec auctor est volutpat. Mauris vitae.
     </div>
     <div class="tab-pane" id="nav-tab-two">
@@ -25,10 +42,9 @@
       Vestibulum vitae vulputate neque. Vivamus sit amet lobortis metus. Aliquam eget imperdiet urna, hendrerit blandit quam. Pellentesque tempus sapien sed.
     </div>
   </div>
-{% endmacro %}
 
-{% block body %}
 
-  {{ NavDropdown() }}
 
-{% endblock %}
+    <script src="../javascripts/giza.js"></script>
+  </body>
+</html>
