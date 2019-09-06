@@ -1,37 +1,43 @@
 {% extends 'lab-source.html' %}
 
-{% from 'icon.html' import Icon %}
-
-{% macro NavDropdown(modal) %}
-  <ul class="nav nav--dropdown" data-module="Nav">
-    <li class="nav__item is-dropdown-nav-parent">
-      <a href="#" class="nav__link">Item 1</a>
-      <button class="button is-dropdown-button">
-        {{Icon('chevron-down')}}
-      </button>
-      <ul class="nav is-dropdown-nav nav--vertical">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Item 1 - 1</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Item 1 - 2</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Item 1 - 3</a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Item 2</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Item 3</a>
-    </li>
-  </ul>
-{% endmacro %}
+{% from 'nav.html' import Nav %}
 
 {% block body %}
 
-  {{ NavDropdown() }}
+  {{ Nav({
+    'items': [
+      {
+        'title': 'Link 1',
+        'url': '#',
+        'classes': ' is-dropdown-nav-parent',
+        'children': {
+        'items': [
+          {
+            'title': 'Link 1',
+            'url': '#'
+          },
+          {
+            'title': 'Link 2',
+            'url': '#'
+          },
+          {
+            'title': 'Link 3',
+            'url': '#'
+          }
+        ],
+        'classes': ' is-dropdown-nav'
+        }
+      },
+      {
+        'title': 'Link 2',
+        'url': '#'
+      },
+      {
+        'title': 'Link 3',
+        'url': '#'
+      }
+    ],
+    'classes': ' nav--dropdown'
+  }) }}
 
 {% endblock %}

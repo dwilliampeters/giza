@@ -1,37 +1,43 @@
 {% extends 'lab-source.html' %}
 
-{% from 'icon.html' import Icon %}
-
-{% macro NavAccordion(modal) %}
-  <ul class="nav nav--vertical nav--accordion" data-module="Nav" style="max-width: 200px;">
-    <li class="nav__item is-accordion-nav-parent">
-      <a href="#" class="nav__link">Item 1</a>
-      <button class="button is-accordion-button">
-        {{Icon('chevron-down')}}
-      </button>
-      <ul class="nav is-accordion-nav nav--vertical">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Item 1 - 1</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Item 1 - 2</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Item 1 - 3</a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Item 2</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Item 3</a>
-    </li>
-  </ul>
-{% endmacro %}
+{% from 'nav.html' import Nav %}
 
 {% block body %}
 
-  {{ NavAccordion() }}
+  {{ Nav({
+    'items': [
+      {
+        'title': 'Link 1',
+        'url': '#',
+        'classes': ' is-accordion-nav-parent',
+        'children': {
+        'items': [
+          {
+            'title': 'Link 1',
+            'url': '#'
+          },
+          {
+            'title': 'Link 2',
+            'url': '#'
+          },
+          {
+            'title': 'Link 3',
+            'url': '#'
+          }
+        ],
+        'classes': ' nav--vertical is-accordion-nav'
+        }
+      },
+      {
+        'title': 'Link 2',
+        'url': '#'
+      },
+      {
+        'title': 'Link 3',
+        'url': '#'
+      }
+    ],
+    'classes': ' nav--vertical nav--accordion'
+  }) }}
 
 {% endblock %}

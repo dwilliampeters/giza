@@ -107,18 +107,18 @@ $dropdown-nav-border: $black 1px solid !default;
   }
 }
 
+.is-parent-button {
+  display: inline-flex;
+  height: 100%;
+  flex: 0 1 auto;
+  margin: 0;
+}
+
 @mixin accordion-nav {
   .is-accordion-nav {
     display: none;
     border: $accordion-nav-border;
     background: $accordion-nav-bg;
-  }
-
-  .is-accordion-button {
-    display: inline-flex;
-    height: 100%;
-    flex: 0 1 auto;
-    margin: 0;
   }
 
   .is-accordion-nav-parent {
@@ -137,7 +137,7 @@ $dropdown-nav-border: $black 1px solid !default;
         flex: none;
       }
 
-      > .is-accordion-button {
+      > .is-parent-button {
         .icon {
           transform: rotate(-180deg);
         }
@@ -169,13 +169,6 @@ $dropdown-nav-border: $black 1px solid !default;
     background: $dropdown-nav-bg;
   }
 
-  .is-dropdown-button {
-    display: inline-flex;
-    height: 100%;
-    flex: 0 1 auto;
-    margin: 0;
-  }
-
   .is-dropdown-nav-parent {
     position: relative;
     display: flex;
@@ -193,7 +186,7 @@ $dropdown-nav-border: $black 1px solid !default;
         flex: none;
       }
 
-      > .is-dropdown-button {
+      > .is-parent-button {
         .icon {
           transform: rotate(-180deg);
         }

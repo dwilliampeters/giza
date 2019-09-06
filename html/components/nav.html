@@ -1,15 +1,33 @@
 {% extends 'lab-source.html' %}
 
+{% from 'icon.html' import Icon %}
+
 {% macro Nav(model) %}
-  <ul class="nav{{model.classes}}">
+  <ul class="nav{{model.classes}}" data-module="Nav">
     {% for item in model.items %}
 
-      {% if item.children %}
+      {% if item.items %}
         {% set parent = " is-parent" %}
       {% endif %}
 
       <li class="nav__item{{item.classes}}{{level}}{{parent}}{{activeClass}}">
         <a class="nav__link" href="{{item.url}}">{{item.title}}</a>
+
+        {% if item.children %}
+          <button class="button is-parent-button">
+            {{Icon('chevron-down')}}
+          </button>
+        {% endif %}
+
+        {% if item.children %}
+          <ul class="nav nav--nested{{item.children.classes}}">
+            {% for item in item.children.items %}
+              <li class="nav__item{{item.classes}}{{level}}{{parent}}{{activeClass}}">
+                <a class="nav__link" href="{{item.url}}">{{item.title}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
