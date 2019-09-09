@@ -2,7 +2,7 @@
 
 {% from 'icon.html' import Icon %}
 
-{% macro NavDropdown(modal) %}
+{% macro NavTabs(modal) %}
   <nav class="nav nav--tabs" data-module="Nav">
     <li class="nav__item is-active">
       <a href="#nav-tab-one" class="nav__link">Item 1</a>
@@ -29,6 +29,6 @@
 
 {% block body %}
 
-  {{ NavDropdown() }}
+  {{ NavTabs() }}
 
 {% endblock %}
