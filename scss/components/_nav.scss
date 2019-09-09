@@ -108,7 +108,7 @@ $dropdown-nav-border: $black 1px solid !default;
 }
 
 .is-parent-button {
-  display: inline-flex;
+  display: none;
   height: 100%;
   flex: 0 1 auto;
   margin: 0;
@@ -126,6 +126,10 @@ $dropdown-nav-border: $black 1px solid !default;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    .is-parent-button {
+      display: inline-flex;
+    }
 
     > .nav__link {
       margin-right: $spacer;
@@ -174,6 +178,11 @@ $dropdown-nav-border: $black 1px solid !default;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    .is-parent-button {
+      display: inline-flex;
+    }
+
 
     > .nav__link {
       flex: 1 1 auto;
