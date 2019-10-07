@@ -92,3 +92,11 @@ a.button,
 .button__text {
   display: inline-block;
 }
+
+.button-sm {
+  @inlude font-sm;
+}
+
+.button-lg {
+
+}

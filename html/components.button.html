@@ -13,7 +13,7 @@
   {{LabExample(AppParentId, AppCurrentId)}}
   {{LabCode('html', '
   <button class="button">
-    <span class="button__text">Primary</span>
+    <span class="button__text">Button</span>
   </button>
   ')}}
 
@@ -22,7 +22,7 @@
   {{LabExample(AppParentId, AppCurrentId, 'link')}}
   {{LabCode('html', '
   <a class="button" href="">
-    <span class="button__text">Link</span>
+    <span class="button__text">Link button</span>
   </a>
   ')}}
 
@@ -32,6 +32,22 @@
   {{LabCode('html', '
   <button class="button is-active" data-module="Toggle" data-options="{target: parent, activeClass: is-active}">
     <span class="button__text">Toggle button</span>
+  </button>
+  ')}}
+
+  <h2>Sizes</h2>
+
+  {{LabExample(AppParentId, AppCurrentId, 'large')}}
+  {{LabCode('html', '
+  <button class="button button--lg">
+    <span class="button__text">Large button</span>
+  </button>
+  ')}}
+
+  {{LabExample(AppParentId, AppCurrentId, 'small')}}
+  {{LabCode('html', '
+  <button class="button button-sm">
+    <span class="button__text">Small button</span>
   </button>
   ')}}
 
