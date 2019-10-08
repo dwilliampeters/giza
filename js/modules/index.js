@@ -5,6 +5,8 @@
 
 const moduleElements = document.querySelectorAll("[data-module]");
 
+window.Giza = [];
+
 for (var i = 0; i < moduleElements.length; i++) {
   const el = moduleElements[i];
   const name = el.getAttribute("data-module");
@@ -15,7 +17,8 @@ for (var i = 0; i < moduleElements.length; i++) {
   }
 
   import(`./${name}`).then(Module => {
-    new Module.default(el, options);
+    const module = new Module.default(el, options);
+    window.Giza.push(module);
   });
 }
 
