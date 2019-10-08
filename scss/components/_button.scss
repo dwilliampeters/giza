@@ -93,10 +93,10 @@ a.button,
   display: inline-block;
 }
 
-.button-sm {
-  @inlude font-sm;
+.button--sm {
+  @include font-size-sm;
 }
 
-.button-lg {
-
+.button--lg {
+  @include font-size-lg;
 }
