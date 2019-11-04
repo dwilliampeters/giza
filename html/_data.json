@@ -1,7 +1,7 @@
 {
   "version": "0.1.5",
   "settings": {
-    "theme": " theme-dark",
+    "theme": " theme-default",
     "lab_stylesheet": "stylesheets/giza-lab.css",
     "lab_javascript": "javascripts/giza.js",
     "lab_iframe_stylesheet": "../stylesheets/giza.css",
@@ -45,6 +45,11 @@
           "id": "container",
           "url": "layouts.container.html",
           "title": "Container"
+        },
+        {
+          "id": "grid",
+          "url": "layouts.grid.html",
+          "title": "Grid"
         },
         {
           "id": "spacer",

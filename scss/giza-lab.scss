@@ -307,9 +307,12 @@ a.app-download {
   right: 0;
 }
 
+body.app-example {
+  padding-top: ($spacer * 2);
+}
+
 .app-example {
   position: relative;
-  padding-top: ($spacer * 2);
   border: 1px solid $gallery;
 
   .grid .grid__cell,

@@ -1,0 +1,30 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "layouts" %}
+{% set AppCurrentId = "grid" %}
+
+{% block content %}
+  <h1>Grid</h1>
+
+  <p class="font-size-md">Build mobile-first grid layouts.</p>
+
+  <h2>Usage</h2>
+
+  <div class="app-example">
+    <div class="row">
+      <div class="col-4 padding-3">Column</div>
+      <div class="col-4 padding-3">Column</div>
+      <div class="col-4 padding-3">Column</div>
+    </div>
+  </div>
+
+  {{LabCode('html', '
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </div>
+  ')}}
+{% endblock %}
