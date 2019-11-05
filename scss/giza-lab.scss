@@ -313,6 +313,7 @@ body.app-example {
 
 .app-example {
   position: relative;
+  padding-top: ($spacer * 2);
   border: 1px solid $gallery;
 
   .grid .grid__cell,
