@@ -98,6 +98,8 @@
           
             
   
+    
+  
 
   
 
@@ -109,7 +111,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="layouts.breakpoints.html">Layout</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -146,14 +148,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="layouts.grid.html">Grid</a>
     
 </li>
@@ -422,8 +426,6 @@
           
             
   
-    
-  
 
   
 
@@ -435,7 +437,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="utilities.display.html">Utilities</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -547,8 +549,6 @@
         
           
   
-    
-  
 
   
 
@@ -556,7 +556,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="utilities.visibility.html">Visibility</a>
     
 </li>
@@ -626,49 +626,33 @@
     </div>
     <main class="app-content-sibling">
       
+  <h1>Grid</h1>
 
-  <h1>Visibility</h1>
+  <p class="font-size-md">Build mobile-first grid layouts.</p>
 
-  <p class="font-size-md">Quickly hide and show content at any breakpoint.</p>
+  <h2>Usage</h2>
 
-  
-
-  <div class="app-code" data-module="LabCode">
-    <table class="table">
-      <tr>
-        <th class="font-size-xs">Class</th>
-        <th class="font-size-xs">Rule</th>
-      </tr>
-
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.visibility-hidden</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">visibility: hidden;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.visibility-visible</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">visibility: visible;</code></pre>
-          </td>
-        </tr>
-      
-    </table>
+  <div class="app-example">
+    <div class="row">
+      <div class="col-4 padding-3">Column</div>
+      <div class="col-4 padding-3">Column</div>
+      <div class="col-4 padding-3">Column</div>
+    </div>
   </div>
 
-
-
-  <h2>Media Queries</h2>
-
-  <p>
-    <code>visibility-hidden@md</code>
-  </p>
+  
+  <div class="app-code" data-module="LabCode">
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;col&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </code></pre>
+  </div>
 
 
     </main>

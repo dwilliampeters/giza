@@ -82,13 +82,16 @@ gulp.task("clean:production", function() {
 gulp.task("html", function() {
   htmlPaths = {
     src: [
-      projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "**/*.html"),
-      "!" +
-        projectPath(
-          PATH_CONFIG.BASE,
-          PATH_CONFIG.html.src,
-          "**/{layouts,macros,data}/**"
-        )
+      projectPath(
+        PATH_CONFIG.BASE,
+        PATH_CONFIG.html.src,
+        "templates/**/*.html"
+      ),
+      projectPath(
+        PATH_CONFIG.BASE,
+        PATH_CONFIG.html.src,
+        "{components,content,modules}/**/*.html"
+      )
     ],
     src_render: [
       projectPath(PATH_CONFIG.BASE, PATH_CONFIG.html.src, "components"),

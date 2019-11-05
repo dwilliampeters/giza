@@ -1,12 +1,13 @@
 {
   "version": "0.1.5",
   "settings": {
+    "base_url": "https://r500dwp.github.io/giza/",
     "theme": " theme-default",
     "lab_stylesheet": "stylesheets/giza-lab.css",
     "lab_javascript": "javascripts/giza.js",
-    "lab_iframe_stylesheet": "../stylesheets/giza.css",
-    "lab_iframe_stylesheet_demo": "../stylesheets/giza-lab-demo.css",
-    "lab_iframe_javascript": "../javascripts/giza.js",
+    "lab_iframe_stylesheet": "stylesheets/giza.css",
+    "lab_iframe_stylesheet_demo": "stylesheets/giza-lab-demo.css",
+    "lab_iframe_javascript": "javascripts/giza.js",
     "meta_title": "Giza Framework for Frontend, HTML, CSS, JS",
     "logo": {
       "src": "images/app-logo-light.svg",
