@@ -1,7 +1,7 @@
 {
   "version": "0.1.5",
   "settings": {
-    "base_url": "https://r500dwp.github.io/giza/",
+    "base_url": "/",
     "theme": " theme-default",
     "lab_stylesheet": "stylesheets/giza-lab.css",
     "lab_javascript": "javascripts/giza.js",

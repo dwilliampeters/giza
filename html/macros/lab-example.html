@@ -2,16 +2,16 @@
   {% if child %}
     <div class="app-example">
       <div class="app-example__tabs">
-        <a class="app-example__tab" href="{{base_url}}{{type}}/{{name}}.{{child}}.html" target="_blank">Open this example in a new window</a>
+        <a class="app-example__tab" href="{{settings.base_url}}{{type}}/{{name}}.{{child}}.html" target="_blank">Open this example in a new window</a>
       </div>
-      <div data-module="LabFrame" data-options='{"src": "{{base_url}}{{type}}/{{name}}.{{child}}.html"}'></div>
+      <div data-module="LabFrame" data-options='{"src": "{{settings.base_url}}{{type}}/{{name}}.{{child}}.html"}'></div>
     </div>
   {% else %}
     <div class="app-example">
       <div class="app-example__tabs">
-        <a class="app-example__tab" href="{{base_url}}{{type}}/{{name}}.html" target="_blank">Open this example in a new window</a>
+        <a class="app-example__tab" href="{{settings.base_url}}{{type}}/{{name}}.html" target="_blank">Open this example in a new window</a>
       </div>
-      <div data-module="LabFrame" data-options='{"src": "{{base_url}}{{type}}/{{name}}.html"}'></div>
+      <div data-module="LabFrame" data-options='{"src": "{{settings.base_url}}{{type}}/{{name}}.html"}'></div>
     </div>
   {% endif %}
 {% endmacro %}

@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
 @import 'vendor/prism-github';
 @import 'vendor/prism-dark';
+@import 'settings/base';
 
 // Colors
 $bombay: #afb1b8;
@@ -11,6 +12,12 @@ $bonjour: #e5e0e1;
 $gallery: #f0f0f0;
 $woodsmoke: #0b0c0c;
 $denim: #1a50bc;
+
+// New Colors
+$cobalt: #0250bb;
+$haiti: #20123a;
+$mirage: #202340;
+$gun-powder: #42425a;
 
 // Dark theme colors
 $wild-sand: #f5f4f4;
@@ -25,7 +32,14 @@ $font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
   'Courier', monospace;
 
 // Base
-$body-text-color: $woodsmoke;
+$body-text-color: $mirage;
+$link-color: $cobalt;
+$button-bg: $cobalt;
+$app-header-background-color: $haiti;
+$app-footer-background-color: $haiti;
+$app-footer-text-color: $white;
+$app-footer-link-color: $white;
+$app-footer-link-hover-color: $app-footer-link-color;
 
 // Import Giza
 @import 'giza';
@@ -89,21 +103,6 @@ $body-text-color: $woodsmoke;
   }
 }
 
-.app-footer {
-  padding: ($spacer * 2) 0;
-  background-color: $gallery;
-
-  .nav__item {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.app-footer__title {
-  padding: 0 0 $spacer;
-  border-bottom: $bombay 1px solid;
-}
-
 .app-header {
   position: absolute;
   z-index: 98;
@@ -111,7 +110,7 @@ $body-text-color: $woodsmoke;
   right: 0;
   left: 0;
   height: 50px;
-  background-color: $woodsmoke;
+  background-color: $app-header-background-color;
   color: $white;
 }
 
@@ -143,6 +142,36 @@ $body-text-color: $woodsmoke;
 
 a.app-download {
   display: none;
+}
+
+.app-footer {
+  padding: ($spacer * 2) 0;
+  background-color: $app-footer-background-color;
+  color: $app-footer-text-color;
+
+  a {
+    @include color-swap-on-hover(
+      $app-footer-link-color,
+      $app-footer-link-hover-color
+    );
+
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .nav__item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.app-footer__title {
+  padding: 0 0 $spacer;
+  border-bottom: $gun-powder 1px solid;
 }
 
 .app-sidebar-toggle {

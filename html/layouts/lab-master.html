@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{settings.meta_title}}</title>
-    <link rel="stylesheet" href="{{base_url}}{{settings.lab_stylesheet}}">
+    <link rel="stylesheet" href="{{settings.base_url}}{{settings.lab_stylesheet}}">
     <script>
       if (document.documentElement) {
         document
@@ -21,7 +21,7 @@
     <header class="app-header">
       <div class="container app-header__inner">
         <a class="app-logo" href="index.html">
-          <img class="app-logo__image" src="{{base_url}}{{settings.logo.src}}" alt="{{settings.logo.description}}">
+          <img class="app-logo__image" src="{{settings.base_url}}{{settings.logo.src}}" alt="{{settings.logo.description}}">
         </a>
         <span class="app-version">v{{version}}</span>
         {% if download %}
@@ -55,6 +55,6 @@
 
       </div>
     </footer>
-    <script src="{{base_url}}{{settings.lab_javascript}}"></script>
+    <script src="{{settings.base_url}}{{settings.lab_javascript}}"></script>
   </body>
 </html>
