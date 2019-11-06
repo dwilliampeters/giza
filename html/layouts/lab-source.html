@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{settings.meta_title}}</title>
-    <link rel="stylesheet" href="{{settings.base_url}}{{settings.lab_iframe_stylesheet}}">
-    <link rel="stylesheet" href="{{settings.base_url}}{{settings.lab_iframe_stylesheet_demo}}">
+    <link rel="stylesheet" href="{{Globals.baseurl}}{{settings.lab_iframe_stylesheet}}">
+    <link rel="stylesheet" href="{{Globals.baseurl}}{{settings.lab_iframe_stylesheet_demo}}">
     <script>
       if (document.documentElement) {
         document
@@ -18,6 +18,6 @@
   </head>
   <body class="app-example">
     {% block body %}{% endblock %}
-    <script src="{{settings.base_url}}{{settings.lab_iframe_javascript}}"></script>
+    <script src="{{Globals.baseurl}}{{settings.lab_iframe_javascript}}"></script>
   </body>
 </html>
