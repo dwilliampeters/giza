@@ -34,7 +34,7 @@
   @include typography('xs');
 }
 
-@function rem($pixels, $context: $font-size) {
+@function rem($pixels, $context: $font-size-base) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
   }

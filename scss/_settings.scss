@@ -33,14 +33,29 @@ $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
 // Fonts
-$font: sans-serif !default;
-$font-loaded: Helvetica, Arial, sans-serif !default;
-$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
-  'Courier', monospace !default;
-$font-size: 1rem !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: 1rem !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 600 !default;
 $font-weight-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+// Breakpoints
+$breakpoints: (
+  xxs: 320px,
+  xs: 480px,
+  sm: 640px,
+  md: 768px,
+  lg: 960px,
+  xl: 1180px,
+  xxl: 1400px
+) !default;
 
 // Utilities
 $display-breakpoints: null;
