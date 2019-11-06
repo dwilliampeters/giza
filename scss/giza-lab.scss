@@ -26,13 +26,10 @@ $tuatara-medium: #252423;
 $tuatara-light: #323130;
 
 // Fonts
-$font: sans-serif;
-$font-loaded: 'Fira Sans', sans-serif;
-$font-monospace: 'Inconsolata', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono',
-  'Courier', monospace;
+$font-family-base: 'Fira Sans', sans-serif;
 
 // Base
-$body-text-color: $mirage;
+$body-color: $mirage;
 $link-color: $cobalt;
 $button-bg: $cobalt;
 $app-header-background-color: $haiti;
@@ -44,6 +41,7 @@ $app-footer-link-hover-color: $app-footer-link-color;
 // Import Giza
 @import 'giza';
 
+// Lab styles
 .theme-dark {
   background-color: $tuatara-medium;
   color: $wild-sand;
@@ -235,8 +233,20 @@ a.app-download {
   height: 100%;
   flex-wrap: wrap;
   padding: $spacer $spacer $spacer ($spacer * 4);
-  background: $white;
+  background-color: $haiti;
   box-shadow: 0 2px 20px rgba($black, 0.6);
+  color: $white;
+
+  a {
+    @include color-swap-on-hover($white, $white);
+
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   &.is-active {
     display: block;
@@ -251,7 +261,8 @@ a.app-download {
 
     &.is-active {
       > .nav__link {
-        font-weight: bold;
+        border-bottom: 3px solid $white;
+        text-decoration: none;
       }
     }
   }
@@ -259,18 +270,9 @@ a.app-download {
   .nav__link {
     display: inline-block;
     padding: 0;
-    text-decoration: none;
 
     &::after {
       display: none;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:focus {
-      text-decoration: none;
     }
   }
 
@@ -283,7 +285,8 @@ a.app-download {
 
     &.is-active {
       > .nav__link {
-        border-bottom: 3px solid $blue;
+        border-bottom: 3px solid $white;
+        text-decoration: none;
 
         &:hover {
           text-decoration: none;
@@ -429,16 +432,6 @@ body.app-example {
     padding-left: ($spacer * 2);
   }
 
-  .app-nav {
-    .nav__item {
-      @include font-size-base;
-    }
-
-    .nav__item-level-1 {
-      @include font-size-md;
-    }
-  }
-
   .app-sidebar {
     position: relative;
     top: 0;
@@ -451,6 +444,19 @@ body.app-example {
 
     > .button {
       display: none;
+    }
+  }
+
+  .app-nav {
+    padding: $spacer;
+    background-color: $haiti;
+
+    .nav__item {
+      @include font-size-base;
+    }
+
+    .nav__item-level-1 {
+      @include font-size-md;
     }
   }
 }
