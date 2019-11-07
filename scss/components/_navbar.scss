@@ -74,6 +74,7 @@ $navbar-padding: $spacer-sm $spacer;
 
 .navbar__toggle {
   display: none;
+  width: 100%;
   flex-wrap: wrap;
   margin-right: -$spacer;
   margin-left: -$spacer;
@@ -100,6 +101,7 @@ $navbar-padding: $spacer-sm $spacer;
 
   .navbar__toggle {
     display: flex;
+    width: auto;
     flex: 1 0 auto;
     justify-content: space-between;
     margin: 0;
