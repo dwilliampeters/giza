@@ -13,6 +13,10 @@ body {
   > .card,
   > .container > .card {
     max-width: 18rem;
+
+    &.card--horizontal {
+      max-width: 34rem;
+    }
   }
 
   > .modal {
