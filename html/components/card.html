@@ -10,6 +10,9 @@
     {% if model.img %}
       <img class="card__img" src="{{model.img.src}}" alt="{{model.img.description}}">
     {% endif %}
+    {% if model.vimeo %}
+      <iframe src="https://player.vimeo.com/video/{{model.vimeo.src}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+    {% endif %}
     {% if model.title or model.description %}
       <div class="card__body">
         {% if model.title %}
