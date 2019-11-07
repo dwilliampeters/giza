@@ -2,7 +2,7 @@
 
 {% from 'button.html' import Button %}
 
-{% macro Card(model) %}
+{% macro CardHorizontal(model) %}
   {% if model.container %}
     <div class="container">
     {% endif %}
@@ -49,7 +49,7 @@
 
 {% block body %}
 
-  {{Card({
+  {{CardHorizontal({
     'header': 'Card header',
     'title': 'Card title',
     'description': 'Some text adding to the card title and to add volume to the card\'s content.',
