@@ -3,34 +3,40 @@
 {% from 'button.html' import Button %}
 
 {% macro Card(model) %}
-  <div class="card">
-    {% if model.header %}
-      <div class="card__header">{{model.header}}</div>
+  {% if model.container %}
+    <div class="container">
     {% endif %}
-    {% if model.img %}
-      <img class="card__img" src="{{model.img.src}}" alt="{{model.img.description}}">
-    {% endif %}
-    {% if model.vimeo %}
-      <div class="card__video">
-        <div class="video">
-          <iframe src="https://player.vimeo.com/video/{{model.vimeo.src}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+    <div class="card">
+      {% if model.header %}
+        <div class="card__header">{{model.header}}</div>
+      {% endif %}
+      {% if model.img %}
+        <img class="card__img" src="{{model.img.src}}" alt="{{model.img.description}}">
+      {% endif %}
+      {% if model.vimeo %}
+        <div class="card__video">
+          <div class="video">
+            <iframe src="https://player.vimeo.com/video/{{model.vimeo.src}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+          </div>
         </div>
-      </div>
-    {% endif %}
-    {% if model.title or model.description %}
-      <div class="card__body">
-        {% if model.title %}
-          <h5 class="card__title">{{model.title}}</h5>
-        {% endif %}
-        {% if model.description %}
-          <p class="card__text">{{model.description}}</p>
-        {% endif %}
-        {% if model.button %}
-          {{ Button(model.button) }}
-        {% endif %}
-      </div>
-    {% endif %}
-  </div>
+      {% endif %}
+      {% if model.title or model.description %}
+        <div class="card__body">
+          {% if model.title %}
+            <h5 class="card__title">{{model.title}}</h5>
+          {% endif %}
+          {% if model.description %}
+            <p class="card__text">{{model.description}}</p>
+          {% endif %}
+          {% if model.button %}
+            {{ Button(model.button) }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    {% if model.container %}
+    </div>
+  {% endif %}
 {% endmacro %}
 
 {% block body %}
@@ -46,7 +52,8 @@
     'button': {
       'url': '#',
       'description': 'Go somewhere'
-    }
+    },
+    'container': true
   })}}
 
 {% endblock %}
