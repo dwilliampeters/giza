@@ -55,7 +55,24 @@
   <h3>Horizontal</h3>
   {{LabExample(AppParentId, AppCurrentId, 'horizontal')}}
   {{LabCode('html', '
-  <div class="card">
+  <div class="card card--horizontal">
+    <div class="row margin-0">
+      <div class="col padding-0">
+        <div class="card__header">...</div>
+      </div>
+      <div class="col col-4 padding-0">
+        <img class="card__img height-100" src="..." alt="">
+      </div>
+      <div class="col col-8 padding-0">
+        <div class="card__body">
+          <h5 class="card__title">...</h5>
+          <p class="card__text">...</p>
+          <a class="button" href="#">
+            <span class="button__text">Go somewhere</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   ')}}
 {% endblock %}
