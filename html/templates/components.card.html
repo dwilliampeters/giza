@@ -22,7 +22,7 @@
   </div>
   ')}}
 
-  <h2>Body</h2>
+  <h3>Body</h3>
   {{LabExample(AppParentId, AppCurrentId, 'body')}}
   {{LabCode('html', '
   <div class="card">
@@ -32,11 +32,21 @@
   </div>
   ')}}
 
-  <h2>Image</h2>
+  <h3>Image</h3>
   {{LabExample(AppParentId, AppCurrentId, 'image')}}
   {{LabCode('html', '
   <div class="card">
     <img class="card__img" src="..." alt="">
+  </div>
+  ')}}
+
+  <h3>Video</h3>
+  {{LabExample(AppParentId, AppCurrentId, 'video')}}
+  {{LabCode('html', '
+  <div class="card">
+    <div class="card__video">
+      ...
+    </div>
   </div>
   ')}}
 {% endblock %}

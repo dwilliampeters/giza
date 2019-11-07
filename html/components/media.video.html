@@ -1,0 +1,15 @@
+{% extends 'lab-source.html' %}
+
+{% from 'media.html' import Media %}
+
+{% block body %}
+
+  {{ Media({
+    'title': 'Heading',
+    'description': '<p>Some text adding to the card title and to add volume to the card\'s content.</p>',
+    'vimeo': {
+      'src': '371612154'
+    }
+  }) }}
+
+{% endblock %}
