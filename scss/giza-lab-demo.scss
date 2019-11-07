@@ -10,7 +10,8 @@ body {
 .app-example {
   padding: 2rem;
 
-  > .card {
+  > .card,
+  > .container > .card {
     max-width: 18rem;
   }
 
