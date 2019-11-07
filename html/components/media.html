@@ -2,12 +2,21 @@
 
 {% macro Media(model) %}
   <div class="media">
-    <div class="media__image">
-      <img src="{{model.img.src}}" alt="{{model.img.description}}">
-    </div>
+    {% if model.img %}
+      <div class="media__image">
+        <img src="{{model.img.src}}" alt="{{model.img.description}}">
+      </div>
+    {% endif %}
+    {% if model.vimeo %}
+      <div class="media__video">
+        <iframe src="https://player.vimeo.com/video/{{model.vimeo.src}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+    {% endif %}
     <div class="media__body">
       <h5 class="media__title">{{model.title}}</h5>
-      {{model.description|safe}}
+      {% if model.description %}
+        {{model.description|safe}}
+      {% endif %}
     </div>
   </div>
 {% endmacro %}
