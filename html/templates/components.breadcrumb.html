@@ -1,0 +1,36 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "breadcrumb" %}
+
+{% block content %}
+  <h1>Breadcrumb</h1>
+
+  <p class="font-size-md">Use the breadcrumb to indicate the current page's location.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  <ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+      <a itemprop="item" class="breadcrumb__link" href="#">
+        <span itemprop="name">Link One</span>
+        <meta itemprop="position" content="1"/>
+      </a>
+    </li>
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+      <a itemprop="item" class="breadcrumb__link" href="#">
+        <span itemprop="name">Link Two</span>
+        <meta itemprop="position" content="2"/>
+      </a>
+    </li>
+    <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+      <a itemprop="item" class="breadcrumb__link" href="#">
+        <span itemprop="name">Link Three</span>
+        <meta itemprop="position" content="3"/>
+      </a>
+    </li>
+  </ol>
+  ')}}
+{% endblock %}

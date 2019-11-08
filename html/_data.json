@@ -74,9 +74,19 @@
     },
     {
       "id": "components",
-      "url": "components.button.html",
+      "url": "components.breadcrumb.html",
       "title": "Components",
       "children": [
+        {
+          "id": "accordion",
+          "url": "components.accordion.html",
+          "title": "Accordion"
+        },
+        {
+          "id": "breadcrumb",
+          "url": "components.breadcrumb.html",
+          "title": "Breadcrumb"
+        },
         {
           "id": "button",
           "url": "components.button.html",

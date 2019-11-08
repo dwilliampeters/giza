@@ -1,0 +1,29 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "components" %}
+{% set AppCurrentId = "accordion" %}
+
+{% block content %}
+  <h1>Accordion</h1>
+
+  <p class="font-size-md">Use Accordions to organise content navigation within a container.</p>
+
+  <h3>Usage</h3>
+
+  {{LabExample(AppParentId, AppCurrentId)}}
+  {{LabCode('html', '
+  <ul class="accordion" data-module="Accordion">
+    <li class="accordion__item is-active">
+      <div class="accordion__header">
+        <h2 class="accordion__title">
+          <button class="accordion__toggle">...</button>
+        </h2>
+      </div>
+      <div class="accordion__content">
+        <p>...</p>
+      </div>
+    </li>
+    ...
+  </ul>
+  ')}}
+{% endblock %}

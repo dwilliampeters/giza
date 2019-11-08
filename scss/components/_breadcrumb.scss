@@ -1,0 +1,24 @@
+.breadcrumb {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumb__item {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &:not(:last-child)::after {
+    display: block;
+    padding: 0 $spacer;
+    content: '/';
+  }
+
+  &.is-active {
+    .breadcrumb__link {
+      font-weight: $font-weight-bold;
+    }
+  }
+}

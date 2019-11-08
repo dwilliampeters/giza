@@ -1,0 +1,36 @@
+{% extends 'lab-source.html' %}
+
+{% macro Breadcrumb(modal) %}
+  {% if model.container %}
+    <div class="container">
+    {% endif %}
+    <ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <a itemprop="item" class="breadcrumb__link" href="#">
+          <span itemprop="name">Link One</span>
+          <meta itemprop="position" content="1"/>
+        </a>
+      </li>
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <a itemprop="item" class="breadcrumb__link" href="#">
+          <span itemprop="name">Link Two</span>
+          <meta itemprop="position" content="2"/>
+        </a>
+      </li>
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+        <a itemprop="item" class="breadcrumb__link" href="#">
+          <span itemprop="name">Link Three</span>
+          <meta itemprop="position" content="3"/>
+        </a>
+      </li>
+    </ol>
+    {% if model.container %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% block body %}
+
+  {{ Breadcrumb() }}
+
+{% endblock %}

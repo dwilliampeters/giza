@@ -250,6 +250,8 @@
           
             
   
+    
+  
 
   
 
@@ -261,7 +263,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent">
+  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
     <a class="nav__link" href="components.breadcrumb.html">Components</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -283,14 +285,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="components.breadcrumb.html">Breadcrumb</a>
     
 </li>
@@ -453,8 +457,6 @@
           
             
   
-    
-  
 
   
 
@@ -466,7 +468,7 @@
     
   
 
-  <li class="nav__item nav__item-level-1 nav__item-parent is-active">
+  <li class="nav__item nav__item-level-1 nav__item-parent">
     <a class="nav__link" href="utilities.display.html">Utilities</a>
     
       <ul class="nav nav--vertical nav--nested">
@@ -563,8 +565,6 @@
         
           
   
-    
-  
 
   
 
@@ -572,7 +572,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="utilities.type.html">Type</a>
     
 </li>
@@ -657,106 +657,48 @@
     </div>
     <main class="app-content-sibling">
       
+  <h1>Breadcrumb</h1>
 
-  <h1>Type</h1>
+  <p class="font-size-md">Use the breadcrumb to indicate the current page's location.</p>
 
-  <p class="font-size-md">Our responsive text sizing, each font size has its range of sizes with its own media queries.</p>
+  <h3>Usage</h3>
 
   
+  
+    <div class="app-example">
+      <div class="app-example__tabs">
+        <a class="app-example__tab" href="https://r500dwp.github.io/giza/components/breadcrumb.html" target="_blank">Open this example in a new window</a>
+      </div>
+      <div data-module="LabFrame" data-options='{"src": "https://r500dwp.github.io/giza/components/breadcrumb.html"}'></div>
+    </div>
+  
 
+  
   <div class="app-code" data-module="LabCode">
-    <table class="table">
-      <tr>
-        <th class="font-size-xs">Class</th>
-        <th class="font-size-xs">Rule</th>
-      </tr>
-
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-display</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-xxxl</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-xxl</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-xl</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-lg</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-md</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-base</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-sm</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.font-size-xs</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css"></code></pre>
-          </td>
-        </tr>
-      
-    </table>
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  &lt;ol class=&quot;breadcrumb&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/BreadcrumbList&quot;&gt;
+    &lt;li class=&quot;breadcrumb__item&quot; itemprop=&quot;itemListElement&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/ListItem&quot;&gt;
+      &lt;a itemprop=&quot;item&quot; class=&quot;breadcrumb__link&quot; href=&quot;#&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Link One&lt;/span&gt;
+        &lt;meta itemprop=&quot;position&quot; content=&quot;1&quot;/&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;breadcrumb__item&quot; itemprop=&quot;itemListElement&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/ListItem&quot;&gt;
+      &lt;a itemprop=&quot;item&quot; class=&quot;breadcrumb__link&quot; href=&quot;#&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Link Two&lt;/span&gt;
+        &lt;meta itemprop=&quot;position&quot; content=&quot;2&quot;/&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;breadcrumb__item&quot; itemprop=&quot;itemListElement&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/ListItem&quot;&gt;
+      &lt;a itemprop=&quot;item&quot; class=&quot;breadcrumb__link&quot; href=&quot;#&quot;&gt;
+        &lt;span itemprop=&quot;name&quot;&gt;Link Three&lt;/span&gt;
+        &lt;meta itemprop=&quot;position&quot; content=&quot;3&quot;/&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  </code></pre>
   </div>
-
-
 
 
     </main>
