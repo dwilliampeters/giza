@@ -16,7 +16,7 @@
 {% macro Navbar(model) %}
   <nav class="navbar">
     {% if model.innerContainer %}
-      <div class="container position-relative">
+      <div class="container padding-0">
       {% endif %}
 
       <a class="navbar__brand" href="{{ model.brand.url }}">
@@ -80,7 +80,8 @@
       ],
       'classes': ' navbar__nav'
     },
-    'search': false
+    'search': true,
+    'innerContainer': true
   }) }}
 
 {% endblock %}
