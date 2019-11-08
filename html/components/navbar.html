@@ -15,30 +15,38 @@
 
 {% macro Navbar(model) %}
   <nav class="navbar">
-    <a class="navbar__brand" href="{{ model.brand.url }}">
-      {% if model.brand.logo.src %}
-        <img src="{{ model.brand.logo.src }}" alt="{{ model.brand.logo.description }}">
-      {% else %}
-        {{ model.brand.title }}
+    {% if model.innerContainer %}
+      <div class="container position-relative">
       {% endif %}
-    </a>
 
-    {% if model.nav %}
-      {{ Toggler({
+      <a class="navbar__brand" href="{{ model.brand.url }}">
+        {% if model.brand.logo.src %}
+          <img src="{{ model.brand.logo.src }}" alt="{{ model.brand.logo.description }}">
+        {% else %}
+          {{ model.brand.title }}
+        {% endif %}
+      </a>
+
+      {% if model.nav %}
+        {{ Toggler({
         'target': 'parent',
         'class': 'has-nav-open',
         'aria': {
           'label': 'Toggle navigation'
         }
       }) }}
-      <div class="navbar__toggle">
-        {{ Nav(model.nav) }}
-        {% if model.search %}
-          <form class="form navbar__form">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            <button class="button" type="submit">Search</button>
-          </form>
-        {% endif %}
+        <div class="navbar__toggle">
+          {{ Nav(model.nav) }}
+          {% if model.search %}
+            <form class="form navbar__form">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="button" type="submit">Search</button>
+            </form>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if model.innerContainer %}
       </div>
     {% endif %}
   </nav>
