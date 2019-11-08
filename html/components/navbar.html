@@ -15,7 +15,14 @@
 
 {% macro Navbar(model) %}
   <nav class="navbar">
-    <a class="navbar__brand" href="{{model.brand.url}}">{{model.brand.title}}</a>
+    <a class="navbar__brand" href="{{ model.brand.url }}">
+      {% if model.brand.logo.src %}
+        <img src="{{ model.brand.logo.src }}" alt="{{ model.brand.logo.description }}">
+      {% else %}
+        {{ model.brand.title }}
+      {% endif %}
+    </a>
+
     {% if model.nav %}
       {{ Toggler({
         'target': 'parent',
@@ -42,6 +49,10 @@
   {{ Navbar({
     'brand': {
       'title': 'Navbar',
+      'logo': {
+        'src': '',
+        'description': ''
+      },
       'url': '#'
     },
     'nav': {
