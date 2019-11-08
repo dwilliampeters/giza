@@ -1,11 +1,7 @@
 $navbar-padding: $spacer-sm $spacer;
 
 .navbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: $spacer-xs $spacer;
+  padding: $spacer-xs 0;
   background: $gray;
 
   > .container {
