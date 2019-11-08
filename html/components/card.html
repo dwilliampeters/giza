@@ -26,7 +26,7 @@
             <h5 class="card__title">{{model.title}}</h5>
           {% endif %}
           {% if model.description %}
-            <div class="card__text">{{model.description}}</div>
+            <div class="card__text">{{model.description|safe}}</div>
           {% endif %}
           {% if model.button %}
             {{ Button(model.button) }}
