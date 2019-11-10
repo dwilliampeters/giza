@@ -488,14 +488,16 @@
         
           
   
-
+    
   
 
   
 
   
 
-  <li class="nav__item">
+  
+
+  <li class="nav__item is-active">
     <a class="nav__link" href="utilities.embed.html">Embed</a>
     
 </li>
@@ -533,8 +535,6 @@
         
           
   
-    
-  
 
   
 
@@ -542,7 +542,7 @@
 
   
 
-  <li class="nav__item is-active">
+  <li class="nav__item">
     <a class="nav__link" href="utilities.size.html">Size</a>
     
 </li>
@@ -673,263 +673,19 @@
     <main class="app-content-sibling">
       
 
-  <h1>Size</h1>
+  <h1>Embed</h1>
 
-  <p class="font-size-md">Responsive control over widths and heights.</p>
-
-  <h3>Width</h3>
+  <p class="font-size-md">Quickly embed responsive media.</p>
 
   
-
   <div class="app-code" data-module="LabCode">
-    <table class="table">
-      <tr>
-        <th class="font-size-xs">Class</th>
-        <th class="font-size-xs">Rule</th>
-      </tr>
-
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.width-25</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">width: 25%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.width-50</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">width: 50%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.width-75</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">width: 75%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.width-100</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">width: 100%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.width-auto</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">width: auto;</code></pre>
-          </td>
-        </tr>
-      
-    </table>
+    <button class="button app-copy-button js-app-copy-button">Copy code</button>
+    <pre class="language-html"><code class="language-html">
+  &lt;div class=&quot;embed&quot;&gt;
+    &lt;iframe src=&quot;https://player.vimeo.com/video/371612154&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
+  &lt;/div
+  </code></pre>
   </div>
-
-
-
-  <h3>Min width</h3>
-
-  
-
-  <div class="app-code" data-module="LabCode">
-    <table class="table">
-      <tr>
-        <th class="font-size-xs">Class</th>
-        <th class="font-size-xs">Rule</th>
-      </tr>
-
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-width-25</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-width: 25%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-width-50</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-width: 50%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-width-75</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-width: 75%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-width-100</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-width: 100%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-width-auto</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-width: auto;</code></pre>
-          </td>
-        </tr>
-      
-    </table>
-  </div>
-
-
-
-  <h3>Height</h3>
-
-  
-
-  <div class="app-code" data-module="LabCode">
-    <table class="table">
-      <tr>
-        <th class="font-size-xs">Class</th>
-        <th class="font-size-xs">Rule</th>
-      </tr>
-
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.height-25</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">height: 25%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.height-50</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">height: 50%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.height-75</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">height: 75%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.height-100</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">height: 100%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.height-auto</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">width: auto;</code></pre>
-          </td>
-        </tr>
-      
-    </table>
-  </div>
-
-
-
-  <h3>Min height</h3>
-
-  
-
-  <div class="app-code" data-module="LabCode">
-    <table class="table">
-      <tr>
-        <th class="font-size-xs">Class</th>
-        <th class="font-size-xs">Rule</th>
-      </tr>
-
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-height-25</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-height: 25%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-height-50</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-height: 50%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-height-75</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-height: 75%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-height-100</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-height: 100%;</code></pre>
-          </td>
-        </tr>
-      
-        <tr>
-          <td>
-            <pre class="language-css"><code class="language-css">.min-height-auto</code></pre>
-          </td>
-          <td>
-            <pre class="language-css"><code class="language-css">min-height: auto;</code></pre>
-          </td>
-        </tr>
-      
-    </table>
-  </div>
-
-
-
-  <h3>Media Queries</h3>
-
-  <p>
-    <code>width-50@md</code>
-  </p>
 
 
     </main>

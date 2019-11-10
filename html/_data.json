@@ -74,7 +74,7 @@
     },
     {
       "id": "components",
-      "url": "components.breadcrumb.html",
+      "url": "components.accordion.html",
       "title": "Components",
       "children": [
         {
@@ -120,6 +120,11 @@
           "id": "display",
           "url": "utilities.display.html",
           "title": "Display"
+        },
+        {
+          "id": "embed",
+          "url": "utilities.embed.html",
+          "title": "Embed"
         },
         {
           "id": "flex",

@@ -1,12 +1,10 @@
 $link-color: $blue !default;
-$link-hover-color: darken($link-color, 50%) !default;
+$link-hover-color: $link-color !default;
 $link-visited-color: $link-color !default;
-$link-focus-bg-color: #ffcd3d !default;
-$link-focus-box-shadow: 0 -2px #ffcd3d, 0 4px #0b0c0c !default;
 
 $link-trans-speed: 200 !default;
 $link-underline: underline !default;
-$link-hover-underline: underline !default;
+$link-hover-underline: none !default;
 $link-focus-underline: none !default;
 
 a {
@@ -22,8 +20,6 @@ a {
   }
 
   &:focus {
-    background-color: $link-focus-bg-color;
-    box-shadow: $link-focus-box-shadow;
     text-decoration: $link-focus-underline;
   }
 

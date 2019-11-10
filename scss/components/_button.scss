@@ -6,14 +6,13 @@ $button-border: 0 !default;
 $button-cursor: pointer !default;
 $button-bg: $blue !default;
 $button-color: $white !default;
+$button-font-weight: $font-weight-normal !default;
 $button-hover-bg: darken($blue, 10%) !default;
 $button-hover-color: $white !default;
 $button-visited-bg: $button-bg !default;
 $button-visited-color: $white !default;
 $button-visited-hover-bg: $button-hover-bg !default;
 $button-visited-hover-color: $button-hover-color !default;
-$button-focus-bg-color: #ffcd3d !default;
-$button-focus-box-shadow: 0 2px #0b0c0c !default;
 $button-focus-text-color: #0b0c0c !default;
 $button-active-bg: $button-hover-bg !default;
 $button-active-color: $button-hover-color !default;
@@ -40,6 +39,7 @@ a.button,
   background-color: $button-bg;
   color: $button-color;
   cursor: $button-cursor;
+  font-weight: $button-font-weight;
   outline: none;
   text-decoration: $button-text-decoration;
   vertical-align: baseline;
@@ -51,8 +51,6 @@ a.button,
   );
 
   &:focus {
-    background-color: $button-focus-bg-color;
-    box-shadow: $button-focus-box-shadow;
     color: $button-focus-text-color;
 
     .icon {

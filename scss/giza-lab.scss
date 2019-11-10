@@ -9,29 +9,33 @@
 // Colors
 $bombay: #afb1b8;
 $bonjour: #e5e0e1;
-$gallery: #f0f0f0;
+$gallery: #ededed;
 $woodsmoke: #0b0c0c;
 $denim: #1a50bc;
 
 // New Colors
+$azure-radiance: #0090ed;
 $cobalt: #0250bb;
+$science-blue: #0060df;
+$catalina-blue: #073072;
 $haiti: #20123a;
 $mirage: #202340;
 $gun-powder: #42425a;
+$heliotropeapprox: #9059ff;
+$purple-heart: #592acb;
+$hot-cinnamon: #e25920;
 
-// Dark theme colors
-$wild-sand: #f5f4f4;
-$tuatara: #201f1e;
-$tuatara-medium: #252423;
-$tuatara-light: #323130;
+// Reboot
+$body-bg: #f9f7fd;
 
 // Fonts
 $font-family-base: 'Fira Sans', sans-serif;
 
 // Base
 $body-color: $mirage;
-$link-color: $cobalt;
-$button-bg: $cobalt;
+$link-color: $science-blue;
+$button-bg: $purple-heart;
+$button-font-weight: $font-weight-medium;
 $app-header-background-color: $haiti;
 $app-footer-background-color: $haiti;
 $app-footer-text-color: $white;
@@ -42,65 +46,6 @@ $app-footer-link-hover-color: $app-footer-link-color;
 @import 'giza';
 
 // Lab styles
-.theme-dark {
-  background-color: $tuatara-medium;
-  color: $wild-sand;
-
-  a:not(.button) {
-    &:focus {
-      color: $link-hover-color !important;
-    }
-
-    @include color-swap-on-hover($link-color, $wild-sand, $link-trans-speed);
-  }
-
-  .app-header {
-    background-color: $denim;
-    color: $wild-sand;
-
-    a:not(.button) {
-      color: $white;
-    }
-  }
-
-  .app-sidebar {
-    background-color: $tuatara;
-
-    @include md {
-      background-color: transparent;
-    }
-  }
-
-  .app-footer {
-    background-color: $tuatara-light;
-    color: $wild-sand;
-  }
-
-  .app-example {
-    border-color: $wild-sand;
-    background-color: $white;
-  }
-
-  .app-code {
-    background-color: $tuatara-light;
-  }
-
-  code {
-    background-color: $tuatara-light;
-  }
-
-  .app-example__tabs {
-    background-color: $tuatara-light;
-  }
-
-  .table {
-    th,
-    td {
-      border-color: $tuatara-light;
-    }
-  }
-}
-
 .app-header {
   position: absolute;
   z-index: 98;
@@ -218,7 +163,7 @@ a.app-download {
 }
 
 .app-content-sibling {
-  overflow-x: auto;
+  // overflow-x: auto;
 }
 
 .app-sidebar {
@@ -228,17 +173,15 @@ a.app-download {
   left: 0;
   display: flex;
   display: none;
-  overflow: auto;
+  // overflow: auto;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
   padding: $spacer $spacer $spacer ($spacer * 4);
-  background-color: $haiti;
-  box-shadow: 0 2px 20px rgba($black, 0.6);
-  color: $white;
+  background-color: $white;
 
   a {
-    @include color-swap-on-hover($white, $white);
+    @include color-swap-on-hover($haiti, $haiti);
 
     text-decoration: underline;
 
@@ -261,7 +204,7 @@ a.app-download {
 
     &.is-active {
       > .nav__link {
-        border-bottom: 3px solid $white;
+        border-bottom: 3px solid $heliotropeapprox;
         text-decoration: none;
       }
     }
@@ -285,7 +228,7 @@ a.app-download {
 
     &.is-active {
       > .nav__link {
-        border-bottom: 3px solid $white;
+        border-bottom: 3px solid $hot-cinnamon;
         text-decoration: none;
 
         &:hover {
@@ -315,7 +258,9 @@ a.app-download {
 .app-code {
   position: relative;
   margin-bottom: $spacer * 2;
-  background-color: $gallery;
+  background-color: #e9e6f3;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #e9e6f3;
 
   pre {
     margin: 0;
@@ -346,7 +291,14 @@ body.app-example {
 .app-example {
   position: relative;
   padding-top: ($spacer * 2);
-  border: 1px solid $gallery;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #e9e6f3;
+
+  + .app-code {
+    margin-top: -10px;
+    border-radius: 0 0 10px 10px;
+  }
 
   .grid .grid__cell,
   .flex-grid .flex-grid__cell {
@@ -368,11 +320,12 @@ body.app-example {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: $gallery;
+  background-color: #e9e6f3;
 }
 
-.app-example__tab {
+a.app-example__tab {
   @include font-size-xs;
+  @include color-swap-on-hover($haiti, $haiti);
 
   display: inline-flex;
   padding: ($spacer / 2);
@@ -399,11 +352,11 @@ body.app-example {
   }
 
   .app-version {
+    @include font-size-xs;
+
     display: inline-block;
     padding: 0 ($spacer / 2);
     margin-left: auto;
-    font-size: 0.8rem;
-    font-style: italic;
     line-height: 0.8rem;
   }
 
@@ -428,7 +381,8 @@ body.app-example {
   }
 
   .app-content-sibling {
-    flex: 1 1 60%;
+    max-width: calc(100% - 200px);
+    flex: 1 1 calc(100% - 200px);
     padding-left: ($spacer * 2);
   }
 
@@ -437,10 +391,9 @@ body.app-example {
     top: 0;
     display: block;
     height: auto;
-    flex: 0 0 200px;
+    flex: 0 1 200px;
     padding: ($spacer * 2) 0 !important;
     background: transparent;
-    box-shadow: none;
 
     > .button {
       display: none;
@@ -449,7 +402,10 @@ body.app-example {
 
   .app-nav {
     padding: $spacer;
-    background-color: $haiti;
+    border: 1px solid #e9e6f3;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #e9e6f3;
 
     .nav__item {
       @include font-size-base;
@@ -464,5 +420,10 @@ body.app-example {
 @include lg {
   .app-sidebar {
     flex: 0 0 250px;
+  }
+
+  .app-content-sibling {
+    max-width: calc(100% - 250px);
+    flex: 1 1 calc(100% - 250px);
   }
 }

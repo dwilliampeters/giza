@@ -1,0 +1,17 @@
+{% extends 'lab-side-content.html' %}
+
+{% set AppParentId = "utilities" %}
+{% set AppCurrentId = "embed" %}
+
+{% block content %}
+
+  <h1>Embed</h1>
+
+  <p class="font-size-md">Quickly embed responsive media.</p>
+
+  {{LabCode('html', '
+  <div class="embed">
+    <iframe src="https://player.vimeo.com/video/371612154" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+  </div
+  ')}}
+{% endblock %}
