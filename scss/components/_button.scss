@@ -7,7 +7,7 @@ $button-cursor: pointer !default;
 $button-bg: $blue !default;
 $button-color: $white !default;
 $button-font-weight: $font-weight-normal !default;
-$button-hover-bg: darken($blue, 10%) !default;
+$button-hover-bg: darken($button-bg, 10%) !default;
 $button-hover-color: $white !default;
 $button-visited-bg: $button-bg !default;
 $button-visited-color: $white !default;
