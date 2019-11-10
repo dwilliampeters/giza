@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // Dependencies
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 @import 'vendor/prism-github';
 @import 'vendor/prism-dark';
 @import 'settings';
@@ -29,7 +29,7 @@ $hot-cinnamon: #e25920;
 $body-bg: #f9f7fd;
 
 // Fonts
-$font-family-base: 'Fira Sans', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 
 // Base
 $body-color: $mirage;
@@ -340,6 +340,7 @@ a.app-example__tab {
 @include md {
   .app-header {
     position: relative;
+    height: 60px;
   }
 
   .app-header__inner {
