@@ -1,4 +1,4 @@
-$container-max-width: $site-max-width !default;
+$container-width: $site-max-width !default;
 $column-spacing: $spacer !default;
 $column-breakpoint-spacings: () !default;
 
@@ -10,7 +10,7 @@ $column-breakpoint-spacings: () !default;
 }
 
 .container {
-  width: $container-max-width;
+  width: $container-width;
   margin-right: auto;
   margin-left: auto;
 }

@@ -1,3 +1,4 @@
+$modal-width: 600px !default;
 $modal-background-color: rgba($white, 0.6) !default;
 $modal-content-border: 1px solid $gray !default;
 $modal-content-background-color: $white !default;
@@ -12,8 +13,6 @@ $modal-footer-border: 1px solid $gray !default;
   bottom: 0;
   left: 0;
   display: none;
-  align-items: center;
-  justify-content: center;
   background: $modal-background-color;
 
   &.is-active {
@@ -22,11 +21,34 @@ $modal-footer-border: 1px solid $gray !default;
 }
 
 .modal__content {
-  max-width: 500px;
-  flex: 1;
+  width: $modal-width;
+  align-self: center;
   margin: 0 auto;
   border: $modal-content-border;
   background: $modal-content-background-color;
+  justify-self: center;
+}
+
+.modal__content--fluid {
+  width: 100%;
+}
+
+.modal__content--position-top {
+  align-self: flex-start;
+}
+
+.modal__content--position-right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.modal__content--position-bottom {
+  align-self: flex-end;
+}
+
+.modal__content--position-left {
+  margin-right: auto;
+  margin-left: 0;
 }
 
 .modal__header {
