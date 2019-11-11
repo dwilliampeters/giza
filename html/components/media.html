@@ -18,7 +18,9 @@
         </div>
       {% endif %}
       <div class="media__body">
-        <h5 class="media__title">{{model.title}}</h5>
+        {% if model.title %}
+          <h5 class="media__title">{{model.title}}</h5>
+        {% endif %}
         {% if model.description %}
           {{model.description|safe}}
         {% endif %}
