@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -102,6 +102,8 @@
 /******/ 				}
 /******/ 				script.src = jsonpScriptSrc(chunkId);
 /******/
+/******/ 				// create error before stack unwound to get useful stacktrace later
+/******/ 				var error = new Error();
 /******/ 				onScriptComplete = function (event) {
 /******/ 					// avoid mem leaks in IE.
 /******/ 					script.onerror = script.onload = null;
@@ -111,7 +113,8 @@
 /******/ 						if(chunk) {
 /******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 /******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							var error = new Error('Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')');
+/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 							error.name = 'ChunkLoadError';
 /******/ 							error.type = errorType;
 /******/ 							error.request = realSrc;
 /******/ 							chunk[1](error);
@@ -228,7 +231,7 @@ eval("\n\n__webpack_require__(/*! ./modules */ \"./modules/index.js\");\n\n__web
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./\": [\n\t\t\"./modules/index.js\"\n\t],\n\t\"./Accordion\": [\n\t\t\"./modules/Accordion.js\",\n\t\t1\n\t],\n\t\"./Accordion.js\": [\n\t\t\"./modules/Accordion.js\",\n\t\t1\n\t],\n\t\"./Example\": [\n\t\t\"./modules/Example.js\",\n\t\t2\n\t],\n\t\"./Example.js\": [\n\t\t\"./modules/Example.js\",\n\t\t2\n\t],\n\t\"./LabCode\": [\n\t\t\"./modules/LabCode.js\",\n\t\t0\n\t],\n\t\"./LabCode.js\": [\n\t\t\"./modules/LabCode.js\",\n\t\t0\n\t],\n\t\"./LabFrame\": [\n\t\t\"./modules/LabFrame.js\",\n\t\t3\n\t],\n\t\"./LabFrame.js\": [\n\t\t\"./modules/LabFrame.js\",\n\t\t3\n\t],\n\t\"./Nav\": [\n\t\t\"./modules/Nav.js\",\n\t\t4\n\t],\n\t\"./Nav.js\": [\n\t\t\"./modules/Nav.js\",\n\t\t4\n\t],\n\t\"./OffCanvas\": [\n\t\t\"./modules/OffCanvas.js\",\n\t\t5\n\t],\n\t\"./OffCanvas.js\": [\n\t\t\"./modules/OffCanvas.js\",\n\t\t5\n\t],\n\t\"./Sticky\": [\n\t\t\"./modules/Sticky.js\",\n\t\t8,\n\t\t6\n\t],\n\t\"./Sticky.js\": [\n\t\t\"./modules/Sticky.js\",\n\t\t8,\n\t\t6\n\t],\n\t\"./Toggle\": [\n\t\t\"./modules/Toggle.js\",\n\t\t7\n\t],\n\t\"./Toggle.js\": [\n\t\t\"./modules/Toggle.js\",\n\t\t7\n\t],\n\t\"./index\": [\n\t\t\"./modules/index.js\"\n\t],\n\t\"./index.js\": [\n\t\t\"./modules/index.js\"\n\t]\n};\nfunction webpackAsyncContext(req) {\n\tvar ids = map[req];\n\tif(!ids) {\n\t\treturn Promise.resolve().then(function() {\n\t\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\t\te.code = 'MODULE_NOT_FOUND';\n\t\t\tthrow e;\n\t\t});\n\t}\n\treturn Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {\n\t\tvar id = ids[0];\n\t\treturn __webpack_require__.t(id, 7);\n\t});\n}\nwebpackAsyncContext.keys = function webpackAsyncContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackAsyncContext.id = \"./modules lazy recursive ^\\\\.\\\\/.*$\";\nmodule.exports = webpackAsyncContext;\n\n//# sourceURL=webpack:///./modules_lazy_^\\.\\/.*$_namespace_object?");
+eval("var map = {\n\t\"./\": [\n\t\t\"./modules/index.js\"\n\t],\n\t\"./Accordion\": [\n\t\t\"./modules/Accordion.js\",\n\t\t1\n\t],\n\t\"./Accordion.js\": [\n\t\t\"./modules/Accordion.js\",\n\t\t1\n\t],\n\t\"./Example\": [\n\t\t\"./modules/Example.js\",\n\t\t2\n\t],\n\t\"./Example.js\": [\n\t\t\"./modules/Example.js\",\n\t\t2\n\t],\n\t\"./LabCode\": [\n\t\t\"./modules/LabCode.js\",\n\t\t0\n\t],\n\t\"./LabCode.js\": [\n\t\t\"./modules/LabCode.js\",\n\t\t0\n\t],\n\t\"./LabFrame\": [\n\t\t\"./modules/LabFrame.js\",\n\t\t3\n\t],\n\t\"./LabFrame.js\": [\n\t\t\"./modules/LabFrame.js\",\n\t\t3\n\t],\n\t\"./Nav\": [\n\t\t\"./modules/Nav.js\",\n\t\t4\n\t],\n\t\"./Nav.js\": [\n\t\t\"./modules/Nav.js\",\n\t\t4\n\t],\n\t\"./OffCanvas\": [\n\t\t\"./modules/OffCanvas.js\",\n\t\t5\n\t],\n\t\"./OffCanvas.js\": [\n\t\t\"./modules/OffCanvas.js\",\n\t\t5\n\t],\n\t\"./Sticky\": [\n\t\t\"./modules/Sticky.js\",\n\t\t8,\n\t\t6\n\t],\n\t\"./Sticky.js\": [\n\t\t\"./modules/Sticky.js\",\n\t\t8,\n\t\t6\n\t],\n\t\"./Toggle\": [\n\t\t\"./modules/Toggle.js\",\n\t\t7\n\t],\n\t\"./Toggle.js\": [\n\t\t\"./modules/Toggle.js\",\n\t\t7\n\t],\n\t\"./index\": [\n\t\t\"./modules/index.js\"\n\t],\n\t\"./index.js\": [\n\t\t\"./modules/index.js\"\n\t]\n};\nfunction webpackAsyncContext(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\treturn Promise.resolve().then(function() {\n\t\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\t\te.code = 'MODULE_NOT_FOUND';\n\t\t\tthrow e;\n\t\t});\n\t}\n\n\tvar ids = map[req], id = ids[0];\n\treturn Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {\n\t\treturn __webpack_require__.t(id, 7);\n\t});\n}\nwebpackAsyncContext.keys = function webpackAsyncContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackAsyncContext.id = \"./modules lazy recursive ^\\\\.\\\\/.*$\";\nmodule.exports = webpackAsyncContext;\n\n//# sourceURL=webpack:///./modules_lazy_^\\.\\/.*$_namespace_object?");
 
 /***/ }),
 

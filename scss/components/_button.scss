@@ -6,6 +6,7 @@ $button-border: 0 !default;
 $button-cursor: pointer !default;
 $button-bg: $blue !default;
 $button-color: $white !default;
+$button-font-family: $font-family-base !default;
 $button-font-weight: $font-weight-normal !default;
 $button-hover-bg: darken($button-bg, 10%) !default;
 $button-hover-color: $white !default;
@@ -39,6 +40,7 @@ a.button,
   background-color: $button-bg;
   color: $button-color;
   cursor: $button-cursor;
+  font-family: $button-font-family;
   font-weight: $button-font-weight;
   outline: none;
   text-decoration: $button-text-decoration;
