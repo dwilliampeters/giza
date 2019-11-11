@@ -8,6 +8,7 @@ $modal-footer-border: 1px solid $gray !default;
 
 .modal {
   position: fixed;
+  z-index: 99;
   top: 0;
   right: 0;
   bottom: 0;
