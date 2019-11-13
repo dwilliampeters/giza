@@ -1,18 +1,28 @@
 $container-width: $site-width !default;
+$container-width-slim: $site-width / 2 !default;
 $column-spacing: $spacer !default;
 $column-breakpoint-spacings: () !default;
 
 .container,
-.container-fluid {
+.container-fluid,
+.container-slim {
   max-width: 100%;
   padding-right: $column-spacing;
   padding-left: $column-spacing;
 }
 
-.container {
-  width: $container-width;
+.container,
+.container-slim {
   margin-right: auto;
   margin-left: auto;
+}
+
+.container {
+  width: $container-width;
+}
+
+.container-slim {
+  width: $container-width-slim;
 }
 
 @each $key, $value in $breakpoints {
