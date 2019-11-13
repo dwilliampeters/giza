@@ -19,7 +19,13 @@
       {% endif %}
       <div class="media__body">
         {% if model.title %}
-          <h5 class="media__title">{{model.title}}</h5>
+          {% if model.url %}
+            <h5 class="media__title">
+              <a href="{{model.url}}">{{model.title}}</a>
+            </h5>
+          {% else %}
+            <h5 class="media__title">{{model.title}}</h5>
+          {% endif %}
         {% endif %}
         {% if model.description %}
           {{model.description|safe}}
