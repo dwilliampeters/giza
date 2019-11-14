@@ -32,7 +32,7 @@
                 <h5 class="card__title">{{model.title}}</h5>
               {% endif %}
               {% if model.description %}
-                <p class="card__text">{{model.description|safe}}</p>
+                <div class="card__text">{{model.description|safe}}</div>
               {% endif %}
               {% if model.button %}
                 {{ Button(model.button) }}
