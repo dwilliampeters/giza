@@ -6,7 +6,7 @@
   {% if model.container %}
     <div class="container">
     {% endif %}
-    <div class="card{% if model.centered %} text-center{% endif %}">
+    <div class="card{% if model.centered %} text-center{% endif %}{% if model.classes %} {{model.classes}}{% endif %}">
       {% if model.header %}
         <div class="card__header">{{model.header}}</div>
       {% endif %}
