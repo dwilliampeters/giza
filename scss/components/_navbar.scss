@@ -1,6 +1,9 @@
 $navbar-padding: $spacer-sm $spacer !default;
 $navbar-bg-color: $gray !default;
 
+$navbar-toggler-border: 1px solid $black !default;
+$navbar-toggler-bg-color: $black !default;
+
 .navbar {
   padding: $spacer-xs 0;
   background-color: $navbar-bg-color;
@@ -20,7 +23,7 @@ $navbar-bg-color: $gray !default;
 
 .navbar__toggler {
   padding: $spacer-sm $spacer-sm;
-  border: 1px solid $black;
+  border: $navbar-toggler-border;
   background: none;
 }
 
@@ -41,7 +44,7 @@ $navbar-bg-color: $gray !default;
     display: block;
     width: 100%;
     height: 4px;
-    background-color: $black;
+    background-color: $navbar-toggler-bg-color;
 
     &:nth-child(1) {
       top: 0;
