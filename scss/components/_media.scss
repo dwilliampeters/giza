@@ -1,14 +1,16 @@
+$media-body-padding: $spacer !default;
+
 .media {
   display: flex;
   flex-direction: column;
 }
 
 .media__body {
-  padding: $spacer 0;
+  padding: $media-body-padding 0;
 }
 
 .media__title {
-  margin: 0 0 $spacer;
+  margin: 0 0 $media-body-padding;
 }
 
 @include md {
@@ -21,6 +23,6 @@
   }
 
   .media__body {
-    padding: 0 $spacer;
+    padding: 0 $media-body-padding;
   }
 }
