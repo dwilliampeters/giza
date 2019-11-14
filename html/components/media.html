@@ -4,7 +4,7 @@
   {% if model.container %}
     <div class="container">
     {% endif %}
-    <div class="media">
+    <div class="media{% if model.classes %} {{model.classes}}{% endif %}">
       {% if model.img %}
         <div class="media__image">
           <img src="{{model.img.src}}" alt="{{model.img.description}}">
