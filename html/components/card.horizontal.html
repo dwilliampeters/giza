@@ -6,7 +6,7 @@
   {% if model.container %}
     <div class="container">
     {% endif %}
-    <div class="card card--horizontal">
+    <div class="card card--horizontal{% if model.classes %} {{model.classes}}{% endif %}">
       <div class="row margin-0">
         {% if model.header %}
           <div class="col padding-0">
@@ -32,7 +32,7 @@
                 <h5 class="card__title">{{model.title}}</h5>
               {% endif %}
               {% if model.description %}
-                <p class="card__text">{{model.description}}</p>
+                <p class="card__text">{{model.description|safe}}</p>
               {% endif %}
               {% if model.button %}
                 {{ Button(model.button) }}
