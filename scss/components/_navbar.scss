@@ -1,8 +1,9 @@
-$navbar-padding: $spacer-sm $spacer;
+$navbar-padding: $spacer-sm $spacer !default;
+$navbar-bg-color: $gray !default;
 
 .navbar {
   padding: $spacer-xs 0;
-  background: $gray;
+  background-color: $navbar-bg-color;
 
   > .container {
     display: flex;
