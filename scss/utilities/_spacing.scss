@@ -1,7 +1,5 @@
-$size-breakpoints: null !default;
-
 @mixin spacing($breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
   .margin-auto#{$breakpoint-suffix} {
     margin: auto !important;
@@ -366,7 +364,7 @@ $size-breakpoints: null !default;
 
 @include spacing();
 
-@each $key in $size-breakpoints {
+@each $key, $value in $breakpoints {
   @include breakpoint($key) {
     @include spacing($key);
   }

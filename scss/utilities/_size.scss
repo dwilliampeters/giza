@@ -1,7 +1,5 @@
-$size-breakpoints: null !default;
-
 @mixin size($breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
   .width-25#{$breakpoint-suffix} {
     width: 25% !important;
@@ -66,7 +64,7 @@ $size-breakpoints: null !default;
 
 @include size();
 
-@each $key in $size-breakpoints {
+@each $key, $value in $breakpoints {
   @include breakpoint($key) {
     @include size($key);
   }

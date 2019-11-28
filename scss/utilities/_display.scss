@@ -1,7 +1,5 @@
-$display-breakpoints: null;
-
 @mixin display($breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
   .display-none#{$breakpoint-suffix} {
     display: none !important;
@@ -22,7 +20,7 @@ $display-breakpoints: null;
 
 @include display();
 
-@each $key in $display-breakpoints {
+@each $key, $value in $breakpoints {
   @include breakpoint($key) {
     @include display($key);
   }

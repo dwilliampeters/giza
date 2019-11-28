@@ -1,7 +1,5 @@
-$text-align-breakpoints: null !default;
-
 @mixin text-align($breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
   .text-left#{$breakpoint-suffix} {
     text-align: left !important;
@@ -22,7 +20,7 @@ $text-align-breakpoints: null !default;
 
 @include text-align();
 
-@each $key in $text-align-breakpoints {
+@each $key, $value in $breakpoints {
   @include breakpoint($key) {
     @include text-align($key);
   }

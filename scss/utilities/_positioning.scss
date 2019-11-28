@@ -1,7 +1,5 @@
-$position-breakpoints: null !default;
-
 @mixin position($breakpoint: '') {
-  $breakpoint-suffix: if($breakpoint == '', '', '\\@' + $breakpoint);
+  $breakpoint-suffix: if($breakpoint == '', '', '\\@'+ $breakpoint);
 
   .position-relative#{$breakpoint-suffix} {
     position: relative !important;
@@ -22,7 +20,7 @@ $position-breakpoints: null !default;
 
 @include position();
 
-@each $key in $position-breakpoints {
+@each $key, $value in $breakpoints {
   @include breakpoint($key) {
     @include position($key);
   }
