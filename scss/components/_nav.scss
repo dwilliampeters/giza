@@ -60,17 +60,7 @@ $dropdown-nav-border: $black 1px solid !default;
 }
 
 .nav__link {
-  position: relative;
   display: inline-block;
-
-  &::after {
-    position: absolute;
-    top: -$nav-link-padding;
-    right: -$nav-link-padding;
-    bottom: -$nav-link-padding;
-    left: -$nav-link-padding;
-    content: '';
-  }
 }
 
 .nav--nested {
@@ -182,7 +172,6 @@ $dropdown-nav-border: $black 1px solid !default;
     .is-parent-button {
       display: inline-flex;
     }
-
 
     > .nav__link {
       flex: 1 1 auto;
